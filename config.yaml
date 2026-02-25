@@ -1,0 +1,83 @@
+topics:
+  - name: Artificial Consciousness
+    enabled: true
+    terms:
+      - artificial consciousness
+      - machine consciousness
+      - conscious AI
+      - sentience
+      - phenomenal experience
+      - qualia
+      - self-awareness
+      - subjective experience
+      - integrated information theory
+      - IIT
+      - global workspace theory
+      - GWT
+      - higher-order theory
+      - cognitive architecture
+      - inner experience
+      - awareness
+    description: "Papers about machine consciousness, subjective experience, and theories of mind applied to AI systems"
+
+  - name: Test-Time Learning
+    enabled: true
+    terms:
+      - test-time learning
+      - test-time training
+      - TTL
+      - TTT
+      - test-time compute
+      - inference-time compute
+      - inference-time scaling
+      - test-time adaptation
+      - chain of thought
+      - CoT
+      - self-consistency
+      - tree of thought
+      - ToT
+      - best-of-N
+      - majority voting
+      - slow thinking
+      - extended thinking
+      - reasoning model
+      - Monte Carlo tree search
+      - MCTS
+      - search at inference
+    description: "Papers about leveraging more computation at inference time to improve model performance, including reasoning models and search-based methods"
+
+  - name: Symbolic AI
+    enabled: true
+    terms:
+      - symbolic
+      - neurosymbolic
+      - neuro-symbolic
+      - symbolic reasoning
+      - knowledge graph
+      - formal verification
+      - theorem proving
+      - automated reasoning
+      - first-order logic
+      - FOL
+      - constraint satisfaction
+      - program synthesis
+      - rule-based
+      - knowledge representation
+      - ontology
+      - inductive logic programming
+      - ILP
+      - symbolic regression
+      - hybrid reasoning
+    description: "Papers combining neural networks with symbolic reasoning, logic, or structured knowledge representations"
+
+# arXiv categories to fetch from
+categories:
+  - cs.AI
+  - cs.LG
+  - cs.CL
+
+# Max papers to fetch per run
+max_results: 300
+
+# Semantic similarity threshold (0.0–1.0, lower = more results)
+embedding_threshold: 0.35

@@ -1,110 +1,64 @@
 # arXiv Digest
 
-A daily arXiv paper digest with semantic + keyword matching, email delivery via SendGrid, and a web UI to manage topics — all running on GitHub Actions + Vercel.
+A daily personalized arXiv paper digest, published as a static GitHub Pages site.
 
-## Architecture
+## How it works
 
-```
-GitHub Actions (daily cron)          Vercel (Next.js)
-  pipeline/main.py          ←→       /api/topics   (edit topics)
-  ├── fetcher.py                      /api/trigger  (manual run)
-  ├── filter.py                       app/page.tsx  (UI)
-  ├── emailer.py
-  └── config_client.py ──────────── Vercel KV (shared config store)
-```
+1. GitHub Actions runs every weekday at 08:00 UTC
+2. `pipeline/main.py` fetches recent papers from arXiv, filters them by your topics, and writes `index.html`
+3. The workflow pushes `index.html` to the `gh-pages` branch
+4. GitHub Pages serves it at `https://yourusername.github.io/arxiv-digest`
 
 ## Setup
 
-### 1. Vercel KV
+### 1. Fork / clone this repo
 
-1. Create a Vercel project and add a **KV (Redis)** database from the Vercel dashboard.
-2. Copy the KV environment variables (`KV_REST_API_URL`, `KV_REST_API_TOKEN`).
+### 2. Enable GitHub Pages
+- Go to repo **Settings → Pages**
+- Set source to **Deploy from branch → gh-pages → / (root)**
 
-### 2. SendGrid
+### 3. Run it
+- Go to **Actions → Daily arXiv Digest → Run workflow** to trigger manually
+- Or just wait — it runs automatically at 08:00 UTC on weekdays
 
-1. Create a [SendGrid](https://sendgrid.com) account (free tier: 100 emails/day).
-2. Create an API key with **Mail Send** permission.
-3. Verify your sender email address in SendGrid.
+That's it. No API keys, no external services.
 
-### 3. GitHub Secrets
+## Customizing topics
 
-In your repo → Settings → Secrets → Actions, add:
+Edit `config.yaml` and push. The next run picks up your changes.
 
-| Secret | Value |
-|---|---|
-| `SENDGRID_API_KEY` | Your SendGrid API key |
-| `KV_REST_API_URL` | From Vercel KV dashboard |
-| `KV_REST_API_TOKEN` | From Vercel KV dashboard |
-
-### 4. Vercel Environment Variables
-
-In Vercel project settings → Environment Variables, add:
-
-| Variable | Value |
-|---|---|
-| `KV_REST_API_URL` | From Vercel KV dashboard |
-| `KV_REST_API_TOKEN` | From Vercel KV dashboard |
-| `GITHUB_PAT` | GitHub personal access token (for manual trigger) |
-| `GITHUB_OWNER` | Your GitHub username |
-| `GITHUB_REPO` | Your repo name |
-
-### 5. Initial config
-
-On first run, the pipeline falls back to built-in defaults (your 3 topics).
-Then open the web UI to edit topics — changes are saved to KV and used immediately.
-
-Update `email_to` and `email_from` in the KV config key, or edit `config_client.py` defaults.
-
-### 6. Deploy
-
-```bash
-# Deploy web UI
-cd web && vercel deploy
-
-# Push to GitHub → Actions will run daily at 08:00 UTC (weekdays)
-git push origin main
+```yaml
+topics:
+  - name: My Topic
+    enabled: true
+    terms:
+      - keyword one
+      - keyword two
+    description: "Used for semantic matching — describe what this topic is about"
 ```
 
-## Local Development
+- **`terms`** — keyword/synonym list, matched against title + abstract with light stemming
+- **`description`** — plain English description used for semantic (embedding) matching
+- **`enabled`** — set to `false` to temporarily disable a topic without deleting it
+
+## Running locally
 
 ```bash
-# Run pipeline locally (without KV — uses config.json fallback)
-cd pipeline
 pip install -r requirements.txt
-python main.py
-
-# Run web UI locally
-cd web
-npm install
-npm run dev
+python pipeline/main.py
+# opens index.html in your browser
 ```
 
-## Matching Logic
-
-1. **Keyword layer** — regex match against title + abstract with light stemming (`reasoning` matches `reasoning-based`). Fast, zero dependencies.
-2. **Semantic layer** — `all-MiniLM-L6-v2` embeds abstracts and compares cosine similarity against topic descriptions. Only runs on papers that didn't match keywords. Threshold: 0.35 (adjustable in config).
-
-A paper passes if **either** layer fires. Result email groups papers by topic and labels each match method.
-
-## File Structure
+## File structure
 
 ```
 arxiv-digest/
-├── .github/workflows/daily.yml   # Cron: 08:00 UTC Mon-Fri
+├── .github/workflows/daily.yml  # cron + deploy
 ├── pipeline/
-│   ├── main.py                   # Orchestrator
-│   ├── fetcher.py                # arXiv API client
-│   ├── filter.py                 # Keyword + semantic matching
-│   ├── emailer.py                # HTML email via SendGrid
-│   ├── config_client.py          # Vercel KV + local fallback
-│   └── requirements.txt
-├── web/                          # Next.js app → Vercel
-│   ├── app/
-│   │   ├── page.tsx              # Topic editor UI
-│   │   ├── layout.tsx
-│   │   └── api/
-│   │       ├── topics/route.ts   # GET/POST topics from KV
-│   │       └── trigger/route.ts  # Trigger GitHub Actions
-│   └── package.json
-└── vercel.json
+│   ├── main.py                  # orchestrator
+│   ├── fetcher.py               # arXiv API client
+│   ├── filter.py                # keyword + semantic matching
+│   └── renderer.py              # HTML page generator
+├── config.yaml                  # your topics
+└── requirements.txt
 ```
