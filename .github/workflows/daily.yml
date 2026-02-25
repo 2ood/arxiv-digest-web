@@ -2,7 +2,7 @@ name: Daily arXiv Digest
 
 on:
   schedule:
-    - cron: "0 8 * * 1-5"   # 08:00 UTC, Monday–Friday
+    - cron: "0 22 * * 0-4"  # 22:00 UTC Sun–Thu = 07:00 KST Mon–Fri
   workflow_dispatch:          # manual trigger from Actions tab
 
 permissions:
