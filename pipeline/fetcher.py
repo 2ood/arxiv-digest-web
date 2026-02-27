@@ -13,17 +13,13 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta, date
-from collections import defaultdict
 
 
 ARXIV_API     = "https://export.arxiv.org/api/query"
 CHUNK_SIZE    = 300
 REQUEST_DELAY = 3
-MAX_DAYS      = 7
 
-NS = {
-    "atom": "http://www.w3.org/2005/Atom",
-}
+NS = {"atom": "http://www.w3.org/2005/Atom"}
 
 KST = timezone(timedelta(hours=9))
 

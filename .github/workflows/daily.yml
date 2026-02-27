@@ -2,11 +2,11 @@ name: Daily arXiv Digest
 
 on:
   schedule:
-    - cron: "0 22 * * 0-4"  # 22:00 UTC Sun–Thu = 07:00 KST Mon–Fri
-  workflow_dispatch:          # manual trigger from Actions tab
+    - cron: "0 22 * * 0-4"   # 22:00 UTC Sun–Thu = 07:00 KST Mon–Fri
+  workflow_dispatch:           # manual trigger from Actions tab
 
 permissions:
-  contents: write             # needed to push to gh-pages
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -40,6 +40,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .        # index.html is in repo root
           publish_branch: gh-pages
-          include_files: index.html
+          publish_dir: .
+          include_files: |
+            index.html
+            date.html
+            data/papers/*.json
