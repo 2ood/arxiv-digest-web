@@ -66,6 +66,7 @@ def _paper_to_dict(p: Paper, match: MatchResult | None) -> dict:
         "authors":        p.authors,
         "url":            p.url,
         "published":      p.published.isoformat(),
+        "updated":        p.updated.isoformat(),
         "categories":     p.categories,
         "matched_topics": match.matched_topics if match else [],
         "best_score":     round(match.best_semantic_score, 3) if match else 0.0,
@@ -80,6 +81,7 @@ def _dict_to_paper(d: dict) -> Paper:
         authors=d["authors"],
         url=d["url"],
         published=datetime.fromisoformat(d["published"]),
+        updated=datetime.fromisoformat(d.get("updated", d["published"])),  # fallback for old files
         categories=d["categories"],
     )
 
