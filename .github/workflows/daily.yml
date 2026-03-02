@@ -2,8 +2,8 @@ name: Daily arXiv Digest
 
 on:
   schedule:
-    - cron: "0 22 * * 0-4"   # 22:00 UTC Sun–Thu = 07:00 KST Mon–Fri
-  workflow_dispatch:           # manual trigger from Actions tab
+    - cron: "30 0 * * 2-6"   # 00:30 UTC Tue–Sat = 09:30 KST Tue–Sat
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,8 +14,10 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,13 +38,33 @@ jobs:
       - name: Run pipeline
         run: python pipeline/main.py
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: .
-          include_files: |
-            index.html
-            date.html
-            data/papers/*.json
+      # ── Commit data back to main ──────────────────────────────────────────
+      # Persists data/papers/*.json and data/available_dates.json across runs.
+      # index.html and date.html are static and committed once — no rebuild needed.
+      - name: Commit data to main
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/papers/*.json data/available_dates.json
+          git diff --cached --quiet || git commit -m "chore: papers $(date -u +'%Y-%m-%d') [skip ci]"
+          git push origin main
+
+      # ── Deploy to GitHub Pages ────────────────────────────────────────────
+      # Copies the full site (static shell + data + shared assets) to gh-pages.
+      - name: Deploy to gh-pages
+        run: |
+          mkdir /tmp/site
+          cp index.html  /tmp/site/
+          cp date.html   /tmp/site/
+          cp -r static/  /tmp/site/static/
+          cp -r data/    /tmp/site/data/
+
+          git fetch origin gh-pages 2>/dev/null || true
+          git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
+
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -r /tmp/site/. .
+
+          git add index.html date.html static/ data/
+          git diff --cached --quiet || git commit -m "deploy: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push origin gh-pages
