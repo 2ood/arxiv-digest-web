@@ -1,7 +1,27 @@
 {
   "date": "2026-03-11",
-  "fetched_at": "2026-03-11T12:11:32.757391+09:00",
+  "fetched_at": "2026-03-17T09:10:53.142235+09:00",
   "papers": [
+    {
+      "id": "2603.09786",
+      "title": "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth",
+      "abstract": "Large language models (LLMs) tend to externalize their reasoning in their chain of thought, making the chain of thought a good target for monitoring. This is partially an inherent feature of the Transformer architecture: sufficiently long serial cognition must pass through the chain of thought (Korbak et al., 2025). We formalize this argument through the notion of opaque serial depth, given by the length of the longest computation that can be done without the use of interpretable intermediate steps like chain of thought. Given this formalization, we compute numeric upper bounds on the opaque serial depth of Gemma 3 models, as well as asymptotic results for additional architectures beyond standard LLMs. We also open-source an automated method that can calculate upper bounds on the opaque serial depth of arbitrary neural networks, and use it to demonstrate that Mixture-of-Experts models likely have lower depth than dense models. Overall, our results suggest that opaque serial depth is a useful tool for understanding the potential for models to do significant reasoning that is not externalized.",
+      "authors": [
+        "Jonah Brown-Cohen",
+        "David Lindner",
+        "Rohin Shah"
+      ],
+      "url": "https://arxiv.org/abs/2603.09786",
+      "published": "2026-03-10T15:21:42+00:00",
+      "updated": "2026-03-10T15:21:42+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Test-Time Learning"
+      ],
+      "best_score": 0.0
+    },
     {
       "id": "2603.09970",
       "title": "CREATE: Testing LLMs for Associative Creativity",
@@ -19,11 +39,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.42
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09943",
@@ -47,10 +64,8 @@
       "categories": [
         "cs.AI"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.372
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09938",
@@ -66,10 +81,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.429
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09906",
@@ -89,10 +102,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.463
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09865",
@@ -114,10 +125,8 @@
       "categories": [
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.353
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09835",
@@ -142,10 +151,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.378
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09827",
@@ -167,10 +174,8 @@
         "cs.CV",
         "cs.AI"
       ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.353
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09803",
@@ -192,10 +197,8 @@
       "categories": [
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.359
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09800",
@@ -213,10 +216,8 @@
         "cs.AI",
         "cs.CL"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.351
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09787",
@@ -236,29 +237,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.413
-    },
-    {
-      "id": "2603.09786",
-      "title": "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth",
-      "abstract": "Large language models (LLMs) tend to externalize their reasoning in their chain of thought, making the chain of thought a good target for monitoring. This is partially an inherent feature of the Transformer architecture: sufficiently long serial cognition must pass through the chain of thought (Korbak et al., 2025). We formalize this argument through the notion of opaque serial depth, given by the length of the longest computation that can be done without the use of interpretable intermediate steps like chain of thought. Given this formalization, we compute numeric upper bounds on the opaque serial depth of Gemma 3 models, as well as asymptotic results for additional architectures beyond standard LLMs. We also open-source an automated method that can calculate upper bounds on the opaque serial depth of arbitrary neural networks, and use it to demonstrate that Mixture-of-Experts models likely have lower depth than dense models. Overall, our results suggest that opaque serial depth is a useful tool for understanding the potential for models to do significant reasoning that is not externalized.",
-      "authors": [
-        "Jonah Brown-Cohen",
-        "David Lindner",
-        "Rohin Shah"
-      ],
-      "url": "https://arxiv.org/abs/2603.09786",
-      "published": "2026-03-10T15:21:42+00:00",
-      "updated": "2026-03-10T15:21:42+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -282,10 +261,8 @@
         "cs.AI",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.451
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.09972",
@@ -307,7 +284,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.344
+      "best_score": 0.0
     },
     {
       "id": "2603.09793",
@@ -325,7 +302,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.317
+      "best_score": 0.0
     },
     {
       "id": "2603.09872",
@@ -342,7 +319,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.314
+      "best_score": 0.0
     },
     {
       "id": "2603.09842",
@@ -363,7 +340,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.307
+      "best_score": 0.0
     },
     {
       "id": "2603.05228",
@@ -380,7 +357,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.305
+      "best_score": 0.0
     },
     {
       "id": "2603.06731",
@@ -402,7 +379,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.301
+      "best_score": 0.0
     },
     {
       "id": "2603.09789",
@@ -420,7 +397,7 @@
         "quant-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.299
+      "best_score": 0.0
     },
     {
       "id": "2603.09951",
@@ -441,7 +418,7 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.298
+      "best_score": 0.0
     },
     {
       "id": "2603.09923",
@@ -459,7 +436,7 @@
         "math.OC"
       ],
       "matched_topics": [],
-      "best_score": 0.297
+      "best_score": 0.0
     },
     {
       "id": "2603.09964",
@@ -481,7 +458,7 @@
         "cs.ET"
       ],
       "matched_topics": [],
-      "best_score": 0.288
+      "best_score": 0.0
     },
     {
       "id": "2603.09774",
@@ -503,7 +480,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.285
+      "best_score": 0.0
     },
     {
       "id": "2603.08448",
@@ -568,7 +545,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.283
+      "best_score": 0.0
     },
     {
       "id": "2603.09974",
@@ -587,7 +564,7 @@
         "physics.ao-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.275
+      "best_score": 0.0
     },
     {
       "id": "2603.09957",
@@ -613,7 +590,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.273
+      "best_score": 0.0
     },
     {
       "id": "2603.09868",
@@ -633,7 +610,7 @@
         "physics.ao-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.273
+      "best_score": 0.0
     },
     {
       "id": "2603.09771",
@@ -654,7 +631,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.27
+      "best_score": 0.0
     },
     {
       "id": "2603.09853",
@@ -673,7 +650,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.265
+      "best_score": 0.0
     },
     {
       "id": "2603.09963",
@@ -690,7 +667,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2603.09909",
@@ -714,7 +691,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2603.07422",
@@ -734,7 +711,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2603.09888",
@@ -752,7 +729,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.259
+      "best_score": 0.0
     },
     {
       "id": "2603.09952",
@@ -774,7 +751,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.253
+      "best_score": 0.0
     },
     {
       "id": "2603.09892",
@@ -795,7 +772,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.253
+      "best_score": 0.0
     },
     {
       "id": "2603.09815",
@@ -812,7 +789,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.24
+      "best_score": 0.0
     },
     {
       "id": "2603.09881",
@@ -835,7 +812,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.223
+      "best_score": 0.0
     },
     {
       "id": "2603.09778",
@@ -857,7 +834,7 @@
         "physics.comp-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.221
+      "best_score": 0.0
     },
     {
       "id": "2603.09792",
@@ -880,7 +857,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.215
+      "best_score": 0.0
     },
     {
       "id": "2603.09821",
@@ -906,7 +883,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.214
+      "best_score": 0.0
     },
     {
       "id": "2603.09961",
@@ -926,7 +903,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.213
+      "best_score": 0.0
     },
     {
       "id": "2603.09950",
@@ -948,7 +925,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.213
+      "best_score": 0.0
     },
     {
       "id": "2603.09890",
@@ -967,7 +944,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.213
+      "best_score": 0.0
     },
     {
       "id": "2603.07313",
@@ -985,7 +962,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.205
+      "best_score": 0.0
     },
     {
       "id": "2603.09884",
@@ -1004,7 +981,7 @@
         "cs.CY"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.09931",
@@ -1027,7 +1004,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.193
+      "best_score": 0.0
     },
     {
       "id": "2603.09940",
@@ -1048,7 +1025,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.192
+      "best_score": 0.0
     },
     {
       "id": "2603.09916",
@@ -1067,7 +1044,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.189
+      "best_score": 0.0
     },
     {
       "id": "2603.09955",
@@ -1089,7 +1066,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.187
+      "best_score": 0.0
     },
     {
       "id": "2603.09773",
@@ -1108,7 +1085,7 @@
         "q-fin.MF"
       ],
       "matched_topics": [],
-      "best_score": 0.176
+      "best_score": 0.0
     },
     {
       "id": "2603.09945",
@@ -1129,7 +1106,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.17
+      "best_score": 0.0
     },
     {
       "id": "2603.09859",
@@ -1150,7 +1127,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.168
+      "best_score": 0.0
     },
     {
       "id": "2603.09882",
@@ -1177,7 +1154,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.164
+      "best_score": 0.0
     },
     {
       "id": "2603.09947",
@@ -1193,7 +1170,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.161
+      "best_score": 0.0
     },
     {
       "id": "2603.09936",
@@ -1210,7 +1187,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.147
+      "best_score": 0.0
     },
     {
       "id": "2603.09785",
@@ -1227,7 +1204,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.126
+      "best_score": 0.0
     },
     {
       "id": "2603.09942",
@@ -1247,7 +1224,7 @@
         "cs.NI"
       ],
       "matched_topics": [],
-      "best_score": 0.11
+      "best_score": 0.0
     }
   ]
 }

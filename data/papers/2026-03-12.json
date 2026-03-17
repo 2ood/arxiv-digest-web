@@ -1,99 +1,7 @@
 {
   "date": "2026-03-12",
-  "fetched_at": "2026-03-12T12:18:06.382372+09:00",
+  "fetched_at": "2026-03-17T09:10:53.095849+09:00",
   "papers": [
-    {
-      "id": "2603.11024",
-      "title": "Does AI See like Art Historians? Interpreting How Vision Language Models Recognize Artistic Style",
-      "abstract": "VLMs have become increasingly proficient at a range of computer vision tasks, such as visual question answering and object detection. This includes increasingly strong capabilities in the domain of art, from analyzing artwork to generation of art. In an interdisciplinary collaboration between computer scientists and art historians, we characterize the mechanisms underlying VLMs' ability to predict artistic style and assess the extent to which they align with the criteria art historians use to reason about artistic style. We employ a latent-space decomposition approach to identify concepts that drive art style prediction and conduct quantitative evaluations, causal analysis and assessment by art historians. Our findings indicate that 73% of the extracted concepts are judged by art historians to exhibit a coherent and semantically meaningful visual feature and 90% of concepts used to predict style of a given artwork were judged relevant. In cases where an irrelevant concept was used to successfully predict style, art historians identified possible reasons for its success; for example, the model might \"understand\" a concept in more formal terms, such as dark/light contrasts.",
-      "authors": [
-        "Marvin Limpijankit",
-        "Milad Alshomary",
-        "Yassin Oulad Daoud",
-        "Amith Ananthram",
-        "Tim Trombley",
-        "Elias Stengel-Eskin",
-        "Mohit Bansal",
-        "Noam M. Elcott",
-        "Kathleen McKeown"
-      ],
-      "url": "https://arxiv.org/abs/2603.11024",
-      "published": "2026-03-11T17:49:45+00:00",
-      "updated": "2026-03-11T17:49:45+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.351
-    },
-    {
-      "id": "2603.10992",
-      "title": "Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches",
-      "abstract": "Accelerating the explorations of stationary points on potential energy surfaces building local surrogates spans decades of effort. Done correctly, surrogates reduce required evaluations by an order of magnitude while preserving the accuracy of the underlying theory. We present a unified Bayesian Optimization view of minimization, single point saddle searches, and double ended saddle searches through a unified six-step surrogate loop, differing only in the inner optimization target and acquisition criterion. The framework uses Gaussian process regression with derivative observations, inverse-distance kernels, and active learning. The Optimal Transport GP extensions of farthest point sampling with Earth mover's distance, MAP regularization via variance barrier and oscillation detection, and adaptive trust radius form concrete extensions of the same basic methodology, improving accuracy and efficiency. We also demonstrate random Fourier features decouple hyperparameter training from predictions enabling favorable scaling for high-dimensional systems. Accompanying pedagogical Rust code demonstrates that all applications use the exact same Bayesian optimization loop, bridging the gap between theoretical formulation and practical execution.",
-      "authors": [
-        "Rohit Goswami"
-      ],
-      "url": "https://arxiv.org/abs/2603.10992",
-      "published": "2026-03-11T17:20:28+00:00",
-      "updated": "2026-03-11T17:20:28+00:00",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "physics.chem-ph",
-        "physics.comp-ph"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.398
-    },
-    {
-      "id": "2603.10991",
-      "title": "ForwardFlow: Simulation only statistical inference using deep learning",
-      "abstract": "Deep learning models are being used for the analysis of parametric statistical models based on simulation-only frameworks. Bayesian models using normalizing flows simulate data from a prior distribution and are composed of two deep neural networks: a summary network that learns a sufficient statistic for the parameter and a normalizing flow that conditional on the summary network can approximate the posterior distribution. Here, we explore frequentist models that are based on a single summary network. During training, input of the network is a simulated data set based on a parameter and the loss function minimizes the mean-square error between learned summary and parameter. The network thereby solves the inverse problem of parameter estimation. We propose a branched network structure that contains collapsing layers that reduce a data set to summary statistics that are further mapped through fully connected layers to approximate the parameter estimate. We motivate our choice of network structure by theoretical considerations.   In simulations we demonstrate three desirable properties of parameter estimates: finite sample exactness, robustness to data contamination, and algorithm approximation. These properties are achieved offering the the network varying sample size, contaminated data, and data needing algorithmic reconstruction during the training phase. In our simulations an EM-algorithm for genetic data is automatically approximated by the network.   Simulation only approaches seem to offer practical advantages in complex modeling tasks where the simpler data simulation part is left to the researcher and the more complex problem of solving the inverse problem is left to the neural network. Challenging future work includes offering pre-trained models that can be used in a wide variety of applications.",
-      "authors": [
-        "Stefan Böhringer"
-      ],
-      "url": "https://arxiv.org/abs/2603.10991",
-      "published": "2026-03-11T17:20:14+00:00",
-      "updated": "2026-03-11T17:20:14+00:00",
-      "categories": [
-        "math.ST",
-        "cs.LG",
-        "cs.NE",
-        "stat.CO"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.361
-    },
-    {
-      "id": "2603.10978",
-      "title": "GroundCount: Grounding Vision-Language Models with Object Detection for Mitigating Counting Hallucinations",
-      "abstract": "Vision Language Models (VLMs) exhibit persistent hallucinations in counting tasks, with accuracy substantially lower than other visual reasoning tasks (excluding sentiment). This phenomenon persists even in state-of-the-art reasoning-capable VLMs. Conversely, CNN-based object detection models (ODMs) such as YOLO excel at spatial localization and instance counting with minimal computational overhead. We propose GroundCount, a framework that augments VLMs with explicit spatial grounding from ODMs to mitigate counting hallucinations. In the best case, our prompt-based augmentation strategy achieves 81.3% counting accuracy on the best-performing model (Ovis2.5-2B) - a 6.6pp improvement - while reducing inference time by 22% through elimination of hallucination-driven reasoning loops for stronger models. We conduct comprehensive ablation studies demonstrating that positional encoding is a critical component, being beneficial for stronger models but detrimental for weaker ones. Confidence scores, by contrast, introduce noise for most architectures and their removal improves performance in four of five evaluated models. We further evaluate feature-level fusion architectures, finding that explicit symbolic grounding via structured prompts outperforms implicit feature fusion despite sophisticated cross-attention mechanisms. Our approach yields consistent improvements across four of five evaluated VLM architectures (6.2--7.5pp), with one architecture exhibiting degraded performance due to incompatibility between its iterative reflection mechanisms and structured prompts. These results suggest that counting failures stem from fundamental spatial-semantic integration limitations rather than architecture-specific deficiencies, while highlighting the importance of architectural compatibility in augmentation strategies.",
-      "authors": [
-        "Boyuan Chen",
-        "Minghao Shao",
-        "Siddharth Garg",
-        "Ramesh Karri",
-        "Muhammad Shafique"
-      ],
-      "url": "https://arxiv.org/abs/2603.10978",
-      "published": "2026-03-11T17:04:30+00:00",
-      "updated": "2026-03-11T17:04:30+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
     {
       "id": "2603.10960",
       "title": "Ranking Reasoning LLMs under Test-Time Scaling",
@@ -115,31 +23,6 @@
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.10899",
-      "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
-      "abstract": "Transformer-based large language models (LLMs) rely on key-value (KV) caching to avoid redundant computation during autoregressive inference. While this mechanism greatly improves efficiency, the cache size grows linearly with the input sequence length, quickly becoming a bottleneck for long-context tasks. Existing solutions mitigate this problem by evicting prompt KV that are deemed unimportant, guided by estimated importance scores. Notably, a recent line of work proposes to improve eviction quality by \"glimpsing into the future\", in which a draft generator produces a surrogate future response approximating the target model's true response, and this surrogate is subsequently used to estimate the importance of cached KV more accurately. However, these approaches rely on computationally expensive draft generation, which introduces substantial prefilling overhead and limits their practicality in real-world deployment. To address this challenge, we propose LookaheadKV, a lightweight eviction framework that leverages the strength of surrogate future response without requiring explicit draft generation. LookaheadKV augments transformer layers with parameter-efficient modules trained to predict true importance scores with high accuracy. Our design ensures negligible runtime overhead comparable to existing inexpensive heuristics, while achieving accuracy superior to more costly approximation methods. Extensive experiments on long-context understanding benchmarks, across a wide range of models, demonstrate that our method not only outperforms recent competitive baselines in various long-context understanding tasks, but also reduces the eviction cost by up to 14.5x, leading to significantly faster time-to-first-token. Our code is available at https://github.com/SamsungLabs/LookaheadKV.",
-      "authors": [
-        "Jinwoo Ahn",
-        "Ingyu Seong",
-        "Akhil Kedia",
-        "Junhan Kim",
-        "Hyemi Jang",
-        "Kangwook Lee",
-        "Yongkweon Jeon"
-      ],
-      "url": "https://arxiv.org/abs/2603.10899",
-      "published": "2026-03-11T15:44:32+00:00",
-      "updated": "2026-03-11T15:44:32+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.404
     },
     {
       "id": "2603.10891",
@@ -189,6 +72,92 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.11024",
+      "title": "Does AI See like Art Historians? Interpreting How Vision Language Models Recognize Artistic Style",
+      "abstract": "VLMs have become increasingly proficient at a range of computer vision tasks, such as visual question answering and object detection. This includes increasingly strong capabilities in the domain of art, from analyzing artwork to generation of art. In an interdisciplinary collaboration between computer scientists and art historians, we characterize the mechanisms underlying VLMs' ability to predict artistic style and assess the extent to which they align with the criteria art historians use to reason about artistic style. We employ a latent-space decomposition approach to identify concepts that drive art style prediction and conduct quantitative evaluations, causal analysis and assessment by art historians. Our findings indicate that 73% of the extracted concepts are judged by art historians to exhibit a coherent and semantically meaningful visual feature and 90% of concepts used to predict style of a given artwork were judged relevant. In cases where an irrelevant concept was used to successfully predict style, art historians identified possible reasons for its success; for example, the model might \"understand\" a concept in more formal terms, such as dark/light contrasts.",
+      "authors": [
+        "Marvin Limpijankit",
+        "Milad Alshomary",
+        "Yassin Oulad Daoud",
+        "Amith Ananthram",
+        "Tim Trombley",
+        "Elias Stengel-Eskin",
+        "Mohit Bansal",
+        "Noam M. Elcott",
+        "Kathleen McKeown"
+      ],
+      "url": "https://arxiv.org/abs/2603.11024",
+      "published": "2026-03-11T17:49:45+00:00",
+      "updated": "2026-03-11T17:49:45+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.10992",
+      "title": "Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches",
+      "abstract": "Accelerating the explorations of stationary points on potential energy surfaces building local surrogates spans decades of effort. Done correctly, surrogates reduce required evaluations by an order of magnitude while preserving the accuracy of the underlying theory. We present a unified Bayesian Optimization view of minimization, single point saddle searches, and double ended saddle searches through a unified six-step surrogate loop, differing only in the inner optimization target and acquisition criterion. The framework uses Gaussian process regression with derivative observations, inverse-distance kernels, and active learning. The Optimal Transport GP extensions of farthest point sampling with Earth mover's distance, MAP regularization via variance barrier and oscillation detection, and adaptive trust radius form concrete extensions of the same basic methodology, improving accuracy and efficiency. We also demonstrate random Fourier features decouple hyperparameter training from predictions enabling favorable scaling for high-dimensional systems. Accompanying pedagogical Rust code demonstrates that all applications use the exact same Bayesian optimization loop, bridging the gap between theoretical formulation and practical execution.",
+      "authors": [
+        "Rohit Goswami"
+      ],
+      "url": "https://arxiv.org/abs/2603.10992",
+      "published": "2026-03-11T17:20:28+00:00",
+      "updated": "2026-03-11T17:20:28+00:00",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "physics.chem-ph",
+        "physics.comp-ph"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.10991",
+      "title": "ForwardFlow: Simulation only statistical inference using deep learning",
+      "abstract": "Deep learning models are being used for the analysis of parametric statistical models based on simulation-only frameworks. Bayesian models using normalizing flows simulate data from a prior distribution and are composed of two deep neural networks: a summary network that learns a sufficient statistic for the parameter and a normalizing flow that conditional on the summary network can approximate the posterior distribution. Here, we explore frequentist models that are based on a single summary network. During training, input of the network is a simulated data set based on a parameter and the loss function minimizes the mean-square error between learned summary and parameter. The network thereby solves the inverse problem of parameter estimation. We propose a branched network structure that contains collapsing layers that reduce a data set to summary statistics that are further mapped through fully connected layers to approximate the parameter estimate. We motivate our choice of network structure by theoretical considerations.   In simulations we demonstrate three desirable properties of parameter estimates: finite sample exactness, robustness to data contamination, and algorithm approximation. These properties are achieved offering the the network varying sample size, contaminated data, and data needing algorithmic reconstruction during the training phase. In our simulations an EM-algorithm for genetic data is automatically approximated by the network.   Simulation only approaches seem to offer practical advantages in complex modeling tasks where the simpler data simulation part is left to the researcher and the more complex problem of solving the inverse problem is left to the neural network. Challenging future work includes offering pre-trained models that can be used in a wide variety of applications.",
+      "authors": [
+        "Stefan Böhringer"
+      ],
+      "url": "https://arxiv.org/abs/2603.10991",
+      "published": "2026-03-11T17:20:14+00:00",
+      "updated": "2026-03-11T17:20:14+00:00",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "cs.NE",
+        "stat.CO"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.10899",
+      "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
+      "abstract": "Transformer-based large language models (LLMs) rely on key-value (KV) caching to avoid redundant computation during autoregressive inference. While this mechanism greatly improves efficiency, the cache size grows linearly with the input sequence length, quickly becoming a bottleneck for long-context tasks. Existing solutions mitigate this problem by evicting prompt KV that are deemed unimportant, guided by estimated importance scores. Notably, a recent line of work proposes to improve eviction quality by \"glimpsing into the future\", in which a draft generator produces a surrogate future response approximating the target model's true response, and this surrogate is subsequently used to estimate the importance of cached KV more accurately. However, these approaches rely on computationally expensive draft generation, which introduces substantial prefilling overhead and limits their practicality in real-world deployment. To address this challenge, we propose LookaheadKV, a lightweight eviction framework that leverages the strength of surrogate future response without requiring explicit draft generation. LookaheadKV augments transformer layers with parameter-efficient modules trained to predict true importance scores with high accuracy. Our design ensures negligible runtime overhead comparable to existing inexpensive heuristics, while achieving accuracy superior to more costly approximation methods. Extensive experiments on long-context understanding benchmarks, across a wide range of models, demonstrate that our method not only outperforms recent competitive baselines in various long-context understanding tasks, but also reduces the eviction cost by up to 14.5x, leading to significantly faster time-to-first-token. Our code is available at https://github.com/SamsungLabs/LookaheadKV.",
+      "authors": [
+        "Jinwoo Ahn",
+        "Ingyu Seong",
+        "Akhil Kedia",
+        "Junhan Kim",
+        "Hyemi Jang",
+        "Kangwook Lee",
+        "Yongkweon Jeon"
+      ],
+      "url": "https://arxiv.org/abs/2603.10899",
+      "published": "2026-03-11T15:44:32+00:00",
+      "updated": "2026-03-11T15:44:32+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
       "id": "2603.10877",
       "title": "From Images to Words: Efficient Cross-Modal Knowledge Distillation to Language Models from Black-box Teachers",
       "abstract": "Knowledge distillation (KD) methods are pivotal in compressing large pre-trained language models into smaller models, ensuring computational efficiency without significantly dropping performance. Traditional KD techniques assume homogeneity in modalities between the teacher (source) and the student (target) models. On the other hand, existing multimodal knowledge distillation methods require modality-specific pre-training of the teacher model, which is computationally infeasible in most cases. In this paper, we introduce ARMADA, an efficient cross-modal knowledge distillation framework designed to transfer knowledge from large vision-language models, including black-box models, to language-only models. Unlike existing KD techniques that rely on the internal structures of multimodal teachers or require computationally expensive pre-training, ARMADA leverages novel alignment techniques to distil knowledge without altering the teacher model, ensuring efficiency and scalability. We empirically validate ARMADA on twelve natural language understanding, eight complex generative reasoning and five instruction-tuning tasks, demonstrating consistent performance improvements in large models such as DeBERTa-v2-1.4B, OPT-1.3B, LLaMA-{3B, 7B, 8B}. ARMADA achieves up to 3.4% improvement on language understanding tasks and 2.6% boost in generative reasoning, all without requiring expensive multimodal pre-training or fine-tuning of the teacher model. Our findings challenge conventional knowledge distillation paradigms by demonstrating that even vision-language models, despite lacking direct textual understanding, can significantly enhance language models when distilled appropriately.",
@@ -204,37 +173,7 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.357
-    },
-    {
-      "id": "2603.10876",
-      "title": "An Extreme Multi-label Text Classification (XMTC) Library Dataset: What if we took \"Use of Practical AI in Digital Libraries\" seriously?",
-      "abstract": "Subject indexing is vital for discovery but hard to sustain at scale and across languages. We release a large bilingual (English/German) corpus of catalog records annotated with the Integrated Authority File (GND), plus a machine-actionable GND taxonomy. The resource enables ontology-aware multi-label classification, mapping text to authority terms, and agent-assisted cataloging with reproducible, authority-grounded evaluation. We provide a brief statistical profile and qualitative error analyses of three systems. We invite the community to assess not only accuracy but usefulness and transparency, toward authority-anchored AI co-pilots that amplify catalogers' work.",
-      "authors": [
-        "Jennifer D'Souza",
-        "Sameer Sadruddin",
-        "Maximilian Kähler",
-        "Andrea Salfinger",
-        "Luca Zaccagna",
-        "Francesca Incitti",
-        "Lauro Snidaro",
-        "Osma Suominen"
-      ],
-      "url": "https://arxiv.org/abs/2603.10876",
-      "published": "2026-03-11T15:24:20+00:00",
-      "updated": "2026-03-11T15:24:20+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.DL",
-        "cs.IR"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -254,7 +193,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.338
+      "best_score": 0.0
     },
     {
       "id": "2603.11008",
@@ -272,7 +211,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.33
+      "best_score": 0.0
     },
     {
       "id": "2603.11001",
@@ -298,7 +237,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.305
+      "best_score": 0.0
     },
     {
       "id": "2603.10881",
@@ -318,7 +257,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.291
+      "best_score": 0.0
     },
     {
       "id": "2603.10995",
@@ -340,7 +279,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.288
+      "best_score": 0.0
     },
     {
       "id": "2603.10985",
@@ -356,7 +295,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.286
+      "best_score": 0.0
     },
     {
       "id": "2603.10950",
@@ -376,7 +315,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.285
+      "best_score": 0.0
     },
     {
       "id": "2603.10983",
@@ -397,7 +336,7 @@
         "physics.space-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.279
+      "best_score": 0.0
     },
     {
       "id": "2603.09172",
@@ -417,7 +356,7 @@
         "cs.CC"
       ],
       "matched_topics": [],
-      "best_score": 0.276
+      "best_score": 0.0
     },
     {
       "id": "2603.10913",
@@ -438,7 +377,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.275
+      "best_score": 0.0
     },
     {
       "id": "2603.09974",
@@ -457,7 +396,7 @@
         "physics.ao-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.275
+      "best_score": 0.0
     },
     {
       "id": "2603.10963",
@@ -476,7 +415,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.274
+      "best_score": 0.0
     },
     {
       "id": "2603.10858",
@@ -499,7 +438,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.274
+      "best_score": 0.0
     },
     {
       "id": "2603.10910",
@@ -537,7 +476,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.272
+      "best_score": 0.0
     },
     {
       "id": "2603.09771",
@@ -558,7 +497,28 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.27
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.10978",
+      "title": "GroundCount: Grounding Vision-Language Models with Object Detection for Mitigating Counting Hallucinations",
+      "abstract": "Vision Language Models (VLMs) exhibit persistent hallucinations in counting tasks, with accuracy substantially lower than other visual reasoning tasks (excluding sentiment). This phenomenon persists even in state-of-the-art reasoning-capable VLMs. Conversely, CNN-based object detection models (ODMs) such as YOLO excel at spatial localization and instance counting with minimal computational overhead. We propose GroundCount, a framework that augments VLMs with explicit spatial grounding from ODMs to mitigate counting hallucinations. In the best case, our prompt-based augmentation strategy achieves 81.3% counting accuracy on the best-performing model (Ovis2.5-2B) - a 6.6pp improvement - while reducing inference time by 22% through elimination of hallucination-driven reasoning loops for stronger models. We conduct comprehensive ablation studies demonstrating that positional encoding is a critical component, being beneficial for stronger models but detrimental for weaker ones. Confidence scores, by contrast, introduce noise for most architectures and their removal improves performance in four of five evaluated models. We further evaluate feature-level fusion architectures, finding that explicit symbolic grounding via structured prompts outperforms implicit feature fusion despite sophisticated cross-attention mechanisms. Our approach yields consistent improvements across four of five evaluated VLM architectures (6.2--7.5pp), with one architecture exhibiting degraded performance due to incompatibility between its iterative reflection mechanisms and structured prompts. These results suggest that counting failures stem from fundamental spatial-semantic integration limitations rather than architecture-specific deficiencies, while highlighting the importance of architectural compatibility in augmentation strategies.",
+      "authors": [
+        "Boyuan Chen",
+        "Minghao Shao",
+        "Siddharth Garg",
+        "Ramesh Karri",
+        "Muhammad Shafique"
+      ],
+      "url": "https://arxiv.org/abs/2603.10978",
+      "published": "2026-03-11T17:04:30+00:00",
+      "updated": "2026-03-11T17:04:30+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.11045",
@@ -582,7 +542,7 @@
         "physics.ins-det"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.11027",
@@ -600,7 +560,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.08935",
@@ -627,7 +587,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.242
+      "best_score": 0.0
     },
     {
       "id": "2603.10994",
@@ -645,7 +605,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.229
+      "best_score": 0.0
     },
     {
       "id": "2603.11021",
@@ -664,7 +624,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.225
+      "best_score": 0.0
     },
     {
       "id": "2603.11039",
@@ -683,7 +643,7 @@
         "cs.DS"
       ],
       "matched_topics": [],
-      "best_score": 0.224
+      "best_score": 0.0
     },
     {
       "id": "2603.10935",
@@ -702,7 +662,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.223
+      "best_score": 0.0
     },
     {
       "id": "2603.11000",
@@ -720,7 +680,7 @@
         "q-bio.NC"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.10961",
@@ -742,7 +702,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.21
+      "best_score": 0.0
     },
     {
       "id": "2603.10916",
@@ -763,7 +723,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.207
+      "best_score": 0.0
     },
     {
       "id": "2603.10904",
@@ -782,7 +742,7 @@
         "cs.ET"
       ],
       "matched_topics": [],
-      "best_score": 0.205
+      "best_score": 0.0
     },
     {
       "id": "2603.10873",
@@ -804,7 +764,7 @@
         "q-bio.GN"
       ],
       "matched_topics": [],
-      "best_score": 0.197
+      "best_score": 0.0
     },
     {
       "id": "2603.11048",
@@ -827,7 +787,33 @@
         "cs.NE"
       ],
       "matched_topics": [],
-      "best_score": 0.192
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.10876",
+      "title": "An Extreme Multi-label Text Classification (XMTC) Library Dataset: What if we took \"Use of Practical AI in Digital Libraries\" seriously?",
+      "abstract": "Subject indexing is vital for discovery but hard to sustain at scale and across languages. We release a large bilingual (English/German) corpus of catalog records annotated with the Integrated Authority File (GND), plus a machine-actionable GND taxonomy. The resource enables ontology-aware multi-label classification, mapping text to authority terms, and agent-assisted cataloging with reproducible, authority-grounded evaluation. We provide a brief statistical profile and qualitative error analyses of three systems. We invite the community to assess not only accuracy but usefulness and transparency, toward authority-anchored AI co-pilots that amplify catalogers' work.",
+      "authors": [
+        "Jennifer D'Souza",
+        "Sameer Sadruddin",
+        "Maximilian Kähler",
+        "Andrea Salfinger",
+        "Luca Zaccagna",
+        "Francesca Incitti",
+        "Lauro Snidaro",
+        "Osma Suominen"
+      ],
+      "url": "https://arxiv.org/abs/2603.10876",
+      "published": "2026-03-11T15:24:20+00:00",
+      "updated": "2026-03-11T15:24:20+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DL",
+        "cs.IR"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.10937",
@@ -845,7 +831,7 @@
         "stat.AP"
       ],
       "matched_topics": [],
-      "best_score": 0.186
+      "best_score": 0.0
     },
     {
       "id": "2603.10971",
@@ -869,7 +855,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.181
+      "best_score": 0.0
     },
     {
       "id": "2603.10895",
@@ -892,7 +878,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.176
+      "best_score": 0.0
     },
     {
       "id": "2603.11047",
@@ -913,7 +899,7 @@
         "cs.GR"
       ],
       "matched_topics": [],
-      "best_score": 0.174
+      "best_score": 0.0
     },
     {
       "id": "2603.08771",
@@ -931,7 +917,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.172
+      "best_score": 0.0
     },
     {
       "id": "2603.10969",
@@ -955,7 +941,7 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.167
+      "best_score": 0.0
     },
     {
       "id": "2603.10885",
@@ -974,7 +960,7 @@
         "q-bio.GN"
       ],
       "matched_topics": [],
-      "best_score": 0.16
+      "best_score": 0.0
     },
     {
       "id": "2603.10926",
@@ -992,7 +978,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.148
+      "best_score": 0.0
     },
     {
       "id": "2603.10938",
@@ -1012,7 +998,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.132
+      "best_score": 0.0
     },
     {
       "id": "2603.10861",
@@ -1033,7 +1019,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.11
+      "best_score": 0.0
     },
     {
       "id": "2603.10977",
@@ -1054,7 +1040,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.093
+      "best_score": 0.0
     },
     {
       "id": "2603.10886",
@@ -1073,7 +1059,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.082
+      "best_score": 0.0
     },
     {
       "id": "2603.11042",
@@ -1098,7 +1084,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.079
+      "best_score": 0.0
     },
     {
       "id": "2603.10856",
@@ -1119,7 +1105,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.018
+      "best_score": 0.0
     }
   ]
 }

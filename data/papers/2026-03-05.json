@@ -1,6 +1,6 @@
 {
   "date": "2026-03-05",
-  "fetched_at": "2026-03-05T12:14:59.016068+09:00",
+  "fetched_at": "2026-03-17T09:10:53.717944+09:00",
   "papers": [
     {
       "id": "2603.04390",
@@ -49,99 +49,6 @@
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.04384",
-      "title": "AgentIR: Reasoning-Aware Retrival for Deep Research Agents",
-      "abstract": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
-      "authors": [
-        "Zijian Chen",
-        "Xueguang Ma",
-        "Shengyao Zhuang",
-        "Jimmy Lin",
-        "Akari Asai",
-        "Victor Zhong"
-      ],
-      "url": "https://arxiv.org/abs/2603.04384",
-      "published": "2026-03-04T18:47:26+00:00",
-      "updated": "2026-03-04T18:47:26+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.366
-    },
-    {
-      "id": "2603.04334",
-      "title": "SpotIt+: Verification-based Text-to-SQL Evaluation with Database Constraints",
-      "abstract": "We present SpotIt+, an open-source tool for evaluating Text-to-SQL systems via bounded equivalence verification. Given a generated SQL query and the ground truth, SpotIt+ actively searches for database instances that differentiate the two queries. To ensure that the generated counterexamples reflect practically relevant discrepancies, we introduce a constraint-mining pipeline that combines rule-based specification mining over example databases with LLM-based validation. Experimental results on the BIRD dataset show that the mined constraints enable SpotIt+ to generate more realistic differentiating databases, while preserving its ability to efficiently uncover numerous discrepancies between generated and gold SQL queries that are missed by standard test-based evaluation.",
-      "authors": [
-        "Rocky Klopfenstein",
-        "Yang He",
-        "Andrew Tremante",
-        "Yuepeng Wang",
-        "Nina Narodytska",
-        "Haoze Wu"
-      ],
-      "url": "https://arxiv.org/abs/2603.04334",
-      "published": "2026-03-04T17:51:42+00:00",
-      "updated": "2026-03-04T17:51:42+00:00",
-      "categories": [
-        "cs.DB",
-        "cs.AI",
-        "cs.LO",
-        "cs.PL"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.04325",
-      "title": "Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images",
-      "abstract": "Evaluation of AI systems often requires synthetic test cases, particularly for rare or safety-critical conditions that are difficult to observe in operational data. Generative AI offers a promising approach for producing such data through controllable image editing, but its usefulness depends on whether the resulting images are sufficiently realistic to support meaningful evaluation.   We present a scalable framework for assessing the realism of synthetic image-editing methods and apply it to the task of adding environmental conditions-fog, rain, snow, and nighttime-to car-mounted camera images. Using 40 clear-day images, we compare rule-based augmentation libraries with generative AI image-editing models. Realism is evaluated using two complementary automated metrics: a vision-language model (VLM) jury for perceptual realism assessment, and embedding-based distributional analysis to measure similarity to genuine adverse-condition imagery.   Generative AI methods substantially outperform rule-based approaches, with the best generative method achieving approximately 3.6 times the acceptance rate of the best rule-based method. Performance varies across conditions: fog proves easiest to simulate, while nighttime transformations remain challenging. Notably, the VLM jury assigns imperfect acceptance even to real adverse-condition imagery, establishing practical ceilings against which synthetic methods can be judged. By this standard, leading generative methods match or exceed real-image performance for most conditions.   These results suggest that modern generative image-editing models can enable scalable generation of realistic adverse-condition imagery for evaluation pipelines. Our framework therefore provides a practical approach for scalable realism evaluation, though validation against human studies remains an important direction for future work.",
-      "authors": [
-        "Damian J. Ruck",
-        "Paul Vautravers",
-        "Oliver Chalkley",
-        "Jake Thomas"
-      ],
-      "url": "https://arxiv.org/abs/2603.04325",
-      "published": "2026-03-04T17:46:08+00:00",
-      "updated": "2026-03-04T17:46:08+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.04319",
-      "title": "AILS-NTUA at SemEval-2026 Task 12: Graph-Based Retrieval and Reflective Prompting for Abductive Event Reasoning",
-      "abstract": "We present a winning three-stage system for SemEval 2026 Task~12: Abductive Event Reasoning that combines graph-based retrieval, LLM-driven abductive reasoning with prompt design optimized through reflective prompt evolution, and post-hoc consistency enforcement; our system ranks first on the evaluation-phase leaderboard with an accuracy score of 0.95. Cross-model error analysis across 14 models (7~families) reveals three shared inductive biases: causal chain incompleteness, proximate cause preference, and salience bias, whose cross-family convergence (51\\% cause-count reduction) indicates systematic rather than model-specific failure modes in multi-label causal reasoning.",
-      "authors": [
-        "Nikolas Karafyllis",
-        "Maria Lymperaiou",
-        "Giorgos Filandrianos",
-        "Athanasios Voulodimos",
-        "Giorgos Stamou"
-      ],
-      "url": "https://arxiv.org/abs/2603.04319",
-      "published": "2026-03-04T17:38:52+00:00",
-      "updated": "2026-03-04T17:38:52+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.361
     },
     {
       "id": "2603.04304",
@@ -205,6 +112,47 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.04384",
+      "title": "AgentIR: Reasoning-Aware Retrival for Deep Research Agents",
+      "abstract": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
+      "authors": [
+        "Zijian Chen",
+        "Xueguang Ma",
+        "Shengyao Zhuang",
+        "Jimmy Lin",
+        "Akari Asai",
+        "Victor Zhong"
+      ],
+      "url": "https://arxiv.org/abs/2603.04384",
+      "published": "2026-03-04T18:47:26+00:00",
+      "updated": "2026-03-04T18:47:26+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.04319",
+      "title": "AILS-NTUA at SemEval-2026 Task 12: Graph-Based Retrieval and Reflective Prompting for Abductive Event Reasoning",
+      "abstract": "We present a winning three-stage system for SemEval 2026 Task~12: Abductive Event Reasoning that combines graph-based retrieval, LLM-driven abductive reasoning with prompt design optimized through reflective prompt evolution, and post-hoc consistency enforcement; our system ranks first on the evaluation-phase leaderboard with an accuracy score of 0.95. Cross-model error analysis across 14 models (7~families) reveals three shared inductive biases: causal chain incompleteness, proximate cause preference, and salience bias, whose cross-family convergence (51\\% cause-count reduction) indicates systematic rather than model-specific failure modes in multi-label causal reasoning.",
+      "authors": [
+        "Nikolas Karafyllis",
+        "Maria Lymperaiou",
+        "Giorgos Filandrianos",
+        "Athanasios Voulodimos",
+        "Giorgos Stamou"
+      ],
+      "url": "https://arxiv.org/abs/2603.04319",
+      "published": "2026-03-04T17:38:52+00:00",
+      "updated": "2026-03-04T17:38:52+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
       "id": "2603.04276",
       "title": "Causality Elicitation from Large Language Models",
       "abstract": "Large language models (LLMs) are trained on enormous amounts of data and encode knowledge in their parameters. We propose a pipeline to elicit causal relationships from LLMs. Specifically, (i) we sample many documents from LLMs on a given topic, (ii) we extract an event list from from each document, (iii) we group events that appear across documents into canonical events, (iv) we construct a binary indicator vector for each document over canonical events, and (v) we estimate candidate causal graphs using causal discovery methods. Our approach does not guarantee real-world causality. Rather, it provides a framework for presenting the set of causal hypotheses that LLMs can plausibly assume, as an inspectable set of variables and candidate graphs.",
@@ -224,10 +172,8 @@
         "cs.CL",
         "econ.EM"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.353
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04257",
@@ -246,10 +192,8 @@
         "cs.CL",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.374
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04241",
@@ -267,56 +211,7 @@
         "cs.AI",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.365
-    },
-    {
-      "id": "2603.04180",
-      "title": "Architectural Proprioception in State Space Models: Thermodynamic Training Induces Anticipatory Halt Detection",
-      "abstract": "We introduce the Probability Navigation Architecture (PNA) framework, which treats neural computation as navigation through a probability manifold governed by thermodynamic principles. We train State Space Models (SSMs) and Transformers with a novel thermodynamic loss function that penalizes computational waste alongside standard cross-entropy. Across 19 experimental phases, we discover that thermodynamically-trained SSMs develop architectural proprioception: a strong anticipatory coupling between recurrent state entropy and halt confidence (r = -0.836, p < 0.001) in which the halt signal leads state entropy collapse by exactly two tokens (tau = -2.0). This Universal Stopping Signature (USS) reproduces to four decimal places across random seeds and generalizes to a structurally distinct sorting task. Critically, Transformers trained identically show no such coupling (r = -0.07), demonstrating that the phenomenon is architecture-dependent. Cross-task transfer experiments confirm that SSM halt detection reflects genuine meta-cognition (zero-shot transfer F1: SSMs 64.2% vs. Transformers 69.3%; post-adaptation: SSMs 94.5% vs. Transformers 86.4%), while Transformer halt detection relies on syntactic pattern matching. A 2D hyperparameter sweep over energy penalty (alpha) and halt supervision (beta) reveals that the anticipatory coupling is continuously controllable through training, with thermodynamic pressure serving as the primary induction mechanism and explicit halt supervision as an amplifier. Our results establish that SSMs are thermodynamically native architectures whose fixed-size recurrent states naturally support the Markovian compression that enables computational self-awareness, with implications for cost-aware inference, dynamic token budgets, and confidence-based routing in production systems.",
-      "authors": [
-        "Jay Noon"
-      ],
-      "url": "https://arxiv.org/abs/2603.04180",
-      "published": "2026-03-04T15:36:40+00:00",
-      "updated": "2026-03-04T15:36:40+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.04158",
-      "title": "GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning",
-      "abstract": "Garment manipulation has attracted increasing attention due to its critical role in home-assistant robotics. However, the majority of existing garment manipulation works assume an initial state consisting of only one garment, while piled garments are far more common in real-world settings. To bridge this gap, we propose a novel garment retrieval pipeline that can not only follow language instruction to execute safe and clean retrieval but also guarantee exactly one garment is retrieved per attempt, establishing a robust foundation for the execution of downstream tasks (e.g., folding, hanging, wearing). Our pipeline seamlessly integrates vision-language reasoning with visual affordance perception, fully leveraging the high-level reasoning and planning capabilities of VLMs alongside the generalization power of visual affordance for low-level actions. To enhance the VLM's comprehensive awareness of each garment's state within a garment pile, we employ visual segmentation model (SAM2) to execute object segmentation on the garment pile for aiding VLM-based reasoning with sufficient visual cues. A mask fine-tuning mechanism is further integrated to address scenarios where the initial segmentation results are suboptimal. In addition, a dual-arm cooperation framework is deployed to address cases involving large or long garments, as well as excessive garment sagging caused by incorrect grasping point determination, both of which are strenuous for a single arm to handle. The effectiveness of our pipeline are consistently demonstrated across diverse tasks and varying scenarios in both real-world and simulation environments. Project page: https://garmentpile2.github.io/.",
-      "authors": [
-        "Mingleyang Li",
-        "Yuran Wang",
-        "Yue Chen",
-        "Tianxing Chen",
-        "Jiaqi Liang",
-        "Zishun Shen",
-        "Haoran Lu",
-        "Ruihai Wu",
-        "Hao Dong"
-      ],
-      "url": "https://arxiv.org/abs/2603.04158",
-      "published": "2026-03-04T15:13:40+00:00",
-      "updated": "2026-03-04T15:13:40+00:00",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -347,7 +242,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.347
+      "best_score": 0.0
     },
     {
       "id": "2603.04337",
@@ -372,7 +267,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.333
+      "best_score": 0.0
     },
     {
       "id": "2603.04380",
@@ -390,7 +285,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.326
+      "best_score": 0.0
     },
     {
       "id": "2603.04209",
@@ -410,7 +305,24 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.326
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.04180",
+      "title": "Architectural Proprioception in State Space Models: Thermodynamic Training Induces Anticipatory Halt Detection",
+      "abstract": "We introduce the Probability Navigation Architecture (PNA) framework, which treats neural computation as navigation through a probability manifold governed by thermodynamic principles. We train State Space Models (SSMs) and Transformers with a novel thermodynamic loss function that penalizes computational waste alongside standard cross-entropy. Across 19 experimental phases, we discover that thermodynamically-trained SSMs develop architectural proprioception: a strong anticipatory coupling between recurrent state entropy and halt confidence (r = -0.836, p < 0.001) in which the halt signal leads state entropy collapse by exactly two tokens (tau = -2.0). This Universal Stopping Signature (USS) reproduces to four decimal places across random seeds and generalizes to a structurally distinct sorting task. Critically, Transformers trained identically show no such coupling (r = -0.07), demonstrating that the phenomenon is architecture-dependent. Cross-task transfer experiments confirm that SSM halt detection reflects genuine meta-cognition (zero-shot transfer F1: SSMs 64.2% vs. Transformers 69.3%; post-adaptation: SSMs 94.5% vs. Transformers 86.4%), while Transformer halt detection relies on syntactic pattern matching. A 2D hyperparameter sweep over energy penalty (alpha) and halt supervision (beta) reveals that the anticipatory coupling is continuously controllable through training, with thermodynamic pressure serving as the primary induction mechanism and explicit halt supervision as an amplifier. Our results establish that SSMs are thermodynamically native architectures whose fixed-size recurrent states naturally support the Markovian compression that enables computational self-awareness, with implications for cost-aware inference, dynamic token budgets, and confidence-based routing in production systems.",
+      "authors": [
+        "Jay Noon"
+      ],
+      "url": "https://arxiv.org/abs/2603.04180",
+      "published": "2026-03-04T15:36:40+00:00",
+      "updated": "2026-03-04T15:36:40+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04392",
@@ -435,7 +347,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.308
+      "best_score": 0.0
     },
     {
       "id": "2603.04289",
@@ -457,7 +369,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.306
+      "best_score": 0.0
     },
     {
       "id": "2603.04247",
@@ -479,7 +391,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.304
+      "best_score": 0.0
     },
     {
       "id": "2603.04162",
@@ -496,7 +408,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.304
+      "best_score": 0.0
     },
     {
       "id": "2603.04177",
@@ -517,7 +429,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.3
+      "best_score": 0.0
     },
     {
       "id": "2603.04370",
@@ -539,7 +451,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.298
+      "best_score": 0.0
     },
     {
       "id": "2603.04222",
@@ -562,7 +474,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.296
+      "best_score": 0.0
     },
     {
       "id": "2603.02353",
@@ -578,7 +490,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.286
+      "best_score": 0.0
     },
     {
       "id": "2603.04217",
@@ -600,7 +512,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.279
+      "best_score": 0.0
     },
     {
       "id": "2603.04348",
@@ -620,7 +532,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.274
+      "best_score": 0.0
     },
     {
       "id": "2603.04343",
@@ -641,7 +553,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.266
+      "best_score": 0.0
     },
     {
       "id": "2603.04277",
@@ -662,7 +574,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.265
+      "best_score": 0.0
     },
     {
       "id": "2603.04366",
@@ -688,7 +600,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2603.04333",
@@ -707,7 +619,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.257
+      "best_score": 0.0
     },
     {
       "id": "2603.04356",
@@ -728,7 +640,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.252
+      "best_score": 0.0
     },
     {
       "id": "2603.04194",
@@ -747,7 +659,31 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.252
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.04334",
+      "title": "SpotIt+: Verification-based Text-to-SQL Evaluation with Database Constraints",
+      "abstract": "We present SpotIt+, an open-source tool for evaluating Text-to-SQL systems via bounded equivalence verification. Given a generated SQL query and the ground truth, SpotIt+ actively searches for database instances that differentiate the two queries. To ensure that the generated counterexamples reflect practically relevant discrepancies, we introduce a constraint-mining pipeline that combines rule-based specification mining over example databases with LLM-based validation. Experimental results on the BIRD dataset show that the mined constraints enable SpotIt+ to generate more realistic differentiating databases, while preserving its ability to efficiently uncover numerous discrepancies between generated and gold SQL queries that are missed by standard test-based evaluation.",
+      "authors": [
+        "Rocky Klopfenstein",
+        "Yang He",
+        "Andrew Tremante",
+        "Yuepeng Wang",
+        "Nina Narodytska",
+        "Haoze Wu"
+      ],
+      "url": "https://arxiv.org/abs/2603.04334",
+      "published": "2026-03-04T17:51:42+00:00",
+      "updated": "2026-03-04T17:51:42+00:00",
+      "categories": [
+        "cs.DB",
+        "cs.AI",
+        "cs.LO",
+        "cs.PL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04308",
@@ -764,7 +700,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.25
+      "best_score": 0.0
     },
     {
       "id": "2603.04198",
@@ -782,7 +718,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.245
+      "best_score": 0.0
     },
     {
       "id": "2603.04355",
@@ -801,7 +737,27 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.243
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.04325",
+      "title": "Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images",
+      "abstract": "Evaluation of AI systems often requires synthetic test cases, particularly for rare or safety-critical conditions that are difficult to observe in operational data. Generative AI offers a promising approach for producing such data through controllable image editing, but its usefulness depends on whether the resulting images are sufficiently realistic to support meaningful evaluation.   We present a scalable framework for assessing the realism of synthetic image-editing methods and apply it to the task of adding environmental conditions-fog, rain, snow, and nighttime-to car-mounted camera images. Using 40 clear-day images, we compare rule-based augmentation libraries with generative AI image-editing models. Realism is evaluated using two complementary automated metrics: a vision-language model (VLM) jury for perceptual realism assessment, and embedding-based distributional analysis to measure similarity to genuine adverse-condition imagery.   Generative AI methods substantially outperform rule-based approaches, with the best generative method achieving approximately 3.6 times the acceptance rate of the best rule-based method. Performance varies across conditions: fog proves easiest to simulate, while nighttime transformations remain challenging. Notably, the VLM jury assigns imperfect acceptance even to real adverse-condition imagery, establishing practical ceilings against which synthetic methods can be judged. By this standard, leading generative methods match or exceed real-image performance for most conditions.   These results suggest that modern generative image-editing models can enable scalable generation of realistic adverse-condition imagery for evaluation pipelines. Our framework therefore provides a practical approach for scalable realism evaluation, though validation against human studies remains an important direction for future work.",
+      "authors": [
+        "Damian J. Ruck",
+        "Paul Vautravers",
+        "Oliver Chalkley",
+        "Jake Thomas"
+      ],
+      "url": "https://arxiv.org/abs/2603.04325",
+      "published": "2026-03-04T17:46:08+00:00",
+      "updated": "2026-03-04T17:46:08+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04395",
@@ -825,7 +781,7 @@
         "physics.ao-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
     },
     {
       "id": "2603.02512",
@@ -843,7 +799,7 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
     },
     {
       "id": "2603.04161",
@@ -861,7 +817,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.235
+      "best_score": 0.0
     },
     {
       "id": "2603.04321",
@@ -886,7 +842,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.229
+      "best_score": 0.0
     },
     {
       "id": "2603.04340",
@@ -910,7 +866,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.227
+      "best_score": 0.0
     },
     {
       "id": "2603.04204",
@@ -934,7 +890,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.224
+      "best_score": 0.0
     },
     {
       "id": "2603.04259",
@@ -956,7 +912,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.212
+      "best_score": 0.0
     },
     {
       "id": "2603.04191",
@@ -975,7 +931,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.21
+      "best_score": 0.0
     },
     {
       "id": "2603.04166",
@@ -994,7 +950,32 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.21
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.04158",
+      "title": "GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning",
+      "abstract": "Garment manipulation has attracted increasing attention due to its critical role in home-assistant robotics. However, the majority of existing garment manipulation works assume an initial state consisting of only one garment, while piled garments are far more common in real-world settings. To bridge this gap, we propose a novel garment retrieval pipeline that can not only follow language instruction to execute safe and clean retrieval but also guarantee exactly one garment is retrieved per attempt, establishing a robust foundation for the execution of downstream tasks (e.g., folding, hanging, wearing). Our pipeline seamlessly integrates vision-language reasoning with visual affordance perception, fully leveraging the high-level reasoning and planning capabilities of VLMs alongside the generalization power of visual affordance for low-level actions. To enhance the VLM's comprehensive awareness of each garment's state within a garment pile, we employ visual segmentation model (SAM2) to execute object segmentation on the garment pile for aiding VLM-based reasoning with sufficient visual cues. A mask fine-tuning mechanism is further integrated to address scenarios where the initial segmentation results are suboptimal. In addition, a dual-arm cooperation framework is deployed to address cases involving large or long garments, as well as excessive garment sagging caused by incorrect grasping point determination, both of which are strenuous for a single arm to handle. The effectiveness of our pipeline are consistently demonstrated across diverse tasks and varying scenarios in both real-world and simulation environments. Project page: https://garmentpile2.github.io/.",
+      "authors": [
+        "Mingleyang Li",
+        "Yuran Wang",
+        "Yue Chen",
+        "Tianxing Chen",
+        "Jiaqi Liang",
+        "Zishun Shen",
+        "Haoran Lu",
+        "Ruihai Wu",
+        "Hao Dong"
+      ],
+      "url": "https://arxiv.org/abs/2603.04158",
+      "published": "2026-03-04T15:13:40+00:00",
+      "updated": "2026-03-04T15:13:40+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04293",
@@ -1017,7 +998,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.202
+      "best_score": 0.0
     },
     {
       "id": "2603.04399",
@@ -1035,7 +1016,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.199
+      "best_score": 0.0
     },
     {
       "id": "2603.04223",
@@ -1053,7 +1034,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.198
+      "best_score": 0.0
     },
     {
       "id": "2603.04165",
@@ -1072,7 +1053,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.198
+      "best_score": 0.0
     },
     {
       "id": "2603.04353",
@@ -1094,7 +1075,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.197
+      "best_score": 0.0
     },
     {
       "id": "2603.04299",
@@ -1113,7 +1094,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.197
+      "best_score": 0.0
     },
     {
       "id": "2603.04199",
@@ -1135,7 +1116,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.197
+      "best_score": 0.0
     },
     {
       "id": "2603.04212",
@@ -1157,7 +1138,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.194
+      "best_score": 0.0
     },
     {
       "id": "2603.04238",
@@ -1176,7 +1157,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.193
+      "best_score": 0.0
     },
     {
       "id": "2603.04323",
@@ -1199,7 +1180,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.188
+      "best_score": 0.0
     },
     {
       "id": "2603.04378",
@@ -1219,7 +1200,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.184
+      "best_score": 0.0
     },
     {
       "id": "2603.04186",
@@ -1240,7 +1221,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.183
+      "best_score": 0.0
     },
     {
       "id": "2603.04224",
@@ -1258,7 +1239,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.173
+      "best_score": 0.0
     },
     {
       "id": "2603.04314",
@@ -1279,7 +1260,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.171
+      "best_score": 0.0
     },
     {
       "id": "2603.04309",
@@ -1310,7 +1291,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.169
+      "best_score": 0.0
     },
     {
       "id": "2603.04181",
@@ -1326,7 +1307,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.167
+      "best_score": 0.0
     },
     {
       "id": "2603.04219",
@@ -1347,7 +1328,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.165
+      "best_score": 0.0
     },
     {
       "id": "2603.04328",
@@ -1365,7 +1346,7 @@
         "econ.EM"
       ],
       "matched_topics": [],
-      "best_score": 0.158
+      "best_score": 0.0
     },
     {
       "id": "2603.04244",
@@ -1385,7 +1366,7 @@
         "cs.HC"
       ],
       "matched_topics": [],
-      "best_score": 0.148
+      "best_score": 0.0
     },
     {
       "id": "2603.04317",
@@ -1403,7 +1384,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.139
+      "best_score": 0.0
     },
     {
       "id": "2603.04359",
@@ -1423,7 +1404,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.138
+      "best_score": 0.0
     },
     {
       "id": "2603.04291",
@@ -1447,7 +1428,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.124
+      "best_score": 0.0
     },
     {
       "id": "2603.04245",
@@ -1467,7 +1448,7 @@
         "cs.HC"
       ],
       "matched_topics": [],
-      "best_score": 0.118
+      "best_score": 0.0
     },
     {
       "id": "2603.04354",
@@ -1494,7 +1475,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.106
+      "best_score": 0.0
     },
     {
       "id": "2603.04360",
@@ -1514,7 +1495,7 @@
         "eess.SP"
       ],
       "matched_topics": [],
-      "best_score": 0.099
+      "best_score": 0.0
     },
     {
       "id": "2603.04364",
@@ -1535,7 +1516,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.096
+      "best_score": 0.0
     },
     {
       "id": "2603.04383",
@@ -1558,7 +1539,7 @@
         "cs.SI"
       ],
       "matched_topics": [],
-      "best_score": -0.007
+      "best_score": 0.0
     }
   ]
 }

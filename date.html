@@ -38,7 +38,7 @@
 <div class="content">
   <div id="matched-list"></div>
   <div class="pagination" id="matched-pagination"></div>
-  <div class="section-divider">
+  <div class="section-divider" id="unmatched-anchor">
     <div class="section-divider-line"></div>
     <div class="section-divider-label">Filtered out · sorted by relevance</div>
     <div class="section-divider-line"></div>
@@ -63,9 +63,9 @@ async function boot() {
     return;
   }
 
-  const d = new Date(dateStr + "T00:00:00");
+  const d = new Date(Date.UTC(...dateStr.split("-").map(Number).map((v, i) => i === 1 ? v - 1 : v)));
   document.getElementById("header-title").textContent =
-    d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   document.title = "arXiv Digest · " + dateStr;
 
   DigestDisplay.showLoading("matched-list");
@@ -123,7 +123,14 @@ function render() {
     matchedPapers:   filtered,
     unmatchedPapers: unmatched,
     pages,
-    onPage: (which, pg) => { pages[which] = pg; render(); scrollTo(0, 0); },
+    onPage: (which, pg) => {
+      pages[which] = pg; render();
+      if (which === "unmatched") {
+        document.getElementById("unmatched-anchor").scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
   });
 }
 

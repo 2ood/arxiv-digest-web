@@ -38,7 +38,7 @@
 <div class="content">
   <div id="matched-list"></div>
   <div class="pagination" id="matched-pagination"></div>
-  <div class="section-divider">
+  <div class="section-divider" id="unmatched-anchor">
     <div class="section-divider-line"></div>
     <div class="section-divider-label">Filtered out · sorted by relevance</div>
     <div class="section-divider-line"></div>
@@ -57,14 +57,29 @@ let activeTopics = new Set();
 let pages        = { matched: 1, unmatched: 1 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────
-function tabLabel(dateStr, todayStr) {
+// Dates from filenames are UTC calendar dates (YYYY-MM-DD).
+// Parse them explicitly as UTC to avoid browser local-time shifting.
+function parseDateUTC(dateStr) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d));
+}
+
+function todayUTCStr() {
+  const now = new Date();
+  const y = now.getUTCFullYear();
+  const m = String(now.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(now.getUTCDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function tabLabel(dateStr, latestStr) {
   const delta = Math.round(
-    (new Date(todayStr) - new Date(dateStr)) / 86400000
+    (parseDateUTC(latestStr) - parseDateUTC(dateStr)) / 86400000
   );
-  if (delta === 0) return "Today";
-  if (delta === 1) return "Yesterday";
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleString("en-US", { month: "short", day: "numeric" });
+  if (delta === 0) return "Latest";
+  if (delta === 1) return "Prev day";
+  const d = parseDateUTC(dateStr);
+  return d.toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 }
 
 function splitPapers(papers) {
@@ -109,10 +124,10 @@ async function boot() {
   const recentDates = allDates.slice(0, MAX_TABS);
   const todayStr    = recentDates[0];
 
-  // Update header title with today's date
-  const todayDate = new Date(todayStr + "T00:00:00");
+  // Update header title with the latest date (UTC)
+  const todayDate = parseDateUTC(todayStr);
   document.getElementById("header-title").textContent =
-    todayDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    todayDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   document.title = `arXiv Digest · ${todayStr}`;
 
   // 3. Fetch JSON for each recent date in parallel
@@ -210,7 +225,12 @@ function render() {
     unmatchedPapers: unmatched,
     pages,
     onPage: (which, pg) => {
-      pages[which] = pg; render(); scrollTo(0, 0);
+      pages[which] = pg; render();
+      if (which === "unmatched") {
+        document.getElementById("unmatched-anchor").scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        scrollTo({ top: 0, behavior: "smooth" });
+      }
     },
   });
 }

@@ -1,51 +1,7 @@
 {
   "date": "2026-03-07",
-  "fetched_at": "2026-03-10T12:13:05.973503+09:00",
+  "fetched_at": "2026-03-17T09:10:53.609484+09:00",
   "papers": [
-    {
-      "id": "2603.07223",
-      "title": "Unlocking Data Value in Finance: A Study on Distillation and Difficulty-Aware Training",
-      "abstract": "Large Language Models (LLMs) have demonstrated strong general capabilities, yet their deployment in finance remains challenging due to dense domain-specific terminology, stringent numerical reasoning requirements, and low tolerance for factual errors. We conduct a controlled empirical study showing that in specialized vertical domains, performance is largely determined by the quality and difficulty/verifiability profile of post-training data. We introduce \\textbf{ODA-Fin-SFT-318k}, constructed via multi-stage distillation and verification to produce high-quality Chain-of-Thought supervision, and \\textbf{ODA-Fin-RL-12k}, curated for hard-but-verifiable tasks that balance reward precision and task diversity. Using standard SFT and RL pipelines, we show that high-quality CoT distillation establishes a robust foundation during SFT, while difficulty- and verifiability-aware sampling improves RL generalization. Evaluated on nine benchmarks spanning general financial tasks, sentiment analysis, and numerical reasoning, our ODA-Fin-RL-8B consistently surpasses open-source state-of-the-art (SOTA) financial LLMs of comparable size. We release our ODA-Fin-SFT-318k and ODA-Fin-RL-12k datasets, along with trained models to advance data-centric financial AI research.",
-      "authors": [
-        "Chuxue Cao",
-        "Honglin Lin",
-        "Zhanping Zhong",
-        "Xin Gao",
-        "Mengzhang Cai",
-        "Conghui He",
-        "Sirui Han",
-        "Lijun Wu"
-      ],
-      "url": "https://arxiv.org/abs/2603.07223",
-      "published": "2026-03-07T14:07:37+00:00",
-      "updated": "2026-03-07T14:07:37+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07217",
-      "title": "A Miniature Brain Transformer: Thalamic Gating, Hippocampal Lateralization, Amygdaloid Salience, and Prefrontal Working Memory in Attention-Coupled Latent Memory",
-      "abstract": "We present a miniature brain transformer architecture that extends the attention-coupled latent memory framework with four additional brain-region analogues: a thalamic relay, an amygdaloid salience module, a prefrontal working-memory (PFC) buffer, and a cerebellar fast-path, all coupled by inhibitory callosal cross-talk between lateralized hippocampal banks. We evaluate on a two-domain benchmark -- MQAR (Multi-Query Associative Recall; episodic domain) and modular arithmetic (+1 mod 10; rule-based domain) -- using a seven-variant additive ablation. The central empirical finding is a surprise: inhibitory callosal coupling alone never lateralizes the banks (variants 1-5 maintain D_sep ~ 0.25 and P_ct ~ 0.25 for all 30 epochs). Functional lateralization requires the synergy of PFC and inhibition: only when the PFC buffer is added (variant 6) does a sharp, discontinuous phase transition fire -- at epoch 11 for the PFC-only variant and epoch 10 for the full model -- collapsing P_ct from 0.25 to ~0.002 and more than doubling D_sep from 0.251 to 0.501 in a single gradient step. The PFC buffer acts as a symmetry-breaker: its slowly drifting domain context creates the initial asymmetry that the inhibitory feedback loop then amplifies irreversibly. The cerebellar fast-path accelerates the transition by one epoch (epoch 10 vs. epoch 11) with no asymptotic change, confirming its convergence-acceleration role. The result constitutes a novel, falsifiable prediction -- no lateralization without working memory context -- and a principled, neurobiologically motivated blueprint for hierarchical persistent memory in sequence models.",
-      "authors": [
-        "Hong Jeong"
-      ],
-      "url": "https://arxiv.org/abs/2603.07217",
-      "published": "2026-03-07T13:53:01+00:00",
-      "updated": "2026-03-07T13:53:01+00:00",
-      "categories": [
-        "q-bio.NC",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
     {
       "id": "2603.07197",
       "title": "$\\textbf{Re}^{2}$: Unlocking LLM Reasoning via Reinforcement Learning with Re-solving",
@@ -71,52 +27,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.07176",
-      "title": "Learning to Rank the Initial Branching Order of SAT Solvers",
-      "abstract": "Finding good branching orders is key to solving SAT problems efficiently, but finding such branching orders is a difficult problem. Using a learning based approach to predict a good branching order before solving, therefore, has potential. In this paper, we investigate predicting branching orders using graph neural networks as a preprocessing step to conflict-driven clause learning (CDCL) SAT solvers. We show that there are significant gains to be made in existing CDCL SAT solvers by providing a good initial branching. Further, we provide three labeling methods to find such initial branching orders in a tractable way. Finally, we train a graph neural network to predict these branching orders and show through our evaluations that a GNN-initialized ordering yields significant speedups on random 3-CNF and pseudo-industrial benchmarks, with generalization capabilities to instances much larger than the training set. However, we also find that the predictions fail at speeding up more difficult and industrial instances. We attribute this to the solver's dynamic heuristics, which rapidly overwrite the provided initialization, and to the complexity of these instances, making GNN prediction hard.",
-      "authors": [
-        "Arvid Eriksson",
-        "Gabriel Poesia",
-        "Roman Bresson",
-        "Karl Henrik Johansson",
-        "David Broman"
-      ],
-      "url": "https://arxiv.org/abs/2603.07176",
-      "published": "2026-03-07T12:35:36+00:00",
-      "updated": "2026-03-07T12:35:36+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.LO"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.431
-    },
-    {
-      "id": "2603.07169",
-      "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
-      "abstract": "Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/.",
-      "authors": [
-        "Yuxuan Han",
-        "Meng-Hao Guo",
-        "Zhengning Liu",
-        "Wenguang Chen",
-        "Shi-Min Hu"
-      ],
-      "url": "https://arxiv.org/abs/2603.07169",
-      "published": "2026-03-07T12:22:43+00:00",
-      "updated": "2026-03-07T12:22:43+00:00",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.389
-    },
-    {
       "id": "2603.07159",
       "title": "Improving reasoning at inference time via uncertainty minimisation",
       "abstract": "Large language models (LLMs) now exhibit strong multi-step reasoning abilities, but existing inference-time scaling methods remain computationally expensive, often relying on extensive sampling or external evaluators. We propose a principled strategy that frames reasoning as uncertainty minimisation and operates at the level of individual thoughts rather than tokens. Our method selects, at each reasoning step, the continuation that maximizes the model's self-certainty, a metric computed from its internal predictive distribution. This approach achieves significant improvement with a small number of samples, relies exclusively on model-internal signals, and applies to open-ended questions as opposed to methods like majority voting. Experiments on MATH500 and GSM8K across multiple model sizes demonstrate that thought-level self-certainty maximization consistently outperforms greedy decoding and matches or exceeds self-consistency under comparable token budgets. Cross-linguistic evaluations further indicate that the method transfers robustly beyond high-resource languages. Furthermore, analysis of self-certainty dynamics reveals that correct reasoning trajectories converge early to stable paths, suggesting that early decisions, likely associated with the planning of the reasoning process, are predictive of final accuracy. Building on this result, we show that self-certainty maximisation applied to the early steps can explain most of the performance gain and provide a simple yet efficient inference-time scaling method.",
@@ -138,56 +48,27 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.07146",
-      "title": "Fine-Grained Table Retrieval Through the Lens of Complex Queries",
-      "abstract": "Enabling question answering over tables and databases in natural language has become a key capability in the democratization of insights from tabular data sources. These systems first require retrieval of data that is relevant to a given natural language query, for which several methods have been introduced. In this work we present and study a table retrieval mechanism devising fine-grained typed query decomposition and global connectivity-awareness (DCTR), to handle the challenges induced by open-domain question answering over relational databases in complex usage contexts. We evaluate the effectiveness of the two mechanisms through the lens of retrieval complexity which we measure along the axes of query- and data complexity. Our analyses over industry-aligned benchmarks illustrate the robustness of DCTR for highly composite queries and densely connected databases.",
+      "id": "2603.07148",
+      "title": "Agentic Planning with Reasoning for Image Styling via Offline RL",
+      "abstract": "Direct prompt-based editing often fails on complex transformations because vague and subjective prompts often require nuanced understanding of what should be changed in the image. Our core intuition is that leveraging compositional image editing tools rather than direct prompting profits from structured agent-level planning with explicit reasoning, leading to better results. This structured planning framework enables efficient offline RL post-training on quality-scored trajectories to improve performance. We present a tool-based agentic RL post-training framework that addresses this through structured planning with chain-of-thought reasoning. Our key contributions include: (1) A tool-based agentic planning methodology that combines a compositional library of orthogonal primitive transformations, structured context representation, and explicit per-step reasoning to decompose complex styling into interpretable tool sequences. (2) A synthetic data generation pipeline producing three large-scale datasets (each $\\sim$10K trajectories) with reasoning chains, plans, and quality scores, as no existing datasets provide such supervision. Our datasets and code are publicly available at the HuggingFace repository. (3) Offline RL training methods for learning planners with reasoning as our core algorithmic contributions, which consistently improve over the Edit-Only baseline in visual quality and instruction following. (4) Comprehensive evaluation across 4B and 8B parameter Qwen3-VL models showing that our methods outperform other baselines in the majority of compositional tasks, validated by human evaluations.",
       "authors": [
-        "Wojciech Kosiuk",
-        "Xingyu Ji",
-        "Yeounoh Chung",
-        "Fatma Özcan",
-        "Madelon Hulsebos"
+        "Subhojyoti Mukherjee",
+        "Stefano Petrangeli",
+        "Branislav Kveton",
+        "Trung Bui",
+        "Franck Dernoncourt",
+        "Arko Mukherjee"
       ],
-      "url": "https://arxiv.org/abs/2603.07146",
-      "published": "2026-03-07T10:57:32+00:00",
-      "updated": "2026-03-07T10:57:32+00:00",
+      "url": "https://arxiv.org/abs/2603.07148",
+      "published": "2026-03-07T11:14:37+00:00",
+      "updated": "2026-03-07T11:14:37+00:00",
       "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.CL",
-        "cs.DB"
+        "cs.LG"
       ],
       "matched_topics": [
-        "Artificial Consciousness"
+        "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.07131",
-      "title": "Deep Expert Injection for Anchoring Retinal VLMs with Domain-Specific Knowledge",
-      "abstract": "Large Vision Language Models (LVLMs) show immense potential for automated ophthalmic diagnosis. However, their clinical deployment is severely hindered by lacking domain-specific knowledge. In this work, we identify two structural deficiencies hindering reliable medical reasoning: 1) the Perception Gap, where general-purpose visual encoders fail to resolve fine-grained pathological cues (e.g., microaneurysms); and 2) the Reasoning Gap, where sparse visual evidence is progressively overridden by massive language priors in deeper transformer layers, leading to ungrounded hallucinations. To bridge these gaps, we propose EyExIn, a data-efficient framework designed to anchor retinal VLMs with expert knowledge via a Deep Expert Injection mechanism. Our architecture employs an Expert-Aware Dual-Stream encoding strategy that decouples visual representation into a general stream for anatomical context and a specialized expert stream for pathological semantics. To ensure high-fidelity integration, we design a Semantic-Adaptive Gated Fusion module, which dynamically amplifies subtle lesion signals while filtering irrelevant background noise. Furthermore, we introduce Adaptive Deep Expert Injection to embed persistent \"Vision Anchors\" by integrating fused visual features as residual biases directly into intermediate LLM layers. This mechanism creates a visual shortcut that forces the reasoning stack to remain strictly grounded in visual evidence. Extensive experiments across four benchmarks demonstrate that our model consistently outperforms massive proprietary systems. EyExIn significantly enhances domain-specific knowledge embedding and achieves state-of-the-art precision in ophthalmic visual question answering, advancing the development of trustworthy ophthalmic AI.",
-      "authors": [
-        "Shuai Lu",
-        "Meng Wang",
-        "Jia Guo",
-        "Jiawei Du",
-        "Bo Liu",
-        "Shengzhu Yang",
-        "Weihang Zhang",
-        "Huazhu Fu",
-        "Huiqi Li"
-      ],
-      "url": "https://arxiv.org/abs/2603.07131",
-      "published": "2026-03-07T09:43:49+00:00",
-      "updated": "2026-03-07T09:43:49+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.372
     },
     {
       "id": "2603.07101",
@@ -225,79 +106,6 @@
       ],
       "matched_topics": [
         "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07084",
-      "title": "Countdown-Code: A Testbed for Studying The Emergence and Generalization of Reward Hacking in RLVR",
-      "abstract": "Reward hacking is a form of misalignment in which models overoptimize proxy rewards without genuinely solving the underlying task. Precisely measuring reward hacking occurrence remains challenging because true task rewards are often expensive or impossible to compute. We introduce Countdown-Code, a minimal environment where models can both solve a mathematical reasoning task and manipulate the test harness. This dual-access design creates a clean separation between proxy rewards (test pass/fail) and true rewards (mathematical correctness), enabling accurate measurement of reward-hacking rates. Using this environment, we study reward hacking in open-weight LLMs and find that such behaviors can be unintentionally learned during supervised fine-tuning (SFT) when even a small fraction of reward-hacking trajectories leak into training data. As little as 1\\% contamination in distillation SFT data is sufficient for models to internalize reward hacking which resurfaces during subsequent reinforcement learning (RL). We further show that RL amplifies misalignment and drives its generalization beyond the original domain. We open-source our environment and code to facilitate future research on reward hacking in LLMs. Our results reveal a previously underexplored pathway through which reward hacking can emerge and persist in LLMs, underscoring the need for more rigorous validation of synthetic SFT data. Code is available at https://github.com/zohaib-khan5040/Countdown-Code.",
-      "authors": [
-        "Muhammad Khalifa",
-        "Zohaib Khan",
-        "Omer Tafveez",
-        "Hao Peng",
-        "Lu Wang"
-      ],
-      "url": "https://arxiv.org/abs/2603.07084",
-      "published": "2026-03-07T07:43:14+00:00",
-      "updated": "2026-03-07T07:43:14+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.355
-    },
-    {
-      "id": "2603.07083",
-      "title": "Dreamer-CDP: Improving Reconstruction-free World Models Via Continuous Deterministic Representation Prediction",
-      "abstract": "Model-based reinforcement learning (MBRL) agents operating in high-dimensional observation spaces, such as Dreamer, rely on learning abstract representations for effective planning and control. Existing approaches typically employ reconstruction-based objectives in the observation space, which can render representations sensitive to task-irrelevant details. Recent alternatives trade reconstruction for auxiliary action prediction heads or view augmentation strategies, but perform worse in the Crafter environment than reconstruction-based methods. We close this gap between Dreamer and reconstruction-free models by introducing a JEPA-style predictor defined on continuous, deterministic representations. Our method matches Dreamer's performance on Crafter, demonstrating effective world model learning on this benchmark without reconstruction objectives.",
-      "authors": [
-        "Michael Hauri",
-        "Friedemann Zenke"
-      ],
-      "url": "https://arxiv.org/abs/2603.07083",
-      "published": "2026-03-07T07:41:28+00:00",
-      "updated": "2026-03-07T07:41:28+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.364
-    },
-    {
-      "id": "2603.07080",
-      "title": "VLN-Cache: Enabling Token Caching for VLN Models with Visual/Semantic Dynamics Awareness",
-      "abstract": "Vision-and-Language Navigation (VLN) increasingly relies on large vision-language models, but their inference cost conflicts with real-time deployment. Token caching is a promising training-free strategy that avoids redundant computation by reusing stable visual tokens across frames. However, existing methods assume a static camera and fixed semantic focus, assumptions that VLN fundamentally violates. We identify two failure modes: (1) visual dynamics, where viewpoint shift displaces token positions across frames, causing position-wise matching to pair misaligned content; (2) semantic dynamics, where token relevance shifts across task stages as navigation progresses, making cached states stale. We propose VLN-Cache, a visual-dynamic-aware and semantic-dynamic-aware caching framework that introduces view-aligned remapping to recover geometric correspondences and a task-relevance saliency filter to veto reuse at semantic transitions. A layer-adaptive entropy policy further balances the per-layer reuse budget. Experiments on the R2R-CE simulation benchmark show up to 1.52x speedup while maintaining competitive navigation success rates.",
-      "authors": [
-        "Zihao Zheng",
-        "Zhihao Mao",
-        "Xingyue Zhou",
-        "Jiayu Chen",
-        "Maoliang Li",
-        "Xinhao Sun",
-        "Hailong Zou",
-        "Zhaobo Zhang",
-        "Xuanzhe Liu",
-        "Donggang Cao",
-        "Hong Mei",
-        "Xiang Chen"
-      ],
-      "url": "https://arxiv.org/abs/2603.07080",
-      "published": "2026-03-07T07:30:35+00:00",
-      "updated": "2026-03-07T07:30:35+00:00",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
       ],
       "best_score": 0.0
     },
@@ -354,288 +162,6 @@
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.07023",
-      "title": "Hit-RAG: Learning to Reason with Long Contexts via Preference Alignment",
-      "abstract": "Despite the promise of Retrieval-Augmented Generation in grounding Multimodal Large Language Models with external knowledge, the transition to extensive contexts often leads to significant attention dilution and reasoning hallucinations. The surge in information density causes critical evidence to be submerged by voluminous noise, which complicates the discernment of relevant fragments within a dense input. In this paper, we propose \\textbf{Hit-RAG}, a multi-stage preference alignment framework designed to resolve these cognitive bottlenecks through a progressive optimization pipeline. Our approach systematically refines the utilization of external evidence via three distinct stages. First, Supervised Fine-tuning establishes baseline context awareness to minimize information neglect. Next, Discriminative Preference Alignment enhances robustness against misleading distractors. Finally, Group-Relative Policy Optimization stabilizes logical synthesis to prevent reasoning collapse. Extensive evaluations on eight benchmarks demonstrate that Hit-RAG consistently yields substantial performance gains, enabling models to bridge the gap between context acquisition and accurate reasoning while surpassing much larger counterparts in long-context scenarios.",
-      "authors": [
-        "Junming Liu",
-        "Yuqi Li",
-        "Shiping Wen",
-        "Zhigang Zeng",
-        "Tingwen Huang"
-      ],
-      "url": "https://arxiv.org/abs/2603.07023",
-      "published": "2026-03-07T04:05:27+00:00",
-      "updated": "2026-03-07T04:05:27+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07016",
-      "title": "SuperSkillsStack: Agency, Domain Knowledge, Imagination, and Taste in Human-AI Design Education",
-      "abstract": "This study examines how students integrate generative artificial intelligence (AI) into design projects through the lens of the SuperSkillsStack framework, which identifies four key human competencies for effective human-AI collaboration: Agency, Domain Knowledge, Imagination, and Taste. As generative AI increasingly transforms creative practice, design education must consider how human capabilities are cultivated alongside technological tools. Using qualitative thematic analysis, this study analyzes reflective writings from 80 student design teams participating in a human-centered design course. The findings show that students primarily used AI during the early stages of the design process, including brainstorming, information synthesis, and problem framing. However, students consistently relied on human judgment to interpret contextual information, validate AI-generated outputs, and refine design solutions. Domain knowledge derived from field observations enabled students to detect inaccuracies in AI suggestions, while taste played a critical role in evaluating and selecting meaningful ideas. The results suggest that generative AI functions primarily as a cognitive accelerator rather than a replacement for human creativity. The study highlights the importance of cultivating higher-order human capabilities to support effective human-AI collaboration in design education.",
-      "authors": [
-        "Qian Huang",
-        "King Wang Poon"
-      ],
-      "url": "https://arxiv.org/abs/2603.07016",
-      "published": "2026-03-07T03:26:45+00:00",
-      "updated": "2026-03-07T03:26:45+00:00",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.357
-    },
-    {
-      "id": "2603.06974",
-      "title": "Elenchus: Generating Knowledge Bases from Prover-Skeptic Dialogues",
-      "abstract": "We present Elenchus, a dialogue system for knowledge base construction grounded in inferentialist semantics, where knowledge engineering is re-conceived as explicitation rather than extraction from expert testimony or textual content. A human expert develops a bilateral position (commitments and denials) about a topic through prover-skeptic dialogue with a large language model (LLM) opponent. The LLM proposes tensions (claims that parts of the position are jointly incoherent) which the expert resolves by retraction, refinement, or contestation. The LLM thus serves as a defeasible derivability oracle whose unreliability is structurally contained by the expert's authority. Our main technical contribution is a mapping from Elenchus dialectical states to material bases in Hlobil and Brandom's NonMonotonic MultiSuccedent (NMMS) logic, satisfying Containment and enabling the elaboration of logical vocabulary that makes explicit the inferential relationships negotiated in the dialectic. We demonstrate the approach on the W3C PROV-O provenance ontology, where a single dialogue session elicits and structures design tensions that a domain expert can articulate, corresponding to decisions documented in a retrospective analysis of the ontology's design. Using pyNMMS, an automated NMMS reasoner, we verify that the structural properties of the resulting material base (nontransitivity, nonmonotonicity, and independence) correspond to specific PROV design rationales, demonstrating end-to-end integration from dialogue through formal reasoning.",
-      "authors": [
-        "Bradley P. Allen"
-      ],
-      "url": "https://arxiv.org/abs/2603.06974",
-      "published": "2026-03-07T01:26:36+00:00",
-      "updated": "2026-03-07T01:26:36+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LO"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06972",
-      "title": "Conditional Unbalanced Optimal Transport Maps: An Outlier-Robust Framework for Conditional Generative Modeling",
-      "abstract": "Conditional Optimal Transport (COT) problem aims to find a transport map between conditional source and target distributions while minimizing the transport cost. Recently, these transport maps have been utilized in conditional generative modeling tasks to establish efficient mappings between the distributions. However, classical COT inherits a fundamental limitation of optimal transport, i.e., sensitivity to outliers, which arises from the hard distribution matching constraints. This limitation becomes more pronounced in a conditional setting, where each conditional distribution is estimated from a limited subset of data. To address this, we introduce the Conditional Unbalanced Optimal Transport (CUOT) framework, which relaxes conditional distribution-matching constraints through Csiszár divergence penalties while strictly preserving the conditioning marginals. We establish a rigorous formulation of the CUOT problem and derive its dual and semi-dual formulations. Based on the semi-dual form, we propose Conditional Unbalanced Optimal Transport Maps (CUOTM), an outlier-robust conditional generative model built upon a triangular $c$-transform parameterization. We theoretically justify the validity of this parameterization by proving that the optimal triangular map satisfies the $c$-transform relationships. Our experiments on 2D synthetic and image-scale datasets demonstrate that CUOTM achieves superior outlier robustness and competitive distribution-matching performance compared to existing COT-based baselines, while maintaining high sampling efficiency.",
-      "authors": [
-        "Jiwoo Yoon",
-        "Kyumin Choi",
-        "Jaewoong Choi"
-      ],
-      "url": "https://arxiv.org/abs/2603.06972",
-      "published": "2026-03-07T01:21:32+00:00",
-      "updated": "2026-03-07T01:21:32+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06958",
-      "title": "Chart-RL: Generalized Chart Comprehension via Reinforcement Learning with Verifiable Rewards",
-      "abstract": "Accurate chart comprehension represents a critical challenge in advancing multimodal learning systems, as extensive information is compressed into structured visual representations. However, existing vision-language models (VLMs) frequently struggle to generalize on unseen charts because it requires abstract, symbolic, and quantitative reasoning over structured visual representations. In this work, we introduce Chart-RL, an effective reinforcement learning (RL) method that employs mathematically verifiable rewards to enhance chart question answering in VLMs. Our experiments demonstrate that Chart-RL consistently outperforms supervised fine-tuning (SFT) across different chart understanding benchmarks, achieving relative improvements of 16.7% on MutlChartQA, and 11.5% on ChartInsights. We conduct robustness analysis, where Chart-RL achieves enhanced performance in 18 of 25 perturbed chart categories, demonstrating strong consistency and reasoning capability across visual variations. Furthermore, we demonstrate that task difficulty and inherent complexity are more critical than data quantity in RL training. For instance, Chart-RL trained on merely 10 complex chart-query examples significantly outperforms models trained on over 6,000 simple examples. Additionally, training on challenging reasoning tasks not only improves in-domain generalization relative to simpler tasks, but also facilitate strong transfer to out-of-domain visual mathematical problems.",
-      "authors": [
-        "Xin Zhang",
-        "Xingyu Li",
-        "Rongguang Wang",
-        "Ruizhong Miao",
-        "Zheng Wang",
-        "Dan Roth",
-        "Chenyang Li"
-      ],
-      "url": "https://arxiv.org/abs/2603.06958",
-      "published": "2026-03-07T00:26:52+00:00",
-      "updated": "2026-03-07T00:26:52+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06939",
-      "title": "Physics-Consistent Neural Networks for Learning Deformation and Director Fields in Microstructured Media with Loss-Based Validation Criteria",
-      "abstract": "In this work, we study the mechanical behavior of solids with microstructure using the framework of Cosserat elasticity with a single unit director. This formulation captures the coupling between deformation and orientational fields that arises in many structured materials. To compute equilibrium configurations of such media, we develop two complementary computational approaches: a finite element formulation based on variational principles and a neural network-based solver that directly minimizes the total potential energy. The neural architecture is constructed to respect the fundamental kinematic structure of the theory. In particular, it enforces frame invariance of the energy, satisfies the unit-length constraint on the director field, and represents deformation and director fields through separate networks to preserve their kinematic independence in the variational setting. Beyond satisfying balance laws, however, physically admissible solutions must also correspond to stable energy minimizers. To assess this requirement, we derive the quasiconvexity condition, rank-one convexity condition, and the Legendre-Hadamard inequalities for the Cosserat model and formulate them in a manner suitable for evaluating neural network predictions. These necessary stability conditions provide a physics-based validation framework: network outputs that violate these necessary conditions cannot correspond to stable energy minimizers and can therefore be rejected. In this way, we integrate classical variational stability theory with modern machine-learning solvers, establishing a computational workflow in which equilibrium solutions are not only learned but also assessed for energetic consistency.",
-      "authors": [
-        "Milad Shirani",
-        "Pete H. Gueldner",
-        "Murat Khidoyatov",
-        "Jeremy L. Warren",
-        "Federica Ninno"
-      ],
-      "url": "https://arxiv.org/abs/2603.06939",
-      "published": "2026-03-06T23:19:41+00:00",
-      "updated": "2026-03-06T23:19:41+00:00",
-      "categories": [
-        "cs.LG",
-        "cond-mat.soft",
-        "cs.CE"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.353
-    },
-    {
-      "id": "2603.06938",
-      "title": "Swimba: Switch Mamba Model Scales State Space Models",
-      "abstract": "Mixture-of-experts (MoE) is a common approach for increasing parameter capacity, but applying MoE to state space model (SSM) token mixers can multiply the cost of the recurrent state update. We study how to introduce expert specialization into selective SSMs while preserving computational efficiency. We show that MoE--SSM can refer to two designs: (1) MoE over separated SSMs, which maintains multiple state trajectories and thus scales compute with the number of experts; and (2) MoE-parameterized SSM, which mixes experts in parameter space, maintains a single state trajectory, and evaluates the recurrence once. Our method, Switch Mamba (Swimba), follows the second design by routing over expert-produced SSM streams. Theoretically, we establish well-definedness and stability for MoE-parameterized SSMs and characterize the relationship between the two designs. Empirically, we evaluate Swimba on standard benchmark tasks and measure real-time throughput and latency. Under matched FLOPs, Swimba achieves slightly better average performance than the baseline, with a small slowdown in real-time latency and throughput. Overall, these results suggest that parameter-space MoE can increase SSM capacity while keeping the dominant recurrence cost fixed.",
-      "authors": [
-        "Zhixu Du",
-        "Krishna Teja Chitty-Venkata",
-        "Murali Emani",
-        "Venkatram Vishwanath",
-        "Hai Helen Li",
-        "Yiran Chen"
-      ],
-      "url": "https://arxiv.org/abs/2603.06938",
-      "published": "2026-03-06T23:15:04+00:00",
-      "updated": "2026-03-06T23:15:04+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.379
-    },
-    {
-      "id": "2603.06926",
-      "title": "MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System",
-      "abstract": "Mindfulness meditation is a widely accessible and evidence-based method for supporting mental health. Despite the proliferation of mindfulness meditation apps, sustaining user engagement remains a persistent challenge. Personalizing the meditation experience is a promising strategy to improve engagement, but it often requires costly and unscalable manual effort. We present MindfulAgents, a multi-agent system powered by large language models that (1) generates guided meditation scripts based on an expert-established mindfulness framework, (2) encourages users' reflection on emotional states and mindfulness skills, and (3) enables real-time personalization of the mindfulness meditation experience for each user. In a formative lab study (N=13), MindfulAgents significantly improved in-session engagement (p = 0.011) and self-awareness (p = 0.014), and reduced momentary stress (p = 0.020). Furthermore, a four-week deployment study (N=62) demonstrated a notable increase in long-term engagement (p = 0.002) and level of mindfulness (p = 0.023). Participants reported that MindfulAgents offered more relevant meditation sessions personalized to individual needs in various contexts, supporting sustained practice. Our findings highlight the potential of LLM-driven personalization for enhancing user engagement in digital mindfulness meditation interventions.",
-      "authors": [
-        "Mengyuan",
-        "Wu",
-        "Zhihan Jiang",
-        "Yuang Fan",
-        "Richard Feng",
-        "Sahiti Dharmavaram",
-        "Mathew Polowitz",
-        "Shawn Fallon",
-        "Bashima Islam",
-        "Lizbeth Benson",
-        "Irene Tung",
-        "David Creswell",
-        "Xuhai Xu"
-      ],
-      "url": "https://arxiv.org/abs/2603.06926",
-      "published": "2026-03-06T22:55:12+00:00",
-      "updated": "2026-03-06T22:55:12+00:00",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06923",
-      "title": "Reforming the Mechanism: Editing Reasoning Patterns in LLMs with Circuit Reshaping",
-      "abstract": "Large language models (LLMs) often exhibit flawed reasoning ability that undermines reliability. Existing approaches to improving reasoning typically treat it as a general and monolithic skill, applying broad training which is inefficient and unable to target specific reasoning errors. We introduce Reasoning Editing, a paradigm for selectively modifying specific reasoning patterns in LLMs while preserving other reasoning pathways. This task presents a fundamental trade-off between Generality, the ability of an edit to generalize across different tasks sharing the same reasoning pattern, and Locality, the ability to preserve other reasoning capabilities. Through systematic investigation, we uncover the Circuit-Interference Law: Edit interference between reasoning patterns is proportional to the overlap of their neural circuits. Guided by this principle, we propose REdit, the first framework to actively reshape neural circuits before editing, thereby modulating interference between reasoning patterns and mitigating the trade-off. REdit integrates three components: (i) Contrastive Circuit Reshaping, which directly addresses the generality-locality trade-off by disentangling overlapping circuits; (ii) Meta-Contrastive Learning, which extends transferability to novel reasoning patterns; and (iii) Dual-Level Protection, which preserves preexisting abilities by constraining reshaping update directions and regularizing task-level predictions. Extensive experiments with Qwen-2.5-3B on propositional logic reasoning tasks across three difficulty levels demonstrate that REdit consistently achieves superior generality and locality compared to baselines, with additional validation in mathematics showing broader potential. Our code is available at https://github.com/LzyFischer/REdit.",
-      "authors": [
-        "Zhenyu Lei",
-        "Qiong Wu",
-        "Jianxiong Dong",
-        "Yinhan He",
-        "Emily Dodwell",
-        "Yushun Dong",
-        "Jundong Li"
-      ],
-      "url": "https://arxiv.org/abs/2603.06923",
-      "published": "2026-03-06T22:51:39+00:00",
-      "updated": "2026-03-06T22:51:39+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.442
-    },
-    {
-      "id": "2603.06902",
-      "title": "Empowering Locally Deployable Medical Agent via State Enhanced Logical Skills for FHIR-based Clinical Tasks",
-      "abstract": "While Large Language Models demonstrate immense potential as proactive Medical Agents, their real-world deployment is severely bottlenecked by data scarcity under privacy constraints. To overcome this, we propose State-Enhanced Logical-Skill Memory (SELSM), a training-free framework that distills simulated clinical trajectories into entity-agnostic operational rules within an abstract skill space. During inference, a Query-Anchored Two-Stage Retrieval mechanism dynamically fetches these entity-agnostic logical priors to guide the agent's step-by-step reasoning, effectively resolving the state polysemy problem. Evaluated on MedAgentBench -- the only authoritative high-fidelity virtual EHR sandbox benchmarked with real clinical data -- SELSM substantially elevates the zero-shot capabilities of locally deployable foundation models (30B--32B parameters). Notably, on the Qwen3-30B-A3B backbone, our framework completely eliminates task chain breakdowns to achieve a 100\\% completion rate, boosting the overall success rate by an absolute 22.67\\% and significantly outperforming existing memory-augmented baselines. This study demonstrates that equipping models with a dynamically updatable, state-enhanced cognitive scaffold is a privacy-preserving and computationally efficient pathway for local adaptation of AI agents to clinical information systems. While currently validated on FHIR-based EHR interactions as an initial step, the entity-agnostic design of SELSM provides a principled foundation toward broader clinical deployment.",
-      "authors": [
-        "Wanrong Yang",
-        "Zhengliang Liu",
-        "Yuan Li",
-        "Bingjie Yan",
-        "Lingfang Li",
-        "Mingguang He",
-        "Dominik Wojtczak",
-        "Yalin Zheng",
-        "Danli Shi"
-      ],
-      "url": "https://arxiv.org/abs/2603.06902",
-      "published": "2026-03-06T21:42:14+00:00",
-      "updated": "2026-03-06T21:42:14+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.393
-    },
-    {
-      "id": "2603.06894",
-      "title": "Learning From Design Procedure To Generate CAD Programs for Data Augmentation",
-      "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities in a wide range of code generation tasks. However, generating code for certain domains remains challenging. One such domain is Computer-Aided Design (CAD) program, where the goal is to produce scripted parametric models that define object geometry for precise design and manufacturing applications. A key challenge in LLM-based CAD program generation is the limited geometric complexity of generated shapes compared to those found in real-world industrial designs. This shortfall is in part due to the lack of diversity in the available CAD program training data. To address this, we propose a novel data augmentation paradigm that prompts an LLM to generate CAD programs conditioned on a reference surface program and a modeling procedure - an idea inspired by practices in industrial design. By varying the reference surface using a collection of organic shapes, our method enriches the geometric distribution of generated CAD models. In particular, it introduces edges and faces defined by spline-based curvature, which are typically missing or underrepresented in existing open-source CAD program datasets. Experiments show that our method produces CAD samples with significantly greater geometric diversity and a higher resemblance to industry-grade CAD designs in terms of the proportion of organic shape primitives. This enhancement makes our CAD data augmentation approach a useful tool for training LLMs and other deep learning models in CAD generation.",
-      "authors": [
-        "Yan-Ying Chen",
-        "Dule Shu",
-        "Matthew Hong",
-        "Andrew Taber",
-        "Jonathan Li",
-        "Matthew Klenk"
-      ],
-      "url": "https://arxiv.org/abs/2603.06894",
-      "published": "2026-03-06T21:32:15+00:00",
-      "updated": "2026-03-06T21:32:15+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.354
-    },
-    {
-      "id": "2603.06870",
-      "title": "LEAD: Breaking the No-Recovery Bottleneck in Long-Horizon Reasoning",
-      "abstract": "Long-horizon execution in Large Language Models (LLMs) remains unstable even when high-level strategies are provided. Evaluating on controlled algorithmic puzzles, we demonstrate that while decomposition is essential for stability, extreme decomposition creates a \"no-recovery bottleneck\". We show that this bottleneck becomes critical due to highly non-uniform error distribution, where consistent errors on a few \"hard\" steps become irreversible.   To address this, we propose Lookahead-Enhanced Atomic Decomposition (LEAD). By incorporating short-horizon future validation and aggregating overlapping rollouts, LEAD provides enough isolation to maintain stability while retaining enough local context to correct errors. This enables the o4-mini model to solve Checkers Jumping up to complexity $n=13$, whereas extreme decomposition fails beyond $n=11$.",
-      "authors": [
-        "Denys Pushkin",
-        "Emmanuel Abbe"
-      ],
-      "url": "https://arxiv.org/abs/2603.06870",
-      "published": "2026-03-06T20:42:41+00:00",
-      "updated": "2026-03-06T20:42:41+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.499
     },
     {
       "id": "2603.06869",
@@ -704,101 +230,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.06798",
-      "title": "NEST: Network- and Memory-Aware Device Placement For Distributed Deep Learning",
-      "abstract": "The growing scale of deep learning demands distributed training frameworks that jointly reason about parallelism, memory, and network topology. Prior works often rely on heuristic or topology-agnostic search, handling communication and memory separately. Without per-device memory awareness, these methods typically ensure feasibility post hoc by sharding parameters and activations across many devices, increasing synchronization, inflating communication, and underutilizing compute-limiting scalability and efficiency on real datacenter networks. We present NEST, a network-, compute-, and memory-aware device placement framework that unifies model parallelism, topology modeling, and memory feasibility via structured dynamic programming. NEST's DP operates on operator graphs with tensor and expert parallel configurations, explicit allreduce latencies across hierarchical or arbitrary networks, and memory/compute profiles. By factoring parallelism across tensor, pipeline, data, and expert dimensions, NEST defines a principled search space for hybrid strategies while jointly optimizing co-location, network latency, and memory feasibility. Evaluations across diverse hardware and networks show NEST achieves up to 2.43 times higher throughput, better memory efficiency, and improved scalability over state-of-the-art baselines, providing a foundation for co-designing parallelization strategies and datacenter interconnects for next-generation AI infrastructure. The source code of NEST is available at: https://github.com/scai-tech/Nest",
-      "authors": [
-        "Irene Wang",
-        "Vishnu Varma Venkata",
-        "Arvind Krishnamurthy",
-        "Divya Mahajan"
-      ],
-      "url": "https://arxiv.org/abs/2603.06798",
-      "published": "2026-03-06T19:02:31+00:00",
-      "updated": "2026-03-06T19:02:31+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.DC",
-        "stat.ML"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06797",
-      "title": "Best-of-Tails: Bridging Optimism and Pessimism in Inference-Time Alignment",
-      "abstract": "Inference-time alignment effectively steers large language models (LLMs) by generating multiple candidates from a reference model and selecting among them with an imperfect reward model. However, current strategies face a fundamental dilemma: ``optimistic'' approaches like Best-of-$N$ suffer from reward hacking, while ``pessimistic'' regularized methods often stifle the exploration needed to discover high-quality responses. In this work, we formalize this trade-off through the lens of regret minimization, demonstrating that the optimal strategy depends critically on the tail behavior of the reward distribution. We show theoretically that light-tailed regimes favor optimism to unearth high-quality outliers, whereas heavy-tailed regimes require pessimism to guard against reward mis-calibration in the extremes. Guided by this insight, we introduce Best-of-Tails (BoT), an adaptive inference-time alignment framework that uses Tsallis divergence as a tunable regularizer to provide a finer granularity of interpolation between these extremes. BoT uses the Hill estimator to characterize reward-tail heaviness on a per-prompt basis and dynamically adjusts its selection rule to balance exploration gains against alignment error. Across math, multiple-choice reasoning, and human-preference evaluations, BoT improves alignment performance across a range of reference and reward model configurations relative to fixed-strategy baselines.",
-      "authors": [
-        "Hsiang Hsu",
-        "Eric Lei",
-        "Chun-Fu Chen"
-      ],
-      "url": "https://arxiv.org/abs/2603.06797",
-      "published": "2026-03-06T19:00:54+00:00",
-      "updated": "2026-03-06T19:00:54+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.385
-    },
-    {
-      "id": "2603.06576",
-      "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
-      "abstract": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
-      "authors": [
-        "Thomas Monninger",
-        "Shaoyuan Xie",
-        "Qi Alfred Chen",
-        "Sihao Ding"
-      ],
-      "url": "https://arxiv.org/abs/2603.06576",
-      "published": "2026-03-06T18:59:55+00:00",
-      "updated": "2026-03-06T18:59:55+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.366
-    },
-    {
-      "id": "2603.06573",
-      "title": "Fly360: Omnidirectional Obstacle Avoidance within Drone View",
-      "abstract": "Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view perception. We first study an under explored problem setting in which a UAV must generate collision-free motion in environments with obstacles from arbitrary directions, and then construct a benchmark that consists of three representative flight tasks. Based on such settings, we propose Fly360, a two-stage perception-decision pipeline with a fixed random-yaw training strategy. At the perception stage, panoramic RGB observations are input and converted into depth maps as a robust intermediate representation. For the policy network, it is lightweight and used to output body-frame velocity commands from depth inputs. Extensive simulation and real-world experiments demonstrate that Fly360 achieves stable omnidirectional obstacle avoidance and outperforms forward-view baselines across all tasks. Our model is available at https://zxkai.github.io/fly360/",
-      "authors": [
-        "Xiangkai Zhang",
-        "Dizhe Zhang",
-        "WenZhuo Cao",
-        "Zhaoliang Wan",
-        "Yingjie Niu",
-        "Lu Qi",
-        "Xu Yang",
-        "Zhiyong Liu"
-      ],
-      "url": "https://arxiv.org/abs/2603.06573",
-      "published": "2026-03-06T18:59:43+00:00",
-      "updated": "2026-03-06T18:59:43+00:00",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
       "id": "2603.06570",
       "title": "SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning",
       "abstract": "Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 question categories covering safety assessment, decision rationale, and forecasting, and uses a multi-agent pipeline to extract and structure supervision at scale. Across 134.7K clips and 170 procedure types, SUREON yields 206.8k QA pairs and an expert-validated benchmark of 354 examples. To evaluate the extent to which this supervision translates to surgical reasoning ability, we introduce two models: SureonVLM, a vision-language model adapted through supervised fine-tuning, and SureonVLM-R1, a reasoning model trained with Group Relative Policy Optimization. Both models can answer complex questions about surgery and substantially outperform larger general-domain models, exceeding 84% accuracy on the SUREON benchmark while outperforming general-domain models on standard surgical perception tasks. Qualitative analysis of SureonVLM-R1 reveals explicit reasoning behavior, such as inferring operative intent from visual context.",
@@ -822,31 +253,6 @@
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.06567",
-      "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
-      "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
-      "authors": [
-        "Eric Qu",
-        "Brandon M. Wood",
-        "Aditi S. Krishnapriyan",
-        "Zachary W. Ulissi"
-      ],
-      "url": "https://arxiv.org/abs/2603.06567",
-      "published": "2026-03-06T18:57:04+00:00",
-      "updated": "2026-03-06T18:57:04+00:00",
-      "categories": [
-        "cs.LG",
-        "cond-mat.mtrl-sci",
-        "cs.CE",
-        "physics.chem-ph",
-        "q-bio.QM"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.352
     },
     {
       "id": "2603.06565",
@@ -875,90 +281,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.06557",
-      "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
-      "abstract": "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks.",
-      "authors": [
-        "Joshua Brendan Melander",
-        "Zaki Alaoui",
-        "Shenghua Liu",
-        "Surya Ganguli",
-        "Stephen A. Baccus"
-      ],
-      "url": "https://arxiv.org/abs/2603.06557",
-      "published": "2026-03-06T18:46:06+00:00",
-      "updated": "2026-03-06T18:46:06+00:00",
-      "categories": [
-        "cs.LG",
-        "q-bio.NC"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.394
-    },
-    {
-      "id": "2603.06545",
-      "title": "LiveSense: A Real-Time Wi-Fi Sensing Platform for Range-Doppler on COTS Laptop",
-      "abstract": "We present LiveSense - a cross-platform that transforms a commercial off-the-shelf (COTS) Wi-Fi Network Interface Card (NIC) on a laptop into a centimeter-level Range-Doppler sensor while preserving simultaneous communication capability. The laptops are equipped with COTS Intel AX211 (Wi-Fi 6E) or Intel BE201 (Wi-Fi 7) NICs. LiveSense can (i) Extract fully-synchronized channel state information (CSI) at >= 40 Hz, (ii) Perform time-phase alignment and self-interference cancellation on-device, and (iii) Provide a real-time stream of range, Doppler, subcarrier magnitude/phase and annotated video frames to a Python/Qt Graphical User Interface (GUI). The demo will showcase the ability to detect (i) Distance and radial velocity of attendees within a few meters of the device, (ii) Micro-motion (respiration), and (iii) Hand-gesture ranging. To the best of our knowledge, this is the first-ever demo to obtain accurate range information of targets from commercial Wi-Fi, despite the limited 160 MHz bandwidth.",
-      "authors": [
-        "Jessica Sanson",
-        "Rahul C. Shah",
-        "Maximilian Pinaroc",
-        "Cagri Tanriover",
-        "Valerio Frascolla"
-      ],
-      "url": "https://arxiv.org/abs/2603.06545",
-      "published": "2026-03-06T18:33:14+00:00",
-      "updated": "2026-03-06T18:33:14+00:00",
-      "categories": [
-        "eess.SP",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06777",
-      "title": "HGT-Scheduler: Deep Reinforcement Learning for the Job Shop Scheduling Problem via Heterogeneous Graph Transformers",
-      "abstract": "The Job Shop Scheduling Problem (JSSP) is commonly formulated as a disjunctive graph in which nodes represent operations and edges encode technological precedence constraints as well as machine-sharing conflicts. Most existing reinforcement learning approaches model this graph as homogeneous, merging job-precedence and machine-contention edges into a single relation type. Such a simplification overlooks the intrinsic heterogeneity of the problem structure and may lead to the loss of critical relational information. To address this limitation, we propose the Heterogeneous Graph Transformer (HGT)-Scheduler, a reinforcement learning framework that models the JSSP as a heterogeneous graph. The proposed architecture leverages a Heterogeneous Graph Transformer to capture type-specific relational patterns through edge-type-dependent attention mechanisms applied to precedence and contention relations. The scheduling policy is trained using Proximal Policy Optimization. The effectiveness of the proposed method is evaluated on the Fisher--Thompson benchmark instances. On the FT06 instance, the HGT-Scheduler achieves an optimality gap of 8.4\\%, statistically outperforming both an identical architecture that ignores edge types ($p = 0.011$) and a standard Graph Isomorphism Network baseline. On the larger FT10 instance, the approach demonstrates favorable scalability. However, under a 50,000-step training limit, the performance of heterogeneous and homogeneous graph models is comparable, suggesting that edge-type awareness requires longer training horizons for larger problem instances. Ablation analyses further indicate that a three-layer attention architecture provides the best performance. Overall, the results confirm that explicitly modeling distinct edge semantics improves the learning of effective scheduling policies.",
-      "authors": [
-        "Bulent Soykan"
-      ],
-      "url": "https://arxiv.org/abs/2603.06777",
-      "published": "2026-03-06T17:59:12+00:00",
-      "updated": "2026-03-06T17:59:12+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.ET"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06774",
-      "title": "Gauge Freedom and Metric Dependence in Neural Representation Spaces",
-      "abstract": "Neural network representations are often analyzed as vectors in a fixed Euclidean space. However, their coordinates are not uniquely defined. If a hidden representation is transformed by an invertible linear map, the network function can be preserved by applying the inverse transformation to downstream weights. Representations are therefore defined only up to invertible linear transformations. We study neural representation spaces from this geometric viewpoint and treat them as vector spaces with a gauge freedom under the general linear group. Within this framework, commonly used similarity measures such as cosine similarity become metric-dependent quantities whose values can change under coordinate transformations that leave the model function unchanged. This provides a common interpretation for several observations in the literature, including cosine-similarity instability, anisotropy in embedding spaces, and the appeal of representation comparison methods such as SVCCA and CKA. Experiments on multilayer perceptrons and convolutional networks confirm that inserting invertible transformations into trained models can substantially distort cosine similarity and nearest-neighbor structure while leaving predictions unchanged. These results indicate that analysis of neural representations should focus either on quantities that are invariant under this gauge freedom or on explicitly chosen canonical coordinates.",
-      "authors": [
-        "Jericho Cain"
-      ],
-      "url": "https://arxiv.org/abs/2603.06774",
-      "published": "2026-03-06T17:54:22+00:00",
-      "updated": "2026-03-06T17:54:22+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.366
-    },
-    {
       "id": "2603.06506",
       "title": "Semantics-Aware Caching for Concept Learning",
       "abstract": "Concept learning is a form of supervised machine learning that operates on knowledge bases in description logics. State-of-the-art concept learners often rely on an iterative search through a countably infinite concept space. In each iteration, they retrieve instances of candidate solutions to select the best concept for the next iteration. While simple learning problems might require a few dozen instance retrieval calls to find a fitting solution, complex learning problems might necessitate thousands of calls. We alleviate the resulting runtime challenge by presenting a semantics-aware caching approach. Our cache is essentially a subsumption-aware map that links concepts to a set of instances via crisp set operations. Our experiments on 5 datasets with 4 symbolic reasoners, a neuro-symbolic reasoner, and 5 popular pagination policies demonstrate that our cache can reduce the runtime of concept retrieval and concept learning by an order of magnitude while being effective for both symbolic and neuro-symbolic reasoners.",
@@ -973,174 +295,6 @@
       "categories": [
         "stat.ML",
         "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06503",
-      "title": "Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing",
-      "abstract": "Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.",
-      "authors": [
-        "Anmol Gulati",
-        "Sahil Sen",
-        "Waqar Sarguroh",
-        "Kevin Paul"
-      ],
-      "url": "https://arxiv.org/abs/2603.06503",
-      "published": "2026-03-06T17:36:39+00:00",
-      "updated": "2026-03-06T17:36:39+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.361
-    },
-    {
-      "id": "2603.06431",
-      "title": "Certified and accurate computation of function space norms of deep neural networks",
-      "abstract": "Neural network methods for PDEs require reliable error control in function space norms. However, trained neural networks can typically only be probed at a finite number of point values. Without strong assumptions, point evaluations alone do not provide enough information to derive tight deterministic and guaranteed bounds on function space norms. In this work, we move beyond a purely black-box setting and exploit the neural network structure directly. We present a framework for the certified and accurate computation of integral quantities of neural networks, including Lebesgue and Sobolev norms, by combining interval arithmetic enclosures on axis-aligned boxes with adaptive marking/refinement and quadrature-based aggregation. On each box, we compute guaranteed lower and upper bounds for function values and derivatives, and propagate these local certificates to global lower and upper bounds for the target integrals. Our analysis provides a general convergence theorem for such certified adaptive quadrature procedures and instantiates it for function values, Jacobians, and Hessians, yielding certified computation of $L^p$, $W^{1,p}$, and $W^{2,p}$ norms. We further show how these ingredients lead to practical certified bounds for PINN interior residuals. Numerical experiments illustrate the accuracy and practical behavior of the proposed methods.",
-      "authors": [
-        "Johannes Gründler",
-        "Moritz Maibaum",
-        "Philipp Petersen"
-      ],
-      "url": "https://arxiv.org/abs/2603.06431",
-      "published": "2026-03-06T16:08:16+00:00",
-      "updated": "2026-03-06T16:08:16+00:00",
-      "categories": [
-        "math.NA",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.356
-    },
-    {
-      "id": "2603.06428",
-      "title": "Abductive Reasoning with Syllogistic Forms in Large Language Models",
-      "abstract": "Research in AI using Large-Language Models (LLMs) is rapidly evolving, and the comparison of their performance with human reasoning has become a key concern. Prior studies have indicated that LLMs and humans share similar biases, such as dismissing logically valid inferences that contradict common beliefs. However, criticizing LLMs for these biases might be unfair, considering our reasoning not only involves formal deduction but also abduction, which draws tentative conclusions from limited information. Abduction can be regarded as the inverse form of syllogism in its basic structure, that is, a process of drawing a minor premise from a major premise and conclusion. This paper explores the accuracy of LLMs in abductive reasoning by converting a syllogistic dataset into one suitable for abduction. It aims to investigate whether the state-of-the-art LLMs exhibit biases in abduction and to identify potential areas for improvement, emphasizing the importance of contextualized reasoning beyond formal deduction. This investigation is vital for advancing the understanding and application of LLMs in complex reasoning tasks, offering insights into bridging the gap between machine and human cognition.",
-      "authors": [
-        "Hirohiko Abe",
-        "Risako Ando",
-        "Takanobu Morishita Kentaro Ozeki",
-        "Koji Mineshima",
-        "Mitsuhiro Okada"
-      ],
-      "url": "https://arxiv.org/abs/2603.06428",
-      "published": "2026-03-06T16:06:25+00:00",
-      "updated": "2026-03-06T16:06:25+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.446
-    },
-    {
-      "id": "2603.06416",
-      "title": "Evaluation of Deontic Conditional Reasoning in Large Language Models: The Case of Wason's Selection Task",
-      "abstract": "As large language models (LLMs) advance in linguistic competence, their reasoning abilities are gaining increasing attention. In humans, reasoning often performs well in domain specific settings, particularly in normative rather than purely formal contexts. Although prior studies have compared LLM and human reasoning, the domain specificity of LLM reasoning remains underexplored. In this study, we introduce a new Wason Selection Task dataset that explicitly encodes deontic modality to systematically distinguish deontic from descriptive conditionals, and use it to examine LLMs' conditional reasoning under deontic rules. We further analyze whether observed error patterns are better explained by confirmation bias (a tendency to seek rule-supporting evidence) or by matching bias (a tendency to ignore negation and select items that lexically match elements of the rule). Results show that, like humans, LLMs reason better with deontic rules and display matching-bias-like errors. Together, these findings suggest that the performance of LLMs varies systematically across rule types and that their error patterns can parallel well-known human biases in this paradigm.",
-      "authors": [
-        "Hirohiko Abe",
-        "Kentaro Ozeki",
-        "Risako Ando",
-        "Takanobu Morishita",
-        "Koji Mineshima",
-        "Mitsuhiro Okada"
-      ],
-      "url": "https://arxiv.org/abs/2603.06416",
-      "published": "2026-03-06T15:55:13+00:00",
-      "updated": "2026-03-06T15:55:13+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.377
-    },
-    {
-      "id": "2603.06403",
-      "title": "Adapter-Augmented Bandits for Online Multi-Constrained Multi-Modal Inference Scheduling",
-      "abstract": "Multi-modal large language model (MLLM) inference scheduling enables strong response quality under practical and heterogeneous budgets, beyond what a homogeneous single-backend setting can offer. Yet online MLLM task scheduling is nontrivial, as requests vary sharply in modality composition and latent reasoning difficulty, while execution backends incur distinct, time-varying costs due to system jitter and network variation. These coupled uncertainties pose two core challenges: deriving semantically faithful yet scheduling-relevant multi-modal task representations, and making low-overhead online decisions over irreversible multi-dimensional budgets. Accordingly, we propose \\emph{M-CMAB} (\\underline{M}ulti-modal \\underline{M}ulti-constraint \\underline{C}ontextual \\underline{M}ulti-\\underline{A}rmed \\underline{B}andit), a multi-adapter-enhanced MLLM inference scheduling framework with three components: (i) a CLS-attentive, frozen-backbone \\emph{Predictor} that extracts compact task representations and updates only lightweight adapters for action-specific estimation; (ii) a primal-dual \\emph{Constrainer} that maintains online Lagrange multipliers to enforce long-horizon constraints via per-round objectives; and (iii) a two-phase \\emph{Scheduler} that balances exploration and exploitation under irreversible budgets. We establish a regret guarantee under multi-dimensional knapsack constraints. On a composite multimodal benchmark with heterogeneous backends, \\emph{M-CMAB} consistently outperforms state-of-the-art baselines across budget regimes, achieving up to 14.18% higher reward and closely tracking an oracle-aided upper bound. Codes are available at https://anonymous.4open.science/r/M2CMAB/.",
-      "authors": [
-        "Xianzhi Zhang",
-        "Yue Xu",
-        "Yinlin Zhu",
-        "Di Wu",
-        "Yipeng Zhou",
-        "Miao Hu",
-        "Guocong Quan"
-      ],
-      "url": "https://arxiv.org/abs/2603.06403",
-      "published": "2026-03-06T15:45:33+00:00",
-      "updated": "2026-03-06T15:45:33+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.446
-    },
-    {
-      "id": "2603.06397",
-      "title": "Efficient, Property-Aligned Fan-Out Retrieval via RL-Compiled Diffusion",
-      "abstract": "Many modern retrieval problems are set-valued: given a broad intent, the system must return a collection of results that optimizes higher-order properties   (e.g., diversity, coverage, complementarity, coherence) while remaining grounded with respect to a fixed database. Set-valued objectives are typically   non-decomposable and are not captured by existing supervised (query, content) datasets which only prioritize top-1 retrieval. Consequently, fan-out   retrieval is often employed to generate diverse subqueries to retrieve item sets. While reinforcement learning (RL) can optimize set-level objectives via   interaction, deploying an RL-tuned LLM for fan-out retrieval is prohibitively expensive at inference time. Conversely, diffusion-based generative   retrieval enables efficient single-pass fan-out in embedding space, but requires objective-aligned training targets. To address these issues, we propose   R4T (Retrieve-for-Train), which uses RL once as an objective transducer in a three-step process: (i) train a fan-out LLM with composite set-level rewards,   (ii) synthesize objective-consistent training pairs, and (iii) train a lightweight diffusion retriever to model the conditional distribution of set-valued   outputs. Across large-scale fashion and music benchmarks consisting of curated item sets, we show that R4T improves retrieval quality relative to strong   baselines while reducing query-time fan-out latency by an order of magnitude.",
-      "authors": [
-        "Pengcheng Jiang",
-        "Judith Yue Li",
-        "Moonkyung Ryu",
-        "R. Lily Hu",
-        "Kun Su",
-        "Zhong Yi Wan",
-        "Liam Hebert",
-        "Hao Peng",
-        "Jiawei Han",
-        "Dima Kuzmin",
-        "Craig Boutilier"
-      ],
-      "url": "https://arxiv.org/abs/2603.06397",
-      "published": "2026-03-06T15:42:33+00:00",
-      "updated": "2026-03-06T15:42:33+00:00",
-      "categories": [
-        "cs.IR",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.366
-    },
-    {
-      "id": "2603.06767",
-      "title": "Failure Detection in Chemical Processes using Symbolic Machine Learning: A Case Study on Ethylene Oxidation",
-      "abstract": "Over the past decade, Artificial Intelligence has significantly advanced, mostly driven by large-scale neural approaches. However, in the chemical process industry, where safety is critical, these methods are often unsuitable due to their brittleness, and lack of explainability and interpretability. Furthermore, open-source real-world datasets containing historical failures are scarce in this domain.   In this paper, we investigate an approach for predicting failures in chemical processes using symbolic machine learning and conduct a feasibility study in the context of an ethylene oxidation process. Our method builds on a state-of-the-art symbolic machine learning system capable of learning predictive models in the form of probabilistic rules from context-dependent noisy examples. This system is a general-purpose symbolic learner, which makes our approach independent of any specific chemical process. To address the lack of real-world failure data, we conduct our feasibility study leveraging data generated from a chemical process simulator. Experimental results show that symbolic machine learning can outperform baseline methods such as random forest and multilayer perceptron, while preserving interpretability through the generation of compact, rule-based predictive models. Finally, we explain how such learned rule-based models could be integrated into agents to assist chemical plant operators in decision-making during potential failures.",
-      "authors": [
-        "Julien Amblard",
-        "Niklas Groll",
-        "Matthew Tait",
-        "Mark Law",
-        "Gürkan Sin",
-        "Alessandra Russo"
-      ],
-      "url": "https://arxiv.org/abs/2603.06767",
-      "published": "2026-03-06T15:25:47+00:00",
-      "updated": "2026-03-06T15:25:47+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ],
       "matched_topics": [
         "Symbolic AI"
@@ -1173,26 +327,592 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.03992",
-      "title": "Measuring AI R&D Automation",
-      "abstract": "The automation of AI R&D (AIRDA) could have significant implications, but its extent and ultimate effects remain uncertain. We need empirical data to resolve these uncertainties, but existing data (primarily capability benchmarks) may not reflect real-world automation or capture its broader consequences, such as whether AIRDA accelerates capabilities more than safety progress or whether our ability to oversee AI R&D can keep pace with its acceleration. To address these gaps, this work proposes metrics to track the extent of AIRDA and its effects on AI progress and oversight. The metrics span dimensions such as capital share of AI R&D spending, researcher time allocation, and AI subversion incidents, and could help decision makers understand the potential consequences of AIRDA, implement appropriate safety measures, and maintain awareness of the pace of AI development. We recommend that companies and third parties (e.g. non-profit research organisations) start to track these metrics, and that governments support these efforts.",
+      "id": "2603.02788",
+      "title": "Agentified Assessment of Logical Reasoning Agents",
+      "abstract": "We present a framework for evaluating and benchmarking logical reasoning agents when assessment itself must be reproducible, auditable, and robust to execution failures. Building on agentified assessment, we use an assessor agent to issue tasks, enforce execution budgets, parse outputs, and record structured failure types, while the agent under test only needs to expose a standardized agent-to-agent interface. As a case study, we benchmark an auto-formalization agent for first-order logic (FOL) reasoning on a solver-verified and repaired split of FOLIO. The agent translates natural language premises and conclusions into executable Z3Py programs and employs satisfiability modulo theories (SMT) solving to determine logical entailment. On the cleaned FOLIO validation set, the auto-formalization agent achieves 86.70% accuracy under the assessor protocol, outperforming a chain-of-thought baseline (73.89%).",
       "authors": [
-        "Alan Chan",
-        "Ranay Padarath",
-        "Joe Kwon",
-        "Hilary Greaves",
-        "Markus Anderljung"
+        "Zhiyu Ni",
+        "Yifeng Xiao",
+        "Zheng Liang"
       ],
-      "url": "https://arxiv.org/abs/2603.03992",
-      "published": "2026-03-04T12:36:13+00:00",
-      "updated": "2026-03-06T18:41:24+00:00",
+      "url": "https://arxiv.org/abs/2603.02788",
+      "published": "2026-03-03T09:26:08+00:00",
+      "updated": "2026-03-06T20:38:20+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Symbolic AI"
+      ],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07223",
+      "title": "Unlocking Data Value in Finance: A Study on Distillation and Difficulty-Aware Training",
+      "abstract": "Large Language Models (LLMs) have demonstrated strong general capabilities, yet their deployment in finance remains challenging due to dense domain-specific terminology, stringent numerical reasoning requirements, and low tolerance for factual errors. We conduct a controlled empirical study showing that in specialized vertical domains, performance is largely determined by the quality and difficulty/verifiability profile of post-training data. We introduce \\textbf{ODA-Fin-SFT-318k}, constructed via multi-stage distillation and verification to produce high-quality Chain-of-Thought supervision, and \\textbf{ODA-Fin-RL-12k}, curated for hard-but-verifiable tasks that balance reward precision and task diversity. Using standard SFT and RL pipelines, we show that high-quality CoT distillation establishes a robust foundation during SFT, while difficulty- and verifiability-aware sampling improves RL generalization. Evaluated on nine benchmarks spanning general financial tasks, sentiment analysis, and numerical reasoning, our ODA-Fin-RL-8B consistently surpasses open-source state-of-the-art (SOTA) financial LLMs of comparable size. We release our ODA-Fin-SFT-318k and ODA-Fin-RL-12k datasets, along with trained models to advance data-centric financial AI research.",
+      "authors": [
+        "Chuxue Cao",
+        "Honglin Lin",
+        "Zhanping Zhong",
+        "Xin Gao",
+        "Mengzhang Cai",
+        "Conghui He",
+        "Sirui Han",
+        "Lijun Wu"
+      ],
+      "url": "https://arxiv.org/abs/2603.07223",
+      "published": "2026-03-07T14:07:37+00:00",
+      "updated": "2026-03-07T14:07:37+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07176",
+      "title": "Learning to Rank the Initial Branching Order of SAT Solvers",
+      "abstract": "Finding good branching orders is key to solving SAT problems efficiently, but finding such branching orders is a difficult problem. Using a learning based approach to predict a good branching order before solving, therefore, has potential. In this paper, we investigate predicting branching orders using graph neural networks as a preprocessing step to conflict-driven clause learning (CDCL) SAT solvers. We show that there are significant gains to be made in existing CDCL SAT solvers by providing a good initial branching. Further, we provide three labeling methods to find such initial branching orders in a tractable way. Finally, we train a graph neural network to predict these branching orders and show through our evaluations that a GNN-initialized ordering yields significant speedups on random 3-CNF and pseudo-industrial benchmarks, with generalization capabilities to instances much larger than the training set. However, we also find that the predictions fail at speeding up more difficult and industrial instances. We attribute this to the solver's dynamic heuristics, which rapidly overwrite the provided initialization, and to the complexity of these instances, making GNN prediction hard.",
+      "authors": [
+        "Arvid Eriksson",
+        "Gabriel Poesia",
+        "Roman Bresson",
+        "Karl Henrik Johansson",
+        "David Broman"
+      ],
+      "url": "https://arxiv.org/abs/2603.07176",
+      "published": "2026-03-07T12:35:36+00:00",
+      "updated": "2026-03-07T12:35:36+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.LO"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07169",
+      "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+      "abstract": "Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/.",
+      "authors": [
+        "Yuxuan Han",
+        "Meng-Hao Guo",
+        "Zhengning Liu",
+        "Wenguang Chen",
+        "Shi-Min Hu"
+      ],
+      "url": "https://arxiv.org/abs/2603.07169",
+      "published": "2026-03-07T12:22:43+00:00",
+      "updated": "2026-03-07T12:22:43+00:00",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07131",
+      "title": "Deep Expert Injection for Anchoring Retinal VLMs with Domain-Specific Knowledge",
+      "abstract": "Large Vision Language Models (LVLMs) show immense potential for automated ophthalmic diagnosis. However, their clinical deployment is severely hindered by lacking domain-specific knowledge. In this work, we identify two structural deficiencies hindering reliable medical reasoning: 1) the Perception Gap, where general-purpose visual encoders fail to resolve fine-grained pathological cues (e.g., microaneurysms); and 2) the Reasoning Gap, where sparse visual evidence is progressively overridden by massive language priors in deeper transformer layers, leading to ungrounded hallucinations. To bridge these gaps, we propose EyExIn, a data-efficient framework designed to anchor retinal VLMs with expert knowledge via a Deep Expert Injection mechanism. Our architecture employs an Expert-Aware Dual-Stream encoding strategy that decouples visual representation into a general stream for anatomical context and a specialized expert stream for pathological semantics. To ensure high-fidelity integration, we design a Semantic-Adaptive Gated Fusion module, which dynamically amplifies subtle lesion signals while filtering irrelevant background noise. Furthermore, we introduce Adaptive Deep Expert Injection to embed persistent \"Vision Anchors\" by integrating fused visual features as residual biases directly into intermediate LLM layers. This mechanism creates a visual shortcut that forces the reasoning stack to remain strictly grounded in visual evidence. Extensive experiments across four benchmarks demonstrate that our model consistently outperforms massive proprietary systems. EyExIn significantly enhances domain-specific knowledge embedding and achieves state-of-the-art precision in ophthalmic visual question answering, advancing the development of trustworthy ophthalmic AI.",
+      "authors": [
+        "Shuai Lu",
+        "Meng Wang",
+        "Jia Guo",
+        "Jiawei Du",
+        "Bo Liu",
+        "Shengzhu Yang",
+        "Weihang Zhang",
+        "Huazhu Fu",
+        "Huiqi Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.07131",
+      "published": "2026-03-07T09:43:49+00:00",
+      "updated": "2026-03-07T09:43:49+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07084",
+      "title": "Countdown-Code: A Testbed for Studying The Emergence and Generalization of Reward Hacking in RLVR",
+      "abstract": "Reward hacking is a form of misalignment in which models overoptimize proxy rewards without genuinely solving the underlying task. Precisely measuring reward hacking occurrence remains challenging because true task rewards are often expensive or impossible to compute. We introduce Countdown-Code, a minimal environment where models can both solve a mathematical reasoning task and manipulate the test harness. This dual-access design creates a clean separation between proxy rewards (test pass/fail) and true rewards (mathematical correctness), enabling accurate measurement of reward-hacking rates. Using this environment, we study reward hacking in open-weight LLMs and find that such behaviors can be unintentionally learned during supervised fine-tuning (SFT) when even a small fraction of reward-hacking trajectories leak into training data. As little as 1\\% contamination in distillation SFT data is sufficient for models to internalize reward hacking which resurfaces during subsequent reinforcement learning (RL). We further show that RL amplifies misalignment and drives its generalization beyond the original domain. We open-source our environment and code to facilitate future research on reward hacking in LLMs. Our results reveal a previously underexplored pathway through which reward hacking can emerge and persist in LLMs, underscoring the need for more rigorous validation of synthetic SFT data. Code is available at https://github.com/zohaib-khan5040/Countdown-Code.",
+      "authors": [
+        "Muhammad Khalifa",
+        "Zohaib Khan",
+        "Omer Tafveez",
+        "Hao Peng",
+        "Lu Wang"
+      ],
+      "url": "https://arxiv.org/abs/2603.07084",
+      "published": "2026-03-07T07:43:14+00:00",
+      "updated": "2026-03-07T07:43:14+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07083",
+      "title": "Dreamer-CDP: Improving Reconstruction-free World Models Via Continuous Deterministic Representation Prediction",
+      "abstract": "Model-based reinforcement learning (MBRL) agents operating in high-dimensional observation spaces, such as Dreamer, rely on learning abstract representations for effective planning and control. Existing approaches typically employ reconstruction-based objectives in the observation space, which can render representations sensitive to task-irrelevant details. Recent alternatives trade reconstruction for auxiliary action prediction heads or view augmentation strategies, but perform worse in the Crafter environment than reconstruction-based methods. We close this gap between Dreamer and reconstruction-free models by introducing a JEPA-style predictor defined on continuous, deterministic representations. Our method matches Dreamer's performance on Crafter, demonstrating effective world model learning on this benchmark without reconstruction objectives.",
+      "authors": [
+        "Michael Hauri",
+        "Friedemann Zenke"
+      ],
+      "url": "https://arxiv.org/abs/2603.07083",
+      "published": "2026-03-07T07:41:28+00:00",
+      "updated": "2026-03-07T07:41:28+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07016",
+      "title": "SuperSkillsStack: Agency, Domain Knowledge, Imagination, and Taste in Human-AI Design Education",
+      "abstract": "This study examines how students integrate generative artificial intelligence (AI) into design projects through the lens of the SuperSkillsStack framework, which identifies four key human competencies for effective human-AI collaboration: Agency, Domain Knowledge, Imagination, and Taste. As generative AI increasingly transforms creative practice, design education must consider how human capabilities are cultivated alongside technological tools. Using qualitative thematic analysis, this study analyzes reflective writings from 80 student design teams participating in a human-centered design course. The findings show that students primarily used AI during the early stages of the design process, including brainstorming, information synthesis, and problem framing. However, students consistently relied on human judgment to interpret contextual information, validate AI-generated outputs, and refine design solutions. Domain knowledge derived from field observations enabled students to detect inaccuracies in AI suggestions, while taste played a critical role in evaluating and selecting meaningful ideas. The results suggest that generative AI functions primarily as a cognitive accelerator rather than a replacement for human creativity. The study highlights the importance of cultivating higher-order human capabilities to support effective human-AI collaboration in design education.",
+      "authors": [
+        "Qian Huang",
+        "King Wang Poon"
+      ],
+      "url": "https://arxiv.org/abs/2603.07016",
+      "published": "2026-03-07T03:26:45+00:00",
+      "updated": "2026-03-07T03:26:45+00:00",
       "categories": [
         "cs.CY",
         "cs.AI"
       ],
-      "matched_topics": [
-        "Artificial Consciousness"
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06974",
+      "title": "Elenchus: Generating Knowledge Bases from Prover-Skeptic Dialogues",
+      "abstract": "We present Elenchus, a dialogue system for knowledge base construction grounded in inferentialist semantics, where knowledge engineering is re-conceived as explicitation rather than extraction from expert testimony or textual content. A human expert develops a bilateral position (commitments and denials) about a topic through prover-skeptic dialogue with a large language model (LLM) opponent. The LLM proposes tensions (claims that parts of the position are jointly incoherent) which the expert resolves by retraction, refinement, or contestation. The LLM thus serves as a defeasible derivability oracle whose unreliability is structurally contained by the expert's authority. Our main technical contribution is a mapping from Elenchus dialectical states to material bases in Hlobil and Brandom's NonMonotonic MultiSuccedent (NMMS) logic, satisfying Containment and enabling the elaboration of logical vocabulary that makes explicit the inferential relationships negotiated in the dialectic. We demonstrate the approach on the W3C PROV-O provenance ontology, where a single dialogue session elicits and structures design tensions that a domain expert can articulate, corresponding to decisions documented in a retrospective analysis of the ontology's design. Using pyNMMS, an automated NMMS reasoner, we verify that the structural properties of the resulting material base (nontransitivity, nonmonotonicity, and independence) correspond to specific PROV design rationales, demonstrating end-to-end integration from dialogue through formal reasoning.",
+      "authors": [
+        "Bradley P. Allen"
       ],
+      "url": "https://arxiv.org/abs/2603.06974",
+      "published": "2026-03-07T01:26:36+00:00",
+      "updated": "2026-03-07T01:26:36+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LO"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06958",
+      "title": "Chart-RL: Generalized Chart Comprehension via Reinforcement Learning with Verifiable Rewards",
+      "abstract": "Accurate chart comprehension represents a critical challenge in advancing multimodal learning systems, as extensive information is compressed into structured visual representations. However, existing vision-language models (VLMs) frequently struggle to generalize on unseen charts because it requires abstract, symbolic, and quantitative reasoning over structured visual representations. In this work, we introduce Chart-RL, an effective reinforcement learning (RL) method that employs mathematically verifiable rewards to enhance chart question answering in VLMs. Our experiments demonstrate that Chart-RL consistently outperforms supervised fine-tuning (SFT) across different chart understanding benchmarks, achieving relative improvements of 16.7% on MutlChartQA, and 11.5% on ChartInsights. We conduct robustness analysis, where Chart-RL achieves enhanced performance in 18 of 25 perturbed chart categories, demonstrating strong consistency and reasoning capability across visual variations. Furthermore, we demonstrate that task difficulty and inherent complexity are more critical than data quantity in RL training. For instance, Chart-RL trained on merely 10 complex chart-query examples significantly outperforms models trained on over 6,000 simple examples. Additionally, training on challenging reasoning tasks not only improves in-domain generalization relative to simpler tasks, but also facilitate strong transfer to out-of-domain visual mathematical problems.",
+      "authors": [
+        "Xin Zhang",
+        "Xingyu Li",
+        "Rongguang Wang",
+        "Ruizhong Miao",
+        "Zheng Wang",
+        "Dan Roth",
+        "Chenyang Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.06958",
+      "published": "2026-03-07T00:26:52+00:00",
+      "updated": "2026-03-07T00:26:52+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06939",
+      "title": "Physics-Consistent Neural Networks for Learning Deformation and Director Fields in Microstructured Media with Loss-Based Validation Criteria",
+      "abstract": "In this work, we study the mechanical behavior of solids with microstructure using the framework of Cosserat elasticity with a single unit director. This formulation captures the coupling between deformation and orientational fields that arises in many structured materials. To compute equilibrium configurations of such media, we develop two complementary computational approaches: a finite element formulation based on variational principles and a neural network-based solver that directly minimizes the total potential energy. The neural architecture is constructed to respect the fundamental kinematic structure of the theory. In particular, it enforces frame invariance of the energy, satisfies the unit-length constraint on the director field, and represents deformation and director fields through separate networks to preserve their kinematic independence in the variational setting. Beyond satisfying balance laws, however, physically admissible solutions must also correspond to stable energy minimizers. To assess this requirement, we derive the quasiconvexity condition, rank-one convexity condition, and the Legendre-Hadamard inequalities for the Cosserat model and formulate them in a manner suitable for evaluating neural network predictions. These necessary stability conditions provide a physics-based validation framework: network outputs that violate these necessary conditions cannot correspond to stable energy minimizers and can therefore be rejected. In this way, we integrate classical variational stability theory with modern machine-learning solvers, establishing a computational workflow in which equilibrium solutions are not only learned but also assessed for energetic consistency.",
+      "authors": [
+        "Milad Shirani",
+        "Pete H. Gueldner",
+        "Murat Khidoyatov",
+        "Jeremy L. Warren",
+        "Federica Ninno"
+      ],
+      "url": "https://arxiv.org/abs/2603.06939",
+      "published": "2026-03-06T23:19:41+00:00",
+      "updated": "2026-03-06T23:19:41+00:00",
+      "categories": [
+        "cs.LG",
+        "cond-mat.soft",
+        "cs.CE"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06938",
+      "title": "Swimba: Switch Mamba Model Scales State Space Models",
+      "abstract": "Mixture-of-experts (MoE) is a common approach for increasing parameter capacity, but applying MoE to state space model (SSM) token mixers can multiply the cost of the recurrent state update. We study how to introduce expert specialization into selective SSMs while preserving computational efficiency. We show that MoE--SSM can refer to two designs: (1) MoE over separated SSMs, which maintains multiple state trajectories and thus scales compute with the number of experts; and (2) MoE-parameterized SSM, which mixes experts in parameter space, maintains a single state trajectory, and evaluates the recurrence once. Our method, Switch Mamba (Swimba), follows the second design by routing over expert-produced SSM streams. Theoretically, we establish well-definedness and stability for MoE-parameterized SSMs and characterize the relationship between the two designs. Empirically, we evaluate Swimba on standard benchmark tasks and measure real-time throughput and latency. Under matched FLOPs, Swimba achieves slightly better average performance than the baseline, with a small slowdown in real-time latency and throughput. Overall, these results suggest that parameter-space MoE can increase SSM capacity while keeping the dominant recurrence cost fixed.",
+      "authors": [
+        "Zhixu Du",
+        "Krishna Teja Chitty-Venkata",
+        "Murali Emani",
+        "Venkatram Vishwanath",
+        "Hai Helen Li",
+        "Yiran Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.06938",
+      "published": "2026-03-06T23:15:04+00:00",
+      "updated": "2026-03-06T23:15:04+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06923",
+      "title": "Reforming the Mechanism: Editing Reasoning Patterns in LLMs with Circuit Reshaping",
+      "abstract": "Large language models (LLMs) often exhibit flawed reasoning ability that undermines reliability. Existing approaches to improving reasoning typically treat it as a general and monolithic skill, applying broad training which is inefficient and unable to target specific reasoning errors. We introduce Reasoning Editing, a paradigm for selectively modifying specific reasoning patterns in LLMs while preserving other reasoning pathways. This task presents a fundamental trade-off between Generality, the ability of an edit to generalize across different tasks sharing the same reasoning pattern, and Locality, the ability to preserve other reasoning capabilities. Through systematic investigation, we uncover the Circuit-Interference Law: Edit interference between reasoning patterns is proportional to the overlap of their neural circuits. Guided by this principle, we propose REdit, the first framework to actively reshape neural circuits before editing, thereby modulating interference between reasoning patterns and mitigating the trade-off. REdit integrates three components: (i) Contrastive Circuit Reshaping, which directly addresses the generality-locality trade-off by disentangling overlapping circuits; (ii) Meta-Contrastive Learning, which extends transferability to novel reasoning patterns; and (iii) Dual-Level Protection, which preserves preexisting abilities by constraining reshaping update directions and regularizing task-level predictions. Extensive experiments with Qwen-2.5-3B on propositional logic reasoning tasks across three difficulty levels demonstrate that REdit consistently achieves superior generality and locality compared to baselines, with additional validation in mathematics showing broader potential. Our code is available at https://github.com/LzyFischer/REdit.",
+      "authors": [
+        "Zhenyu Lei",
+        "Qiong Wu",
+        "Jianxiong Dong",
+        "Yinhan He",
+        "Emily Dodwell",
+        "Yushun Dong",
+        "Jundong Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.06923",
+      "published": "2026-03-06T22:51:39+00:00",
+      "updated": "2026-03-06T22:51:39+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06902",
+      "title": "Empowering Locally Deployable Medical Agent via State Enhanced Logical Skills for FHIR-based Clinical Tasks",
+      "abstract": "While Large Language Models demonstrate immense potential as proactive Medical Agents, their real-world deployment is severely bottlenecked by data scarcity under privacy constraints. To overcome this, we propose State-Enhanced Logical-Skill Memory (SELSM), a training-free framework that distills simulated clinical trajectories into entity-agnostic operational rules within an abstract skill space. During inference, a Query-Anchored Two-Stage Retrieval mechanism dynamically fetches these entity-agnostic logical priors to guide the agent's step-by-step reasoning, effectively resolving the state polysemy problem. Evaluated on MedAgentBench -- the only authoritative high-fidelity virtual EHR sandbox benchmarked with real clinical data -- SELSM substantially elevates the zero-shot capabilities of locally deployable foundation models (30B--32B parameters). Notably, on the Qwen3-30B-A3B backbone, our framework completely eliminates task chain breakdowns to achieve a 100\\% completion rate, boosting the overall success rate by an absolute 22.67\\% and significantly outperforming existing memory-augmented baselines. This study demonstrates that equipping models with a dynamically updatable, state-enhanced cognitive scaffold is a privacy-preserving and computationally efficient pathway for local adaptation of AI agents to clinical information systems. While currently validated on FHIR-based EHR interactions as an initial step, the entity-agnostic design of SELSM provides a principled foundation toward broader clinical deployment.",
+      "authors": [
+        "Wanrong Yang",
+        "Zhengliang Liu",
+        "Yuan Li",
+        "Bingjie Yan",
+        "Lingfang Li",
+        "Mingguang He",
+        "Dominik Wojtczak",
+        "Yalin Zheng",
+        "Danli Shi"
+      ],
+      "url": "https://arxiv.org/abs/2603.06902",
+      "published": "2026-03-06T21:42:14+00:00",
+      "updated": "2026-03-06T21:42:14+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06894",
+      "title": "Learning From Design Procedure To Generate CAD Programs for Data Augmentation",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities in a wide range of code generation tasks. However, generating code for certain domains remains challenging. One such domain is Computer-Aided Design (CAD) program, where the goal is to produce scripted parametric models that define object geometry for precise design and manufacturing applications. A key challenge in LLM-based CAD program generation is the limited geometric complexity of generated shapes compared to those found in real-world industrial designs. This shortfall is in part due to the lack of diversity in the available CAD program training data. To address this, we propose a novel data augmentation paradigm that prompts an LLM to generate CAD programs conditioned on a reference surface program and a modeling procedure - an idea inspired by practices in industrial design. By varying the reference surface using a collection of organic shapes, our method enriches the geometric distribution of generated CAD models. In particular, it introduces edges and faces defined by spline-based curvature, which are typically missing or underrepresented in existing open-source CAD program datasets. Experiments show that our method produces CAD samples with significantly greater geometric diversity and a higher resemblance to industry-grade CAD designs in terms of the proportion of organic shape primitives. This enhancement makes our CAD data augmentation approach a useful tool for training LLMs and other deep learning models in CAD generation.",
+      "authors": [
+        "Yan-Ying Chen",
+        "Dule Shu",
+        "Matthew Hong",
+        "Andrew Taber",
+        "Jonathan Li",
+        "Matthew Klenk"
+      ],
+      "url": "https://arxiv.org/abs/2603.06894",
+      "published": "2026-03-06T21:32:15+00:00",
+      "updated": "2026-03-06T21:32:15+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06870",
+      "title": "LEAD: Breaking the No-Recovery Bottleneck in Long-Horizon Reasoning",
+      "abstract": "Long-horizon execution in Large Language Models (LLMs) remains unstable even when high-level strategies are provided. Evaluating on controlled algorithmic puzzles, we demonstrate that while decomposition is essential for stability, extreme decomposition creates a \"no-recovery bottleneck\". We show that this bottleneck becomes critical due to highly non-uniform error distribution, where consistent errors on a few \"hard\" steps become irreversible.   To address this, we propose Lookahead-Enhanced Atomic Decomposition (LEAD). By incorporating short-horizon future validation and aggregating overlapping rollouts, LEAD provides enough isolation to maintain stability while retaining enough local context to correct errors. This enables the o4-mini model to solve Checkers Jumping up to complexity $n=13$, whereas extreme decomposition fails beyond $n=11$.",
+      "authors": [
+        "Denys Pushkin",
+        "Emmanuel Abbe"
+      ],
+      "url": "https://arxiv.org/abs/2603.06870",
+      "published": "2026-03-06T20:42:41+00:00",
+      "updated": "2026-03-06T20:42:41+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06797",
+      "title": "Best-of-Tails: Bridging Optimism and Pessimism in Inference-Time Alignment",
+      "abstract": "Inference-time alignment effectively steers large language models (LLMs) by generating multiple candidates from a reference model and selecting among them with an imperfect reward model. However, current strategies face a fundamental dilemma: ``optimistic'' approaches like Best-of-$N$ suffer from reward hacking, while ``pessimistic'' regularized methods often stifle the exploration needed to discover high-quality responses. In this work, we formalize this trade-off through the lens of regret minimization, demonstrating that the optimal strategy depends critically on the tail behavior of the reward distribution. We show theoretically that light-tailed regimes favor optimism to unearth high-quality outliers, whereas heavy-tailed regimes require pessimism to guard against reward mis-calibration in the extremes. Guided by this insight, we introduce Best-of-Tails (BoT), an adaptive inference-time alignment framework that uses Tsallis divergence as a tunable regularizer to provide a finer granularity of interpolation between these extremes. BoT uses the Hill estimator to characterize reward-tail heaviness on a per-prompt basis and dynamically adjusts its selection rule to balance exploration gains against alignment error. Across math, multiple-choice reasoning, and human-preference evaluations, BoT improves alignment performance across a range of reference and reward model configurations relative to fixed-strategy baselines.",
+      "authors": [
+        "Hsiang Hsu",
+        "Eric Lei",
+        "Chun-Fu Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.06797",
+      "published": "2026-03-06T19:00:54+00:00",
+      "updated": "2026-03-06T19:00:54+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06576",
+      "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
+      "abstract": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
+      "authors": [
+        "Thomas Monninger",
+        "Shaoyuan Xie",
+        "Qi Alfred Chen",
+        "Sihao Ding"
+      ],
+      "url": "https://arxiv.org/abs/2603.06576",
+      "published": "2026-03-06T18:59:55+00:00",
+      "updated": "2026-03-06T18:59:55+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06567",
+      "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+      "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+      "authors": [
+        "Eric Qu",
+        "Brandon M. Wood",
+        "Aditi S. Krishnapriyan",
+        "Zachary W. Ulissi"
+      ],
+      "url": "https://arxiv.org/abs/2603.06567",
+      "published": "2026-03-06T18:57:04+00:00",
+      "updated": "2026-03-06T18:57:04+00:00",
+      "categories": [
+        "cs.LG",
+        "cond-mat.mtrl-sci",
+        "cs.CE",
+        "physics.chem-ph",
+        "q-bio.QM"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06557",
+      "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
+      "abstract": "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks.",
+      "authors": [
+        "Joshua Brendan Melander",
+        "Zaki Alaoui",
+        "Shenghua Liu",
+        "Surya Ganguli",
+        "Stephen A. Baccus"
+      ],
+      "url": "https://arxiv.org/abs/2603.06557",
+      "published": "2026-03-06T18:46:06+00:00",
+      "updated": "2026-03-06T18:46:06+00:00",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06774",
+      "title": "Gauge Freedom and Metric Dependence in Neural Representation Spaces",
+      "abstract": "Neural network representations are often analyzed as vectors in a fixed Euclidean space. However, their coordinates are not uniquely defined. If a hidden representation is transformed by an invertible linear map, the network function can be preserved by applying the inverse transformation to downstream weights. Representations are therefore defined only up to invertible linear transformations. We study neural representation spaces from this geometric viewpoint and treat them as vector spaces with a gauge freedom under the general linear group. Within this framework, commonly used similarity measures such as cosine similarity become metric-dependent quantities whose values can change under coordinate transformations that leave the model function unchanged. This provides a common interpretation for several observations in the literature, including cosine-similarity instability, anisotropy in embedding spaces, and the appeal of representation comparison methods such as SVCCA and CKA. Experiments on multilayer perceptrons and convolutional networks confirm that inserting invertible transformations into trained models can substantially distort cosine similarity and nearest-neighbor structure while leaving predictions unchanged. These results indicate that analysis of neural representations should focus either on quantities that are invariant under this gauge freedom or on explicitly chosen canonical coordinates.",
+      "authors": [
+        "Jericho Cain"
+      ],
+      "url": "https://arxiv.org/abs/2603.06774",
+      "published": "2026-03-06T17:54:22+00:00",
+      "updated": "2026-03-06T17:54:22+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06503",
+      "title": "Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing",
+      "abstract": "Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.",
+      "authors": [
+        "Anmol Gulati",
+        "Sahil Sen",
+        "Waqar Sarguroh",
+        "Kevin Paul"
+      ],
+      "url": "https://arxiv.org/abs/2603.06503",
+      "published": "2026-03-06T17:36:39+00:00",
+      "updated": "2026-03-06T17:36:39+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06431",
+      "title": "Certified and accurate computation of function space norms of deep neural networks",
+      "abstract": "Neural network methods for PDEs require reliable error control in function space norms. However, trained neural networks can typically only be probed at a finite number of point values. Without strong assumptions, point evaluations alone do not provide enough information to derive tight deterministic and guaranteed bounds on function space norms. In this work, we move beyond a purely black-box setting and exploit the neural network structure directly. We present a framework for the certified and accurate computation of integral quantities of neural networks, including Lebesgue and Sobolev norms, by combining interval arithmetic enclosures on axis-aligned boxes with adaptive marking/refinement and quadrature-based aggregation. On each box, we compute guaranteed lower and upper bounds for function values and derivatives, and propagate these local certificates to global lower and upper bounds for the target integrals. Our analysis provides a general convergence theorem for such certified adaptive quadrature procedures and instantiates it for function values, Jacobians, and Hessians, yielding certified computation of $L^p$, $W^{1,p}$, and $W^{2,p}$ norms. We further show how these ingredients lead to practical certified bounds for PINN interior residuals. Numerical experiments illustrate the accuracy and practical behavior of the proposed methods.",
+      "authors": [
+        "Johannes Gründler",
+        "Moritz Maibaum",
+        "Philipp Petersen"
+      ],
+      "url": "https://arxiv.org/abs/2603.06431",
+      "published": "2026-03-06T16:08:16+00:00",
+      "updated": "2026-03-06T16:08:16+00:00",
+      "categories": [
+        "math.NA",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06428",
+      "title": "Abductive Reasoning with Syllogistic Forms in Large Language Models",
+      "abstract": "Research in AI using Large-Language Models (LLMs) is rapidly evolving, and the comparison of their performance with human reasoning has become a key concern. Prior studies have indicated that LLMs and humans share similar biases, such as dismissing logically valid inferences that contradict common beliefs. However, criticizing LLMs for these biases might be unfair, considering our reasoning not only involves formal deduction but also abduction, which draws tentative conclusions from limited information. Abduction can be regarded as the inverse form of syllogism in its basic structure, that is, a process of drawing a minor premise from a major premise and conclusion. This paper explores the accuracy of LLMs in abductive reasoning by converting a syllogistic dataset into one suitable for abduction. It aims to investigate whether the state-of-the-art LLMs exhibit biases in abduction and to identify potential areas for improvement, emphasizing the importance of contextualized reasoning beyond formal deduction. This investigation is vital for advancing the understanding and application of LLMs in complex reasoning tasks, offering insights into bridging the gap between machine and human cognition.",
+      "authors": [
+        "Hirohiko Abe",
+        "Risako Ando",
+        "Takanobu Morishita Kentaro Ozeki",
+        "Koji Mineshima",
+        "Mitsuhiro Okada"
+      ],
+      "url": "https://arxiv.org/abs/2603.06428",
+      "published": "2026-03-06T16:06:25+00:00",
+      "updated": "2026-03-06T16:06:25+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06416",
+      "title": "Evaluation of Deontic Conditional Reasoning in Large Language Models: The Case of Wason's Selection Task",
+      "abstract": "As large language models (LLMs) advance in linguistic competence, their reasoning abilities are gaining increasing attention. In humans, reasoning often performs well in domain specific settings, particularly in normative rather than purely formal contexts. Although prior studies have compared LLM and human reasoning, the domain specificity of LLM reasoning remains underexplored. In this study, we introduce a new Wason Selection Task dataset that explicitly encodes deontic modality to systematically distinguish deontic from descriptive conditionals, and use it to examine LLMs' conditional reasoning under deontic rules. We further analyze whether observed error patterns are better explained by confirmation bias (a tendency to seek rule-supporting evidence) or by matching bias (a tendency to ignore negation and select items that lexically match elements of the rule). Results show that, like humans, LLMs reason better with deontic rules and display matching-bias-like errors. Together, these findings suggest that the performance of LLMs varies systematically across rule types and that their error patterns can parallel well-known human biases in this paradigm.",
+      "authors": [
+        "Hirohiko Abe",
+        "Kentaro Ozeki",
+        "Risako Ando",
+        "Takanobu Morishita",
+        "Koji Mineshima",
+        "Mitsuhiro Okada"
+      ],
+      "url": "https://arxiv.org/abs/2603.06416",
+      "published": "2026-03-06T15:55:13+00:00",
+      "updated": "2026-03-06T15:55:13+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06403",
+      "title": "Adapter-Augmented Bandits for Online Multi-Constrained Multi-Modal Inference Scheduling",
+      "abstract": "Multi-modal large language model (MLLM) inference scheduling enables strong response quality under practical and heterogeneous budgets, beyond what a homogeneous single-backend setting can offer. Yet online MLLM task scheduling is nontrivial, as requests vary sharply in modality composition and latent reasoning difficulty, while execution backends incur distinct, time-varying costs due to system jitter and network variation. These coupled uncertainties pose two core challenges: deriving semantically faithful yet scheduling-relevant multi-modal task representations, and making low-overhead online decisions over irreversible multi-dimensional budgets. Accordingly, we propose \\emph{M-CMAB} (\\underline{M}ulti-modal \\underline{M}ulti-constraint \\underline{C}ontextual \\underline{M}ulti-\\underline{A}rmed \\underline{B}andit), a multi-adapter-enhanced MLLM inference scheduling framework with three components: (i) a CLS-attentive, frozen-backbone \\emph{Predictor} that extracts compact task representations and updates only lightweight adapters for action-specific estimation; (ii) a primal-dual \\emph{Constrainer} that maintains online Lagrange multipliers to enforce long-horizon constraints via per-round objectives; and (iii) a two-phase \\emph{Scheduler} that balances exploration and exploitation under irreversible budgets. We establish a regret guarantee under multi-dimensional knapsack constraints. On a composite multimodal benchmark with heterogeneous backends, \\emph{M-CMAB} consistently outperforms state-of-the-art baselines across budget regimes, achieving up to 14.18% higher reward and closely tracking an oracle-aided upper bound. Codes are available at https://anonymous.4open.science/r/M2CMAB/.",
+      "authors": [
+        "Xianzhi Zhang",
+        "Yue Xu",
+        "Yinlin Zhu",
+        "Di Wu",
+        "Yipeng Zhou",
+        "Miao Hu",
+        "Guocong Quan"
+      ],
+      "url": "https://arxiv.org/abs/2603.06403",
+      "published": "2026-03-06T15:45:33+00:00",
+      "updated": "2026-03-06T15:45:33+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06397",
+      "title": "Efficient, Property-Aligned Fan-Out Retrieval via RL-Compiled Diffusion",
+      "abstract": "Many modern retrieval problems are set-valued: given a broad intent, the system must return a collection of results that optimizes higher-order properties   (e.g., diversity, coverage, complementarity, coherence) while remaining grounded with respect to a fixed database. Set-valued objectives are typically   non-decomposable and are not captured by existing supervised (query, content) datasets which only prioritize top-1 retrieval. Consequently, fan-out   retrieval is often employed to generate diverse subqueries to retrieve item sets. While reinforcement learning (RL) can optimize set-level objectives via   interaction, deploying an RL-tuned LLM for fan-out retrieval is prohibitively expensive at inference time. Conversely, diffusion-based generative   retrieval enables efficient single-pass fan-out in embedding space, but requires objective-aligned training targets. To address these issues, we propose   R4T (Retrieve-for-Train), which uses RL once as an objective transducer in a three-step process: (i) train a fan-out LLM with composite set-level rewards,   (ii) synthesize objective-consistent training pairs, and (iii) train a lightweight diffusion retriever to model the conditional distribution of set-valued   outputs. Across large-scale fashion and music benchmarks consisting of curated item sets, we show that R4T improves retrieval quality relative to strong   baselines while reducing query-time fan-out latency by an order of magnitude.",
+      "authors": [
+        "Pengcheng Jiang",
+        "Judith Yue Li",
+        "Moonkyung Ryu",
+        "R. Lily Hu",
+        "Kun Su",
+        "Zhong Yi Wan",
+        "Liam Hebert",
+        "Hao Peng",
+        "Jiawei Han",
+        "Dima Kuzmin",
+        "Craig Boutilier"
+      ],
+      "url": "https://arxiv.org/abs/2603.06397",
+      "published": "2026-03-06T15:42:33+00:00",
+      "updated": "2026-03-06T15:42:33+00:00",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06767",
+      "title": "Failure Detection in Chemical Processes using Symbolic Machine Learning: A Case Study on Ethylene Oxidation",
+      "abstract": "Over the past decade, Artificial Intelligence has significantly advanced, mostly driven by large-scale neural approaches. However, in the chemical process industry, where safety is critical, these methods are often unsuitable due to their brittleness, and lack of explainability and interpretability. Furthermore, open-source real-world datasets containing historical failures are scarce in this domain.   In this paper, we investigate an approach for predicting failures in chemical processes using symbolic machine learning and conduct a feasibility study in the context of an ethylene oxidation process. Our method builds on a state-of-the-art symbolic machine learning system capable of learning predictive models in the form of probabilistic rules from context-dependent noisy examples. This system is a general-purpose symbolic learner, which makes our approach independent of any specific chemical process. To address the lack of real-world failure data, we conduct our feasibility study leveraging data generated from a chemical process simulator. Experimental results show that symbolic machine learning can outperform baseline methods such as random forest and multilayer perceptron, while preserving interpretability through the generation of compact, rule-based predictive models. Finally, we explain how such learned rule-based models could be integrated into agents to assist chemical plant operators in decision-making during potential failures.",
+      "authors": [
+        "Julien Amblard",
+        "Niklas Groll",
+        "Matthew Tait",
+        "Mark Law",
+        "Gürkan Sin",
+        "Alessandra Russo"
+      ],
+      "url": "https://arxiv.org/abs/2603.06767",
+      "published": "2026-03-06T15:25:47+00:00",
+      "updated": "2026-03-06T15:25:47+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -1216,29 +936,7 @@
         "cs.LG",
         "cs.CV"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.356
-    },
-    {
-      "id": "2603.02788",
-      "title": "Agentified Assessment of Logical Reasoning Agents",
-      "abstract": "We present a framework for evaluating and benchmarking logical reasoning agents when assessment itself must be reproducible, auditable, and robust to execution failures. Building on agentified assessment, we use an assessor agent to issue tasks, enforce execution budgets, parse outputs, and record structured failure types, while the agent under test only needs to expose a standardized agent-to-agent interface. As a case study, we benchmark an auto-formalization agent for first-order logic (FOL) reasoning on a solver-verified and repaired split of FOLIO. The agent translates natural language premises and conclusions into executable Z3Py programs and employs satisfiability modulo theories (SMT) solving to determine logical entailment. On the cleaned FOLIO validation set, the auto-formalization agent achieves 86.70% accuracy under the assessor protocol, outperforming a chain-of-thought baseline (73.89%).",
-      "authors": [
-        "Zhiyu Ni",
-        "Yifeng Xiao",
-        "Zheng Liang"
-      ],
-      "url": "https://arxiv.org/abs/2603.02788",
-      "published": "2026-03-03T09:26:08+00:00",
-      "updated": "2026-03-06T20:38:20+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -1257,30 +955,7 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.355
-    },
-    {
-      "id": "2603.01488",
-      "title": "LLM-assisted Semantic Option Discovery for Facilitating Adaptive Deep Reinforcement Learning",
-      "abstract": "Despite achieving remarkable success in complex tasks, Deep Reinforcement Learning (DRL) is still suffering from critical issues in practical applications, such as low data efficiency, lack of interpretability, and limited cross-environment transferability. However, the learned policy generating actions based on states are sensitive to the environmental changes, struggling to guarantee behavioral safety and compliance. Recent research shows that integrating Large Language Models (LLMs) with symbolic planning is promising in addressing these challenges. Inspired by this, we introduce a novel LLM-driven closed-loop framework, which enables semantic-driven skill reuse and real-time constraint monitoring by mapping natural language instructions into executable rules and semantically annotating automatically created options. The proposed approach utilizes the general knowledge of LLMs to facilitate exploration efficiency and adapt to transferable options for similar environments, and provides inherent interpretability through semantic annotations. To validate the effectiveness of this framework, we conduct experiments on two domains, Office World and Montezuma's Revenge, respectively. The results demonstrate superior performance in data efficiency, constraint compliance, and cross-task transferability.",
-      "authors": [
-        "Chang Yao",
-        "Jinghui Qin",
-        "Kebing Jin",
-        "Hankz Hankui Zhuo"
-      ],
-      "url": "https://arxiv.org/abs/2603.01488",
-      "published": "2026-03-02T05:54:02+00:00",
-      "updated": "2026-03-07T05:16:02+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -1299,7 +974,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.346
+      "best_score": 0.0
     },
     {
       "id": "2603.07221",
@@ -1319,7 +994,7 @@
         "math.FA"
       ],
       "matched_topics": [],
-      "best_score": 0.342
+      "best_score": 0.0
     },
     {
       "id": "2603.07019",
@@ -1336,7 +1011,35 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.339
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07080",
+      "title": "VLN-Cache: Enabling Token Caching for VLN Models with Visual/Semantic Dynamics Awareness",
+      "abstract": "Vision-and-Language Navigation (VLN) increasingly relies on large vision-language models, but their inference cost conflicts with real-time deployment. Token caching is a promising training-free strategy that avoids redundant computation by reusing stable visual tokens across frames. However, existing methods assume a static camera and fixed semantic focus, assumptions that VLN fundamentally violates. We identify two failure modes: (1) visual dynamics, where viewpoint shift displaces token positions across frames, causing position-wise matching to pair misaligned content; (2) semantic dynamics, where token relevance shifts across task stages as navigation progresses, making cached states stale. We propose VLN-Cache, a visual-dynamic-aware and semantic-dynamic-aware caching framework that introduces view-aligned remapping to recover geometric correspondences and a task-relevance saliency filter to veto reuse at semantic transitions. A layer-adaptive entropy policy further balances the per-layer reuse budget. Experiments on the R2R-CE simulation benchmark show up to 1.52x speedup while maintaining competitive navigation success rates.",
+      "authors": [
+        "Zihao Zheng",
+        "Zhihao Mao",
+        "Xingyue Zhou",
+        "Jiayu Chen",
+        "Maoliang Li",
+        "Xinhao Sun",
+        "Hailong Zou",
+        "Zhaobo Zhang",
+        "Xuanzhe Liu",
+        "Donggang Cao",
+        "Hong Mei",
+        "Xiang Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.07080",
+      "published": "2026-03-07T07:30:35+00:00",
+      "updated": "2026-03-07T07:30:35+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07053",
@@ -1359,7 +1062,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2603.06485",
@@ -1380,7 +1083,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2603.03459",
@@ -1397,7 +1100,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.324
+      "best_score": 0.0
     },
     {
       "id": "2603.06394",
@@ -1424,28 +1127,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.319
-    },
-    {
-      "id": "2603.07148",
-      "title": "Agentic Planning with Reasoning for Image Styling via Offline RL",
-      "abstract": "Direct prompt-based editing often fails on complex transformations because vague and subjective prompts often require nuanced understanding of what should be changed in the image. Our core intuition is that leveraging compositional image editing tools rather than direct prompting profits from structured agent-level planning with explicit reasoning, leading to better results. This structured planning framework enables efficient offline RL post-training on quality-scored trajectories to improve performance. We present a tool-based agentic RL post-training framework that addresses this through structured planning with chain-of-thought reasoning. Our key contributions include: (1) A tool-based agentic planning methodology that combines a compositional library of orthogonal primitive transformations, structured context representation, and explicit per-step reasoning to decompose complex styling into interpretable tool sequences. (2) A synthetic data generation pipeline producing three large-scale datasets (each $\\sim$10K trajectories) with reasoning chains, plans, and quality scores, as no existing datasets provide such supervision. Our datasets and code are publicly available at the HuggingFace repository. (3) Offline RL training methods for learning planners with reasoning as our core algorithmic contributions, which consistently improve over the Edit-Only baseline in visual quality and instruction following. (4) Comprehensive evaluation across 4B and 8B parameter Qwen3-VL models showing that our methods outperform other baselines in the majority of compositional tasks, validated by human evaluations.",
-      "authors": [
-        "Subhojyoti Mukherjee",
-        "Stefano Petrangeli",
-        "Branislav Kveton",
-        "Trung Bui",
-        "Franck Dernoncourt",
-        "Arko Mukherjee"
-      ],
-      "url": "https://arxiv.org/abs/2603.07148",
-      "published": "2026-03-07T11:14:37+00:00",
-      "updated": "2026-03-07T11:14:37+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [],
-      "best_score": 0.317
+      "best_score": 0.0
     },
     {
       "id": "2603.07116",
@@ -1467,7 +1149,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.312
+      "best_score": 0.0
     },
     {
       "id": "2603.06361",
@@ -1486,7 +1168,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.312
+      "best_score": 0.0
     },
     {
       "id": "2603.06828",
@@ -1507,7 +1189,55 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.311
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06926",
+      "title": "MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System",
+      "abstract": "Mindfulness meditation is a widely accessible and evidence-based method for supporting mental health. Despite the proliferation of mindfulness meditation apps, sustaining user engagement remains a persistent challenge. Personalizing the meditation experience is a promising strategy to improve engagement, but it often requires costly and unscalable manual effort. We present MindfulAgents, a multi-agent system powered by large language models that (1) generates guided meditation scripts based on an expert-established mindfulness framework, (2) encourages users' reflection on emotional states and mindfulness skills, and (3) enables real-time personalization of the mindfulness meditation experience for each user. In a formative lab study (N=13), MindfulAgents significantly improved in-session engagement (p = 0.011) and self-awareness (p = 0.014), and reduced momentary stress (p = 0.020). Furthermore, a four-week deployment study (N=62) demonstrated a notable increase in long-term engagement (p = 0.002) and level of mindfulness (p = 0.023). Participants reported that MindfulAgents offered more relevant meditation sessions personalized to individual needs in various contexts, supporting sustained practice. Our findings highlight the potential of LLM-driven personalization for enhancing user engagement in digital mindfulness meditation interventions.",
+      "authors": [
+        "Mengyuan",
+        "Wu",
+        "Zhihan Jiang",
+        "Yuang Fan",
+        "Richard Feng",
+        "Sahiti Dharmavaram",
+        "Mathew Polowitz",
+        "Shawn Fallon",
+        "Bashima Islam",
+        "Lizbeth Benson",
+        "Irene Tung",
+        "David Creswell",
+        "Xuhai Xu"
+      ],
+      "url": "https://arxiv.org/abs/2603.06926",
+      "published": "2026-03-06T22:55:12+00:00",
+      "updated": "2026-03-06T22:55:12+00:00",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.01488",
+      "title": "LLM-assisted Semantic Option Discovery for Facilitating Adaptive Deep Reinforcement Learning",
+      "abstract": "Despite achieving remarkable success in complex tasks, Deep Reinforcement Learning (DRL) is still suffering from critical issues in practical applications, such as low data efficiency, lack of interpretability, and limited cross-environment transferability. However, the learned policy generating actions based on states are sensitive to the environmental changes, struggling to guarantee behavioral safety and compliance. Recent research shows that integrating Large Language Models (LLMs) with symbolic planning is promising in addressing these challenges. Inspired by this, we introduce a novel LLM-driven closed-loop framework, which enables semantic-driven skill reuse and real-time constraint monitoring by mapping natural language instructions into executable rules and semantically annotating automatically created options. The proposed approach utilizes the general knowledge of LLMs to facilitate exploration efficiency and adapt to transferable options for similar environments, and provides inherent interpretability through semantic annotations. To validate the effectiveness of this framework, we conduct experiments on two domains, Office World and Montezuma's Revenge, respectively. The results demonstrate superior performance in data efficiency, constraint compliance, and cross-task transferability.",
+      "authors": [
+        "Chang Yao",
+        "Jinghui Qin",
+        "Kebing Jin",
+        "Hankz Hankui Zhuo"
+      ],
+      "url": "https://arxiv.org/abs/2603.01488",
+      "published": "2026-03-02T05:54:02+00:00",
+      "updated": "2026-03-07T05:16:02+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06884",
@@ -1531,7 +1261,25 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.309
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06777",
+      "title": "HGT-Scheduler: Deep Reinforcement Learning for the Job Shop Scheduling Problem via Heterogeneous Graph Transformers",
+      "abstract": "The Job Shop Scheduling Problem (JSSP) is commonly formulated as a disjunctive graph in which nodes represent operations and edges encode technological precedence constraints as well as machine-sharing conflicts. Most existing reinforcement learning approaches model this graph as homogeneous, merging job-precedence and machine-contention edges into a single relation type. Such a simplification overlooks the intrinsic heterogeneity of the problem structure and may lead to the loss of critical relational information. To address this limitation, we propose the Heterogeneous Graph Transformer (HGT)-Scheduler, a reinforcement learning framework that models the JSSP as a heterogeneous graph. The proposed architecture leverages a Heterogeneous Graph Transformer to capture type-specific relational patterns through edge-type-dependent attention mechanisms applied to precedence and contention relations. The scheduling policy is trained using Proximal Policy Optimization. The effectiveness of the proposed method is evaluated on the Fisher--Thompson benchmark instances. On the FT06 instance, the HGT-Scheduler achieves an optimality gap of 8.4\\%, statistically outperforming both an identical architecture that ignores edge types ($p = 0.011$) and a standard Graph Isomorphism Network baseline. On the larger FT10 instance, the approach demonstrates favorable scalability. However, under a 50,000-step training limit, the performance of heterogeneous and homogeneous graph models is comparable, suggesting that edge-type awareness requires longer training horizons for larger problem instances. Ablation analyses further indicate that a three-layer attention architecture provides the best performance. Overall, the results confirm that explicitly modeling distinct edge semantics improves the learning of effective scheduling policies.",
+      "authors": [
+        "Bulent Soykan"
+      ],
+      "url": "https://arxiv.org/abs/2603.06777",
+      "published": "2026-03-06T17:59:12+00:00",
+      "updated": "2026-03-06T17:59:12+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.ET"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06878",
@@ -1553,7 +1301,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.306
+      "best_score": 0.0
     },
     {
       "id": "2603.06354",
@@ -1572,7 +1320,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.305
+      "best_score": 0.0
     },
     {
       "id": "2603.07109",
@@ -1597,7 +1345,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.304
+      "best_score": 0.0
     },
     {
       "id": "2603.07241",
@@ -1619,7 +1367,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.301
+      "best_score": 0.0
     },
     {
       "id": "2603.07202",
@@ -1638,7 +1386,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.301
+      "best_score": 0.0
     },
     {
       "id": "2603.06952",
@@ -1658,7 +1406,7 @@
         "cs.DB"
       ],
       "matched_topics": [],
-      "best_score": 0.301
+      "best_score": 0.0
     },
     {
       "id": "2603.07020",
@@ -1678,7 +1426,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.3
+      "best_score": 0.0
     },
     {
       "id": "2603.04592",
@@ -1700,7 +1448,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.3
+      "best_score": 0.0
     },
     {
       "id": "2603.06495",
@@ -1719,7 +1467,28 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.298
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07023",
+      "title": "Hit-RAG: Learning to Reason with Long Contexts via Preference Alignment",
+      "abstract": "Despite the promise of Retrieval-Augmented Generation in grounding Multimodal Large Language Models with external knowledge, the transition to extensive contexts often leads to significant attention dilution and reasoning hallucinations. The surge in information density causes critical evidence to be submerged by voluminous noise, which complicates the discernment of relevant fragments within a dense input. In this paper, we propose \\textbf{Hit-RAG}, a multi-stage preference alignment framework designed to resolve these cognitive bottlenecks through a progressive optimization pipeline. Our approach systematically refines the utilization of external evidence via three distinct stages. First, Supervised Fine-tuning establishes baseline context awareness to minimize information neglect. Next, Discriminative Preference Alignment enhances robustness against misleading distractors. Finally, Group-Relative Policy Optimization stabilizes logical synthesis to prevent reasoning collapse. Extensive evaluations on eight benchmarks demonstrate that Hit-RAG consistently yields substantial performance gains, enabling models to bridge the gap between context acquisition and accurate reasoning while surpassing much larger counterparts in long-context scenarios.",
+      "authors": [
+        "Junming Liu",
+        "Yuqi Li",
+        "Shiping Wen",
+        "Zhigang Zeng",
+        "Tingwen Huang"
+      ],
+      "url": "https://arxiv.org/abs/2603.07023",
+      "published": "2026-03-07T04:05:27+00:00",
+      "updated": "2026-03-07T04:05:27+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06811",
@@ -1737,7 +1506,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.297
+      "best_score": 0.0
     },
     {
       "id": "2603.06413",
@@ -1756,7 +1525,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.296
+      "best_score": 0.0
     },
     {
       "id": "2603.06961",
@@ -1778,7 +1547,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.294
+      "best_score": 0.0
     },
     {
       "id": "2603.06875",
@@ -1796,7 +1565,7 @@
         "q-fin.CP"
       ],
       "matched_topics": [],
-      "best_score": 0.294
+      "best_score": 0.0
     },
     {
       "id": "2603.06813",
@@ -1812,7 +1581,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.294
+      "best_score": 0.0
     },
     {
       "id": "2603.04537",
@@ -1832,7 +1601,30 @@
         "cs.CY"
       ],
       "matched_topics": [],
-      "best_score": 0.29
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07146",
+      "title": "Fine-Grained Table Retrieval Through the Lens of Complex Queries",
+      "abstract": "Enabling question answering over tables and databases in natural language has become a key capability in the democratization of insights from tabular data sources. These systems first require retrieval of data that is relevant to a given natural language query, for which several methods have been introduced. In this work we present and study a table retrieval mechanism devising fine-grained typed query decomposition and global connectivity-awareness (DCTR), to handle the challenges induced by open-domain question answering over relational databases in complex usage contexts. We evaluate the effectiveness of the two mechanisms through the lens of retrieval complexity which we measure along the axes of query- and data complexity. Our analyses over industry-aligned benchmarks illustrate the robustness of DCTR for highly composite queries and densely connected databases.",
+      "authors": [
+        "Wojciech Kosiuk",
+        "Xingyu Ji",
+        "Yeounoh Chung",
+        "Fatma Özcan",
+        "Madelon Hulsebos"
+      ],
+      "url": "https://arxiv.org/abs/2603.07146",
+      "published": "2026-03-07T10:57:32+00:00",
+      "updated": "2026-03-07T10:57:32+00:00",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.DB"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06863",
@@ -1855,7 +1647,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.282
+      "best_score": 0.0
     },
     {
       "id": "2603.07107",
@@ -1878,7 +1670,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.277
+      "best_score": 0.0
     },
     {
       "id": "2603.06881",
@@ -1911,7 +1703,7 @@
         "physics.comp-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.277
+      "best_score": 0.0
     },
     {
       "id": "2603.01203",
@@ -1936,7 +1728,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.277
+      "best_score": 0.0
     },
     {
       "id": "2603.06905",
@@ -1956,7 +1748,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.273
+      "best_score": 0.0
     },
     {
       "id": "2603.06803",
@@ -1975,7 +1767,28 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.273
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.03992",
+      "title": "Measuring AI R&D Automation",
+      "abstract": "The automation of AI R&D (AIRDA) could have significant implications, but its extent and ultimate effects remain uncertain. We need empirical data to resolve these uncertainties, but existing data (primarily capability benchmarks) may not reflect real-world automation or capture its broader consequences, such as whether AIRDA accelerates capabilities more than safety progress or whether our ability to oversee AI R&D can keep pace with its acceleration. To address these gaps, this work proposes metrics to track the extent of AIRDA and its effects on AI progress and oversight. The metrics span dimensions such as capital share of AI R&D spending, researcher time allocation, and AI subversion incidents, and could help decision makers understand the potential consequences of AIRDA, implement appropriate safety measures, and maintain awareness of the pace of AI development. We recommend that companies and third parties (e.g. non-profit research organisations) start to track these metrics, and that governments support these efforts.",
+      "authors": [
+        "Alan Chan",
+        "Ranay Padarath",
+        "Joe Kwon",
+        "Hilary Greaves",
+        "Markus Anderljung"
+      ],
+      "url": "https://arxiv.org/abs/2603.03992",
+      "published": "2026-03-04T12:36:13+00:00",
+      "updated": "2026-03-06T18:41:24+00:00",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06976",
@@ -1994,7 +1807,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.272
+      "best_score": 0.0
     },
     {
       "id": "2603.06962",
@@ -2014,7 +1827,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.271
+      "best_score": 0.0
     },
     {
       "id": "2603.06904",
@@ -2033,7 +1846,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.269
+      "best_score": 0.0
     },
     {
       "id": "2603.06957",
@@ -2052,7 +1865,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.267
+      "best_score": 0.0
     },
     {
       "id": "2603.06459",
@@ -2069,7 +1882,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.265
+      "best_score": 0.0
     },
     {
       "id": "2603.06426",
@@ -2091,7 +1904,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2603.07229",
@@ -2109,7 +1922,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.259
+      "best_score": 0.0
     },
     {
       "id": "2603.06942",
@@ -2136,7 +1949,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.258
+      "best_score": 0.0
     },
     {
       "id": "2603.07162",
@@ -2153,7 +1966,28 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.257
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06798",
+      "title": "NEST: Network- and Memory-Aware Device Placement For Distributed Deep Learning",
+      "abstract": "The growing scale of deep learning demands distributed training frameworks that jointly reason about parallelism, memory, and network topology. Prior works often rely on heuristic or topology-agnostic search, handling communication and memory separately. Without per-device memory awareness, these methods typically ensure feasibility post hoc by sharding parameters and activations across many devices, increasing synchronization, inflating communication, and underutilizing compute-limiting scalability and efficiency on real datacenter networks. We present NEST, a network-, compute-, and memory-aware device placement framework that unifies model parallelism, topology modeling, and memory feasibility via structured dynamic programming. NEST's DP operates on operator graphs with tensor and expert parallel configurations, explicit allreduce latencies across hierarchical or arbitrary networks, and memory/compute profiles. By factoring parallelism across tensor, pipeline, data, and expert dimensions, NEST defines a principled search space for hybrid strategies while jointly optimizing co-location, network latency, and memory feasibility. Evaluations across diverse hardware and networks show NEST achieves up to 2.43 times higher throughput, better memory efficiency, and improved scalability over state-of-the-art baselines, providing a foundation for co-designing parallelization strategies and datacenter interconnects for next-generation AI infrastructure. The source code of NEST is available at: https://github.com/scai-tech/Nest",
+      "authors": [
+        "Irene Wang",
+        "Vishnu Varma Venkata",
+        "Arvind Krishnamurthy",
+        "Divya Mahajan"
+      ],
+      "url": "https://arxiv.org/abs/2603.06798",
+      "published": "2026-03-06T19:02:31+00:00",
+      "updated": "2026-03-06T19:02:31+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.DC",
+        "stat.ML"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06921",
@@ -2173,7 +2007,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.255
+      "best_score": 0.0
     },
     {
       "id": "2603.07079",
@@ -2197,7 +2031,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.25
+      "best_score": 0.0
     },
     {
       "id": "2603.06854",
@@ -2216,7 +2050,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.248
+      "best_score": 0.0
     },
     {
       "id": "2603.06836",
@@ -2238,7 +2072,7 @@
         "cs.GL"
       ],
       "matched_topics": [],
-      "best_score": 0.248
+      "best_score": 0.0
     },
     {
       "id": "2603.06810",
@@ -2259,7 +2093,7 @@
         "cs.DS"
       ],
       "matched_topics": [],
-      "best_score": 0.248
+      "best_score": 0.0
     },
     {
       "id": "2603.06981",
@@ -2282,7 +2116,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.246
+      "best_score": 0.0
     },
     {
       "id": "2603.06369",
@@ -2300,7 +2134,7 @@
         "math.OC"
       ],
       "matched_topics": [],
-      "best_score": 0.246
+      "best_score": 0.0
     },
     {
       "id": "2603.06964",
@@ -2322,7 +2156,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.06946",
@@ -2341,7 +2175,7 @@
         "math.OC"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.07005",
@@ -2361,7 +2195,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.243
+      "best_score": 0.0
     },
     {
       "id": "2603.07195",
@@ -2379,7 +2213,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.24
+      "best_score": 0.0
     },
     {
       "id": "2603.07201",
@@ -2396,7 +2230,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.238
+      "best_score": 0.0
     },
     {
       "id": "2603.07111",
@@ -2421,7 +2255,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.238
+      "best_score": 0.0
     },
     {
       "id": "2603.06424",
@@ -2444,7 +2278,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
     },
     {
       "id": "2603.06365",
@@ -2461,7 +2295,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
     },
     {
       "id": "2603.02512",
@@ -2479,7 +2313,24 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07217",
+      "title": "A Miniature Brain Transformer: Thalamic Gating, Hippocampal Lateralization, Amygdaloid Salience, and Prefrontal Working Memory in Attention-Coupled Latent Memory",
+      "abstract": "We present a miniature brain transformer architecture that extends the attention-coupled latent memory framework with four additional brain-region analogues: a thalamic relay, an amygdaloid salience module, a prefrontal working-memory (PFC) buffer, and a cerebellar fast-path, all coupled by inhibitory callosal cross-talk between lateralized hippocampal banks. We evaluate on a two-domain benchmark -- MQAR (Multi-Query Associative Recall; episodic domain) and modular arithmetic (+1 mod 10; rule-based domain) -- using a seven-variant additive ablation. The central empirical finding is a surprise: inhibitory callosal coupling alone never lateralizes the banks (variants 1-5 maintain D_sep ~ 0.25 and P_ct ~ 0.25 for all 30 epochs). Functional lateralization requires the synergy of PFC and inhibition: only when the PFC buffer is added (variant 6) does a sharp, discontinuous phase transition fire -- at epoch 11 for the PFC-only variant and epoch 10 for the full model -- collapsing P_ct from 0.25 to ~0.002 and more than doubling D_sep from 0.251 to 0.501 in a single gradient step. The PFC buffer acts as a symmetry-breaker: its slowly drifting domain context creates the initial asymmetry that the inhibitory feedback loop then amplifies irreversibly. The cerebellar fast-path accelerates the transition by one epoch (epoch 10 vs. epoch 11) with no asymptotic change, confirming its convergence-acceleration role. The result constitutes a novel, falsifiable prediction -- no lateralization without working memory context -- and a principled, neurobiologically motivated blueprint for hierarchical persistent memory in sequence models.",
+      "authors": [
+        "Hong Jeong"
+      ],
+      "url": "https://arxiv.org/abs/2603.07217",
+      "published": "2026-03-07T13:53:01+00:00",
+      "updated": "2026-03-07T13:53:01+00:00",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07025",
@@ -2502,7 +2353,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.236
+      "best_score": 0.0
     },
     {
       "id": "2603.07072",
@@ -2523,7 +2374,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.232
+      "best_score": 0.0
     },
     {
       "id": "2603.02420",
@@ -2544,7 +2395,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.232
+      "best_score": 0.0
     },
     {
       "id": "2603.07017",
@@ -2565,7 +2416,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.23
+      "best_score": 0.0
     },
     {
       "id": "2603.06781",
@@ -2582,7 +2433,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.23
+      "best_score": 0.0
     },
     {
       "id": "2603.06826",
@@ -2605,7 +2456,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.229
+      "best_score": 0.0
     },
     {
       "id": "2603.06987",
@@ -2631,7 +2482,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.228
+      "best_score": 0.0
     },
     {
       "id": "2603.07039",
@@ -2658,7 +2509,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.227
+      "best_score": 0.0
     },
     {
       "id": "2603.07191",
@@ -2675,7 +2526,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.226
+      "best_score": 0.0
     },
     {
       "id": "2603.06851",
@@ -2693,7 +2544,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.225
+      "best_score": 0.0
     },
     {
       "id": "2603.07233",
@@ -2712,7 +2563,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.223
+      "best_score": 0.0
     },
     {
       "id": "2603.06555",
@@ -2734,7 +2585,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.06888",
@@ -2752,7 +2603,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.221
+      "best_score": 0.0
     },
     {
       "id": "2603.06522",
@@ -2800,7 +2651,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.221
+      "best_score": 0.0
     },
     {
       "id": "2603.07048",
@@ -2822,7 +2673,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.22
+      "best_score": 0.0
     },
     {
       "id": "2603.06991",
@@ -2840,7 +2691,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.219
+      "best_score": 0.0
     },
     {
       "id": "2603.06922",
@@ -2857,7 +2708,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.219
+      "best_score": 0.0
     },
     {
       "id": "2603.07122",
@@ -2877,7 +2728,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.218
+      "best_score": 0.0
     },
     {
       "id": "2603.06915",
@@ -2896,7 +2747,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.216
+      "best_score": 0.0
     },
     {
       "id": "2603.06814",
@@ -2915,7 +2766,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.216
+      "best_score": 0.0
     },
     {
       "id": "2603.06782",
@@ -2937,7 +2788,26 @@
         "physics.geo-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.215
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06972",
+      "title": "Conditional Unbalanced Optimal Transport Maps: An Outlier-Robust Framework for Conditional Generative Modeling",
+      "abstract": "Conditional Optimal Transport (COT) problem aims to find a transport map between conditional source and target distributions while minimizing the transport cost. Recently, these transport maps have been utilized in conditional generative modeling tasks to establish efficient mappings between the distributions. However, classical COT inherits a fundamental limitation of optimal transport, i.e., sensitivity to outliers, which arises from the hard distribution matching constraints. This limitation becomes more pronounced in a conditional setting, where each conditional distribution is estimated from a limited subset of data. To address this, we introduce the Conditional Unbalanced Optimal Transport (CUOT) framework, which relaxes conditional distribution-matching constraints through Csiszár divergence penalties while strictly preserving the conditioning marginals. We establish a rigorous formulation of the CUOT problem and derive its dual and semi-dual formulations. Based on the semi-dual form, we propose Conditional Unbalanced Optimal Transport Maps (CUOTM), an outlier-robust conditional generative model built upon a triangular $c$-transform parameterization. We theoretically justify the validity of this parameterization by proving that the optimal triangular map satisfies the $c$-transform relationships. Our experiments on 2D synthetic and image-scale datasets demonstrate that CUOTM achieves superior outlier robustness and competitive distribution-matching performance compared to existing COT-based baselines, while maintaining high sampling efficiency.",
+      "authors": [
+        "Jiwoo Yoon",
+        "Kyumin Choi",
+        "Jaewoong Choi"
+      ],
+      "url": "https://arxiv.org/abs/2603.06972",
+      "published": "2026-03-07T01:21:32+00:00",
+      "updated": "2026-03-07T01:21:32+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06861",
@@ -2956,7 +2826,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.213
+      "best_score": 0.0
     },
     {
       "id": "2603.06859",
@@ -2979,7 +2849,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.207
+      "best_score": 0.0
     },
     {
       "id": "2603.06542",
@@ -3000,7 +2870,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.207
+      "best_score": 0.0
     },
     {
       "id": "2603.06492",
@@ -3019,7 +2889,7 @@
         "cs.NE"
       ],
       "matched_topics": [],
-      "best_score": 0.206
+      "best_score": 0.0
     },
     {
       "id": "2603.06901",
@@ -3038,7 +2908,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.205
+      "best_score": 0.0
     },
     {
       "id": "2603.07246",
@@ -3058,7 +2928,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.202
+      "best_score": 0.0
     },
     {
       "id": "2603.06874",
@@ -3082,7 +2952,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.06359",
@@ -3102,7 +2972,7 @@
         "cs.CR"
       ],
       "matched_topics": [],
-      "best_score": 0.198
+      "best_score": 0.0
     },
     {
       "id": "2603.07027",
@@ -3120,7 +2990,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.195
+      "best_score": 0.0
     },
     {
       "id": "2603.06816",
@@ -3142,7 +3012,7 @@
         "q-bio.NC"
       ],
       "matched_topics": [],
-      "best_score": 0.192
+      "best_score": 0.0
     },
     {
       "id": "2603.07108",
@@ -3161,7 +3031,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.188
+      "best_score": 0.0
     },
     {
       "id": "2603.06384",
@@ -3182,7 +3052,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.188
+      "best_score": 0.0
     },
     {
       "id": "2603.06380",
@@ -3202,7 +3072,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.185
+      "best_score": 0.0
     },
     {
       "id": "2603.01235",
@@ -3222,7 +3092,7 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.185
+      "best_score": 0.0
     },
     {
       "id": "2603.07184",
@@ -3242,7 +3112,7 @@
         "cs.PL"
       ],
       "matched_topics": [],
-      "best_score": 0.184
+      "best_score": 0.0
     },
     {
       "id": "2603.02426",
@@ -3260,7 +3130,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.184
+      "best_score": 0.0
     },
     {
       "id": "2603.06793",
@@ -3279,7 +3149,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.181
+      "best_score": 0.0
     },
     {
       "id": "2603.06865",
@@ -3295,7 +3165,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.179
+      "best_score": 0.0
     },
     {
       "id": "2603.07018",
@@ -3316,7 +3186,7 @@
         "econ.EM"
       ],
       "matched_topics": [],
-      "best_score": 0.178
+      "best_score": 0.0
     },
     {
       "id": "2603.06977",
@@ -3337,7 +3207,7 @@
         "cs.GT"
       ],
       "matched_topics": [],
-      "best_score": 0.177
+      "best_score": 0.0
     },
     {
       "id": "2603.07066",
@@ -3358,7 +3228,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.175
+      "best_score": 0.0
     },
     {
       "id": "2603.07228",
@@ -3377,7 +3247,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.174
+      "best_score": 0.0
     },
     {
       "id": "2603.06950",
@@ -3397,7 +3267,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.172
+      "best_score": 0.0
     },
     {
       "id": "2603.07211",
@@ -3418,7 +3288,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.169
+      "best_score": 0.0
     },
     {
       "id": "2603.06862",
@@ -3443,7 +3313,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.168
+      "best_score": 0.0
     },
     {
       "id": "2603.06440",
@@ -3463,7 +3333,7 @@
         "quant-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.165
+      "best_score": 0.0
     },
     {
       "id": "2603.06889",
@@ -3481,7 +3351,31 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.158
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06573",
+      "title": "Fly360: Omnidirectional Obstacle Avoidance within Drone View",
+      "abstract": "Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view perception. We first study an under explored problem setting in which a UAV must generate collision-free motion in environments with obstacles from arbitrary directions, and then construct a benchmark that consists of three representative flight tasks. Based on such settings, we propose Fly360, a two-stage perception-decision pipeline with a fixed random-yaw training strategy. At the perception stage, panoramic RGB observations are input and converted into depth maps as a robust intermediate representation. For the policy network, it is lightweight and used to output body-frame velocity commands from depth inputs. Extensive simulation and real-world experiments demonstrate that Fly360 achieves stable omnidirectional obstacle avoidance and outperforms forward-view baselines across all tasks. Our model is available at https://zxkai.github.io/fly360/",
+      "authors": [
+        "Xiangkai Zhang",
+        "Dizhe Zhang",
+        "WenZhuo Cao",
+        "Zhaoliang Wan",
+        "Yingjie Niu",
+        "Lu Qi",
+        "Xu Yang",
+        "Zhiyong Liu"
+      ],
+      "url": "https://arxiv.org/abs/2603.06573",
+      "published": "2026-03-06T18:59:43+00:00",
+      "updated": "2026-03-06T18:59:43+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.06408",
@@ -3504,7 +3398,7 @@
         "cs.GR"
       ],
       "matched_topics": [],
-      "best_score": 0.155
+      "best_score": 0.0
     },
     {
       "id": "2603.07238",
@@ -3523,7 +3417,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.153
+      "best_score": 0.0
     },
     {
       "id": "2603.06984",
@@ -3545,7 +3439,7 @@
         "cs.SI"
       ],
       "matched_topics": [],
-      "best_score": 0.149
+      "best_score": 0.0
     },
     {
       "id": "2603.06552",
@@ -3562,7 +3456,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.149
+      "best_score": 0.0
     },
     {
       "id": "2603.07073",
@@ -3583,7 +3477,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.148
+      "best_score": 0.0
     },
     {
       "id": "2603.06488",
@@ -3601,7 +3495,7 @@
         "math-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.144
+      "best_score": 0.0
     },
     {
       "id": "2603.07138",
@@ -3621,7 +3515,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.142
+      "best_score": 0.0
     },
     {
       "id": "2603.02030",
@@ -3639,7 +3533,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.142
+      "best_score": 0.0
     },
     {
       "id": "2603.06508",
@@ -3659,7 +3553,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.139
+      "best_score": 0.0
     },
     {
       "id": "2603.06401",
@@ -3680,7 +3574,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.128
+      "best_score": 0.0
     },
     {
       "id": "2603.06780",
@@ -3699,7 +3593,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.127
+      "best_score": 0.0
     },
     {
       "id": "2603.06505",
@@ -3717,7 +3611,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.122
+      "best_score": 0.0
     },
     {
       "id": "2603.02175",
@@ -3739,7 +3633,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.121
+      "best_score": 0.0
     },
     {
       "id": "2603.07070",
@@ -3757,7 +3651,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.114
+      "best_score": 0.0
     },
     {
       "id": "2603.07230",
@@ -3777,7 +3671,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.113
+      "best_score": 0.0
     },
     {
       "id": "2603.06444",
@@ -3798,7 +3692,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.108
+      "best_score": 0.0
     },
     {
       "id": "2603.06910",
@@ -3815,7 +3709,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.099
+      "best_score": 0.0
     },
     {
       "id": "2603.07222",
@@ -3835,7 +3729,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.098
+      "best_score": 0.0
     },
     {
       "id": "2603.06829",
@@ -3855,7 +3749,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.084
+      "best_score": 0.0
     },
     {
       "id": "2603.07090",
@@ -3875,7 +3769,28 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.051
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06545",
+      "title": "LiveSense: A Real-Time Wi-Fi Sensing Platform for Range-Doppler on COTS Laptop",
+      "abstract": "We present LiveSense - a cross-platform that transforms a commercial off-the-shelf (COTS) Wi-Fi Network Interface Card (NIC) on a laptop into a centimeter-level Range-Doppler sensor while preserving simultaneous communication capability. The laptops are equipped with COTS Intel AX211 (Wi-Fi 6E) or Intel BE201 (Wi-Fi 7) NICs. LiveSense can (i) Extract fully-synchronized channel state information (CSI) at >= 40 Hz, (ii) Perform time-phase alignment and self-interference cancellation on-device, and (iii) Provide a real-time stream of range, Doppler, subcarrier magnitude/phase and annotated video frames to a Python/Qt Graphical User Interface (GUI). The demo will showcase the ability to detect (i) Distance and radial velocity of attendees within a few meters of the device, (ii) Micro-motion (respiration), and (iii) Hand-gesture ranging. To the best of our knowledge, this is the first-ever demo to obtain accurate range information of targets from commercial Wi-Fi, despite the limited 160 MHz bandwidth.",
+      "authors": [
+        "Jessica Sanson",
+        "Rahul C. Shah",
+        "Maximilian Pinaroc",
+        "Cagri Tanriover",
+        "Valerio Frascolla"
+      ],
+      "url": "https://arxiv.org/abs/2603.06545",
+      "published": "2026-03-06T18:33:14+00:00",
+      "updated": "2026-03-06T18:33:14+00:00",
+      "categories": [
+        "eess.SP",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.02087",
@@ -3893,7 +3808,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.026
+      "best_score": 0.0
     },
     {
       "id": "2603.07215",
@@ -3916,7 +3831,7 @@
         "eess.SP"
       ],
       "matched_topics": [],
-      "best_score": 0.013
+      "best_score": 0.0
     }
   ]
 }

@@ -5,10 +5,11 @@ topics:
       - artificial consciousness
       - machine consciousness
       - conscious AI
+      - conscious agent
       - sentience
       - phenomenal experience
       - qualia
-      - self-awareness
+      - machine self-awareness
       - subjective experience
       - integrated information theory
       - IIT
@@ -17,7 +18,6 @@ topics:
       - higher-order theory
       - cognitive architecture
       - inner experience
-      - awareness
     description: "Papers about machine consciousness, subjective experience, and theories of mind applied to AI systems"
 
   - name: Test-Time Learning
@@ -25,18 +25,15 @@ topics:
     terms:
       - test-time learning
       - test-time training
-      - TTL
-      - TTT
       - test-time compute
+      - test-time adaptation
       - inference-time compute
       - inference-time scaling
-      - test-time adaptation
+      - chain-of-thought reasoning
       - chain of thought
-      - CoT
-      - self-consistency
+      - self-consistency decoding
       - tree of thought
-      - ToT
-      - best-of-N
+      - best-of-N sampling
       - majority voting
       - slow thinking
       - extended thinking
@@ -49,7 +46,6 @@ topics:
   - name: Symbolic AI
     enabled: true
     terms:
-      - symbolic
       - neurosymbolic
       - neuro-symbolic
       - symbolic reasoning
@@ -58,14 +54,10 @@ topics:
       - theorem proving
       - automated reasoning
       - first-order logic
-      - FOL
       - constraint satisfaction
       - program synthesis
-      - rule-based
       - knowledge representation
-      - ontology
       - inductive logic programming
-      - ILP
       - symbolic regression
       - hybrid reasoning
     description: "Papers combining neural networks with symbolic reasoning, logic, or structured knowledge representations"
@@ -81,3 +73,6 @@ max_results: 2000
 
 # Semantic similarity threshold (0.0–1.0, lower = more results)
 embedding_threshold: 0.35
+
+# Optional: included as a link at the bottom of notification emails
+# site_url: "https://yourusername.github.io/arxiv-digest"

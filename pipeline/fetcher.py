@@ -3,8 +3,12 @@ fetcher.py — Fetches today's papers from arXiv API.
 
 arXiv API hard limit: 300 results per request.
 Paginates in chunks of 300, stopping when we hit papers
-submitted before today (KST). Returns a flat list for today only.
+submitted before today (UTC). Returns a flat list for today only.
 Past days are loaded from storage, not fetched live.
+
+Date clock: UTC, matching arXiv's own submission-day boundary.
+The pipeline runs just after 00:00 UTC so each run captures the
+previous UTC day's complete paper set.
 """
 
 import time
@@ -21,7 +25,7 @@ REQUEST_DELAY = 3
 
 NS = {"atom": "http://www.w3.org/2005/Atom"}
 
-KST = timezone(timedelta(hours=9))
+UTC = timezone.utc
 
 
 @dataclass
@@ -75,18 +79,18 @@ def fetch_today(
     max_results: int = 2000,
 ) -> tuple[date, list[Paper]]:
     """
-    Fetch today's papers from arXiv (today = current date in KST).
+    Fetch today's papers from arXiv (today = current date in UTC).
     Stops as soon as a paper from a previous date is encountered.
 
-    Returns (today_kst, papers).
+    Returns (today_utc, papers).
     """
-    today_kst    = datetime.now(KST).date()
+    today_utc    = datetime.now(UTC).date()
     cat_query    = " OR ".join(f"cat:{c}" for c in categories)
     all_papers:  list[Paper] = []
     seen_ids:    set[str]    = set()
     start = 0
 
-    print(f"[fetcher] Fetching today's papers ({today_kst} KST) from {categories}…")
+    print(f"[fetcher] Fetching today's papers ({today_utc} UTC) from {categories}…")
 
     while start < max_results:
         print(f"[fetcher] Requesting papers {start+1}–{start+CHUNK_SIZE}…")
@@ -99,7 +103,7 @@ def fetch_today(
         new_today = []
         hit_old   = False
         for p in chunk:
-            if p.updated.astimezone(KST).date() >= today_kst:
+            if p.updated.astimezone(UTC).date() >= today_utc:
                 if p.id not in seen_ids:
                     seen_ids.add(p.id)
                     new_today.append(p)
@@ -121,8 +125,8 @@ def fetch_today(
         print(f"[fetcher] Waiting {REQUEST_DELAY}s…")
         time.sleep(REQUEST_DELAY)
 
-    print(f"[fetcher] Done. {len(all_papers)} papers for {today_kst}.")
-    return today_kst, all_papers
+    print(f"[fetcher] Done. {len(all_papers)} papers for {today_utc}.")
+    return today_utc, all_papers
 
 
 def fetch_recent_days(
@@ -139,14 +143,14 @@ def fetch_recent_days(
     """
     from collections import defaultdict
 
-    today_kst = datetime.now(KST).date()
-    cutoff    = today_kst - timedelta(days=num_days - 1)
+    today_utc = datetime.now(UTC).date()
+    cutoff    = today_utc - timedelta(days=num_days - 1)
     cat_query = " OR ".join(f"cat:{c}" for c in categories)
     grouped:  dict[date, list[Paper]] = defaultdict(list)
     seen_ids: set[str] = set()
     start = 0
 
-    print(f"[fetcher] Fetching {num_days} days ({cutoff} → {today_kst} KST)…")
+    print(f"[fetcher] Fetching {num_days} days ({cutoff} → {today_utc} UTC)…")
 
     while start < max_results:
         print(f"[fetcher] Requesting papers {start+1}–{start+CHUNK_SIZE}…")
@@ -158,7 +162,7 @@ def fetch_recent_days(
 
         all_too_old = True
         for p in chunk:
-            paper_date = p.updated.astimezone(KST).date()
+            paper_date = p.updated.astimezone(UTC).date()
             if paper_date >= cutoff:
                 all_too_old = False
                 if p.id not in seen_ids:

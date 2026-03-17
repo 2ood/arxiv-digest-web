@@ -215,7 +215,8 @@ const DigestDisplay = (() => {
 
     const authorsArr = p.authors || [];
     const authorsStr = authorsArr.slice(0, 3).join(", ") + (authorsArr.length > 3 ? " et al." : "");
-    const uid = p.id.replace(/[^a-zA-Z0-9]/g, "-");
+    const uid    = p.id.replace(/[^a-zA-Z0-9]/g, "-");
+    const pdfUrl = p.url.replace("/abs/", "/pdf/");
 
     const card = document.createElement("div");
     card.className = "paper" + (isIrrelevant ? " irrelevant" : "");
@@ -228,7 +229,7 @@ const DigestDisplay = (() => {
         <div class="abstract-full" id="fl-${uid}">${p.abstract}</div>
         <button class="expand-btn" id="btn-${uid}" onclick="DigestDisplay.toggle('${uid}')">Show more ↓</button>
       ` : ""}
-      <div class="paper-footer">${chips}<a class="pdf-link" href="${p.url}" target="_blank">PDF →</a></div>
+      <div class="paper-footer">${chips}<a class="pdf-link" href="${pdfUrl}" target="_blank">PDF →</a></div>
     `;
     return card;
   }

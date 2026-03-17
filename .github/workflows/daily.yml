@@ -2,7 +2,7 @@ name: Daily arXiv Digest
 
 on:
   schedule:
-    - cron: "30 0 * * 2-6"   # 00:30 UTC Tue–Sat = 09:30 KST Tue–Sat
+    - cron: "30 0 * * 2-6"   # 00:30 UTC Tue–Sat — just after arXiv's midnight UTC cutoff
   workflow_dispatch:
 
 permissions:
@@ -37,6 +37,10 @@ jobs:
 
       - name: Run pipeline
         run: python pipeline/main.py
+        env:
+          NOTIFY_GMAIL_USER:     ${{ secrets.NOTIFY_GMAIL_USER }}
+          NOTIFY_GMAIL_APP_PASS: ${{ secrets.NOTIFY_GMAIL_APP_PASS }}
+          NOTIFY_TO:             ${{ secrets.NOTIFY_TO }}
 
       # ── Commit data back to main ──────────────────────────────────────────
       # Persists data/papers/*.json and data/available_dates.json across runs.

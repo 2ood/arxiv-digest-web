@@ -1,29 +1,7 @@
 {
   "date": "2026-03-06",
-  "fetched_at": "2026-03-06T12:13:45.566666+09:00",
+  "fetched_at": "2026-03-17T09:10:53.664052+09:00",
   "papers": [
-    {
-      "id": "2603.05495",
-      "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
-      "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
-      "authors": [
-        "Khai Nguyen",
-        "Petros Ellinas",
-        "Anvita Bhagavathula",
-        "Priya Donti"
-      ],
-      "url": "https://arxiv.org/abs/2603.05495",
-      "published": "2026-03-05T18:58:39+00:00",
-      "updated": "2026-03-05T18:58:39+00:00",
-      "categories": [
-        "cs.LG",
-        "math.OC"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.376
-    },
     {
       "id": "2603.05488",
       "title": "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought",
@@ -52,75 +30,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.05485",
-      "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
-      "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
-      "authors": [
-        "Benjamin Feuer",
-        "Lucas Rosenblatt",
-        "Oussama Elachqar"
-      ],
-      "url": "https://arxiv.org/abs/2603.05485",
-      "published": "2026-03-05T18:52:28+00:00",
-      "updated": "2026-03-05T18:52:28+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.378
-    },
-    {
-      "id": "2603.05450",
-      "title": "Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry",
-      "abstract": "Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in multimodal, multiparty settings, where the collaborators bring different information to the table. We introduce the Distributed Partial Information Puzzle (DPIP), a collaborative construction task that elicits rich multimodal communication under epistemic asymmetry. We present a multimodal dataset of these interactions, annotated and temporally aligned across speech, gesture, and action modalities to support reasoning over propositional content and belief dynamics. We then evaluate two paradigms for modeling common ground (CG): (1) state-of-the-art large language models (LLMs), prompted to infer shared beliefs from multimodal updates, and (2) an axiomatic pipeline grounded in Dynamic Epistemic Logic (DEL) that incrementally performs the same task. Results on the annotated DPIP data indicate that it poses a challenge to modern LLMs' abilities to track both task progression and belief state.",
-      "authors": [
-        "Yifan Zhu",
-        "Mariah Bradford",
-        "Kenneth Lai",
-        "Timothy Obiso",
-        "Videep Venkatesha",
-        "James Pustejovsky",
-        "Nikhil Krishnaswamy"
-      ],
-      "url": "https://arxiv.org/abs/2603.05450",
-      "published": "2026-03-05T18:22:55+00:00",
-      "updated": "2026-03-05T18:22:55+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.378
-    },
-    {
-      "id": "2603.05438",
-      "title": "Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model",
-      "abstract": "World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent approaches leverage world models as learned simulators, but its application to decision-time planning remains computationally prohibitive for real-time control. A key bottleneck lies in latent representations: conventional tokenizers encode each observation into hundreds of tokens, making planning both slow and resource-intensive. To address this, we propose CompACT, a discrete tokenizer that compresses each observation into as few as 8 tokens, drastically reducing computational cost while preserving essential information for planning. An action-conditioned world model that occupies CompACT tokenizer achieves competitive planning performance with orders-of-magnitude faster planning, offering a practical step toward real-world deployment of world models.",
-      "authors": [
-        "Dongwon Kim",
-        "Gawon Seo",
-        "Jinsung Lee",
-        "Minsu Cho",
-        "Suha Kwak"
-      ],
-      "url": "https://arxiv.org/abs/2603.05438",
-      "published": "2026-03-05T18:00:02+00:00",
-      "updated": "2026-03-05T18:00:02+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.402
-    },
-    {
       "id": "2603.05433",
       "title": "On-Policy Self-Distillation for Reasoning Compression",
       "abstract": "Reasoning models think out loud, but much of what they say is noise. We introduce OPSDC (On-Policy Self-Distillation for Reasoning Compression), a method that teaches models to reason more concisely by   distilling their own concise behavior back into themselves. The entire approach reduces to one idea: condition the same model on a \"be concise\" instruction to obtain teacher logits, and minimize per-token   reverse KL on the student's own rollouts. No ground-truth answers, no token budgets, no difficulty estimators. Just self-distillation. Yet this simplicity belies surprising sophistication: OPSDC automatically   compresses easy problems aggressively while preserving the deliberation needed for hard ones. On Qwen3-8B and Qwen3-14B, we achieve 57-59% token reduction on MATH-500 while improving accuracy by 9-16 points   absolute. On AIME 2024, the 14B model gains 10 points with 41% compression. The secret? Much of what reasoning models produce is not just redundant-it is actively harmful, compounding errors with every   unnecessary token.",
@@ -144,111 +53,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.05432",
-      "title": "Ensembling Language Models with Sequential Monte Carlo",
-      "abstract": "Practitioners have access to an abundance of language models and prompting strategies for solving many language modeling tasks; yet prior work shows that modeling performance is highly sensitive to both choices. Classical machine learning ensembling techniques offer a principled approach: aggregate predictions from multiple sources to achieve better performance than any single one. However, applying ensembling to language models during decoding is challenging: naively aggregating next-token probabilities yields samples from a locally normalized, biased approximation of the generally intractable ensemble distribution over strings. In this work, we introduce a unified framework for composing $K$ language models into $f$-ensemble distributions for a wide range of functions $f\\colon\\mathbb{R}_{\\geq 0}^{K}\\to\\mathbb{R}_{\\geq 0}$. To sample from these distributions, we propose a byte-level sequential Monte Carlo (SMC) algorithm that operates in a shared character space, enabling ensembles of models with mismatching vocabularies and consistent sampling in the limit. We evaluate a family of $f$-ensembles across prompt and model combinations for various structured text generation tasks, highlighting the benefits of alternative aggregation strategies over traditional probability averaging, and showing that better posterior approximations can yield better ensemble performance.",
-      "authors": [
-        "Robin Shing Moon Chan",
-        "Tianyu Liu",
-        "Samuel Kiegeland",
-        "Clemente Pasti",
-        "Jacob Hoover Vigly",
-        "Timothy J. O'Donnell",
-        "Ryan Cotterell",
-        "Tim Vieira"
-      ],
-      "url": "https://arxiv.org/abs/2603.05432",
-      "published": "2026-03-05T17:54:31+00:00",
-      "updated": "2026-03-05T17:54:31+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.415
-    },
-    {
-      "id": "2603.05423",
-      "title": "An interpretable prototype parts-based neural network for medical tabular data",
-      "abstract": "The ability to interpret machine learning model decisions is critical in such domains as healthcare, where trust in model predictions is as important as their accuracy. Inspired by the development of prototype parts-based deep neural networks in computer vision, we propose a new model for tabular data, specifically tailored to medical records, that requires discretization of diagnostic result norms. Unlike the original vision models that rely on the spatial structure, our method employs trainable patching over features describing a patient, to learn meaningful prototypical parts from structured data. These parts are represented as binary or discretized feature subsets. This allows the model to express prototypes in human-readable terms, enabling alignment with clinical language and case-based reasoning. Our proposed neural network is inherently interpretable and offers interpretable concept-based predictions by comparing the patient's description to learned prototypes in the latent space of the network. In experiments, we demonstrate that the model achieves classification performance competitive to widely used baseline models on medical benchmark datasets, while also offering transparency, bridging the gap between predictive performance and interpretability in clinical decision support.",
-      "authors": [
-        "Jacek Karolczak",
-        "Jerzy Stefanowski"
-      ],
-      "url": "https://arxiv.org/abs/2603.05423",
-      "published": "2026-03-05T17:43:32+00:00",
-      "updated": "2026-03-05T17:43:32+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.428
-    },
-    {
-      "id": "2603.05414",
-      "title": "Dissociating Direct Access from Inference in AI Introspection",
-      "abstract": "Introspection is a foundational cognitive ability, but its mechanism is not well understood. Recent work has shown that AI models can introspect. We study their mechanism of introspection, first extensively replicating Lindsey et al. (2025)'s thought injection detection paradigm in large open-source models. We show that these models detect injected representations via two separable mechanisms: (i) probability-matching (inferring from perceived anomaly of the prompt) and (ii) direct access to internal states. The direct access mechanism is content-agnostic: models detect that an anomaly occurred but cannot reliably identify its semantic content. The two model classes we study confabulate injected concepts that are high-frequency and concrete (e.g., \"apple'\"); for them correct concept guesses typically require significantly more tokens. This content-agnostic introspective mechanism is consistent with leading theories in philosophy and psychology.",
-      "authors": [
-        "Harvey Lederman",
-        "Kyle Mahowald"
-      ],
-      "url": "https://arxiv.org/abs/2603.05414",
-      "published": "2026-03-05T17:39:37+00:00",
-      "updated": "2026-03-05T17:39:37+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.419
-    },
-    {
-      "id": "2603.05400",
-      "title": "An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs",
-      "abstract": "Word Sense Disambiguation (WSD) remains a key challenge in Natural Language Processing (NLP), especially when dealing with rare or domain-specific senses that are often misinterpreted. While modern high-parameter Large Language Models (LLMs) such as GPT-4-Turbo have shown state-of-the-art WSD performance, their computational and energy demands limit scalability. This study investigates whether low-parameter LLMs (<4B parameters) can achieve comparable results through fine-tuning strategies that emphasize reasoning-driven sense identification. Using the FEWS dataset augmented with semi-automated, rationale-rich annotations, we fine-tune eight small-scale open-source LLMs (e.g. Gemma and Qwen). Our results reveal that Chain-of-Thought (CoT)-based reasoning combined with neighbour-word analysis achieves performance comparable to GPT-4-Turbo in zero-shot settings. Importantly, Gemma-3-4B and Qwen-3-4B models consistently outperform all medium-parameter baselines and state-of-the-art models on FEWS, with robust generalization to unseen senses. Furthermore, evaluation on the unseen \"Fool Me If You Can'' dataset confirms strong cross-domain adaptability without task-specific fine-tuning. This work demonstrates that with carefully crafted reasoning-centric fine-tuning, low-parameter LLMs can deliver accurate WSD while substantially reducing computational and energy demands.",
-      "authors": [
-        "Deshan Sumanathilaka",
-        "Nicholas Micallef",
-        "Julian Hough"
-      ],
-      "url": "https://arxiv.org/abs/2603.05400",
-      "published": "2026-03-05T17:27:42+00:00",
-      "updated": "2026-03-05T17:27:42+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.05392",
-      "title": "Legal interpretation and AI: from expert systems to argumentation and LLMs",
-      "abstract": "AI and Law research has encountered legal interpretation in different ways, in the context of its evolving approaches and methodologies. Research on expert system has focused on legal knowledge engineering, with the goal of ensuring that human-generated interpretations can be precisely transferred into knowledge-bases, to be consistently applied. Research on argumentation has aimed at representing the structure of interpretive arguments, as well as their dialectical interactions, to assess of the acceptability of interpretive claims within argumentation frameworks. Research on machine learning has focused on the automated generation of interpretive suggestions and arguments, through general and specialised language models, now being increasingly deployed in legal practice.",
-      "authors": [
-        "Václav Janeček",
-        "Giovanni Sartor"
-      ],
-      "url": "https://arxiv.org/abs/2603.05392",
-      "published": "2026-03-05T17:22:56+00:00",
-      "updated": "2026-03-05T17:22:56+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.419
-    },
-    {
       "id": "2603.05357",
       "title": "DiSCTT: Consensus-Guided Self-Curriculum for Efficient Test-Time Adaptation in Reasoning",
       "abstract": "Test-time adaptation offers a promising avenue for improving reasoning performance in large language models without additional supervision, but existing approaches often apply a uniform optimization objective across all inputs, leading to inefficient or unstable adaptation on heterogeneous reasoning problems. We propose DiSCTT, a difficulty-aware, consensus-guided self-curriculum framework that dynamically allocates test-time optimization strategies based on instance-level epistemic uncertainty estimated from agreement among sampled reasoning trajectories. Inputs with high consensus are consolidated via supervised fine-tuning using majority-agreed solutions as pseudo-labels, while low-consensus inputs are optimized via reinforcement learning with a consensus-regularized objective that encourages diversity under relevance constraints. Across a broad suite of mathematical and general reasoning benchmarks, DiSCTT consistently outperforms strong test-time adaptation baselines, achieving higher accuracy with reduced variance and substantially lower computation and wall-clock training times. These results demonstrate that explicitly accounting for instance difficulty and uncertainty enables more stable, efficient, and effective test-time adaptation for reasoning models.",
@@ -266,25 +70,6 @@
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.05352",
-      "title": "Ailed: A Psyche-Driven Chess Engine with Dynamic Emotional Modulation",
-      "abstract": "Chess engines passed human strength years ago, but they still don't play like humans. A grandmaster under clock pressure blunders in ways a club player on a hot streak never would. Conventional engines capture none of this.   This paper proposes a personality x psyche decomposition to produce behavioral variability in chess play, drawing on patterns observed in human games. Personality is static -- a preset that pins down the engine's character. Psyche is dynamic -- a bounded scalar ψ_t \\in [-100, +100], recomputed from five positional factors after every move. These two components feed into an audio-inspired signal chain (noise gate, compressor/expander, five-band equalizer, saturation limiter) that reshapes move probability distributions on the fly. The chain doesn't care what engine sits behind it: any system that outputs move probabilities will do. It needs no search and carries no state beyond ψ_t.   I test the framework across 12,414 games against Maia2-1100, feeding it two probability sources that differ by ~2,800x in training data. Both show the same monotonic gradient in top-move agreement (~20-25 pp spread from stress to overconfidence), which tells us the behavioral variation comes from the signal chain, not from the model underneath. When the psyche runs overconfident, the chain mostly gets out of the way (66% agreement with vanilla Maia2). Under stress, the competitive score falls from 50.8% to 30.1%. The patterns are reminiscent of tilt and overconfidence as described in human play, but I should be upfront: this study includes no human-subject validation.",
-      "authors": [
-        "Diego Armando Resendez Prado"
-      ],
-      "url": "https://arxiv.org/abs/2603.05352",
-      "published": "2026-03-05T16:32:40+00:00",
-      "updated": "2026-03-05T16:32:40+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.HC"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.381
     },
     {
       "id": "2603.05294",
@@ -333,6 +118,201 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.05495",
+      "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
+      "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
+      "authors": [
+        "Khai Nguyen",
+        "Petros Ellinas",
+        "Anvita Bhagavathula",
+        "Priya Donti"
+      ],
+      "url": "https://arxiv.org/abs/2603.05495",
+      "published": "2026-03-05T18:58:39+00:00",
+      "updated": "2026-03-05T18:58:39+00:00",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05485",
+      "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
+      "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
+      "authors": [
+        "Benjamin Feuer",
+        "Lucas Rosenblatt",
+        "Oussama Elachqar"
+      ],
+      "url": "https://arxiv.org/abs/2603.05485",
+      "published": "2026-03-05T18:52:28+00:00",
+      "updated": "2026-03-05T18:52:28+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05450",
+      "title": "Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry",
+      "abstract": "Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in multimodal, multiparty settings, where the collaborators bring different information to the table. We introduce the Distributed Partial Information Puzzle (DPIP), a collaborative construction task that elicits rich multimodal communication under epistemic asymmetry. We present a multimodal dataset of these interactions, annotated and temporally aligned across speech, gesture, and action modalities to support reasoning over propositional content and belief dynamics. We then evaluate two paradigms for modeling common ground (CG): (1) state-of-the-art large language models (LLMs), prompted to infer shared beliefs from multimodal updates, and (2) an axiomatic pipeline grounded in Dynamic Epistemic Logic (DEL) that incrementally performs the same task. Results on the annotated DPIP data indicate that it poses a challenge to modern LLMs' abilities to track both task progression and belief state.",
+      "authors": [
+        "Yifan Zhu",
+        "Mariah Bradford",
+        "Kenneth Lai",
+        "Timothy Obiso",
+        "Videep Venkatesha",
+        "James Pustejovsky",
+        "Nikhil Krishnaswamy"
+      ],
+      "url": "https://arxiv.org/abs/2603.05450",
+      "published": "2026-03-05T18:22:55+00:00",
+      "updated": "2026-03-05T18:22:55+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05438",
+      "title": "Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model",
+      "abstract": "World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent approaches leverage world models as learned simulators, but its application to decision-time planning remains computationally prohibitive for real-time control. A key bottleneck lies in latent representations: conventional tokenizers encode each observation into hundreds of tokens, making planning both slow and resource-intensive. To address this, we propose CompACT, a discrete tokenizer that compresses each observation into as few as 8 tokens, drastically reducing computational cost while preserving essential information for planning. An action-conditioned world model that occupies CompACT tokenizer achieves competitive planning performance with orders-of-magnitude faster planning, offering a practical step toward real-world deployment of world models.",
+      "authors": [
+        "Dongwon Kim",
+        "Gawon Seo",
+        "Jinsung Lee",
+        "Minsu Cho",
+        "Suha Kwak"
+      ],
+      "url": "https://arxiv.org/abs/2603.05438",
+      "published": "2026-03-05T18:00:02+00:00",
+      "updated": "2026-03-05T18:00:02+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05432",
+      "title": "Ensembling Language Models with Sequential Monte Carlo",
+      "abstract": "Practitioners have access to an abundance of language models and prompting strategies for solving many language modeling tasks; yet prior work shows that modeling performance is highly sensitive to both choices. Classical machine learning ensembling techniques offer a principled approach: aggregate predictions from multiple sources to achieve better performance than any single one. However, applying ensembling to language models during decoding is challenging: naively aggregating next-token probabilities yields samples from a locally normalized, biased approximation of the generally intractable ensemble distribution over strings. In this work, we introduce a unified framework for composing $K$ language models into $f$-ensemble distributions for a wide range of functions $f\\colon\\mathbb{R}_{\\geq 0}^{K}\\to\\mathbb{R}_{\\geq 0}$. To sample from these distributions, we propose a byte-level sequential Monte Carlo (SMC) algorithm that operates in a shared character space, enabling ensembles of models with mismatching vocabularies and consistent sampling in the limit. We evaluate a family of $f$-ensembles across prompt and model combinations for various structured text generation tasks, highlighting the benefits of alternative aggregation strategies over traditional probability averaging, and showing that better posterior approximations can yield better ensemble performance.",
+      "authors": [
+        "Robin Shing Moon Chan",
+        "Tianyu Liu",
+        "Samuel Kiegeland",
+        "Clemente Pasti",
+        "Jacob Hoover Vigly",
+        "Timothy J. O'Donnell",
+        "Ryan Cotterell",
+        "Tim Vieira"
+      ],
+      "url": "https://arxiv.org/abs/2603.05432",
+      "published": "2026-03-05T17:54:31+00:00",
+      "updated": "2026-03-05T17:54:31+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05423",
+      "title": "An interpretable prototype parts-based neural network for medical tabular data",
+      "abstract": "The ability to interpret machine learning model decisions is critical in such domains as healthcare, where trust in model predictions is as important as their accuracy. Inspired by the development of prototype parts-based deep neural networks in computer vision, we propose a new model for tabular data, specifically tailored to medical records, that requires discretization of diagnostic result norms. Unlike the original vision models that rely on the spatial structure, our method employs trainable patching over features describing a patient, to learn meaningful prototypical parts from structured data. These parts are represented as binary or discretized feature subsets. This allows the model to express prototypes in human-readable terms, enabling alignment with clinical language and case-based reasoning. Our proposed neural network is inherently interpretable and offers interpretable concept-based predictions by comparing the patient's description to learned prototypes in the latent space of the network. In experiments, we demonstrate that the model achieves classification performance competitive to widely used baseline models on medical benchmark datasets, while also offering transparency, bridging the gap between predictive performance and interpretability in clinical decision support.",
+      "authors": [
+        "Jacek Karolczak",
+        "Jerzy Stefanowski"
+      ],
+      "url": "https://arxiv.org/abs/2603.05423",
+      "published": "2026-03-05T17:43:32+00:00",
+      "updated": "2026-03-05T17:43:32+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05414",
+      "title": "Dissociating Direct Access from Inference in AI Introspection",
+      "abstract": "Introspection is a foundational cognitive ability, but its mechanism is not well understood. Recent work has shown that AI models can introspect. We study their mechanism of introspection, first extensively replicating Lindsey et al. (2025)'s thought injection detection paradigm in large open-source models. We show that these models detect injected representations via two separable mechanisms: (i) probability-matching (inferring from perceived anomaly of the prompt) and (ii) direct access to internal states. The direct access mechanism is content-agnostic: models detect that an anomaly occurred but cannot reliably identify its semantic content. The two model classes we study confabulate injected concepts that are high-frequency and concrete (e.g., \"apple'\"); for them correct concept guesses typically require significantly more tokens. This content-agnostic introspective mechanism is consistent with leading theories in philosophy and psychology.",
+      "authors": [
+        "Harvey Lederman",
+        "Kyle Mahowald"
+      ],
+      "url": "https://arxiv.org/abs/2603.05414",
+      "published": "2026-03-05T17:39:37+00:00",
+      "updated": "2026-03-05T17:39:37+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05400",
+      "title": "An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs",
+      "abstract": "Word Sense Disambiguation (WSD) remains a key challenge in Natural Language Processing (NLP), especially when dealing with rare or domain-specific senses that are often misinterpreted. While modern high-parameter Large Language Models (LLMs) such as GPT-4-Turbo have shown state-of-the-art WSD performance, their computational and energy demands limit scalability. This study investigates whether low-parameter LLMs (<4B parameters) can achieve comparable results through fine-tuning strategies that emphasize reasoning-driven sense identification. Using the FEWS dataset augmented with semi-automated, rationale-rich annotations, we fine-tune eight small-scale open-source LLMs (e.g. Gemma and Qwen). Our results reveal that Chain-of-Thought (CoT)-based reasoning combined with neighbour-word analysis achieves performance comparable to GPT-4-Turbo in zero-shot settings. Importantly, Gemma-3-4B and Qwen-3-4B models consistently outperform all medium-parameter baselines and state-of-the-art models on FEWS, with robust generalization to unseen senses. Furthermore, evaluation on the unseen \"Fool Me If You Can'' dataset confirms strong cross-domain adaptability without task-specific fine-tuning. This work demonstrates that with carefully crafted reasoning-centric fine-tuning, low-parameter LLMs can deliver accurate WSD while substantially reducing computational and energy demands.",
+      "authors": [
+        "Deshan Sumanathilaka",
+        "Nicholas Micallef",
+        "Julian Hough"
+      ],
+      "url": "https://arxiv.org/abs/2603.05400",
+      "published": "2026-03-05T17:27:42+00:00",
+      "updated": "2026-03-05T17:27:42+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05392",
+      "title": "Legal interpretation and AI: from expert systems to argumentation and LLMs",
+      "abstract": "AI and Law research has encountered legal interpretation in different ways, in the context of its evolving approaches and methodologies. Research on expert system has focused on legal knowledge engineering, with the goal of ensuring that human-generated interpretations can be precisely transferred into knowledge-bases, to be consistently applied. Research on argumentation has aimed at representing the structure of interpretive arguments, as well as their dialectical interactions, to assess of the acceptability of interpretive claims within argumentation frameworks. Research on machine learning has focused on the automated generation of interpretive suggestions and arguments, through general and specialised language models, now being increasingly deployed in legal practice.",
+      "authors": [
+        "Václav Janeček",
+        "Giovanni Sartor"
+      ],
+      "url": "https://arxiv.org/abs/2603.05392",
+      "published": "2026-03-05T17:22:56+00:00",
+      "updated": "2026-03-05T17:22:56+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05352",
+      "title": "Ailed: A Psyche-Driven Chess Engine with Dynamic Emotional Modulation",
+      "abstract": "Chess engines passed human strength years ago, but they still don't play like humans. A grandmaster under clock pressure blunders in ways a club player on a hot streak never would. Conventional engines capture none of this.   This paper proposes a personality x psyche decomposition to produce behavioral variability in chess play, drawing on patterns observed in human games. Personality is static -- a preset that pins down the engine's character. Psyche is dynamic -- a bounded scalar ψ_t \\in [-100, +100], recomputed from five positional factors after every move. These two components feed into an audio-inspired signal chain (noise gate, compressor/expander, five-band equalizer, saturation limiter) that reshapes move probability distributions on the fly. The chain doesn't care what engine sits behind it: any system that outputs move probabilities will do. It needs no search and carries no state beyond ψ_t.   I test the framework across 12,414 games against Maia2-1100, feeding it two probability sources that differ by ~2,800x in training data. Both show the same monotonic gradient in top-move agreement (~20-25 pp spread from stress to overconfidence), which tells us the behavioral variation comes from the signal chain, not from the model underneath. When the psyche runs overconfident, the chain mostly gets out of the way (66% agreement with vanilla Maia2). Under stress, the competitive score falls from 50.8% to 30.1%. The patterns are reminiscent of tilt and overconfidence as described in human play, but I should be upfront: this study includes no human-subject validation.",
+      "authors": [
+        "Diego Armando Resendez Prado"
+      ],
+      "url": "https://arxiv.org/abs/2603.05352",
+      "published": "2026-03-05T16:32:40+00:00",
+      "updated": "2026-03-05T16:32:40+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
       "id": "2603.04384",
       "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
       "abstract": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
@@ -350,10 +330,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.366
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.05353",
@@ -374,7 +352,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.348
+      "best_score": 0.0
     },
     {
       "id": "2603.05451",
@@ -395,7 +373,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.347
+      "best_score": 0.0
     },
     {
       "id": "2603.05471",
@@ -422,7 +400,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.341
+      "best_score": 0.0
     },
     {
       "id": "2603.05396",
@@ -441,7 +419,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.339
+      "best_score": 0.0
     },
     {
       "id": "2603.02002",
@@ -463,7 +441,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.323
+      "best_score": 0.0
     },
     {
       "id": "2603.05276",
@@ -483,7 +461,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.322
+      "best_score": 0.0
     },
     {
       "id": "2603.05369",
@@ -505,7 +483,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.318
+      "best_score": 0.0
     },
     {
       "id": "2603.05308",
@@ -536,7 +514,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.313
+      "best_score": 0.0
     },
     {
       "id": "2603.05354",
@@ -556,7 +534,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.307
+      "best_score": 0.0
     },
     {
       "id": "2603.05293",
@@ -573,7 +551,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.306
+      "best_score": 0.0
     },
     {
       "id": "2603.05395",
@@ -592,7 +570,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.287
+      "best_score": 0.0
     },
     {
       "id": "2603.05296",
@@ -612,7 +590,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.285
+      "best_score": 0.0
     },
     {
       "id": "2603.03959",
@@ -633,7 +611,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.285
+      "best_score": 0.0
     },
     {
       "id": "2603.05500",
@@ -655,7 +633,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.283
+      "best_score": 0.0
     },
     {
       "id": "2603.05418",
@@ -673,7 +651,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.271
+      "best_score": 0.0
     },
     {
       "id": "2603.05340",
@@ -693,7 +671,7 @@
         "math.ST"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2603.05335",
@@ -712,7 +690,7 @@
         "math.ST"
       ],
       "matched_topics": [],
-      "best_score": 0.262
+      "best_score": 0.0
     },
     {
       "id": "2603.05343",
@@ -731,7 +709,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2603.05504",
@@ -758,7 +736,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.255
+      "best_score": 0.0
     },
     {
       "id": "2603.05468",
@@ -775,7 +753,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.248
+      "best_score": 0.0
     },
     {
       "id": "2603.05370",
@@ -794,7 +772,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.245
+      "best_score": 0.0
     },
     {
       "id": "2603.05299",
@@ -815,7 +793,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.242
+      "best_score": 0.0
     },
     {
       "id": "2603.05275",
@@ -838,7 +816,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.241
+      "best_score": 0.0
     },
     {
       "id": "2603.05399",
@@ -858,7 +836,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.237
+      "best_score": 0.0
     },
     {
       "id": "2603.05421",
@@ -878,7 +856,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.234
+      "best_score": 0.0
     },
     {
       "id": "2603.05263",
@@ -896,7 +874,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.234
+      "best_score": 0.0
     },
     {
       "id": "2603.05344",
@@ -912,7 +890,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.231
+      "best_score": 0.0
     },
     {
       "id": "2603.05494",
@@ -935,7 +913,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.226
+      "best_score": 0.0
     },
     {
       "id": "2603.05280",
@@ -957,7 +935,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.225
+      "best_score": 0.0
     },
     {
       "id": "2603.05498",
@@ -977,7 +955,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.217
+      "best_score": 0.0
     },
     {
       "id": "2603.05295",
@@ -1000,7 +978,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.217
+      "best_score": 0.0
     },
     {
       "id": "2603.05462",
@@ -1018,7 +996,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.209
+      "best_score": 0.0
     },
     {
       "id": "2603.05480",
@@ -1036,7 +1014,7 @@
         "math.ST"
       ],
       "matched_topics": [],
-      "best_score": 0.205
+      "best_score": 0.0
     },
     {
       "id": "2603.05440",
@@ -1055,7 +1033,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.204
+      "best_score": 0.0
     },
     {
       "id": "2603.05459",
@@ -1075,7 +1053,7 @@
         "cs.DB"
       ],
       "matched_topics": [],
-      "best_score": 0.196
+      "best_score": 0.0
     },
     {
       "id": "2603.05327",
@@ -1096,7 +1074,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.196
+      "best_score": 0.0
     },
     {
       "id": "2603.05318",
@@ -1116,7 +1094,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.196
+      "best_score": 0.0
     },
     {
       "id": "2603.05301",
@@ -1137,7 +1115,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.19
+      "best_score": 0.0
     },
     {
       "id": "2603.05288",
@@ -1156,7 +1134,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.189
+      "best_score": 0.0
     },
     {
       "id": "2603.05371",
@@ -1177,7 +1155,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.177
+      "best_score": 0.0
     },
     {
       "id": "2603.05262",
@@ -1195,7 +1173,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.164
+      "best_score": 0.0
     },
     {
       "id": "2603.05345",
@@ -1215,7 +1193,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.163
+      "best_score": 0.0
     },
     {
       "id": "2603.00918",
@@ -1233,7 +1211,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.162
+      "best_score": 0.0
     },
     {
       "id": "2603.05483",
@@ -1254,7 +1232,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.161
+      "best_score": 0.0
     },
     {
       "id": "2603.05310",
@@ -1278,7 +1256,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.161
+      "best_score": 0.0
     },
     {
       "id": "2603.05317",
@@ -1298,7 +1276,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.157
+      "best_score": 0.0
     },
     {
       "id": "2603.05361",
@@ -1316,7 +1294,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.143
+      "best_score": 0.0
     },
     {
       "id": "2603.05425",
@@ -1338,7 +1316,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.141
+      "best_score": 0.0
     },
     {
       "id": "2603.03229",
@@ -1358,7 +1336,7 @@
         "eess.SP"
       ],
       "matched_topics": [],
-      "best_score": 0.138
+      "best_score": 0.0
     },
     {
       "id": "2603.05267",
@@ -1376,7 +1354,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.136
+      "best_score": 0.0
     },
     {
       "id": "2603.05314",
@@ -1395,7 +1373,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.126
+      "best_score": 0.0
     },
     {
       "id": "2603.05375",
@@ -1412,7 +1390,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.121
+      "best_score": 0.0
     },
     {
       "id": "2603.02175",
@@ -1434,7 +1412,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.121
+      "best_score": 0.0
     },
     {
       "id": "2603.05272",
@@ -1451,7 +1429,7 @@
         "cs.HC"
       ],
       "matched_topics": [],
-      "best_score": 0.107
+      "best_score": 0.0
     },
     {
       "id": "2603.05448",
@@ -1469,7 +1447,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.103
+      "best_score": 0.0
     },
     {
       "id": "2603.05449",
@@ -1492,7 +1470,7 @@
         "cs.GR"
       ],
       "matched_topics": [],
-      "best_score": 0.101
+      "best_score": 0.0
     },
     {
       "id": "2603.05437",
@@ -1514,7 +1492,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.092
+      "best_score": 0.0
     },
     {
       "id": "2603.05270",
@@ -1536,7 +1514,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.076
+      "best_score": 0.0
     }
   ]
 }

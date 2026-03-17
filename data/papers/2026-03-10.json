@@ -1,60 +1,7 @@
 {
   "date": "2026-03-10",
-  "fetched_at": "2026-03-10T12:12:50.634833+09:00",
+  "fetched_at": "2026-03-17T09:10:53.185785+09:00",
   "papers": [
-    {
-      "id": "2603.08706",
-      "title": "Agentic Critical Training",
-      "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
-      "authors": [
-        "Weize Liu",
-        "Minghui Liu",
-        "Sy-Tuyen Ho",
-        "Souradip Chakraborty",
-        "Xiyao Wang",
-        "Furong Huang"
-      ],
-      "url": "https://arxiv.org/abs/2603.08706",
-      "published": "2026-03-09T17:58:56+00:00",
-      "updated": "2026-03-09T17:58:56+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08704",
-      "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
-      "abstract": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
-      "authors": [
-        "Akshay Gulati",
-        "Kanha Singhania",
-        "Tushar Banga",
-        "Parth Arora",
-        "Anshul Verma",
-        "Vaibhav Kumar Singh",
-        "Agyapal Digra",
-        "Jayant Singh Bisht",
-        "Danish Sharma",
-        "Varun Singla",
-        "Shubh Garg"
-      ],
-      "url": "https://arxiv.org/abs/2603.08704",
-      "published": "2026-03-09T17:58:54+00:00",
-      "updated": "2026-03-09T17:58:54+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.364
-    },
     {
       "id": "2603.08660",
       "title": "How Far Can Unsupervised RLVR Scale LLM Training?",
@@ -111,120 +58,9 @@
         "cs.CL"
       ],
       "matched_topics": [
-        "Artificial Consciousness",
         "Test-Time Learning"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.08655",
-      "title": "OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning",
-      "abstract": "We introduce OfficeQA Pro, a benchmark for evaluating AI agents on grounded, multi-document reasoning over a large and heterogeneous document corpus. The corpus consists of U.S. Treasury Bulletins spanning nearly 100 years, comprising 89,000 pages and over 26 million numerical values. OfficeQA Pro consists of 133 questions that require precise document parsing, retrieval, and analytical reasoning across both unstructured text and tabular data. Frontier LLMs including Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro Preview achieve less than 5% accuracy on OfficeQA Pro when relying on parametric knowledge, and less than 12% with additional access to the web. When provided directly with the document corpus, frontier agents still struggle on over half of questions, scoring 34.1% on average. We find that providing agents with a structured document representation produced by Databricks' ai_parse_document yields a 16.1% average relative performance gain across agents. We conduct additional ablations to study the effects of model selection, table representation, retrieval strategy, and test-time scaling on performance. Despite these improvements, significant headroom remains before agents can be considered reliable at enterprise-grade grounded reasoning.",
-      "authors": [
-        "Krista Opsahl-Ong",
-        "Arnav Singhvi",
-        "Jasmine Collins",
-        "Ivan Zhou",
-        "Cindy Wang",
-        "Ashutosh Baheti",
-        "Owen Oertell",
-        "Jacob Portes",
-        "Sam Havens",
-        "Erich Elsen",
-        "Michael Bendersky",
-        "Matei Zaharia",
-        "Xing Chen"
-      ],
-      "url": "https://arxiv.org/abs/2603.08655",
-      "published": "2026-03-09T17:34:53+00:00",
-      "updated": "2026-03-09T17:34:53+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.IR"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.415
-    },
-    {
-      "id": "2603.08652",
-      "title": "CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation",
-      "abstract": "Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the reasoning process as executable code, enabling explicit and verifiable intermediate planning for image generation. Given a text prompt, CoCo first generates executable code that specifies the structural layout of the scene, which is then executed in a sandboxed environment to render a deterministic draft image. The model subsequently refines this draft through fine-grained image editing to produce the final high-fidelity result. To support this training paradigm, we construct CoCo-10K, a curated dataset containing structured draft-final image pairs designed to teach both structured draft construction and corrective visual refinement. Empirical evaluations on StructT2IBench, OneIG-Bench, and LongText-Bench show that CoCo achieves improvements of +68.83%, +54.8%, and +41.23% over direct generation, while also outperforming other generation methods empowered by CoT. These results demonstrate that executable code is an effective and reliable reasoning paradigm for precise, controllable, and structured text-to-image generation. The code is available at: https://github.com/micky-li-hd/CoCo",
-      "authors": [
-        "Haodong Li",
-        "Chunmei Qing",
-        "Huanyu Zhang",
-        "Dongzhi Jiang",
-        "Yihang Zou",
-        "Hongbo Peng",
-        "Dingming Li",
-        "Yuhong Dai",
-        "ZePeng Lin",
-        "Juanxi Tian",
-        "Yi Zhou",
-        "Siqi Dai",
-        "Jingwei Wu"
-      ],
-      "url": "https://arxiv.org/abs/2603.08652",
-      "published": "2026-03-09T17:31:16+00:00",
-      "updated": "2026-03-09T17:31:16+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08647",
-      "title": "Grow, Don't Overwrite: Fine-tuning Without Forgetting",
-      "abstract": "Adapting pre-trained models to specialized tasks often leads to catastrophic forgetting, where new knowledge overwrites foundational capabilities. Existing methods either compromise performance on the new task or struggle to balance training stability with efficient reuse of pre-trained knowledge. We introduce a novel function-preserving expansion method that resolves this dilemma. Our technique expands model capacity by replicating pre-trained parameters within transformer submodules and applying a scaling correction that guarantees the expanded model is mathematically identical to the original at initialization, enabling stable training while exploiting existing knowledge. Empirically, our method eliminates the trade-off between plasticity and stability, matching the performance of full fine-tuning on downstream tasks without any degradation of the model's original capabilities. Furthermore, we demonstrate the modularity of our approach, showing that by selectively expanding a small subset of layers we can achieve the same performance as full fine-tuning at a fraction of the computational cost.",
-      "authors": [
-        "Dyah Adila",
-        "Hanna Mazzawi",
-        "Benoit Dherin",
-        "Xavier Gonzalvo"
-      ],
-      "url": "https://arxiv.org/abs/2603.08647",
-      "published": "2026-03-09T17:26:03+00:00",
-      "updated": "2026-03-09T17:26:03+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.358
-    },
-    {
-      "id": "2603.08640",
-      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
-      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
-      "authors": [
-        "Ben Rank",
-        "Hardik Bhatnagar",
-        "Ameya Prabhu",
-        "Shira Eisenberg",
-        "Karina Nguyen",
-        "Matthias Bethge",
-        "Maksym Andriushchenko"
-      ],
-      "url": "https://arxiv.org/abs/2603.08640",
-      "published": "2026-03-09T17:18:00+00:00",
-      "updated": "2026-03-09T17:18:00+00:00",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.451
     },
     {
       "id": "2603.08578",
@@ -272,6 +108,128 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.08706",
+      "title": "Agentic Critical Training",
+      "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
+      "authors": [
+        "Weize Liu",
+        "Minghui Liu",
+        "Sy-Tuyen Ho",
+        "Souradip Chakraborty",
+        "Xiyao Wang",
+        "Furong Huang"
+      ],
+      "url": "https://arxiv.org/abs/2603.08706",
+      "published": "2026-03-09T17:58:56+00:00",
+      "updated": "2026-03-09T17:58:56+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08704",
+      "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
+      "abstract": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
+      "authors": [
+        "Akshay Gulati",
+        "Kanha Singhania",
+        "Tushar Banga",
+        "Parth Arora",
+        "Anshul Verma",
+        "Vaibhav Kumar Singh",
+        "Agyapal Digra",
+        "Jayant Singh Bisht",
+        "Danish Sharma",
+        "Varun Singla",
+        "Shubh Garg"
+      ],
+      "url": "https://arxiv.org/abs/2603.08704",
+      "published": "2026-03-09T17:58:54+00:00",
+      "updated": "2026-03-09T17:58:54+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08655",
+      "title": "OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning",
+      "abstract": "We introduce OfficeQA Pro, a benchmark for evaluating AI agents on grounded, multi-document reasoning over a large and heterogeneous document corpus. The corpus consists of U.S. Treasury Bulletins spanning nearly 100 years, comprising 89,000 pages and over 26 million numerical values. OfficeQA Pro consists of 133 questions that require precise document parsing, retrieval, and analytical reasoning across both unstructured text and tabular data. Frontier LLMs including Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro Preview achieve less than 5% accuracy on OfficeQA Pro when relying on parametric knowledge, and less than 12% with additional access to the web. When provided directly with the document corpus, frontier agents still struggle on over half of questions, scoring 34.1% on average. We find that providing agents with a structured document representation produced by Databricks' ai_parse_document yields a 16.1% average relative performance gain across agents. We conduct additional ablations to study the effects of model selection, table representation, retrieval strategy, and test-time scaling on performance. Despite these improvements, significant headroom remains before agents can be considered reliable at enterprise-grade grounded reasoning.",
+      "authors": [
+        "Krista Opsahl-Ong",
+        "Arnav Singhvi",
+        "Jasmine Collins",
+        "Ivan Zhou",
+        "Cindy Wang",
+        "Ashutosh Baheti",
+        "Owen Oertell",
+        "Jacob Portes",
+        "Sam Havens",
+        "Erich Elsen",
+        "Michael Bendersky",
+        "Matei Zaharia",
+        "Xing Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.08655",
+      "published": "2026-03-09T17:34:53+00:00",
+      "updated": "2026-03-09T17:34:53+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08647",
+      "title": "Grow, Don't Overwrite: Fine-tuning Without Forgetting",
+      "abstract": "Adapting pre-trained models to specialized tasks often leads to catastrophic forgetting, where new knowledge overwrites foundational capabilities. Existing methods either compromise performance on the new task or struggle to balance training stability with efficient reuse of pre-trained knowledge. We introduce a novel function-preserving expansion method that resolves this dilemma. Our technique expands model capacity by replicating pre-trained parameters within transformer submodules and applying a scaling correction that guarantees the expanded model is mathematically identical to the original at initialization, enabling stable training while exploiting existing knowledge. Empirically, our method eliminates the trade-off between plasticity and stability, matching the performance of full fine-tuning on downstream tasks without any degradation of the model's original capabilities. Furthermore, we demonstrate the modularity of our approach, showing that by selectively expanding a small subset of layers we can achieve the same performance as full fine-tuning at a fraction of the computational cost.",
+      "authors": [
+        "Dyah Adila",
+        "Hanna Mazzawi",
+        "Benoit Dherin",
+        "Xavier Gonzalvo"
+      ],
+      "url": "https://arxiv.org/abs/2603.08647",
+      "published": "2026-03-09T17:26:03+00:00",
+      "updated": "2026-03-09T17:26:03+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08640",
+      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
+      "authors": [
+        "Ben Rank",
+        "Hardik Bhatnagar",
+        "Ameya Prabhu",
+        "Shira Eisenberg",
+        "Karina Nguyen",
+        "Matthias Bethge",
+        "Maksym Andriushchenko"
+      ],
+      "url": "https://arxiv.org/abs/2603.08640",
+      "published": "2026-03-09T17:18:00+00:00",
+      "updated": "2026-03-09T17:18:00+00:00",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
       "id": "2603.08493",
       "title": "Pareto-Optimal Anytime Algorithms via Bayesian Racing",
       "abstract": "Selecting an optimization algorithm requires comparing candidates across problem instances, but the computational budget for deployment is often unknown at benchmarking time. Current methods either collapse anytime performance into a scalar, require manual interpretation of plots, or produce conclusions that change when algorithms are added or removed. Moreover, methods based on raw objective values require normalization, which needs bounds or optima that are often unavailable and breaks coherent aggregation across instances. We propose a framework that formulates anytime algorithm comparison as Pareto optimization over time: an algorithm is non-dominated if no competitor beats it at every timepoint. By using rankings rather than objective values, our approach requires no bounds, no normalization, and aggregates coherently across arbitrary instance distributions without requiring known optima. We introduce PolarBear (Pareto-optimal anytime algorithms via Bayesian racing), a procedure that identifies the anytime Pareto set through adaptive sampling with calibrated uncertainty. Bayesian inference over a temporal Plackett-Luce ranking model provides posterior beliefs about pairwise dominance, enabling early elimination of confidently dominated algorithms. The output Pareto set together with the posterior supports downstream algorithm selection under arbitrary time preferences and risk profiles without additional experiments.",
@@ -289,10 +247,8 @@
         "cs.NE",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.456
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.08488",
@@ -311,10 +267,8 @@
         "cs.LG",
         "math.DS"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.403
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.08475",
@@ -337,10 +291,8 @@
         "cs.RO",
         "cs.AI"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.405
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.08468",
@@ -362,10 +314,8 @@
         "eess.SY",
         "cs.LG"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.376
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.04384",
@@ -385,10 +335,8 @@
       "categories": [
         "cs.CL"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.366
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.08583",
@@ -409,7 +357,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.345
+      "best_score": 0.0
     },
     {
       "id": "2603.08687",
@@ -429,7 +377,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2603.08544",
@@ -448,7 +396,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.33
+      "best_score": 0.0
     },
     {
       "id": "2603.08667",
@@ -468,7 +416,7 @@
         "hep-ex"
       ],
       "matched_topics": [],
-      "best_score": 0.316
+      "best_score": 0.0
     },
     {
       "id": "2603.08676",
@@ -488,7 +436,7 @@
         "stat.CO"
       ],
       "matched_topics": [],
-      "best_score": 0.307
+      "best_score": 0.0
     },
     {
       "id": "2603.08501",
@@ -513,7 +461,35 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.306
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08652",
+      "title": "CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation",
+      "abstract": "Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the reasoning process as executable code, enabling explicit and verifiable intermediate planning for image generation. Given a text prompt, CoCo first generates executable code that specifies the structural layout of the scene, which is then executed in a sandboxed environment to render a deterministic draft image. The model subsequently refines this draft through fine-grained image editing to produce the final high-fidelity result. To support this training paradigm, we construct CoCo-10K, a curated dataset containing structured draft-final image pairs designed to teach both structured draft construction and corrective visual refinement. Empirical evaluations on StructT2IBench, OneIG-Bench, and LongText-Bench show that CoCo achieves improvements of +68.83%, +54.8%, and +41.23% over direct generation, while also outperforming other generation methods empowered by CoT. These results demonstrate that executable code is an effective and reliable reasoning paradigm for precise, controllable, and structured text-to-image generation. The code is available at: https://github.com/micky-li-hd/CoCo",
+      "authors": [
+        "Haodong Li",
+        "Chunmei Qing",
+        "Huanyu Zhang",
+        "Dongzhi Jiang",
+        "Yihang Zou",
+        "Hongbo Peng",
+        "Dingming Li",
+        "Yuhong Dai",
+        "ZePeng Lin",
+        "Juanxi Tian",
+        "Yi Zhou",
+        "Siqi Dai",
+        "Jingwei Wu"
+      ],
+      "url": "https://arxiv.org/abs/2603.08652",
+      "published": "2026-03-09T17:31:16+00:00",
+      "updated": "2026-03-09T17:31:16+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.08514",
@@ -532,7 +508,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.302
+      "best_score": 0.0
     },
     {
       "id": "2603.08651",
@@ -551,7 +527,7 @@
         "math-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.294
+      "best_score": 0.0
     },
     {
       "id": "2603.08682",
@@ -570,7 +546,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.287
+      "best_score": 0.0
     },
     {
       "id": "2603.08465",
@@ -592,7 +568,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.287
+      "best_score": 0.0
     },
     {
       "id": "2603.08707",
@@ -615,7 +591,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.281
+      "best_score": 0.0
     },
     {
       "id": "2603.08600",
@@ -634,7 +610,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.275
+      "best_score": 0.0
     },
     {
       "id": "2603.08649",
@@ -652,7 +628,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.273
+      "best_score": 0.0
     },
     {
       "id": "2603.08495",
@@ -673,7 +649,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2603.08558",
@@ -694,7 +670,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.258
+      "best_score": 0.0
     },
     {
       "id": "2603.05565",
@@ -712,7 +688,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.253
+      "best_score": 0.0
     },
     {
       "id": "2603.08639",
@@ -736,7 +712,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.08679",
@@ -758,7 +734,7 @@
         "econ.TH"
       ],
       "matched_topics": [],
-      "best_score": 0.235
+      "best_score": 0.0
     },
     {
       "id": "2603.08506",
@@ -779,7 +755,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.232
+      "best_score": 0.0
     },
     {
       "id": "2603.08692",
@@ -796,7 +772,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.231
+      "best_score": 0.0
     },
     {
       "id": "2603.08566",
@@ -822,7 +798,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.218
+      "best_score": 0.0
     },
     {
       "id": "2603.08478",
@@ -841,7 +817,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.214
+      "best_score": 0.0
     },
     {
       "id": "2603.08526",
@@ -862,7 +838,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.213
+      "best_score": 0.0
     },
     {
       "id": "2603.08494",
@@ -879,7 +855,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.208
+      "best_score": 0.0
     },
     {
       "id": "2603.08588",
@@ -898,7 +874,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.205
+      "best_score": 0.0
     },
     {
       "id": "2603.08630",
@@ -917,7 +893,7 @@
         "physics.comp-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.08546",
@@ -944,7 +920,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.08575",
@@ -961,7 +937,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.199
+      "best_score": 0.0
     },
     {
       "id": "2603.05318",
@@ -981,7 +957,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.196
+      "best_score": 0.0
     },
     {
       "id": "2603.08658",
@@ -999,7 +975,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.195
+      "best_score": 0.0
     },
     {
       "id": "2603.08572",
@@ -1024,7 +1000,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.191
+      "best_score": 0.0
     },
     {
       "id": "2603.08518",
@@ -1042,7 +1018,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.19
+      "best_score": 0.0
     },
     {
       "id": "2603.08645",
@@ -1067,7 +1043,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.185
+      "best_score": 0.0
     },
     {
       "id": "2603.08553",
@@ -1088,7 +1064,7 @@
         "q-fin.RM"
       ],
       "matched_topics": [],
-      "best_score": 0.184
+      "best_score": 0.0
     },
     {
       "id": "2603.08683",
@@ -1109,7 +1085,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.16
+      "best_score": 0.0
     },
     {
       "id": "2603.08505",
@@ -1131,7 +1107,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.155
+      "best_score": 0.0
     },
     {
       "id": "2603.08709",
@@ -1150,7 +1126,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.154
+      "best_score": 0.0
     },
     {
       "id": "2603.08605",
@@ -1169,7 +1145,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.152
+      "best_score": 0.0
     },
     {
       "id": "2603.08486",
@@ -1189,7 +1165,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.148
+      "best_score": 0.0
     },
     {
       "id": "2603.08483",
@@ -1212,7 +1188,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.111
+      "best_score": 0.0
     }
   ]
 }

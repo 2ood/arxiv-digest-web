@@ -40,6 +40,19 @@ def _normalize(text: str) -> str:
 
 
 def _build_patterns(topics: list[Topic]) -> dict[str, list[re.Pattern]]:
+    """
+    Compile one regex per term per topic.
+
+    Single-word terms (e.g. "symbolic", "IIT", "CoT"):
+      - matched as exact whole words only — no suffix wildcard.
+      - This prevents "symbolic" from firing on "symbolically" in an unrelated
+        sentence, and "awareness" from matching "self-aware" tangentially.
+
+    Multi-word phrases (e.g. "test-time training", "knowledge graph"):
+      - the final word gets a light suffix allowance (ing/ed/s/tion) because
+        "test-time training" should still match "test-time trained".
+      - interior words matched exactly.
+    """
     patterns = {}
     for topic in topics:
         if not topic.enabled:
@@ -47,10 +60,16 @@ def _build_patterns(topics: list[Topic]) -> dict[str, list[re.Pattern]]:
         compiled = []
         for term in topic.terms:
             escaped = re.escape(term.lower())
-            pattern = re.compile(
-                r'\b' + escaped + r'(?:ing|ed|s|er|ly|tion|ations?)?\b',
-                re.IGNORECASE
-            )
+            words   = term.split()
+            if len(words) == 1:
+                # Exact whole-word match only — no stemming for single tokens
+                pattern = re.compile(r'\b' + escaped + r'\b', re.IGNORECASE)
+            else:
+                # Multi-word: allow light suffix on the last word only
+                pattern = re.compile(
+                    r'\b' + escaped + r'(?:ing|ed|s|tion|ations?)?\b',
+                    re.IGNORECASE
+                )
             compiled.append(pattern)
         patterns[topic.id] = compiled
     return patterns

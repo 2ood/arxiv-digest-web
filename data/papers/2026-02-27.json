@@ -1,50 +1,7 @@
 {
   "date": "2026-02-27",
-  "fetched_at": "2026-03-02T08:53:12.716208+09:00",
+  "fetched_at": "2026-03-17T09:10:54.488403+09:00",
   "papers": [
-    {
-      "id": "2602.23358",
-      "title": "A Dataset is Worth 1 MB",
-      "abstract": "A dataset server must often distribute the same large payload to many clients, incurring massive communication costs. Since clients frequently operate on diverse hardware and software frameworks, transmitting a pre-trained model is often infeasible; instead, agents require raw data to train their own task-specific models locally. While dataset distillation attempts to compress training signals, current methods struggle to scale to high-resolution data and rarely achieve sufficiently small files. In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission. We assume agents are preloaded with a large, generic, unlabeled reference dataset (e.g., ImageNet-1K, ImageNet-21K) and communicate a new task by transmitting only the class labels for specific images. To address the distribution mismatch between the reference and target datasets, we introduce a pruning mechanism that filters the reference dataset to retain only the labels of the most semantically relevant images for the target task. This selection process simultaneously maximizes training efficiency and minimizes transmission payload. Experiments on 10 diverse datasets demonstrate that our approach can transfer task knowledge with a payload of less than 1 MB while retaining high classification accuracy, offering a promising solution for efficient dataset serving.",
-      "authors": [
-        "Elad Kimchi Shoshani",
-        "Leeyam Gabay",
-        "Yedid Hoshen"
-      ],
-      "url": "https://arxiv.org/abs/2602.23358",
-      "published": "2026-02-26T18:59:03+00:00",
-      "updated": "2026-02-26T18:59:03+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.358
-    },
-    {
-      "id": "2602.23349",
-      "title": "FlashOptim: Optimizers for Memory Efficient Training",
-      "abstract": "Standard mixed-precision training of neural networks requires many bytes of accelerator memory for each model parameter. These bytes reflect not just the parameter itself, but also its gradient and one or more optimizer state variables. With each of these values typically requiring 4 bytes, training even a 7 billion parameter model can be impractical for researchers with less than 100GB of accelerator memory.   We introduce FlashOptim, a suite of optimizations that reduces per-parameter memory by over 50% while preserving model quality and API compatibility. Our approach introduces two key techniques. First, we improve master weight splitting by finding and exploiting a tight bound on its quantization error. Second, we design companding functions that greatly reduce the error in 8-bit optimizer state quantization. Together with 16-bit gradients, these techniques reduce AdamW memory from 16 bytes to 7 bytes per parameter, or 5 bytes with gradient release. They also cut model checkpoint sizes by more than half.   Experiments with FlashOptim applied to SGD, AdamW, and Lion show no measurable quality degradation on any task from a collection of standard vision and language benchmarks, including Llama-3.1-8B finetuning.",
-      "authors": [
-        "Jose Javier Gonzalez Ortiz",
-        "Abhay Gupta",
-        "Chris Renard",
-        "Davis Blalock"
-      ],
-      "url": "https://arxiv.org/abs/2602.23349",
-      "published": "2026-02-26T18:52:22+00:00",
-      "updated": "2026-02-26T18:52:22+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.378
-    },
     {
       "id": "2602.23318",
       "title": "Generalized Rapid Action Value Estimation in Memory-Constrained Environments",
@@ -66,63 +23,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2602.23303",
-      "title": "Inferential Mechanics Part 1: Causal Mechanistic Theories of Machine Learning in Chemical Biology with Implications",
-      "abstract": "Machine learning techniques are now routinely encountered in research laboratories across the globe. Impressive progress has been made through ML and AI techniques with regards to large data set processing. This progress has increased the ability of the experimenter to digest data and make novel predictions regarding phenomena of interest. However, machine learning predictors generated from data sets taken from the natural sciences are often treated as black boxes which are used broadly and generally without detailed consideration of the causal structure of the data set of interest. Work has been attempted to bring causality into discussions of machine learning models of natural phenomena; however, a firm and unified theoretical treatment is lacking. This series of three papers explores the union of chemical theory, biological theory, probability theory and causality that will correct current causal flaws of machine learning in the natural sciences. This paper, Part 1 of the series, provides the formal framework of the foundational causal structure of phenomena in chemical biology and is extended to machine learning through the novel concept of focus, defined here as the ability of a machine learning algorithm to narrow down to a hidden underpinning mechanism in large data sets. Initial proof of these principles on a family of Akt inhibitors is also provided. The second paper containing Part 2 will provide a formal exploration of chemical similarity, and Part 3 will present extensive experimental evidence of how hidden causal structures weaken all machine learning in chemical biology. This series serves to establish for chemical biology a new kind of mathematical framework for modeling mechanisms in Nature without the need for the tools of reductionism: inferential mechanics.",
-      "authors": [
-        "Ilya Balabin",
-        "Thomas M. Kaiser"
-      ],
-      "url": "https://arxiv.org/abs/2602.23303",
-      "published": "2026-02-26T18:09:16+00:00",
-      "updated": "2026-02-26T18:09:16+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.368
-    },
-    {
-      "id": "2602.23248",
-      "title": "Mitigating Legibility Tax with Decoupled Prover-Verifier Games",
-      "abstract": "As large language models become increasingly capable, it is critical that their outputs can be easily checked by less capable systems. Prover-verifier games can be used to improve checkability of model outputs, but display a degradation in accuracy compared to a baseline trained only to maximize correctness -- a phenonemon named legibility tax. We propose a solution by decoupling the correctness from the checkability condition and instead training a \"translator\" model that turns a fixed solver model's solution into a checkable form. This allows us to first train the solver to maximize correctness, and then train the translator to translate the solver into a checkable form while retaining the solver's answer. To accommodate this new objective of translation, we formulate a decoupled prover-verifier game where the equilibria correspond to faithful and checkable translators.",
-      "authors": [
-        "Yegon Kim",
-        "Juho Lee"
-      ],
-      "url": "https://arxiv.org/abs/2602.23248",
-      "published": "2026-02-26T17:25:22+00:00",
-      "updated": "2026-02-26T17:25:22+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.403
-    },
-    {
-      "id": "2602.23239",
-      "title": "Agency and Architectural Limits: Why Optimization-Based Systems Cannot Be Norm-Responsive",
-      "abstract": "AI systems are increasingly deployed in high-stakes contexts -- medical diagnosis, legal research, financial analysis -- under the assumption they can be governed by norms. This paper demonstrates that assumption is formally invalid for optimization-based systems, specifically Large Language Models trained via Reinforcement Learning from Human Feedback (RLHF). We establish that genuine agency requires two necessary and jointly sufficient architectural conditions: the capacity to maintain certain boundaries as non-negotiable constraints rather than tradeable weights (Incommensurability), and a non-inferential mechanism capable of suspending processing when those boundaries are threatened (Apophatic Responsiveness). These conditions apply across all normative domains.   RLHF-based systems are constitutively incompatible with both conditions. The operations that make optimization powerful -- unifying all values on a scalar metric and always selecting the highest-scoring output -- are precisely the operations that preclude normative governance. This incompatibility is not a correctable training bug awaiting a technical fix; it is a formal constraint inherent to what optimization is. Consequently, documented failure modes - sycophancy, hallucination, and unfaithful reasoning - are not accidents but structural manifestations.   Misaligned deployment triggers a second-order risk we term the Convergence Crisis: when humans are forced to verify AI outputs under metric pressure, they degrade from genuine agents into criteria-checking optimizers, eliminating the only component in the system capable of normative accountability. Beyond the incompatibility proof, the paper's primary positive contribution is a substrate-neutral architectural specification defining what any system -- biological, artificial, or institutional -- must satisfy to qualify as an agent rather than a sophisticated instrument.",
-      "authors": [
-        "Radha Sarma"
-      ],
-      "url": "https://arxiv.org/abs/2602.23239",
-      "published": "2026-02-26T17:16:17+00:00",
-      "updated": "2026-02-26T17:16:17+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CY"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.358
-    },
-    {
       "id": "2602.23232",
       "title": "ReCoN-Ipsundrum: An Inspectable Recurrent Persistence Loop Agent with Affect-Coupled Control and Mechanism-Linked Consciousness Indicator Assays",
       "abstract": "Indicator-based approaches to machine consciousness recommend mechanism-linked evidence triangulated across tasks, supported by architectural inspection and causal intervention. Inspired by Humphrey's ipsundrum hypothesis, we implement ReCoN-Ipsundrum, an inspectable agent that extends a ReCoN state machine with a recurrent persistence loop over sensory salience Ns and an optional affect proxy reporting valence/arousal. Across fixed-parameter ablations (ReCoN, Ipsundrum, Ipsundrum+affect), we operationalize Humphrey's qualiaphilia (preference for sensory experience for its own sake) as a familiarity-controlled scenic-over-dull route choice. We find a novelty dissociation: non-affect variants are novelty-sensitive (Delta scenic-entry = 0.07). Affect coupling is stable (Delta scenic-entry = 0.01) even when scenic is less novel (median Delta novelty ~ -0.43). In reward-free exploratory play, the affect variant shows structured local investigation (scan events 31.4 vs. 0.9; cycle score 7.6). In a pain-tail probe, only the affect variant sustains prolonged planned caution (tail duration 90 vs. 5). Lesioning feedback+integration selectively reduces post-stimulus persistence in ipsundrum variants (AUC drop 27.62, 27.9%) while leaving ReCoN unchanged. These dissociations link recurrence -> persistence and affect-coupled control -> preference stability, scanning, and lingering caution, illustrating how indicator-like signatures can be engineered and why mechanistic and causal evidence should accompany behavioral markers.",
@@ -139,147 +39,6 @@
         "Artificial Consciousness"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2602.23225",
-      "title": "Why Diffusion Language Models Struggle with Truly Parallel (Non-Autoregressive) Decoding?",
-      "abstract": "Diffusion Language Models (DLMs) are often advertised as enabling parallel token generation, yet practical fast DLMs frequently converge to left-to-right, autoregressive (AR)-like decoding dynamics. In contrast, genuinely non-AR generation is promising because it removes AR's sequential bottleneck, better exploiting parallel hardware to reduce synchronization/communication overhead and improve latency scaling with output length. We argue that a primary driver of AR-like decoding is a mismatch between DLM objectives and the highly sequential structure of widely used training data, including standard pretraining corpora and long chain-of-thought (CoT) supervision. Motivated by this diagnosis, we propose NAP (Non-Autoregressive Parallel DLMs), a proof-of-concept, data-centric approach that better aligns supervision with non-AR parallel decoding. NAP curates examples as multiple independent reasoning trajectories and couples them with a parallel-forced decoding strategy that encourages multi-token parallel updates. Across math reasoning benchmarks, NAP yields stronger performance under parallel decoding than DLMs trained on standard long CoT data, with gains growing as parallelism increases. Our results suggest that revisiting data and supervision is a principled direction for mitigating AR-like behavior and moving toward genuinely non-autoregressive parallel generation in DLMs. Our code is available at https://github.com/pixeli99/NAP.",
-      "authors": [
-        "Pengxiang Li",
-        "Dilxat Muhtar",
-        "Lu Yin",
-        "Tianlong Chen",
-        "Shiwei Liu"
-      ],
-      "url": "https://arxiv.org/abs/2602.23225",
-      "published": "2026-02-26T17:04:57+00:00",
-      "updated": "2026-02-26T17:04:57+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2602.23203",
-      "title": "ColoDiff: Integrating Dynamic Consistency With Content Awareness for Colonoscopy Video Generation",
-      "abstract": "Colonoscopy video generation delivers dynamic, information-rich data critical for diagnosing intestinal diseases, particularly in data-scarce scenarios. High-quality video generation demands temporal consistency and precise control over clinical attributes, but faces challenges from irregular intestinal structures, diverse disease representations, and various imaging modalities. To this end, we propose ColoDiff, a diffusion-based framework that generates dynamic-consistent and content-aware colonoscopy videos, aiming to alleviate data shortage and assist clinical analysis. At the inter-frame level, our TimeStream module decouples temporal dependency from video sequences through a cross-frame tokenization mechanism, enabling intricate dynamic modeling despite irregular intestinal structures. At the intra-frame level, our Content-Aware module incorporates noise-injected embeddings and learnable prototypes to realize precise control over clinical attributes, breaking through the coarse guidance of diffusion models. Additionally, ColoDiff employs a non-Markovian sampling strategy that cuts steps by over 90% for real-time generation. ColoDiff is evaluated across three public datasets and one hospital database, based on both generation metrics and downstream tasks including disease diagnosis, modality discrimination, bowel preparation scoring, and lesion segmentation. Extensive experiments show ColoDiff generates videos with smooth transitions and rich dynamics. ColoDiff presents an effort in controllable colonoscopy video generation, revealing the potential of synthetic videos in complementing authentic representation and mitigating data scarcity in clinical settings.",
-      "authors": [
-        "Junhu Fu",
-        "Shuyu Liang",
-        "Wutong Li",
-        "Chen Ma",
-        "Peng Huang",
-        "Kehao Wang",
-        "Ke Chen",
-        "Shengli Lin",
-        "Pinghong Zhou",
-        "Zeju Li",
-        "Yuanyuan Wang",
-        "Yi Guo"
-      ],
-      "url": "https://arxiv.org/abs/2602.23203",
-      "published": "2026-02-26T16:51:24+00:00",
-      "updated": "2026-02-26T16:51:24+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2602.23199",
-      "title": "SC-Arena: A Natural Language Benchmark for Single-Cell Reasoning with Knowledge-Augmented Evaluation",
-      "abstract": "Large language models (LLMs) are increasingly applied in scientific research, offering new capabilities for knowledge discovery and reasoning. In single-cell biology, however, evaluation practices for both general and specialized LLMs remain inadequate: existing benchmarks are fragmented across tasks, adopt formats such as multiple-choice classification that diverge from real-world usage, and rely on metrics lacking interpretability and biological grounding. We present SC-ARENA, a natural language evaluation framework tailored to single-cell foundation models. SC-ARENA formalizes a virtual cell abstraction that unifies evaluation targets by representing both intrinsic attributes and gene-level interactions. Within this paradigm, we define five natural language tasks (cell type annotation, captioning, generation, perturbation prediction, and scientific QA) that probe core reasoning capabilities in cellular biology. To overcome the limitations of brittle string-matching metrics, we introduce knowledge-augmented evaluation, which incorporates external ontologies, marker databases, and scientific literature to support biologically faithful and interpretable judgments. Experiments and analysis across both general-purpose and domain-specialized LLMs demonstrate that (i) under the Virtual Cell unified evaluation paradigm, current models achieve uneven performance on biologically complex tasks, particularly those demanding mechanistic or causal understanding; and (ii) our knowledge-augmented evaluation framework ensures biological correctness, provides interpretable, evidence-grounded rationales, and achieves high discriminative capacity, overcoming the brittleness and opacity of conventional metrics. SC-Arena thus provides a unified and interpretable framework for assessing LLMs in single-cell biology, pointing toward the development of biology-aligned, generalizable foundation models.",
-      "authors": [
-        "Jiahao Zhao",
-        "Feng Jiang",
-        "Shaowei Qin",
-        "Zhonghui Zhang",
-        "Junhao Liu",
-        "Guibing Guo",
-        "Hamid Alinejad-Rokny",
-        "Min Yang"
-      ],
-      "url": "https://arxiv.org/abs/2602.23199",
-      "published": "2026-02-26T16:50:28+00:00",
-      "updated": "2026-02-26T16:50:28+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.389
-    },
-    {
-      "id": "2602.23197",
-      "title": "Fine-Tuning Without Forgetting In-Context Learning: A Theoretical Analysis of Linear Attention Models",
-      "abstract": "Transformer-based large language models exhibit in-context learning, enabling adaptation to downstream tasks via few-shot prompting with demonstrations. In practice, such models are often fine-tuned to improve zero-shot performance on downstream tasks, allowing them to solve tasks without examples and thereby reducing inference costs. However, fine-tuning can degrade in-context learning, limiting the performance of fine-tuned models on tasks not seen during fine-tuning. Using linear attention models, we provide a theoretical analysis that characterizes how fine-tuning objectives modify attention parameters and identifies conditions under which this leads to degraded few-shot performance. We show that fine-tuning all attention parameters can harm in-context learning, whereas restricting updates to the value matrix improves zero-shot performance while preserving in-context learning. We further show that incorporating an auxiliary few-shot loss enhances in-context learning primarily on the target task, at the expense of degraded in-context learning ability on tasks not seen during fine-tuning. We empirically validate our theoretical results.",
-      "authors": [
-        "Chungpa Lee",
-        "Jy-yong Sohn",
-        "Kangwook Lee"
-      ],
-      "url": "https://arxiv.org/abs/2602.23197",
-      "published": "2026-02-26T16:49:15+00:00",
-      "updated": "2026-02-26T16:49:15+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.372
-    },
-    {
-      "id": "2602.23182",
-      "title": "Closing the gap on tabular data with Fourier and Implicit Categorical Features",
-      "abstract": "While Deep Learning has demonstrated impressive results in applications on various data types, it continues to lag behind tree-based methods when applied to tabular data, often referred to as the last \"unconquered castle\" for neural networks. We hypothesize that a significant advantage of tree-based methods lies in their intrinsic capability to model and exploit non-linear interactions induced by features with categorical characteristics. In contrast, neural-based methods exhibit biases toward uniform numerical processing of features and smooth solutions, making it challenging for them to effectively leverage such patterns. We address this performance gap by using statistical-based feature processing techniques to identify features that are strongly correlated with the target once discretized. We further mitigate the bias of deep models for overly-smooth solutions, a bias that does not align with the inherent properties of the data, using Learned Fourier. We show that our proposed feature preprocessing significantly boosts the performance of deep learning models and enables them to achieve a performance that closely matches or surpasses XGBoost on a comprehensive tabular data benchmark.",
-      "authors": [
-        "Marius Dragoi",
-        "Florin Gogianu",
-        "Elena Burceanu"
-      ],
-      "url": "https://arxiv.org/abs/2602.23182",
-      "published": "2026-02-26T16:40:23+00:00",
-      "updated": "2026-02-26T16:40:23+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.368
-    },
-    {
-      "id": "2602.23164",
-      "title": "MetaOthello: A Controlled Study of Multiple World Models in Transformers",
-      "abstract": "Foundation models must handle multiple generative processes, yet mechanistic interpretability largely studies capabilities in isolation; it remains unclear how a single transformer organizes multiple, potentially conflicting \"world models\". Previous experiments on Othello playing neural-networks test world-model learning but focus on a single game with a single set of rules. We introduce MetaOthello, a controlled suite of Othello variants with shared syntax but different rules or tokenizations, and train small GPTs on mixed-variant data to study how multiple world models are organized in a shared representation space. We find that transformers trained on mixed-game data do not partition their capacity into isolated sub-models; instead, they converge on a mostly shared board-state representation that transfers causally across variants. Linear probes trained on one variant can intervene on another's internal state with effectiveness approaching that of matched probes. For isomorphic games with token remapping, representations are equivalent up to a single orthogonal rotation that generalizes across layers. When rules partially overlap, early layers maintain game-agnostic representations while a middle layer identifies game identity, and later layers specialize. MetaOthello offers a path toward understanding not just whether transformers learn world models, but how they organize many at once.",
-      "authors": [
-        "Aviral Chawla",
-        "Galen Hall",
-        "Juniper Lovato"
-      ],
-      "url": "https://arxiv.org/abs/2602.23164",
-      "published": "2026-02-26T16:28:09+00:00",
-      "updated": "2026-02-26T16:28:09+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.356
     },
     {
       "id": "2602.23161",
@@ -303,6 +62,175 @@
       "matched_topics": [
         "Test-Time Learning"
       ],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23358",
+      "title": "A Dataset is Worth 1 MB",
+      "abstract": "A dataset server must often distribute the same large payload to many clients, incurring massive communication costs. Since clients frequently operate on diverse hardware and software frameworks, transmitting a pre-trained model is often infeasible; instead, agents require raw data to train their own task-specific models locally. While dataset distillation attempts to compress training signals, current methods struggle to scale to high-resolution data and rarely achieve sufficiently small files. In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission. We assume agents are preloaded with a large, generic, unlabeled reference dataset (e.g., ImageNet-1K, ImageNet-21K) and communicate a new task by transmitting only the class labels for specific images. To address the distribution mismatch between the reference and target datasets, we introduce a pruning mechanism that filters the reference dataset to retain only the labels of the most semantically relevant images for the target task. This selection process simultaneously maximizes training efficiency and minimizes transmission payload. Experiments on 10 diverse datasets demonstrate that our approach can transfer task knowledge with a payload of less than 1 MB while retaining high classification accuracy, offering a promising solution for efficient dataset serving.",
+      "authors": [
+        "Elad Kimchi Shoshani",
+        "Leeyam Gabay",
+        "Yedid Hoshen"
+      ],
+      "url": "https://arxiv.org/abs/2602.23358",
+      "published": "2026-02-26T18:59:03+00:00",
+      "updated": "2026-02-26T18:59:03+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23349",
+      "title": "FlashOptim: Optimizers for Memory Efficient Training",
+      "abstract": "Standard mixed-precision training of neural networks requires many bytes of accelerator memory for each model parameter. These bytes reflect not just the parameter itself, but also its gradient and one or more optimizer state variables. With each of these values typically requiring 4 bytes, training even a 7 billion parameter model can be impractical for researchers with less than 100GB of accelerator memory.   We introduce FlashOptim, a suite of optimizations that reduces per-parameter memory by over 50% while preserving model quality and API compatibility. Our approach introduces two key techniques. First, we improve master weight splitting by finding and exploiting a tight bound on its quantization error. Second, we design companding functions that greatly reduce the error in 8-bit optimizer state quantization. Together with 16-bit gradients, these techniques reduce AdamW memory from 16 bytes to 7 bytes per parameter, or 5 bytes with gradient release. They also cut model checkpoint sizes by more than half.   Experiments with FlashOptim applied to SGD, AdamW, and Lion show no measurable quality degradation on any task from a collection of standard vision and language benchmarks, including Llama-3.1-8B finetuning.",
+      "authors": [
+        "Jose Javier Gonzalez Ortiz",
+        "Abhay Gupta",
+        "Chris Renard",
+        "Davis Blalock"
+      ],
+      "url": "https://arxiv.org/abs/2602.23349",
+      "published": "2026-02-26T18:52:22+00:00",
+      "updated": "2026-02-26T18:52:22+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23303",
+      "title": "Inferential Mechanics Part 1: Causal Mechanistic Theories of Machine Learning in Chemical Biology with Implications",
+      "abstract": "Machine learning techniques are now routinely encountered in research laboratories across the globe. Impressive progress has been made through ML and AI techniques with regards to large data set processing. This progress has increased the ability of the experimenter to digest data and make novel predictions regarding phenomena of interest. However, machine learning predictors generated from data sets taken from the natural sciences are often treated as black boxes which are used broadly and generally without detailed consideration of the causal structure of the data set of interest. Work has been attempted to bring causality into discussions of machine learning models of natural phenomena; however, a firm and unified theoretical treatment is lacking. This series of three papers explores the union of chemical theory, biological theory, probability theory and causality that will correct current causal flaws of machine learning in the natural sciences. This paper, Part 1 of the series, provides the formal framework of the foundational causal structure of phenomena in chemical biology and is extended to machine learning through the novel concept of focus, defined here as the ability of a machine learning algorithm to narrow down to a hidden underpinning mechanism in large data sets. Initial proof of these principles on a family of Akt inhibitors is also provided. The second paper containing Part 2 will provide a formal exploration of chemical similarity, and Part 3 will present extensive experimental evidence of how hidden causal structures weaken all machine learning in chemical biology. This series serves to establish for chemical biology a new kind of mathematical framework for modeling mechanisms in Nature without the need for the tools of reductionism: inferential mechanics.",
+      "authors": [
+        "Ilya Balabin",
+        "Thomas M. Kaiser"
+      ],
+      "url": "https://arxiv.org/abs/2602.23303",
+      "published": "2026-02-26T18:09:16+00:00",
+      "updated": "2026-02-26T18:09:16+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23248",
+      "title": "Mitigating Legibility Tax with Decoupled Prover-Verifier Games",
+      "abstract": "As large language models become increasingly capable, it is critical that their outputs can be easily checked by less capable systems. Prover-verifier games can be used to improve checkability of model outputs, but display a degradation in accuracy compared to a baseline trained only to maximize correctness -- a phenonemon named legibility tax. We propose a solution by decoupling the correctness from the checkability condition and instead training a \"translator\" model that turns a fixed solver model's solution into a checkable form. This allows us to first train the solver to maximize correctness, and then train the translator to translate the solver into a checkable form while retaining the solver's answer. To accommodate this new objective of translation, we formulate a decoupled prover-verifier game where the equilibria correspond to faithful and checkable translators.",
+      "authors": [
+        "Yegon Kim",
+        "Juho Lee"
+      ],
+      "url": "https://arxiv.org/abs/2602.23248",
+      "published": "2026-02-26T17:25:22+00:00",
+      "updated": "2026-02-26T17:25:22+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23239",
+      "title": "Agency and Architectural Limits: Why Optimization-Based Systems Cannot Be Norm-Responsive",
+      "abstract": "AI systems are increasingly deployed in high-stakes contexts -- medical diagnosis, legal research, financial analysis -- under the assumption they can be governed by norms. This paper demonstrates that assumption is formally invalid for optimization-based systems, specifically Large Language Models trained via Reinforcement Learning from Human Feedback (RLHF). We establish that genuine agency requires two necessary and jointly sufficient architectural conditions: the capacity to maintain certain boundaries as non-negotiable constraints rather than tradeable weights (Incommensurability), and a non-inferential mechanism capable of suspending processing when those boundaries are threatened (Apophatic Responsiveness). These conditions apply across all normative domains.   RLHF-based systems are constitutively incompatible with both conditions. The operations that make optimization powerful -- unifying all values on a scalar metric and always selecting the highest-scoring output -- are precisely the operations that preclude normative governance. This incompatibility is not a correctable training bug awaiting a technical fix; it is a formal constraint inherent to what optimization is. Consequently, documented failure modes - sycophancy, hallucination, and unfaithful reasoning - are not accidents but structural manifestations.   Misaligned deployment triggers a second-order risk we term the Convergence Crisis: when humans are forced to verify AI outputs under metric pressure, they degrade from genuine agents into criteria-checking optimizers, eliminating the only component in the system capable of normative accountability. Beyond the incompatibility proof, the paper's primary positive contribution is a substrate-neutral architectural specification defining what any system -- biological, artificial, or institutional -- must satisfy to qualify as an agent rather than a sophisticated instrument.",
+      "authors": [
+        "Radha Sarma"
+      ],
+      "url": "https://arxiv.org/abs/2602.23239",
+      "published": "2026-02-26T17:16:17+00:00",
+      "updated": "2026-02-26T17:16:17+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23199",
+      "title": "SC-Arena: A Natural Language Benchmark for Single-Cell Reasoning with Knowledge-Augmented Evaluation",
+      "abstract": "Large language models (LLMs) are increasingly applied in scientific research, offering new capabilities for knowledge discovery and reasoning. In single-cell biology, however, evaluation practices for both general and specialized LLMs remain inadequate: existing benchmarks are fragmented across tasks, adopt formats such as multiple-choice classification that diverge from real-world usage, and rely on metrics lacking interpretability and biological grounding. We present SC-ARENA, a natural language evaluation framework tailored to single-cell foundation models. SC-ARENA formalizes a virtual cell abstraction that unifies evaluation targets by representing both intrinsic attributes and gene-level interactions. Within this paradigm, we define five natural language tasks (cell type annotation, captioning, generation, perturbation prediction, and scientific QA) that probe core reasoning capabilities in cellular biology. To overcome the limitations of brittle string-matching metrics, we introduce knowledge-augmented evaluation, which incorporates external ontologies, marker databases, and scientific literature to support biologically faithful and interpretable judgments. Experiments and analysis across both general-purpose and domain-specialized LLMs demonstrate that (i) under the Virtual Cell unified evaluation paradigm, current models achieve uneven performance on biologically complex tasks, particularly those demanding mechanistic or causal understanding; and (ii) our knowledge-augmented evaluation framework ensures biological correctness, provides interpretable, evidence-grounded rationales, and achieves high discriminative capacity, overcoming the brittleness and opacity of conventional metrics. SC-Arena thus provides a unified and interpretable framework for assessing LLMs in single-cell biology, pointing toward the development of biology-aligned, generalizable foundation models.",
+      "authors": [
+        "Jiahao Zhao",
+        "Feng Jiang",
+        "Shaowei Qin",
+        "Zhonghui Zhang",
+        "Junhao Liu",
+        "Guibing Guo",
+        "Hamid Alinejad-Rokny",
+        "Min Yang"
+      ],
+      "url": "https://arxiv.org/abs/2602.23199",
+      "published": "2026-02-26T16:50:28+00:00",
+      "updated": "2026-02-26T16:50:28+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23197",
+      "title": "Fine-Tuning Without Forgetting In-Context Learning: A Theoretical Analysis of Linear Attention Models",
+      "abstract": "Transformer-based large language models exhibit in-context learning, enabling adaptation to downstream tasks via few-shot prompting with demonstrations. In practice, such models are often fine-tuned to improve zero-shot performance on downstream tasks, allowing them to solve tasks without examples and thereby reducing inference costs. However, fine-tuning can degrade in-context learning, limiting the performance of fine-tuned models on tasks not seen during fine-tuning. Using linear attention models, we provide a theoretical analysis that characterizes how fine-tuning objectives modify attention parameters and identifies conditions under which this leads to degraded few-shot performance. We show that fine-tuning all attention parameters can harm in-context learning, whereas restricting updates to the value matrix improves zero-shot performance while preserving in-context learning. We further show that incorporating an auxiliary few-shot loss enhances in-context learning primarily on the target task, at the expense of degraded in-context learning ability on tasks not seen during fine-tuning. We empirically validate our theoretical results.",
+      "authors": [
+        "Chungpa Lee",
+        "Jy-yong Sohn",
+        "Kangwook Lee"
+      ],
+      "url": "https://arxiv.org/abs/2602.23197",
+      "published": "2026-02-26T16:49:15+00:00",
+      "updated": "2026-02-26T16:49:15+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23182",
+      "title": "Closing the gap on tabular data with Fourier and Implicit Categorical Features",
+      "abstract": "While Deep Learning has demonstrated impressive results in applications on various data types, it continues to lag behind tree-based methods when applied to tabular data, often referred to as the last \"unconquered castle\" for neural networks. We hypothesize that a significant advantage of tree-based methods lies in their intrinsic capability to model and exploit non-linear interactions induced by features with categorical characteristics. In contrast, neural-based methods exhibit biases toward uniform numerical processing of features and smooth solutions, making it challenging for them to effectively leverage such patterns. We address this performance gap by using statistical-based feature processing techniques to identify features that are strongly correlated with the target once discretized. We further mitigate the bias of deep models for overly-smooth solutions, a bias that does not align with the inherent properties of the data, using Learned Fourier. We show that our proposed feature preprocessing significantly boosts the performance of deep learning models and enables them to achieve a performance that closely matches or surpasses XGBoost on a comprehensive tabular data benchmark.",
+      "authors": [
+        "Marius Dragoi",
+        "Florin Gogianu",
+        "Elena Burceanu"
+      ],
+      "url": "https://arxiv.org/abs/2602.23182",
+      "published": "2026-02-26T16:40:23+00:00",
+      "updated": "2026-02-26T16:40:23+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23164",
+      "title": "MetaOthello: A Controlled Study of Multiple World Models in Transformers",
+      "abstract": "Foundation models must handle multiple generative processes, yet mechanistic interpretability largely studies capabilities in isolation; it remains unclear how a single transformer organizes multiple, potentially conflicting \"world models\". Previous experiments on Othello playing neural-networks test world-model learning but focus on a single game with a single set of rules. We introduce MetaOthello, a controlled suite of Othello variants with shared syntax but different rules or tokenizations, and train small GPTs on mixed-variant data to study how multiple world models are organized in a shared representation space. We find that transformers trained on mixed-game data do not partition their capacity into isolated sub-models; instead, they converge on a mostly shared board-state representation that transfers causally across variants. Linear probes trained on one variant can intervene on another's internal state with effectiveness approaching that of matched probes. For isomorphic games with token remapping, representations are equivalent up to a single orthogonal rotation that generalizes across layers. When rules partially overlap, early layers maintain game-agnostic representations while a middle layer identifies game identity, and later layers specialize. MetaOthello offers a path toward understanding not just whether transformers learn world models, but how they organize many at once.",
+      "authors": [
+        "Aviral Chawla",
+        "Galen Hall",
+        "Juniper Lovato"
+      ],
+      "url": "https://arxiv.org/abs/2602.23164",
+      "published": "2026-02-26T16:28:09+00:00",
+      "updated": "2026-02-26T16:28:09+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -341,10 +269,8 @@
       "categories": [
         "cs.AI"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.377
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.23148",
@@ -362,9 +288,7 @@
       "categories": [
         "cs.AI"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
+      "matched_topics": [],
       "best_score": 0.0
     },
     {
@@ -387,10 +311,8 @@
       "categories": [
         "cs.LG"
       ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.357
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.23093",
@@ -408,10 +330,8 @@
         "cs.SI",
         "physics.soc-ph"
       ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.382
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.21189",
@@ -430,10 +350,8 @@
         "cs.LG",
         "cs.AI"
       ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.451
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.23200",
@@ -452,7 +370,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.346
+      "best_score": 0.0
     },
     {
       "id": "2602.23276",
@@ -470,7 +388,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.345
+      "best_score": 0.0
     },
     {
       "id": "2602.23092",
@@ -489,7 +407,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.344
+      "best_score": 0.0
     },
     {
       "id": "2602.23320",
@@ -511,7 +429,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.343
+      "best_score": 0.0
     },
     {
       "id": "2602.23329",
@@ -549,7 +467,7 @@
         "cs.HC"
       ],
       "matched_topics": [],
-      "best_score": 0.336
+      "best_score": 0.0
     },
     {
       "id": "2602.23360",
@@ -572,7 +490,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2602.23271",
@@ -591,7 +509,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.33
+      "best_score": 0.0
     },
     {
       "id": "2602.23286",
@@ -612,7 +530,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.329
+      "best_score": 0.0
     },
     {
       "id": "2602.23219",
@@ -633,7 +551,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.323
+      "best_score": 0.0
     },
     {
       "id": "2602.23335",
@@ -672,7 +590,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.319
+      "best_score": 0.0
     },
     {
       "id": "2602.23315",
@@ -688,7 +606,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.318
+      "best_score": 0.0
     },
     {
       "id": "2602.23321",
@@ -708,7 +626,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.309
+      "best_score": 0.0
     },
     {
       "id": "2602.23201",
@@ -726,7 +644,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.306
+      "best_score": 0.0
     },
     {
       "id": "2602.23331",
@@ -743,7 +661,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.304
+      "best_score": 0.0
     },
     {
       "id": "2602.23259",
@@ -767,7 +685,7 @@
         "cs.RO"
       ],
       "matched_topics": [],
-      "best_score": 0.302
+      "best_score": 0.0
     },
     {
       "id": "2602.23285",
@@ -791,7 +709,28 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.296
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23225",
+      "title": "Why Diffusion Language Models Struggle with Truly Parallel (Non-Autoregressive) Decoding?",
+      "abstract": "Diffusion Language Models (DLMs) are often advertised as enabling parallel token generation, yet practical fast DLMs frequently converge to left-to-right, autoregressive (AR)-like decoding dynamics. In contrast, genuinely non-AR generation is promising because it removes AR's sequential bottleneck, better exploiting parallel hardware to reduce synchronization/communication overhead and improve latency scaling with output length. We argue that a primary driver of AR-like decoding is a mismatch between DLM objectives and the highly sequential structure of widely used training data, including standard pretraining corpora and long chain-of-thought (CoT) supervision. Motivated by this diagnosis, we propose NAP (Non-Autoregressive Parallel DLMs), a proof-of-concept, data-centric approach that better aligns supervision with non-AR parallel decoding. NAP curates examples as multiple independent reasoning trajectories and couples them with a parallel-forced decoding strategy that encourages multi-token parallel updates. Across math reasoning benchmarks, NAP yields stronger performance under parallel decoding than DLMs trained on standard long CoT data, with gains growing as parallelism increases. Our results suggest that revisiting data and supervision is a principled direction for mitigating AR-like behavior and moving toward genuinely non-autoregressive parallel generation in DLMs. Our code is available at https://github.com/pixeli99/NAP.",
+      "authors": [
+        "Pengxiang Li",
+        "Dilxat Muhtar",
+        "Lu Yin",
+        "Tianlong Chen",
+        "Shiwei Liu"
+      ],
+      "url": "https://arxiv.org/abs/2602.23225",
+      "published": "2026-02-26T17:04:57+00:00",
+      "updated": "2026-02-26T17:04:57+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.23330",
@@ -811,7 +750,7 @@
         "q-fin.TR"
       ],
       "matched_topics": [],
-      "best_score": 0.291
+      "best_score": 0.0
     },
     {
       "id": "2602.23258",
@@ -834,7 +773,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.289
+      "best_score": 0.0
     },
     {
       "id": "2602.23075",
@@ -858,7 +797,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.289
+      "best_score": 0.0
     },
     {
       "id": "2602.23242",
@@ -875,7 +814,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.288
+      "best_score": 0.0
     },
     {
       "id": "2602.23128",
@@ -893,7 +832,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.288
+      "best_score": 0.0
     },
     {
       "id": "2602.23296",
@@ -912,7 +851,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.287
+      "best_score": 0.0
     },
     {
       "id": "2602.20833",
@@ -929,7 +868,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.287
+      "best_score": 0.0
     },
     {
       "id": "2602.21545",
@@ -949,7 +888,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.286
+      "best_score": 0.0
     },
     {
       "id": "2602.23351",
@@ -971,7 +910,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.281
+      "best_score": 0.0
     },
     {
       "id": "2602.23184",
@@ -992,7 +931,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.277
+      "best_score": 0.0
     },
     {
       "id": "2602.23089",
@@ -1010,7 +949,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.277
+      "best_score": 0.0
     },
     {
       "id": "2602.23188",
@@ -1030,7 +969,7 @@
         "physics.flu-dyn"
       ],
       "matched_topics": [],
-      "best_score": 0.266
+      "best_score": 0.0
     },
     {
       "id": "2602.23305",
@@ -1053,7 +992,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2602.23193",
@@ -1069,7 +1008,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.264
+      "best_score": 0.0
     },
     {
       "id": "2602.23300",
@@ -1088,7 +1027,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.262
+      "best_score": 0.0
     },
     {
       "id": "2602.23280",
@@ -1110,7 +1049,7 @@
         "cs.RO"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2602.23295",
@@ -1130,7 +1069,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.254
+      "best_score": 0.0
     },
     {
       "id": "2602.23334",
@@ -1149,7 +1088,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.251
+      "best_score": 0.0
     },
     {
       "id": "2602.23073",
@@ -1167,7 +1106,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.25
+      "best_score": 0.0
     },
     {
       "id": "2602.23123",
@@ -1183,7 +1122,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2602.23153",
@@ -1205,7 +1144,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.236
+      "best_score": 0.0
     },
     {
       "id": "2602.23353",
@@ -1226,7 +1165,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.228
+      "best_score": 0.0
     },
     {
       "id": "2602.23336",
@@ -1245,7 +1184,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.228
+      "best_score": 0.0
     },
     {
       "id": "2602.23135",
@@ -1264,7 +1203,7 @@
         "cs.SI"
       ],
       "matched_topics": [],
-      "best_score": 0.228
+      "best_score": 0.0
     },
     {
       "id": "2602.23136",
@@ -1282,7 +1221,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.227
+      "best_score": 0.0
     },
     {
       "id": "2602.23111",
@@ -1300,7 +1239,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.227
+      "best_score": 0.0
     },
     {
       "id": "2602.23341",
@@ -1323,7 +1262,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2602.23192",
@@ -1341,7 +1280,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2602.23121",
@@ -1361,7 +1300,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.22
+      "best_score": 0.0
     },
     {
       "id": "2602.19964",
@@ -1384,7 +1323,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.219
+      "best_score": 0.0
     },
     {
       "id": "2602.23179",
@@ -1406,7 +1345,7 @@
         "q-bio.BM"
       ],
       "matched_topics": [],
-      "best_score": 0.215
+      "best_score": 0.0
     },
     {
       "id": "2602.23302",
@@ -1424,7 +1363,7 @@
         "math.LO"
       ],
       "matched_topics": [],
-      "best_score": 0.214
+      "best_score": 0.0
     },
     {
       "id": "2602.23214",
@@ -1448,7 +1387,7 @@
         "eess.IV"
       ],
       "matched_topics": [],
-      "best_score": 0.197
+      "best_score": 0.0
     },
     {
       "id": "2602.23266",
@@ -1472,7 +1411,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.194
+      "best_score": 0.0
     },
     {
       "id": "2602.23142",
@@ -1491,7 +1430,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.194
+      "best_score": 0.0
     },
     {
       "id": "2602.23079",
@@ -1510,7 +1449,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.191
+      "best_score": 0.0
     },
     {
       "id": "2602.23312",
@@ -1535,7 +1474,7 @@
         "eess.SY"
       ],
       "matched_topics": [],
-      "best_score": 0.187
+      "best_score": 0.0
     },
     {
       "id": "2602.23116",
@@ -1556,7 +1495,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.183
+      "best_score": 0.0
     },
     {
       "id": "2602.23234",
@@ -1577,7 +1516,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.181
+      "best_score": 0.0
     },
     {
       "id": "2602.23159",
@@ -1597,7 +1536,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.174
+      "best_score": 0.0
     },
     {
       "id": "2602.23228",
@@ -1618,7 +1557,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.17
+      "best_score": 0.0
     },
     {
       "id": "2602.23085",
@@ -1641,7 +1580,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.162
+      "best_score": 0.0
     },
     {
       "id": "2602.23163",
@@ -1669,7 +1608,7 @@
         "cs.MA"
       ],
       "matched_topics": [],
-      "best_score": 0.16
+      "best_score": 0.0
     },
     {
       "id": "2602.23359",
@@ -1690,7 +1629,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.155
+      "best_score": 0.0
     },
     {
       "id": "2602.23277",
@@ -1710,7 +1649,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.153
+      "best_score": 0.0
     },
     {
       "id": "2602.23132",
@@ -1735,7 +1674,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.146
+      "best_score": 0.0
     },
     {
       "id": "2602.23167",
@@ -1758,7 +1697,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.144
+      "best_score": 0.0
     },
     {
       "id": "2602.23235",
@@ -1779,7 +1718,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.136
+      "best_score": 0.0
     },
     {
       "id": "2602.23172",
@@ -1802,7 +1741,7 @@
         "cs.RO"
       ],
       "matched_topics": [],
-      "best_score": 0.12
+      "best_score": 0.0
     },
     {
       "id": "2602.23071",
@@ -1822,7 +1761,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.12
+      "best_score": 0.0
     },
     {
       "id": "2602.23117",
@@ -1846,7 +1785,35 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.117
+      "best_score": 0.0
+    },
+    {
+      "id": "2602.23203",
+      "title": "ColoDiff: Integrating Dynamic Consistency With Content Awareness for Colonoscopy Video Generation",
+      "abstract": "Colonoscopy video generation delivers dynamic, information-rich data critical for diagnosing intestinal diseases, particularly in data-scarce scenarios. High-quality video generation demands temporal consistency and precise control over clinical attributes, but faces challenges from irregular intestinal structures, diverse disease representations, and various imaging modalities. To this end, we propose ColoDiff, a diffusion-based framework that generates dynamic-consistent and content-aware colonoscopy videos, aiming to alleviate data shortage and assist clinical analysis. At the inter-frame level, our TimeStream module decouples temporal dependency from video sequences through a cross-frame tokenization mechanism, enabling intricate dynamic modeling despite irregular intestinal structures. At the intra-frame level, our Content-Aware module incorporates noise-injected embeddings and learnable prototypes to realize precise control over clinical attributes, breaking through the coarse guidance of diffusion models. Additionally, ColoDiff employs a non-Markovian sampling strategy that cuts steps by over 90% for real-time generation. ColoDiff is evaluated across three public datasets and one hospital database, based on both generation metrics and downstream tasks including disease diagnosis, modality discrimination, bowel preparation scoring, and lesion segmentation. Extensive experiments show ColoDiff generates videos with smooth transitions and rich dynamics. ColoDiff presents an effort in controllable colonoscopy video generation, revealing the potential of synthetic videos in complementing authentic representation and mitigating data scarcity in clinical settings.",
+      "authors": [
+        "Junhu Fu",
+        "Shuyu Liang",
+        "Wutong Li",
+        "Chen Ma",
+        "Peng Huang",
+        "Kehao Wang",
+        "Ke Chen",
+        "Shengli Lin",
+        "Pinghong Zhou",
+        "Zeju Li",
+        "Yuanyuan Wang",
+        "Yi Guo"
+      ],
+      "url": "https://arxiv.org/abs/2602.23203",
+      "published": "2026-02-26T16:51:24+00:00",
+      "updated": "2026-02-26T16:51:24+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2602.23146",
@@ -1873,7 +1840,7 @@
         "physics.ao-ph"
       ],
       "matched_topics": [],
-      "best_score": 0.04
+      "best_score": 0.0
     }
   ]
 }

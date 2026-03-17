@@ -1,32 +1,7 @@
 {
   "date": "2026-03-08",
-  "fetched_at": "2026-03-10T12:13:01.152891+09:00",
+  "fetched_at": "2026-03-17T09:10:53.472367+09:00",
   "papers": [
-    {
-      "id": "2603.07642",
-      "title": "Helix: Evolutionary Reinforcement Learning for Open-Ended Scientific Problem Solving",
-      "abstract": "Large language models (LLMs) with reasoning abilities have demonstrated growing promise for tackling complex scientific problems. Yet such tasks are inherently domain-specific, unbounded and open-ended, demanding exploration across vast and flexible solution spaces. Existing approaches, whether purely learning-based or reliant on carefully designed workflows, often suffer from limited exploration efficiency and poor generalization. To overcome these challenges, we present HELIX -- a Hierarchical Evolutionary reinforcement Learning framework with In-context eXperiences. HELIX introduces two key novelties: (i) a diverse yet high-quality pool of candidate solutions that broadens exploration through in-context learning, and (ii) reinforcement learning for iterative policy refinement that progressively elevates solution quality. This synergy enables the discovery of more advanced solutions. On the circle packing task, HELIX achieves state-of-the-art result with a sum of radii of 2.63598308 using only a 14B model. Across standard machine learning benchmarks, HELIX further surpasses GPT-4o with a carefully engineered pipeline, delivering an average F1 improvement of 5.95 points on the Adult and Bank Marketing datasets.",
-      "authors": [
-        "Chang Su",
-        "Zhongkai Hao",
-        "Zhizhou Zhang",
-        "Zeyu Xia",
-        "Youjia Wu",
-        "Hang Su",
-        "Jun Zhu"
-      ],
-      "url": "https://arxiv.org/abs/2603.07642",
-      "published": "2026-03-08T14:08:52+00:00",
-      "updated": "2026-03-08T14:08:52+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.428
-    },
     {
       "id": "2603.07615",
       "title": "Compression as Adaptation: Implicit Visual Representation with Diffusion Foundation Models",
@@ -48,46 +23,6 @@
       "categories": [
         "cs.LG",
         "cs.CV"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07606",
-      "title": "TT-Sparse: Learning Sparse Rule Models with Differentiable Truth Tables",
-      "abstract": "Interpretable machine learning is essential in high-stakes domains where decision-making requires accountability, transparency, and trust. While rule-based models offer global and exact interpretability, learning rule sets that simultaneously achieve high predictive performance and low, human-understandable complexity remains challenging. To address this, we introduce TT-Sparse, a flexible neural building block that leverages differentiable truth tables as nodes to learn sparse, effective connections. A key contribution of our approach is a new soft TopK operator with straight-through estimation for learning discrete, cardinality-constrained feature selection in an end-to-end differentiable manner. Crucially, the forward pass remains sparse, enabling efficient computation and exact symbolic rule extraction. As a result, each node (and the entire model) can be transformed exactly into compact, globally interpretable DNF/CNF Boolean formulas via Quine-McCluskey minimization. Extensive empirical results across 28 datasets spanning binary, multiclass, and regression tasks show that the learned sparse rules exhibit superior predictive performance with lower complexity compared to existing state-of-the-art methods.",
-      "authors": [
-        "Hans Farrell Soegeng",
-        "Sarthak Ketanbhai Modi",
-        "Thomas Peyrin"
-      ],
-      "url": "https://arxiv.org/abs/2603.07606",
-      "published": "2026-03-08T12:37:10+00:00",
-      "updated": "2026-03-08T12:37:10+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07598",
-      "title": "Shorter Thoughts, Same Answers: Difficulty-Scaled Segment-Wise RL for CoT Compression",
-      "abstract": "Chain-of-thought (CoT) improves reasoning reliability but increases token cost, motivating post-training compression of explicit reasoning traces. However, the shortest sufficient reasoning is not universal: it depends on difficulty, model capacity, and training state, making fixed length targets brittle. In practice, naive RL-based compression can also undesirably shorten the user-facing answer, because a single completion-level learning signal leaks across the think/answer boundary. We propose Difficulty-Scaled Segment-Wise GRPO (DSS-GRPO), which decomposes returns into think and answer components, computes group-relative advantages per segment, and routes them with hard token masks so compression updates act only on think while answer alignment acts only on answer. DSS-GRPO uses prompt-wise within-group shaping and difficulty-aware scaling to encourage concise reasoning without collapsing answer behavior.",
-      "authors": [
-        "Ye Tian",
-        "Aijun Liu"
-      ],
-      "url": "https://arxiv.org/abs/2603.07598",
-      "published": "2026-03-08T11:49:24+00:00",
-      "updated": "2026-03-08T11:49:24+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
       ],
       "matched_topics": [
         "Test-Time Learning"
@@ -122,286 +57,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.07577",
-      "title": "Integration of deep generative Anomaly Detection algorithm in high-speed industrial line",
-      "abstract": "Industrial visual inspection in pharmaceutical production requires high accuracy under strict constraints on cycle time, hardware footprint, and operational cost. Manual inline inspection is still common, but it is affected by operator variability and limited throughput. Classical rule-based computer vision pipelines are often rigid and difficult to scale to highly variable production scenarios. To address these limitations, we present a semi-supervised anomaly detection framework based on a generative adversarial architecture with a residual autoencoder and a dense bottleneck, specifically designed for online deployment on a high-speed Blow-Fill-Seal (BFS) line. The model is trained only on nominal samples and detects anomalies through reconstruction residuals, providing both classification and spatial localization via heatmaps. The training set contains 2,815,200 grayscale patches. Experiments on a real industrial test kit show high detection performance while satisfying timing constraints compatible with a 500 ms acquisition slot.",
-      "authors": [
-        "Niccolò Ferrari",
-        "Nicola Zanarini",
-        "Michele Fraccaroli",
-        "Alice Bizzarri",
-        "Evelina Lamma"
-      ],
-      "url": "https://arxiv.org/abs/2603.07577",
-      "published": "2026-03-08T10:28:34+00:00",
-      "updated": "2026-03-08T10:28:34+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07568",
-      "title": "Constraints Matrix Diffusion based Generative Neural Solver for Vehicle Routing Problems",
-      "abstract": "Over the past decade, neural network solvers powered by generative artificial intelligence have garnered significant attention in the domain of vehicle routing problems (VRPs), owing to their exceptional computational efficiency and superior reasoning capabilities. In particular, autoregressive solvers integrated with reinforcement learning have emerged as a prominent trend. However, much of the existing work emphasizes large-scale generalization of neural approaches while neglecting the limited robustness of attention-based methods across heterogeneous distributions of problem parameters. Their improvements over heuristic search remain largely restricted to hand-curated, fixed-distribution benchmarks. Furthermore, these architectures tend to degrade significantly when node representations are highly similar or when tasks involve long decision horizons. To address the aforementioned limitations, we propose a novel fusion neural network framework that employs a discrete noise graph diffusion model to learn the underlying constraints of vehicle routing problems and generate a constraint assignment matrix. This matrix is subsequently integrated adaptively into the feature representation learning and decision process of the autoregressive solver, serving as a graph structure mask that facilitates the formation of solutions characterized by both global vision and local feature integration. To the best of our knowledge, this work represents the first comprehensive experimental investigation of neural network model solvers across a 378-combinatorial space spanning four distinct dimensions within the CVRPlib public dataset. Extensive experimental evaluations demonstrate that our proposed fusion model effectively captures and leverages problem constraints, achieving state-of-the-art performance across multiple benchmark datasets.",
-      "authors": [
-        "Zhenwei Wang",
-        "Tiehua Zhang",
-        "Ning Xue",
-        "Ender Ozcan",
-        "Ling Wang",
-        "Ruibin Bai"
-      ],
-      "url": "https://arxiv.org/abs/2603.07568",
-      "published": "2026-03-08T10:03:34+00:00",
-      "updated": "2026-03-08T10:03:34+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.383
-    },
-    {
-      "id": "2603.07523",
-      "title": "One-for-All Model Initialization with Frequency-Domain Knowledge",
-      "abstract": "Transferring knowledge by fine-tuning large-scale pre-trained networks has become a standard paradigm for downstream tasks, yet the knowledge of a pre-trained model is tightly coupled with monolithic architecture, which restricts flexible reuse across models of varying scales. In response to this challenge, recent approaches typically resort to either parameter selection, which fails to capture the interdependent structure of this knowledge, or parameter prediction using generative models that depend on impractical access to large network collections. In this paper, we empirically demonstrate that a model's foundational, task-agnostic knowledge, its \"learngene\", is encoded within the low-frequency components of its weights, and can be efficiently inherited by downstream models. Based on this insight, we propose FRONT (FRequency dOmain kNowledge Transfer), a novel framework that uses the Discrete Cosine Transform (DCT) to isolate the low-frequency \"learngene\". This learngene can be seamlessly adapted to initialize models of arbitrary size via simple truncation or padding, a process that is entirely training-free. For enhanced performance, we propose an optional low-cost refinement process that introduces a spectral regularizer to further improve the learngene's transferability. Extensive experiments demonstrate that FRONT achieves the state-of-the-art performance, accelerates convergence by up to 15 times in vision tasks, and reduces training FLOPs by an average of 40.5% in language tasks.",
-      "authors": [
-        "Jianlu Shen",
-        "Fu Feng",
-        "Yucheng Xie",
-        "Jiaqi Lv",
-        "Xin Geng"
-      ],
-      "url": "https://arxiv.org/abs/2603.07523",
-      "published": "2026-03-08T08:25:49+00:00",
-      "updated": "2026-03-08T08:25:49+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.371
-    },
-    {
-      "id": "2603.07506",
-      "title": "A Unified Framework for Knowledge Transfer in Bidirectional Model Scaling",
-      "abstract": "Transferring pre-trained knowledge from a source model to a target model of a different architectural size is a key challenge for flexible and efficient model scaling. However, current parameter-space methods treat Small-to-Large (S2L) and Large-to-Small (L2S) scaling as separate, incompatible problems, focusing on parameter synthesis and selection, respectively. This fragmented perspective has resulted in specialized tools, hindering a unified, bidirectional framework. In this paper, we propose BoT (Bidirectional knowledge Transfer), the first size-agnostic framework to unify S2L and L2S scaling. Our core insight is to treat model weights as continuous signals, where models of different sizes represent distinct discretizations of the transferable knowledge. This multi-resolution perspective directly casts S2L and L2S scaling as the signal processing operations of upsampling and downsampling, naturally leading to the adoption of the Discrete Wavelet Transform (DWT) and its Inverse (IDWT). BoT leverages the recursive nature of wavelets, using the decomposition level as a dynamic scaling factor to bridge disparate model sizes in a parameter-free and computationally efficient manner. Extensive experiments on DeiT, BERT, and GPT demonstrate significant pre-training FLOPs savings (up to 67.1% for S2L, 52.8% for L2S) and state-of-the-art performance on benchmarks like GLUE and SQuAD.",
-      "authors": [
-        "Jianlu Shen",
-        "Fu Feng",
-        "Jiaze Xu",
-        "Yucheng Xie",
-        "Jiaqi Lv",
-        "Xin Geng"
-      ],
-      "url": "https://arxiv.org/abs/2603.07506",
-      "published": "2026-03-08T07:23:16+00:00",
-      "updated": "2026-03-08T07:23:16+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.44
-    },
-    {
-      "id": "2603.07487",
-      "title": "A Joint Neural Baseline for Concept, Assertion, and Relation Extraction from Clinical Text",
-      "abstract": "Clinical information extraction (e.g., 2010 i2b2/VA challenge) usually presents tasks of concept recognition, assertion classification, and relation extraction. Jointly modeling the multi-stage tasks in the clinical domain is an underexplored topic. The existing independent task setting (reference inputs given in each stage) makes the joint models not directly comparable to the existing pipeline work. To address these issues, we define a joint task setting and propose a novel end-to-end system to jointly optimize three-stage tasks. We empirically investigate the joint evaluation of our proposal and the pipeline baseline with various embedding techniques: word, contextual, and in-domain contextual embeddings. The proposed joint system substantially outperforms the pipeline baseline by +0.3, +1.4, +3.1 for the concept, assertion, and relation F1. This work bridges joint approaches and clinical information extraction. The proposed approach could serve as a strong joint baseline for future research. The code is publicly available.",
-      "authors": [
-        "Fei Cheng",
-        "Ribeka Tanaka",
-        "Sadao Kurohashi"
-      ],
-      "url": "https://arxiv.org/abs/2603.07487",
-      "published": "2026-03-08T06:16:35+00:00",
-      "updated": "2026-03-08T06:16:35+00:00",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.399
-    },
-    {
-      "id": "2603.07482",
-      "title": "Interpretable-by-Design Transformers via Architectural Stream Independence",
-      "abstract": "While transformers achieve strong performance, their internal decision-making processes remain opaque. We investigate whether architectural constraints can enforce interpretability by design through architectural stream independence: maintaining a token stream (carrying symbolic structure) and contextual semantics in separated streams that remain independently observable throughout processing, with integration delayed until output. We validate this principle through the Late Fusion Architecture (LFA), which demonstrates interpretable symbolic heads through all the final layers, while standard transformers show dissolution by the third of six layers; we quantify this effect by introducing the Token-Position Dependence Score (PDS), with $PDS_{max}$ = 0.276 and 0.058, respectively. Crucially, intervention experiments demonstrate functional modularity: suppressing LFA's recency heads causes minimal semantic damage (Cohen's d = -0.158) versus catastrophic entanglement in baselines (d = -0.672). LFA demonstrates that architectural constraints improve underlying learning mechanisms, averaging 42% stability versus 19% and 11% for baseline comparisons, with extremes from 50% on LFA's best pairs (6 of 12 heads position-invariant) down to 0% complete collapse in over-constrained cases. By preventing premature entanglement, architectural independence steers models toward semantic understanding over positional heuristics, establishing interpretability as an architectural design criterion enforceable through structural constraints rather than post-hoc analysis.",
-      "authors": [
-        "Clayton Kerce",
-        "Alexis Fox"
-      ],
-      "url": "https://arxiv.org/abs/2603.07482",
-      "published": "2026-03-08T05:44:18+00:00",
-      "updated": "2026-03-08T05:44:18+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07462",
-      "title": "Do Machines Fail Like Humans? A Human-Centred Out-of-Distribution Spectrum for Mapping Error Alignment",
-      "abstract": "Determining whether AI systems process information similarly to humans is central to cognitive science and trustworthy AI. While modern AI models match human accuracy on standard tasks, such parity does not guarantee that their underlying decision-making strategies are aligned with human information processing. Assessing performance using i) error alignment metrics to compare how humans and models fail, and ii) using distorted, or otherwise more challenging, stimuli, provides a viable pathway toward a finer characterization of model-human alignment. However, existing out-of-distribution (OOD) analyses for challenging stimuli are limited due to methodological choices: they define OOD shift relative to model training data or use arbitrary distortion-specific parameters with little correspondence to human perception, hindering principled comparisons. We propose a human-centred framework that redefines the degree of OOD as a spectrum of human perceptual difficulty. By quantifying how much a collection of stimuli deviates from an undistorted reference set based on human accuracy, we construct an OOD spectrum and identify four distinct regimes of perceptual challenge. This approach enables principled model-human comparisons at calibrated difficulty levels. We apply this framework to object recognition and reveal unique, regime-dependent model-human alignment rankings and profiles across deep learning architectures. Vision-language models are the most consistently human aligned across near- and far-OOD conditions, but CNNs are more aligned than ViTs for near-OOD and ViTs are more aligned than CNNs for far-OOD conditions. Our work demonstrates the critical importance of accounting for cross-condition differences such as perceptual difficulty for a principled assessment of model-human alignment.",
-      "authors": [
-        "Binxia Xu",
-        "Xiaoliang Luo",
-        "Luke Dickens",
-        "Robert M. Mok"
-      ],
-      "url": "https://arxiv.org/abs/2603.07462",
-      "published": "2026-03-08T04:51:39+00:00",
-      "updated": "2026-03-08T04:51:39+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.396
-    },
-    {
-      "id": "2603.07449",
-      "title": "Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System",
-      "abstract": "Enterprises commonly deploy heterogeneous database systems, each of which owns a distinct SQL dialect with different syntax rules, built-in functions, and execution constraints. However, most existing NL2SQL methods assume a single dialect (e.g., SQLite) and struggle to produce queries that are both semantically correct and executable on target engines. Prompt-based approaches tightly couple intent reasoning with dialect syntax, rule-based translators often degrade native operators into generic constructs, and multi-dialect fine-tuning suffers from cross-dialect interference.   In this paper, we present Dial, a knowledge-grounded framework for dialect-specific NL2SQL. Dial introduces: (1) a Dialect-Aware Logical Query Planning module that converts natural language into a dialect-aware logical query plan via operator-level intent decomposition and divergence-aware specification; (2) HINT-KB, a hierarchical intent-aware knowledge base that organizes dialect knowledge into (i) a canonical syntax reference, (ii) a declarative function repository, and (iii) a procedural constraint repository; and (3) an execution-driven debugging and semantic verification loop that separates syntactic recovery from logic auditing to prevent semantic drift. We construct DS-NL2SQL, a benchmark covering six major database systems with 2,218 dialect-specific test cases. Experimental results show that Dial consistently improves translation accuracy by 10.25% and dialect feature coverage by 15.77% over state-of-the-art baselines. The code is at https://github.com/weAIDB/Dial.",
-      "authors": [
-        "Xiang Zhang",
-        "Hongming Xu",
-        "Le Zhou",
-        "Wei Zhou",
-        "Xuanhe Zhou",
-        "Guoliang Li",
-        "Yuyu Luo",
-        "Changdong Liu",
-        "Guorun Chen",
-        "Jiang Liao",
-        "Fan Wu"
-      ],
-      "url": "https://arxiv.org/abs/2603.07449",
-      "published": "2026-03-08T03:56:15+00:00",
-      "updated": "2026-03-08T03:56:15+00:00",
-      "categories": [
-        "cs.DB",
-        "cs.AI",
-        "cs.CL",
-        "cs.IR",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07433",
-      "title": "Data Agent: Learning to Select Data via End-to-End Dynamic Optimization",
-      "abstract": "Dynamic Data selection aims to accelerate training by prioritizing informative samples during online training. However, existing methods typically rely on task-specific handcrafted metrics or static/snapshot-based criteria to estimate sample importance, limiting scalability across learning paradigms and making it difficult to capture the evolving utility of data throughout training. To address this challenge, we propose Data Agent, an end-to-end dynamic data selection framework that formulates data selection as a training-aware sequential decision-making problem. The agent learns a sample-wise selection policy that co-evolves with model optimization, guided by a composite reward that integrates loss-based difficulty and confidence-based uncertainty signals. The reward signals capture complementary objectives of optimization impact and information gain, together with a tuning-free adaptive weighting mechanism that balances these signals over training. Extensive experiments across a wide range of datasets and architectures demonstrate that Data Agent consistently accelerates training while preserving or improving performance, e.g., reducing costs by over 50\\% on ImageNet-1k and MMLU with lossless performance. Moreover, its dataset-agnostic formulation and modular reward make it plug-and-play across tasks and scenarios, e.g., robustness to noisy datasets, highlighting its potential in real-world scenarios.",
-      "authors": [
-        "Suorong Yang",
-        "Fangjian Su",
-        "Hai Gan",
-        "Ziqi Ye",
-        "Jie Li",
-        "Baile Xu",
-        "Furao Shen",
-        "Soujanya Poria"
-      ],
-      "url": "https://arxiv.org/abs/2603.07433",
-      "published": "2026-03-08T03:10:39+00:00",
-      "updated": "2026-03-08T03:10:39+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.362
-    },
-    {
-      "id": "2603.07416",
-      "title": "DualSpec: Accelerating Deep Research Agents via Dual-Process Action Speculation",
-      "abstract": "Large language model-based deep research agents have been increasingly popular for addressing long-horizon information-seeking tasks, but they often incur high end-to-end latency due to extensive reasoning and frequent tool use. Speculation frameworks aim to reduce latency by overlapping action execution with reasoning; however, existing approaches typically rely on uniform speculation strategies and strict action matching, which limits inference speedups and robustness. In this work, we revisit the speculate-verify paradigm for deep research agents through the lens of action heterogeneity. We show that \\textit{Search} and \\textit{Visit} actions exhibit fundamentally different reasoning and model capacity requirements: entropy-based analysis reveals that Search decisions have higher uncertainty and benefit significantly from explicit reasoning, whereas Visit decisions have lower entropy and depend primarily on model capacity. Motivated by this dual-process characteristic, we propose DualSpec, a heterogeneous speculation framework equipped with a lightweight, confidence-based semantic verifier. Experiments across multiple models and benchmarks demonstrate that DualSpec achieves up to 3.28$\\times$ end-to-end speedup while maintaining accuracy comparable to fully reasoning agents.",
-      "authors": [
-        "Shuzhang Zhong",
-        "Baotong Lu",
-        "Qi Chen",
-        "Chuanjie Liu",
-        "Fan Yang",
-        "Meng Li"
-      ],
-      "url": "https://arxiv.org/abs/2603.07416",
-      "published": "2026-03-08T02:03:58+00:00",
-      "updated": "2026-03-08T02:03:58+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.487
-    },
-    {
-      "id": "2603.07392",
-      "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
-      "abstract": "LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.",
-      "authors": [
-        "Jiyeon Kim",
-        "Hyunji Lee",
-        "Dylan Zhou",
-        "Sue Hyun Park",
-        "Seunghyun Yoon",
-        "Trung Bui",
-        "Franck Dernoncourt",
-        "Sungmin Cha",
-        "Minjoon Seo"
-      ],
-      "url": "https://arxiv.org/abs/2603.07392",
-      "published": "2026-03-08T00:38:39+00:00",
-      "updated": "2026-03-08T00:38:39+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.377
-    },
-    {
-      "id": "2603.07366",
-      "title": "RILEC: Detection and Generation of L1 Russian Interference Errors in English Learner Texts",
-      "abstract": "Many errors in student essays can be explained by influence from the native language (L1). L1 interference refers to errors influenced by a speaker's first language, such as using stadion instead of stadium, reflecting lexical transliteration from Russian. In this work, we address the task of detecting such errors in English essays written by Russian-speaking learners. We introduce RILEC, a large-scale dataset of over 18,000 sentences, combining expert-annotated data from REALEC with synthetic examples generated through rule-based and neural augmentation. We propose a framework for generating L1-motivated errors using generative language models optimized with PPO, prompt-based control, and rule-based patterns. Models fine-tuned on RILEC achieve strong performance, particularly on word-level interference types such as transliteration and tense semantics. We find that the proposed augmentation pipeline leads to a significant performance improvement, making it a potentially valuable tool for learners and teachers to more effectively identify and address such errors.",
-      "authors": [
-        "Darya Kharlamova",
-        "Irina Proskurina"
-      ],
-      "url": "https://arxiv.org/abs/2603.07366",
-      "published": "2026-03-07T22:33:22+00:00",
-      "updated": "2026-03-07T22:33:22+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
       "id": "2603.07343",
       "title": "Learning Concept Bottleneck Models from Mechanistic Explanations",
       "abstract": "Concept Bottleneck Models (CBMs) aim for ante-hoc interpretability by learning a bottleneck layer that predicts interpretable concepts before the decision. State-of-the-art approaches typically select which concepts to learn via human specification, open knowledge graphs, prompting an LLM, or using general CLIP concepts. However, concepts defined a-priori may not have sufficient predictive power for the task or even be learnable from the available data. As a result, these CBMs often significantly trail their black-box counterpart when controlling for information leakage. To address this, we introduce a novel CBM pipeline named Mechanistic CBM (M-CBM), which builds the bottleneck directly from a black-box model's own learned concepts. These concepts are extracted via Sparse Autoencoders (SAEs) and subsequently named and annotated on a selected subset of images using a Multimodal LLM. For fair comparison and leakage control, we also introduce the Number of Contributing Concepts (NCC), a decision-level sparsity metric that extends the recently proposed NEC metric. Across diverse datasets, we show that M-CBMs consistently surpass prior CBMs at matched sparsity, while improving concept predictions and providing concise explanations. Our code is available at https://github.com/Antonio-Dee/M-CBM.",
@@ -422,128 +77,6 @@
         "Symbolic AI"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.07329",
-      "title": "The Third Ambition: Artificial Intelligence and the Science of Human Behavior",
-      "abstract": "Contemporary artificial intelligence research has been organized around two dominant ambitions: productivity, which treats AI systems as tools for accelerating work and economic output, and alignment, which focuses on ensuring that increasingly capable systems behave safely and in accordance with human values. This paper articulates and develops a third, emerging ambition: the use of large language models (LLMs) as scientific instruments for studying human behavior, culture, and moral reasoning. Trained on unprecedented volumes of human-produced text, LLMs encode large-scale regularities in how people argue, justify, narrate, and negotiate norms across social domains. We argue that these models can be understood as condensates of human symbolic behavior, compressed, generative representations that render patterns of collective discourse computationally accessible. The paper situates this third ambition within long-standing traditions of computational social science, content analysis, survey research, and comparative-historical inquiry, while clarifying the epistemic limits of treating model output as evidence. We distinguish between base models and fine-tuned systems, showing how alignment interventions can systematically reshape or obscure the cultural regularities learned during pretraining, and we identify instruct-only and modular adaptation regimes as pragmatic compromises for behavioral research. We review emerging methodological approaches including prompt-based experiments, synthetic population sampling, comparative-historical modeling, and ablation studies and show how each maps onto familiar social-scientific designs while operating at unprecedented scale.",
-      "authors": [
-        "W. Russell Neuman",
-        "Chad Coleman"
-      ],
-      "url": "https://arxiv.org/abs/2603.07329",
-      "published": "2026-03-07T20:21:58+00:00",
-      "updated": "2026-03-07T20:21:58+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CY"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.07323",
-      "title": "Norm-Hierarchy Transitions in Representation Learning: When and Why Neural Networks Abandon Shortcuts",
-      "abstract": "Neural networks often rely on spurious shortcuts for many epochs before discovering structured representations. However, the mechanism governing when this transition occurs and whether its timing can be predicted remains unclear. Prior work shows that gradient descent converges to low norm solutions and that neural networks exhibit simplicity bias, but neither explains the timescale of the transition from shortcut features to structured representations.   We introduce the Norm-Hierarchy Transition (NHT) framework, which explains delayed representation learning as the slow traversal of a hierarchy of parameter norms during regularized optimization. When multiple interpolating solutions exist with different norms, weight decay gradually moves the model from high norm shortcut solutions toward lower norm structured representations. We derive a tight bound showing that the transition delay grows logarithmically with the ratio between shortcut and structured norms.   Experiments on modular arithmetic, CIFAR-10 with spurious features, CelebA, and Waterbirds support the predictions of the framework. The results suggest that grokking, shortcut learning, and delayed feature discovery arise from a common mechanism based on norm hierarchy traversal during training.",
-      "authors": [
-        "Truong Xuan Khanh",
-        "Truong Quynh Hoa"
-      ],
-      "url": "https://arxiv.org/abs/2603.07323",
-      "published": "2026-03-07T20:07:16+00:00",
-      "updated": "2026-03-07T20:07:16+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Symbolic AI"
-      ],
-      "best_score": 0.392
-    },
-    {
-      "id": "2603.07316",
-      "title": "FinSheet-Bench: From Simple Lookups to Complex Reasoning, Where LLMs Break on Financial Spreadsheets",
-      "abstract": "While Large Language Models (LLMs) can accelerate text-heavy tasks in alternative investment due diligence, a gap remains in their ability to accurately extract and reason over structured tabular data from complex financial spreadsheets. Progress is held back by the lack of real industry fund portfolio datasets for benchmarking, as private equity data rooms are confidential. To address this, we introduce FinSheet-Bench, a benchmark of synthetic financial portfolio data modeled on real private equity fund structures, designed to evaluate LLM performance on text-serialized spreadsheet question answering and numeric reasoning tasks.   Our evaluation of ten model configurations from OpenAI, Google, and Anthropic on financial spreadsheets, including complex layouts, fund dividers, and multi-line column names, reveals that no standalone model achieves error rates low enough for unsupervised use in professional finance applications. The best-performing model, Gemini 3.1 Pro, achieves 82.4% accuracy across twenty-four evaluation files of varying complexity and structural layout (approximately 1 error per 6 questions), followed by GPT-5.2 with reasoning at 80.4%, Claude Opus 4.6 with thinking at 80.2%, and Gemini 3 Pro at 80.2%. Performance degrades substantially on larger, more complex spreadsheets: the largest spreadsheet (152 companies, 8 funds) yields an average accuracy of just 48.6% across all models, compared to 86.2% on the easiest evaluation file. These difficulty patterns are consistent across all ten models, indicating that they reflect LLM limitations rather than idiosyncratic model weaknesses. Reliable financial spreadsheet extraction will likely require architectural approaches that separate document understanding from deterministic computation.",
-      "authors": [
-        "Jan Ravnik",
-        "Matjaž Ličen",
-        "Felix Bührmann",
-        "Bithiah Yuan",
-        "Felix Stinson",
-        "Tanvi Singh"
-      ],
-      "url": "https://arxiv.org/abs/2603.07316",
-      "published": "2026-03-07T19:27:34+00:00",
-      "updated": "2026-03-07T19:27:34+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.352
-    },
-    {
-      "id": "2603.07315",
-      "title": "Shutdown Safety Valves for Advanced AI",
-      "abstract": "One common concern about advanced artificial intelligence is that it will prevent us from turning it off, as that would interfere with pursuing its goals. In this paper, we discuss an unorthodox proposal for addressing this concern: give the AI a (primary) goal of being turned off (see also papers by Martin et al., and by Goldstein and Robinson). We also discuss whether and under what conditions this would be a good idea.",
-      "authors": [
-        "Vincent Conitzer"
-      ],
-      "url": "https://arxiv.org/abs/2603.07315",
-      "published": "2026-03-07T19:19:48+00:00",
-      "updated": "2026-03-07T19:19:48+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.369
-    },
-    {
-      "id": "2603.07300",
-      "title": "AutoResearch-RL: Perpetual Self-Evaluating Reinforcement Learning Agents for Autonomous Neural Architecture Discovery",
-      "abstract": "We present AutoResearch-RL, a framework in which a reinforcement learning agent conducts open-ended neural architecture and hyperparameter research without human supervision, running perpetually until a termination oracle signals convergence or resource exhaustion. At each step the agent proposes a code modification to a target training script, executes it under a fixed wall clock time budget, observes a scalar reward derived from validation bits-per-byte (val-bpb), and updates its policy via Proximal Policy Optimisation (PPO).   The key design insight is the separation of three concerns: (i) a frozen environment (data pipeline, evaluation protocol, and constants) that guarantees fair cross-experiment comparison; (ii) a mutable target file (train.py) that represents the agent's editable state; and (iii) a meta-learner (the RL agent itself) that accumulates a growing trajectory of experiment outcomes and uses them to inform subsequent proposals.   We formalise this as a Markov Decision Process, derive convergence guarantees under mild assumptions, and demonstrate empirically on a single GPU nanochat pretraining benchmark that AutoResearch-RL discovers configurations that match or exceed hand-tuned baselines after approximately 300 overnight iterations, with no human in the loop.",
-      "authors": [
-        "Nilesh Jain",
-        "Rohit Yadav",
-        "Sagar Kotian",
-        "Claude AI"
-      ],
-      "url": "https://arxiv.org/abs/2603.07300",
-      "published": "2026-03-07T17:49:44+00:00",
-      "updated": "2026-03-07T17:49:44+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Test-Time Learning"
-      ],
-      "best_score": 0.356
-    },
-    {
-      "id": "2603.07295",
-      "title": "A Cortically Inspired Architecture for Modular Perceptual AI",
-      "abstract": "This paper bridges neuroscience and artificial intelligence to propose a cortically inspired blueprint for modular perceptual AI. While current monolithic models such as GPT-4V achieve impressive performance, they often struggle to explicitly support interpretability, compositional generalization, and adaptive robustness - hallmarks of human cognition. Drawing on neuroscientific models of cortical modularity, predictive processing, and cross-modal integration, we advocate decomposing perception into specialized, interacting modules. This architecture supports structured, human-inspired reasoning by making internal inference processes explicit through hierarchical predictive feedback loops and shared latent spaces. Our proof-of-concept study provides empirical evidence that modular decomposition yields more stable and inspectable representations. By grounding AI design in biologically validated principles, we move toward systems that not only perform well, but also support more transparent and human-aligned inference.",
-      "authors": [
-        "Prerna Luthra"
-      ],
-      "url": "https://arxiv.org/abs/2603.07295",
-      "published": "2026-03-07T17:35:33+00:00",
-      "updated": "2026-03-07T17:35:33+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "best_score": 0.387
     },
     {
       "id": "2603.07261",
@@ -606,31 +139,9 @@
         "cs.CE"
       ],
       "matched_topics": [
-        "Test-Time Learning",
         "Symbolic AI"
       ],
       "best_score": 0.0
-    },
-    {
-      "id": "2603.03684",
-      "title": "Mathematicians in the age of AI",
-      "abstract": "Recent developments show that AI can prove research-level theorems in mathematics, both formally and informally. This essay urges mathematicians to stay up-to-date with the technology, to consider the ways it will disrupt mathematical practice, and to respond appropriately to the challenges and opportunities we now face.",
-      "authors": [
-        "Jeremy Avigad"
-      ],
-      "url": "https://arxiv.org/abs/2603.03684",
-      "published": "2026-03-04T03:23:58+00:00",
-      "updated": "2026-03-07T23:42:15+00:00",
-      "categories": [
-        "math.HO",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Test-Time Learning",
-        "Symbolic AI"
-      ],
-      "best_score": 0.37
     },
     {
       "id": "2603.01396",
@@ -665,6 +176,360 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.07642",
+      "title": "Helix: Evolutionary Reinforcement Learning for Open-Ended Scientific Problem Solving",
+      "abstract": "Large language models (LLMs) with reasoning abilities have demonstrated growing promise for tackling complex scientific problems. Yet such tasks are inherently domain-specific, unbounded and open-ended, demanding exploration across vast and flexible solution spaces. Existing approaches, whether purely learning-based or reliant on carefully designed workflows, often suffer from limited exploration efficiency and poor generalization. To overcome these challenges, we present HELIX -- a Hierarchical Evolutionary reinforcement Learning framework with In-context eXperiences. HELIX introduces two key novelties: (i) a diverse yet high-quality pool of candidate solutions that broadens exploration through in-context learning, and (ii) reinforcement learning for iterative policy refinement that progressively elevates solution quality. This synergy enables the discovery of more advanced solutions. On the circle packing task, HELIX achieves state-of-the-art result with a sum of radii of 2.63598308 using only a 14B model. Across standard machine learning benchmarks, HELIX further surpasses GPT-4o with a carefully engineered pipeline, delivering an average F1 improvement of 5.95 points on the Adult and Bank Marketing datasets.",
+      "authors": [
+        "Chang Su",
+        "Zhongkai Hao",
+        "Zhizhou Zhang",
+        "Zeyu Xia",
+        "Youjia Wu",
+        "Hang Su",
+        "Jun Zhu"
+      ],
+      "url": "https://arxiv.org/abs/2603.07642",
+      "published": "2026-03-08T14:08:52+00:00",
+      "updated": "2026-03-08T14:08:52+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07606",
+      "title": "TT-Sparse: Learning Sparse Rule Models with Differentiable Truth Tables",
+      "abstract": "Interpretable machine learning is essential in high-stakes domains where decision-making requires accountability, transparency, and trust. While rule-based models offer global and exact interpretability, learning rule sets that simultaneously achieve high predictive performance and low, human-understandable complexity remains challenging. To address this, we introduce TT-Sparse, a flexible neural building block that leverages differentiable truth tables as nodes to learn sparse, effective connections. A key contribution of our approach is a new soft TopK operator with straight-through estimation for learning discrete, cardinality-constrained feature selection in an end-to-end differentiable manner. Crucially, the forward pass remains sparse, enabling efficient computation and exact symbolic rule extraction. As a result, each node (and the entire model) can be transformed exactly into compact, globally interpretable DNF/CNF Boolean formulas via Quine-McCluskey minimization. Extensive empirical results across 28 datasets spanning binary, multiclass, and regression tasks show that the learned sparse rules exhibit superior predictive performance with lower complexity compared to existing state-of-the-art methods.",
+      "authors": [
+        "Hans Farrell Soegeng",
+        "Sarthak Ketanbhai Modi",
+        "Thomas Peyrin"
+      ],
+      "url": "https://arxiv.org/abs/2603.07606",
+      "published": "2026-03-08T12:37:10+00:00",
+      "updated": "2026-03-08T12:37:10+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07598",
+      "title": "Shorter Thoughts, Same Answers: Difficulty-Scaled Segment-Wise RL for CoT Compression",
+      "abstract": "Chain-of-thought (CoT) improves reasoning reliability but increases token cost, motivating post-training compression of explicit reasoning traces. However, the shortest sufficient reasoning is not universal: it depends on difficulty, model capacity, and training state, making fixed length targets brittle. In practice, naive RL-based compression can also undesirably shorten the user-facing answer, because a single completion-level learning signal leaks across the think/answer boundary. We propose Difficulty-Scaled Segment-Wise GRPO (DSS-GRPO), which decomposes returns into think and answer components, computes group-relative advantages per segment, and routes them with hard token masks so compression updates act only on think while answer alignment acts only on answer. DSS-GRPO uses prompt-wise within-group shaping and difficulty-aware scaling to encourage concise reasoning without collapsing answer behavior.",
+      "authors": [
+        "Ye Tian",
+        "Aijun Liu"
+      ],
+      "url": "https://arxiv.org/abs/2603.07598",
+      "published": "2026-03-08T11:49:24+00:00",
+      "updated": "2026-03-08T11:49:24+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07568",
+      "title": "Constraints Matrix Diffusion based Generative Neural Solver for Vehicle Routing Problems",
+      "abstract": "Over the past decade, neural network solvers powered by generative artificial intelligence have garnered significant attention in the domain of vehicle routing problems (VRPs), owing to their exceptional computational efficiency and superior reasoning capabilities. In particular, autoregressive solvers integrated with reinforcement learning have emerged as a prominent trend. However, much of the existing work emphasizes large-scale generalization of neural approaches while neglecting the limited robustness of attention-based methods across heterogeneous distributions of problem parameters. Their improvements over heuristic search remain largely restricted to hand-curated, fixed-distribution benchmarks. Furthermore, these architectures tend to degrade significantly when node representations are highly similar or when tasks involve long decision horizons. To address the aforementioned limitations, we propose a novel fusion neural network framework that employs a discrete noise graph diffusion model to learn the underlying constraints of vehicle routing problems and generate a constraint assignment matrix. This matrix is subsequently integrated adaptively into the feature representation learning and decision process of the autoregressive solver, serving as a graph structure mask that facilitates the formation of solutions characterized by both global vision and local feature integration. To the best of our knowledge, this work represents the first comprehensive experimental investigation of neural network model solvers across a 378-combinatorial space spanning four distinct dimensions within the CVRPlib public dataset. Extensive experimental evaluations demonstrate that our proposed fusion model effectively captures and leverages problem constraints, achieving state-of-the-art performance across multiple benchmark datasets.",
+      "authors": [
+        "Zhenwei Wang",
+        "Tiehua Zhang",
+        "Ning Xue",
+        "Ender Ozcan",
+        "Ling Wang",
+        "Ruibin Bai"
+      ],
+      "url": "https://arxiv.org/abs/2603.07568",
+      "published": "2026-03-08T10:03:34+00:00",
+      "updated": "2026-03-08T10:03:34+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07523",
+      "title": "One-for-All Model Initialization with Frequency-Domain Knowledge",
+      "abstract": "Transferring knowledge by fine-tuning large-scale pre-trained networks has become a standard paradigm for downstream tasks, yet the knowledge of a pre-trained model is tightly coupled with monolithic architecture, which restricts flexible reuse across models of varying scales. In response to this challenge, recent approaches typically resort to either parameter selection, which fails to capture the interdependent structure of this knowledge, or parameter prediction using generative models that depend on impractical access to large network collections. In this paper, we empirically demonstrate that a model's foundational, task-agnostic knowledge, its \"learngene\", is encoded within the low-frequency components of its weights, and can be efficiently inherited by downstream models. Based on this insight, we propose FRONT (FRequency dOmain kNowledge Transfer), a novel framework that uses the Discrete Cosine Transform (DCT) to isolate the low-frequency \"learngene\". This learngene can be seamlessly adapted to initialize models of arbitrary size via simple truncation or padding, a process that is entirely training-free. For enhanced performance, we propose an optional low-cost refinement process that introduces a spectral regularizer to further improve the learngene's transferability. Extensive experiments demonstrate that FRONT achieves the state-of-the-art performance, accelerates convergence by up to 15 times in vision tasks, and reduces training FLOPs by an average of 40.5% in language tasks.",
+      "authors": [
+        "Jianlu Shen",
+        "Fu Feng",
+        "Yucheng Xie",
+        "Jiaqi Lv",
+        "Xin Geng"
+      ],
+      "url": "https://arxiv.org/abs/2603.07523",
+      "published": "2026-03-08T08:25:49+00:00",
+      "updated": "2026-03-08T08:25:49+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07506",
+      "title": "A Unified Framework for Knowledge Transfer in Bidirectional Model Scaling",
+      "abstract": "Transferring pre-trained knowledge from a source model to a target model of a different architectural size is a key challenge for flexible and efficient model scaling. However, current parameter-space methods treat Small-to-Large (S2L) and Large-to-Small (L2S) scaling as separate, incompatible problems, focusing on parameter synthesis and selection, respectively. This fragmented perspective has resulted in specialized tools, hindering a unified, bidirectional framework. In this paper, we propose BoT (Bidirectional knowledge Transfer), the first size-agnostic framework to unify S2L and L2S scaling. Our core insight is to treat model weights as continuous signals, where models of different sizes represent distinct discretizations of the transferable knowledge. This multi-resolution perspective directly casts S2L and L2S scaling as the signal processing operations of upsampling and downsampling, naturally leading to the adoption of the Discrete Wavelet Transform (DWT) and its Inverse (IDWT). BoT leverages the recursive nature of wavelets, using the decomposition level as a dynamic scaling factor to bridge disparate model sizes in a parameter-free and computationally efficient manner. Extensive experiments on DeiT, BERT, and GPT demonstrate significant pre-training FLOPs savings (up to 67.1% for S2L, 52.8% for L2S) and state-of-the-art performance on benchmarks like GLUE and SQuAD.",
+      "authors": [
+        "Jianlu Shen",
+        "Fu Feng",
+        "Jiaze Xu",
+        "Yucheng Xie",
+        "Jiaqi Lv",
+        "Xin Geng"
+      ],
+      "url": "https://arxiv.org/abs/2603.07506",
+      "published": "2026-03-08T07:23:16+00:00",
+      "updated": "2026-03-08T07:23:16+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07487",
+      "title": "A Joint Neural Baseline for Concept, Assertion, and Relation Extraction from Clinical Text",
+      "abstract": "Clinical information extraction (e.g., 2010 i2b2/VA challenge) usually presents tasks of concept recognition, assertion classification, and relation extraction. Jointly modeling the multi-stage tasks in the clinical domain is an underexplored topic. The existing independent task setting (reference inputs given in each stage) makes the joint models not directly comparable to the existing pipeline work. To address these issues, we define a joint task setting and propose a novel end-to-end system to jointly optimize three-stage tasks. We empirically investigate the joint evaluation of our proposal and the pipeline baseline with various embedding techniques: word, contextual, and in-domain contextual embeddings. The proposed joint system substantially outperforms the pipeline baseline by +0.3, +1.4, +3.1 for the concept, assertion, and relation F1. This work bridges joint approaches and clinical information extraction. The proposed approach could serve as a strong joint baseline for future research. The code is publicly available.",
+      "authors": [
+        "Fei Cheng",
+        "Ribeka Tanaka",
+        "Sadao Kurohashi"
+      ],
+      "url": "https://arxiv.org/abs/2603.07487",
+      "published": "2026-03-08T06:16:35+00:00",
+      "updated": "2026-03-08T06:16:35+00:00",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07462",
+      "title": "Do Machines Fail Like Humans? A Human-Centred Out-of-Distribution Spectrum for Mapping Error Alignment",
+      "abstract": "Determining whether AI systems process information similarly to humans is central to cognitive science and trustworthy AI. While modern AI models match human accuracy on standard tasks, such parity does not guarantee that their underlying decision-making strategies are aligned with human information processing. Assessing performance using i) error alignment metrics to compare how humans and models fail, and ii) using distorted, or otherwise more challenging, stimuli, provides a viable pathway toward a finer characterization of model-human alignment. However, existing out-of-distribution (OOD) analyses for challenging stimuli are limited due to methodological choices: they define OOD shift relative to model training data or use arbitrary distortion-specific parameters with little correspondence to human perception, hindering principled comparisons. We propose a human-centred framework that redefines the degree of OOD as a spectrum of human perceptual difficulty. By quantifying how much a collection of stimuli deviates from an undistorted reference set based on human accuracy, we construct an OOD spectrum and identify four distinct regimes of perceptual challenge. This approach enables principled model-human comparisons at calibrated difficulty levels. We apply this framework to object recognition and reveal unique, regime-dependent model-human alignment rankings and profiles across deep learning architectures. Vision-language models are the most consistently human aligned across near- and far-OOD conditions, but CNNs are more aligned than ViTs for near-OOD and ViTs are more aligned than CNNs for far-OOD conditions. Our work demonstrates the critical importance of accounting for cross-condition differences such as perceptual difficulty for a principled assessment of model-human alignment.",
+      "authors": [
+        "Binxia Xu",
+        "Xiaoliang Luo",
+        "Luke Dickens",
+        "Robert M. Mok"
+      ],
+      "url": "https://arxiv.org/abs/2603.07462",
+      "published": "2026-03-08T04:51:39+00:00",
+      "updated": "2026-03-08T04:51:39+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07433",
+      "title": "Data Agent: Learning to Select Data via End-to-End Dynamic Optimization",
+      "abstract": "Dynamic Data selection aims to accelerate training by prioritizing informative samples during online training. However, existing methods typically rely on task-specific handcrafted metrics or static/snapshot-based criteria to estimate sample importance, limiting scalability across learning paradigms and making it difficult to capture the evolving utility of data throughout training. To address this challenge, we propose Data Agent, an end-to-end dynamic data selection framework that formulates data selection as a training-aware sequential decision-making problem. The agent learns a sample-wise selection policy that co-evolves with model optimization, guided by a composite reward that integrates loss-based difficulty and confidence-based uncertainty signals. The reward signals capture complementary objectives of optimization impact and information gain, together with a tuning-free adaptive weighting mechanism that balances these signals over training. Extensive experiments across a wide range of datasets and architectures demonstrate that Data Agent consistently accelerates training while preserving or improving performance, e.g., reducing costs by over 50\\% on ImageNet-1k and MMLU with lossless performance. Moreover, its dataset-agnostic formulation and modular reward make it plug-and-play across tasks and scenarios, e.g., robustness to noisy datasets, highlighting its potential in real-world scenarios.",
+      "authors": [
+        "Suorong Yang",
+        "Fangjian Su",
+        "Hai Gan",
+        "Ziqi Ye",
+        "Jie Li",
+        "Baile Xu",
+        "Furao Shen",
+        "Soujanya Poria"
+      ],
+      "url": "https://arxiv.org/abs/2603.07433",
+      "published": "2026-03-08T03:10:39+00:00",
+      "updated": "2026-03-08T03:10:39+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07416",
+      "title": "DualSpec: Accelerating Deep Research Agents via Dual-Process Action Speculation",
+      "abstract": "Large language model-based deep research agents have been increasingly popular for addressing long-horizon information-seeking tasks, but they often incur high end-to-end latency due to extensive reasoning and frequent tool use. Speculation frameworks aim to reduce latency by overlapping action execution with reasoning; however, existing approaches typically rely on uniform speculation strategies and strict action matching, which limits inference speedups and robustness. In this work, we revisit the speculate-verify paradigm for deep research agents through the lens of action heterogeneity. We show that \\textit{Search} and \\textit{Visit} actions exhibit fundamentally different reasoning and model capacity requirements: entropy-based analysis reveals that Search decisions have higher uncertainty and benefit significantly from explicit reasoning, whereas Visit decisions have lower entropy and depend primarily on model capacity. Motivated by this dual-process characteristic, we propose DualSpec, a heterogeneous speculation framework equipped with a lightweight, confidence-based semantic verifier. Experiments across multiple models and benchmarks demonstrate that DualSpec achieves up to 3.28$\\times$ end-to-end speedup while maintaining accuracy comparable to fully reasoning agents.",
+      "authors": [
+        "Shuzhang Zhong",
+        "Baotong Lu",
+        "Qi Chen",
+        "Chuanjie Liu",
+        "Fan Yang",
+        "Meng Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.07416",
+      "published": "2026-03-08T02:03:58+00:00",
+      "updated": "2026-03-08T02:03:58+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07392",
+      "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
+      "abstract": "LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.",
+      "authors": [
+        "Jiyeon Kim",
+        "Hyunji Lee",
+        "Dylan Zhou",
+        "Sue Hyun Park",
+        "Seunghyun Yoon",
+        "Trung Bui",
+        "Franck Dernoncourt",
+        "Sungmin Cha",
+        "Minjoon Seo"
+      ],
+      "url": "https://arxiv.org/abs/2603.07392",
+      "published": "2026-03-08T00:38:39+00:00",
+      "updated": "2026-03-08T00:38:39+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07329",
+      "title": "The Third Ambition: Artificial Intelligence and the Science of Human Behavior",
+      "abstract": "Contemporary artificial intelligence research has been organized around two dominant ambitions: productivity, which treats AI systems as tools for accelerating work and economic output, and alignment, which focuses on ensuring that increasingly capable systems behave safely and in accordance with human values. This paper articulates and develops a third, emerging ambition: the use of large language models (LLMs) as scientific instruments for studying human behavior, culture, and moral reasoning. Trained on unprecedented volumes of human-produced text, LLMs encode large-scale regularities in how people argue, justify, narrate, and negotiate norms across social domains. We argue that these models can be understood as condensates of human symbolic behavior, compressed, generative representations that render patterns of collective discourse computationally accessible. The paper situates this third ambition within long-standing traditions of computational social science, content analysis, survey research, and comparative-historical inquiry, while clarifying the epistemic limits of treating model output as evidence. We distinguish between base models and fine-tuned systems, showing how alignment interventions can systematically reshape or obscure the cultural regularities learned during pretraining, and we identify instruct-only and modular adaptation regimes as pragmatic compromises for behavioral research. We review emerging methodological approaches including prompt-based experiments, synthetic population sampling, comparative-historical modeling, and ablation studies and show how each maps onto familiar social-scientific designs while operating at unprecedented scale.",
+      "authors": [
+        "W. Russell Neuman",
+        "Chad Coleman"
+      ],
+      "url": "https://arxiv.org/abs/2603.07329",
+      "published": "2026-03-07T20:21:58+00:00",
+      "updated": "2026-03-07T20:21:58+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07323",
+      "title": "Norm-Hierarchy Transitions in Representation Learning: When and Why Neural Networks Abandon Shortcuts",
+      "abstract": "Neural networks often rely on spurious shortcuts for many epochs before discovering structured representations. However, the mechanism governing when this transition occurs and whether its timing can be predicted remains unclear. Prior work shows that gradient descent converges to low norm solutions and that neural networks exhibit simplicity bias, but neither explains the timescale of the transition from shortcut features to structured representations.   We introduce the Norm-Hierarchy Transition (NHT) framework, which explains delayed representation learning as the slow traversal of a hierarchy of parameter norms during regularized optimization. When multiple interpolating solutions exist with different norms, weight decay gradually moves the model from high norm shortcut solutions toward lower norm structured representations. We derive a tight bound showing that the transition delay grows logarithmically with the ratio between shortcut and structured norms.   Experiments on modular arithmetic, CIFAR-10 with spurious features, CelebA, and Waterbirds support the predictions of the framework. The results suggest that grokking, shortcut learning, and delayed feature discovery arise from a common mechanism based on norm hierarchy traversal during training.",
+      "authors": [
+        "Truong Xuan Khanh",
+        "Truong Quynh Hoa"
+      ],
+      "url": "https://arxiv.org/abs/2603.07323",
+      "published": "2026-03-07T20:07:16+00:00",
+      "updated": "2026-03-07T20:07:16+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07316",
+      "title": "FinSheet-Bench: From Simple Lookups to Complex Reasoning, Where LLMs Break on Financial Spreadsheets",
+      "abstract": "While Large Language Models (LLMs) can accelerate text-heavy tasks in alternative investment due diligence, a gap remains in their ability to accurately extract and reason over structured tabular data from complex financial spreadsheets. Progress is held back by the lack of real industry fund portfolio datasets for benchmarking, as private equity data rooms are confidential. To address this, we introduce FinSheet-Bench, a benchmark of synthetic financial portfolio data modeled on real private equity fund structures, designed to evaluate LLM performance on text-serialized spreadsheet question answering and numeric reasoning tasks.   Our evaluation of ten model configurations from OpenAI, Google, and Anthropic on financial spreadsheets, including complex layouts, fund dividers, and multi-line column names, reveals that no standalone model achieves error rates low enough for unsupervised use in professional finance applications. The best-performing model, Gemini 3.1 Pro, achieves 82.4% accuracy across twenty-four evaluation files of varying complexity and structural layout (approximately 1 error per 6 questions), followed by GPT-5.2 with reasoning at 80.4%, Claude Opus 4.6 with thinking at 80.2%, and Gemini 3 Pro at 80.2%. Performance degrades substantially on larger, more complex spreadsheets: the largest spreadsheet (152 companies, 8 funds) yields an average accuracy of just 48.6% across all models, compared to 86.2% on the easiest evaluation file. These difficulty patterns are consistent across all ten models, indicating that they reflect LLM limitations rather than idiosyncratic model weaknesses. Reliable financial spreadsheet extraction will likely require architectural approaches that separate document understanding from deterministic computation.",
+      "authors": [
+        "Jan Ravnik",
+        "Matjaž Ličen",
+        "Felix Bührmann",
+        "Bithiah Yuan",
+        "Felix Stinson",
+        "Tanvi Singh"
+      ],
+      "url": "https://arxiv.org/abs/2603.07316",
+      "published": "2026-03-07T19:27:34+00:00",
+      "updated": "2026-03-07T19:27:34+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07315",
+      "title": "Shutdown Safety Valves for Advanced AI",
+      "abstract": "One common concern about advanced artificial intelligence is that it will prevent us from turning it off, as that would interfere with pursuing its goals. In this paper, we discuss an unorthodox proposal for addressing this concern: give the AI a (primary) goal of being turned off (see also papers by Martin et al., and by Goldstein and Robinson). We also discuss whether and under what conditions this would be a good idea.",
+      "authors": [
+        "Vincent Conitzer"
+      ],
+      "url": "https://arxiv.org/abs/2603.07315",
+      "published": "2026-03-07T19:19:48+00:00",
+      "updated": "2026-03-07T19:19:48+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07300",
+      "title": "AutoResearch-RL: Perpetual Self-Evaluating Reinforcement Learning Agents for Autonomous Neural Architecture Discovery",
+      "abstract": "We present AutoResearch-RL, a framework in which a reinforcement learning agent conducts open-ended neural architecture and hyperparameter research without human supervision, running perpetually until a termination oracle signals convergence or resource exhaustion. At each step the agent proposes a code modification to a target training script, executes it under a fixed wall clock time budget, observes a scalar reward derived from validation bits-per-byte (val-bpb), and updates its policy via Proximal Policy Optimisation (PPO).   The key design insight is the separation of three concerns: (i) a frozen environment (data pipeline, evaluation protocol, and constants) that guarantees fair cross-experiment comparison; (ii) a mutable target file (train.py) that represents the agent's editable state; and (iii) a meta-learner (the RL agent itself) that accumulates a growing trajectory of experiment outcomes and uses them to inform subsequent proposals.   We formalise this as a Markov Decision Process, derive convergence guarantees under mild assumptions, and demonstrate empirically on a single GPU nanochat pretraining benchmark that AutoResearch-RL discovers configurations that match or exceed hand-tuned baselines after approximately 300 overnight iterations, with no human in the loop.",
+      "authors": [
+        "Nilesh Jain",
+        "Rohit Yadav",
+        "Sagar Kotian",
+        "Claude AI"
+      ],
+      "url": "https://arxiv.org/abs/2603.07300",
+      "published": "2026-03-07T17:49:44+00:00",
+      "updated": "2026-03-07T17:49:44+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07295",
+      "title": "A Cortically Inspired Architecture for Modular Perceptual AI",
+      "abstract": "This paper bridges neuroscience and artificial intelligence to propose a cortically inspired blueprint for modular perceptual AI. While current monolithic models such as GPT-4V achieve impressive performance, they often struggle to explicitly support interpretability, compositional generalization, and adaptive robustness - hallmarks of human cognition. Drawing on neuroscientific models of cortical modularity, predictive processing, and cross-modal integration, we advocate decomposing perception into specialized, interacting modules. This architecture supports structured, human-inspired reasoning by making internal inference processes explicit through hierarchical predictive feedback loops and shared latent spaces. Our proof-of-concept study provides empirical evidence that modular decomposition yields more stable and inspectable representations. By grounding AI design in biologically validated principles, we move toward systems that not only perform well, but also support more transparent and human-aligned inference.",
+      "authors": [
+        "Prerna Luthra"
+      ],
+      "url": "https://arxiv.org/abs/2603.07295",
+      "published": "2026-03-07T17:35:33+00:00",
+      "updated": "2026-03-07T17:35:33+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.03684",
+      "title": "Mathematicians in the age of AI",
+      "abstract": "Recent developments show that AI can prove research-level theorems in mathematics, both formally and informally. This essay urges mathematicians to stay up-to-date with the technology, to consider the ways it will disrupt mathematical practice, and to respond appropriately to the challenges and opportunities we now face.",
+      "authors": [
+        "Jeremy Avigad"
+      ],
+      "url": "https://arxiv.org/abs/2603.03684",
+      "published": "2026-03-04T03:23:58+00:00",
+      "updated": "2026-03-07T23:42:15+00:00",
+      "categories": [
+        "math.HO",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
+    },
+    {
       "id": "2603.07524",
       "title": "Neural Dynamics-Informed Pre-trained Framework for Personalized Brain Functional Network Construction",
       "abstract": "Brain activity is intrinsically a neural dynamic process constrained by anatomical space. This leads to significant variations in spatial distribution patterns and correlation patterns of neural activity across variable and heterogeneous scenarios. However, dominant brain functional network construction methods, which relies on pre-defined brain atlases and linear assumptions, fails to precisely capture varying neural activity patterns in heterogeneous scenarios. This limits the consistency and generalizability of the brain functional networks constructed by dominant methods. Here, a neural dynamics-informed pre-trained framework is proposed for personalized brain functional network construction. The proposed framework extracts personalized representations of neural activity patterns in heterogeneous scenarios. Personalized brain functional networks are obtained by utilizing these representations to guide brain parcellation and neural activity correlation estimation. Systematic evaluations were employed on 18 datasets across tasks, such as virtual neural modulation and abnormal neural circuit identification. Experimental results demonstrate that the proposed framework attains superior performance in heterogeneous scenarios. Overall, the proposed framework challenges the dominant brain functional network construction method.",
@@ -681,7 +546,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.349
+      "best_score": 0.0
     },
     {
       "id": "2603.07528",
@@ -704,7 +569,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.347
+      "best_score": 0.0
     },
     {
       "id": "2603.07360",
@@ -720,7 +585,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.346
+      "best_score": 0.0
     },
     {
       "id": "2603.07371",
@@ -739,7 +604,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.34
+      "best_score": 0.0
     },
     {
       "id": "2603.07626",
@@ -758,7 +623,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.339
+      "best_score": 0.0
     },
     {
       "id": "2603.07545",
@@ -781,7 +646,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.338
+      "best_score": 0.0
     },
     {
       "id": "2603.07444",
@@ -799,7 +664,7 @@
         "econ.GN"
       ],
       "matched_topics": [],
-      "best_score": 0.337
+      "best_score": 0.0
     },
     {
       "id": "2603.07311",
@@ -820,7 +685,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.334
+      "best_score": 0.0
     },
     {
       "id": "2603.07655",
@@ -840,7 +705,7 @@
         "math.AP"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2603.07388",
@@ -859,7 +724,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.332
+      "best_score": 0.0
     },
     {
       "id": "2603.07335",
@@ -880,7 +745,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.329
+      "best_score": 0.0
     },
     {
       "id": "2603.07496",
@@ -904,7 +769,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.328
+      "best_score": 0.0
     },
     {
       "id": "2603.07539",
@@ -927,7 +792,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.322
+      "best_score": 0.0
     },
     {
       "id": "2603.07379",
@@ -951,7 +816,7 @@
         "cs.IR"
       ],
       "matched_topics": [],
-      "best_score": 0.321
+      "best_score": 0.0
     },
     {
       "id": "2603.03596",
@@ -984,7 +849,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.321
+      "best_score": 0.0
     },
     {
       "id": "2603.07389",
@@ -1012,7 +877,7 @@
         "math.OC"
       ],
       "matched_topics": [],
-      "best_score": 0.314
+      "best_score": 0.0
     },
     {
       "id": "2603.07356",
@@ -1039,7 +904,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.314
+      "best_score": 0.0
     },
     {
       "id": "2603.07474",
@@ -1060,7 +925,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.309
+      "best_score": 0.0
     },
     {
       "id": "2603.07404",
@@ -1083,7 +948,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.308
+      "best_score": 0.0
     },
     {
       "id": "2603.07432",
@@ -1109,7 +974,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.307
+      "best_score": 0.0
     },
     {
       "id": "2603.07648",
@@ -1138,7 +1003,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.303
+      "best_score": 0.0
     },
     {
       "id": "2603.07390",
@@ -1154,7 +1019,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.302
+      "best_score": 0.0
     },
     {
       "id": "2603.07365",
@@ -1173,7 +1038,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.3
+      "best_score": 0.0
     },
     {
       "id": "2603.07287",
@@ -1193,7 +1058,7 @@
         "cs.SE"
       ],
       "matched_topics": [],
-      "best_score": 0.299
+      "best_score": 0.0
     },
     {
       "id": "2603.07339",
@@ -1216,7 +1081,7 @@
         "cs.CE"
       ],
       "matched_topics": [],
-      "best_score": 0.294
+      "best_score": 0.0
     },
     {
       "id": "2603.07357",
@@ -1237,7 +1102,37 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.291
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07449",
+      "title": "Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System",
+      "abstract": "Enterprises commonly deploy heterogeneous database systems, each of which owns a distinct SQL dialect with different syntax rules, built-in functions, and execution constraints. However, most existing NL2SQL methods assume a single dialect (e.g., SQLite) and struggle to produce queries that are both semantically correct and executable on target engines. Prompt-based approaches tightly couple intent reasoning with dialect syntax, rule-based translators often degrade native operators into generic constructs, and multi-dialect fine-tuning suffers from cross-dialect interference.   In this paper, we present Dial, a knowledge-grounded framework for dialect-specific NL2SQL. Dial introduces: (1) a Dialect-Aware Logical Query Planning module that converts natural language into a dialect-aware logical query plan via operator-level intent decomposition and divergence-aware specification; (2) HINT-KB, a hierarchical intent-aware knowledge base that organizes dialect knowledge into (i) a canonical syntax reference, (ii) a declarative function repository, and (iii) a procedural constraint repository; and (3) an execution-driven debugging and semantic verification loop that separates syntactic recovery from logic auditing to prevent semantic drift. We construct DS-NL2SQL, a benchmark covering six major database systems with 2,218 dialect-specific test cases. Experimental results show that Dial consistently improves translation accuracy by 10.25% and dialect feature coverage by 15.77% over state-of-the-art baselines. The code is at https://github.com/weAIDB/Dial.",
+      "authors": [
+        "Xiang Zhang",
+        "Hongming Xu",
+        "Le Zhou",
+        "Wei Zhou",
+        "Xuanhe Zhou",
+        "Guoliang Li",
+        "Yuyu Luo",
+        "Changdong Liu",
+        "Guorun Chen",
+        "Jiang Liao",
+        "Fan Wu"
+      ],
+      "url": "https://arxiv.org/abs/2603.07449",
+      "published": "2026-03-08T03:56:15+00:00",
+      "updated": "2026-03-08T03:56:15+00:00",
+      "categories": [
+        "cs.DB",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07452",
@@ -1262,7 +1157,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.288
+      "best_score": 0.0
     },
     {
       "id": "2603.07558",
@@ -1279,7 +1174,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.284
+      "best_score": 0.0
     },
     {
       "id": "2603.07466",
@@ -1302,7 +1197,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.284
+      "best_score": 0.0
     },
     {
       "id": "2603.07448",
@@ -1318,7 +1213,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.283
+      "best_score": 0.0
     },
     {
       "id": "2603.07546",
@@ -1335,7 +1230,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.282
+      "best_score": 0.0
     },
     {
       "id": "2603.07427",
@@ -1356,7 +1251,7 @@
         "cs.CR"
       ],
       "matched_topics": [],
-      "best_score": 0.282
+      "best_score": 0.0
     },
     {
       "id": "2603.07348",
@@ -1373,7 +1268,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.282
+      "best_score": 0.0
     },
     {
       "id": "2603.07514",
@@ -1398,7 +1293,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.28
+      "best_score": 0.0
     },
     {
       "id": "2603.02899",
@@ -1422,7 +1317,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.28
+      "best_score": 0.0
     },
     {
       "id": "2603.07521",
@@ -1443,7 +1338,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.279
+      "best_score": 0.0
     },
     {
       "id": "2603.07467",
@@ -1465,7 +1360,7 @@
         "stat.ME"
       ],
       "matched_topics": [],
-      "best_score": 0.278
+      "best_score": 0.0
     },
     {
       "id": "2603.07264",
@@ -1485,7 +1380,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.278
+      "best_score": 0.0
     },
     {
       "id": "2603.07431",
@@ -1502,7 +1397,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.276
+      "best_score": 0.0
     },
     {
       "id": "2603.07572",
@@ -1523,7 +1418,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.27
+      "best_score": 0.0
     },
     {
       "id": "2603.07475",
@@ -1544,7 +1439,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.269
+      "best_score": 0.0
     },
     {
       "id": "2603.07437",
@@ -1566,7 +1461,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.268
+      "best_score": 0.0
     },
     {
       "id": "2603.07612",
@@ -1585,7 +1480,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.266
+      "best_score": 0.0
     },
     {
       "id": "2603.07473",
@@ -1609,7 +1504,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.266
+      "best_score": 0.0
     },
     {
       "id": "2603.07445",
@@ -1629,7 +1524,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.265
+      "best_score": 0.0
     },
     {
       "id": "2603.07422",
@@ -1649,7 +1544,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.26
+      "best_score": 0.0
     },
     {
       "id": "2603.07319",
@@ -1667,7 +1562,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.258
+      "best_score": 0.0
     },
     {
       "id": "2603.07394",
@@ -1686,7 +1581,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.251
+      "best_score": 0.0
     },
     {
       "id": "2603.07529",
@@ -1704,7 +1599,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.25
+      "best_score": 0.0
     },
     {
       "id": "2603.07502",
@@ -1726,7 +1621,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.248
+      "best_score": 0.0
     },
     {
       "id": "2603.07525",
@@ -1747,7 +1642,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.247
+      "best_score": 0.0
     },
     {
       "id": "2603.07373",
@@ -1767,7 +1662,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.246
+      "best_score": 0.0
     },
     {
       "id": "2603.07567",
@@ -1787,7 +1682,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.245
+      "best_score": 0.0
     },
     {
       "id": "2603.07516",
@@ -1809,7 +1704,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.244
+      "best_score": 0.0
     },
     {
       "id": "2603.07415",
@@ -1827,7 +1722,7 @@
         "cs.IT"
       ],
       "matched_topics": [],
-      "best_score": 0.243
+      "best_score": 0.0
     },
     {
       "id": "2603.07305",
@@ -1848,7 +1743,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.241
+      "best_score": 0.0
     },
     {
       "id": "2603.07249",
@@ -1865,7 +1760,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.241
+      "best_score": 0.0
     },
     {
       "id": "2603.03054",
@@ -1881,7 +1776,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.24
+      "best_score": 0.0
     },
     {
       "id": "2603.07272",
@@ -1901,7 +1796,25 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.236
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07482",
+      "title": "Interpretable-by-Design Transformers via Architectural Stream Independence",
+      "abstract": "While transformers achieve strong performance, their internal decision-making processes remain opaque. We investigate whether architectural constraints can enforce interpretability by design through architectural stream independence: maintaining a token stream (carrying symbolic structure) and contextual semantics in separated streams that remain independently observable throughout processing, with integration delayed until output. We validate this principle through the Late Fusion Architecture (LFA), which demonstrates interpretable symbolic heads through all the final layers, while standard transformers show dissolution by the third of six layers; we quantify this effect by introducing the Token-Position Dependence Score (PDS), with $PDS_{max}$ = 0.276 and 0.058, respectively. Crucially, intervention experiments demonstrate functional modularity: suppressing LFA's recency heads causes minimal semantic damage (Cohen's d = -0.158) versus catastrophic entanglement in baselines (d = -0.672). LFA demonstrates that architectural constraints improve underlying learning mechanisms, averaging 42% stability versus 19% and 11% for baseline comparisons, with extremes from 50% on LFA's best pairs (6 of 12 heads position-invariant) down to 0% complete collapse in over-constrained cases. By preventing premature entanglement, architectural independence steers models toward semantic understanding over positional heuristics, establishing interpretability as an architectural design criterion enforceable through structural constraints rather than post-hoc analysis.",
+      "authors": [
+        "Clayton Kerce",
+        "Alexis Fox"
+      ],
+      "url": "https://arxiv.org/abs/2603.07482",
+      "published": "2026-03-08T05:44:18+00:00",
+      "updated": "2026-03-08T05:44:18+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07461",
@@ -1920,7 +1833,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.231
+      "best_score": 0.0
     },
     {
       "id": "2603.07351",
@@ -1940,7 +1853,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.231
+      "best_score": 0.0
     },
     {
       "id": "2603.07253",
@@ -1959,7 +1872,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.228
+      "best_score": 0.0
     },
     {
       "id": "2603.07276",
@@ -1983,7 +1896,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.227
+      "best_score": 0.0
     },
     {
       "id": "2603.07629",
@@ -2001,7 +1914,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.226
+      "best_score": 0.0
     },
     {
       "id": "2603.07307",
@@ -2037,7 +1950,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.223
+      "best_score": 0.0
     },
     {
       "id": "2603.07618",
@@ -2057,7 +1970,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.07518",
@@ -2073,7 +1986,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.07286",
@@ -2093,7 +2006,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.07270",
@@ -2110,7 +2023,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.222
+      "best_score": 0.0
     },
     {
       "id": "2603.07459",
@@ -2131,7 +2044,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.221
+      "best_score": 0.0
     },
     {
       "id": "2603.07402",
@@ -2151,7 +2064,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.221
+      "best_score": 0.0
     },
     {
       "id": "2603.07299",
@@ -2170,7 +2083,24 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.219
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07366",
+      "title": "RILEC: Detection and Generation of L1 Russian Interference Errors in English Learner Texts",
+      "abstract": "Many errors in student essays can be explained by influence from the native language (L1). L1 interference refers to errors influenced by a speaker's first language, such as using stadion instead of stadium, reflecting lexical transliteration from Russian. In this work, we address the task of detecting such errors in English essays written by Russian-speaking learners. We introduce RILEC, a large-scale dataset of over 18,000 sentences, combining expert-annotated data from REALEC with synthetic examples generated through rule-based and neural augmentation. We propose a framework for generating L1-motivated errors using generative language models optimized with PPO, prompt-based control, and rule-based patterns. Models fine-tuned on RILEC achieve strong performance, particularly on word-level interference types such as transliteration and tense semantics. We find that the proposed augmentation pipeline leads to a significant performance improvement, making it a potentially valuable tool for learners and teachers to more effectively identify and address such errors.",
+      "authors": [
+        "Darya Kharlamova",
+        "Irina Proskurina"
+      ],
+      "url": "https://arxiv.org/abs/2603.07366",
+      "published": "2026-03-07T22:33:22+00:00",
+      "updated": "2026-03-07T22:33:22+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07599",
@@ -2191,7 +2121,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.207
+      "best_score": 0.0
     },
     {
       "id": "2603.07361",
@@ -2209,7 +2139,7 @@
         "cs.CV"
       ],
       "matched_topics": [],
-      "best_score": 0.207
+      "best_score": 0.0
     },
     {
       "id": "2603.07406",
@@ -2230,7 +2160,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.204
+      "best_score": 0.0
     },
     {
       "id": "2603.07455",
@@ -2249,7 +2179,7 @@
         "cs.GR"
       ],
       "matched_topics": [],
-      "best_score": 0.203
+      "best_score": 0.0
     },
     {
       "id": "2603.07522",
@@ -2267,7 +2197,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.202
+      "best_score": 0.0
     },
     {
       "id": "2603.07471",
@@ -2287,7 +2217,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.202
+      "best_score": 0.0
     },
     {
       "id": "2603.07438",
@@ -2305,7 +2235,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.07346",
@@ -2322,7 +2252,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.2
+      "best_score": 0.0
     },
     {
       "id": "2603.07584",
@@ -2341,7 +2271,7 @@
         "eess.AS"
       ],
       "matched_topics": [],
-      "best_score": 0.199
+      "best_score": 0.0
     },
     {
       "id": "2603.07313",
@@ -2359,7 +2289,7 @@
         "stat.ML"
       ],
       "matched_topics": [],
-      "best_score": 0.195
+      "best_score": 0.0
     },
     {
       "id": "2603.07413",
@@ -2381,7 +2311,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.194
+      "best_score": 0.0
     },
     {
       "id": "2603.07654",
@@ -2403,7 +2333,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.188
+      "best_score": 0.0
     },
     {
       "id": "2603.07454",
@@ -2424,7 +2354,7 @@
         "cs.RO"
       ],
       "matched_topics": [],
-      "best_score": 0.188
+      "best_score": 0.0
     },
     {
       "id": "2603.07368",
@@ -2443,7 +2373,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.187
+      "best_score": 0.0
     },
     {
       "id": "2603.07590",
@@ -2471,7 +2401,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.186
+      "best_score": 0.0
     },
     {
       "id": "2603.07540",
@@ -2497,7 +2427,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.186
+      "best_score": 0.0
     },
     {
       "id": "2603.07285",
@@ -2515,7 +2445,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.185
+      "best_score": 0.0
     },
     {
       "id": "2603.07507",
@@ -2536,7 +2466,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.179
+      "best_score": 0.0
     },
     {
       "id": "2603.07513",
@@ -2559,7 +2489,29 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.177
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.07577",
+      "title": "Integration of deep generative Anomaly Detection algorithm in high-speed industrial line",
+      "abstract": "Industrial visual inspection in pharmaceutical production requires high accuracy under strict constraints on cycle time, hardware footprint, and operational cost. Manual inline inspection is still common, but it is affected by operator variability and limited throughput. Classical rule-based computer vision pipelines are often rigid and difficult to scale to highly variable production scenarios. To address these limitations, we present a semi-supervised anomaly detection framework based on a generative adversarial architecture with a residual autoencoder and a dense bottleneck, specifically designed for online deployment on a high-speed Blow-Fill-Seal (BFS) line. The model is trained only on nominal samples and detects anomalies through reconstruction residuals, providing both classification and spatial localization via heatmaps. The training set contains 2,815,200 grayscale patches. Experiments on a real industrial test kit show high detection performance while satisfying timing constraints compatible with a 500 ms acquisition slot.",
+      "authors": [
+        "Niccolò Ferrari",
+        "Nicola Zanarini",
+        "Michele Fraccaroli",
+        "Alice Bizzarri",
+        "Evelina Lamma"
+      ],
+      "url": "https://arxiv.org/abs/2603.07577",
+      "published": "2026-03-08T10:28:34+00:00",
+      "updated": "2026-03-08T10:28:34+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "best_score": 0.0
     },
     {
       "id": "2603.07294",
@@ -2583,7 +2535,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.171
+      "best_score": 0.0
     },
     {
       "id": "2603.07460",
@@ -2601,7 +2553,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.165
+      "best_score": 0.0
     },
     {
       "id": "2603.07602",
@@ -2619,7 +2571,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.162
+      "best_score": 0.0
     },
     {
       "id": "2603.07554",
@@ -2643,7 +2595,7 @@
         "cs.SD"
       ],
       "matched_topics": [],
-      "best_score": 0.16
+      "best_score": 0.0
     },
     {
       "id": "2603.07372",
@@ -2664,7 +2616,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.157
+      "best_score": 0.0
     },
     {
       "id": "2603.07645",
@@ -2686,7 +2638,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.156
+      "best_score": 0.0
     },
     {
       "id": "2603.07472",
@@ -2706,7 +2658,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.155
+      "best_score": 0.0
     },
     {
       "id": "2603.07330",
@@ -2723,7 +2675,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.148
+      "best_score": 0.0
     },
     {
       "id": "2603.07370",
@@ -2743,7 +2695,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.143
+      "best_score": 0.0
     },
     {
       "id": "2603.07500",
@@ -2764,7 +2716,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.141
+      "best_score": 0.0
     },
     {
       "id": "2603.07571",
@@ -2784,7 +2736,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.13
+      "best_score": 0.0
     },
     {
       "id": "2603.07607",
@@ -2802,7 +2754,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.129
+      "best_score": 0.0
     },
     {
       "id": "2603.07664",
@@ -2823,7 +2775,7 @@
         "cs.GR"
       ],
       "matched_topics": [],
-      "best_score": 0.128
+      "best_score": 0.0
     },
     {
       "id": "2603.07551",
@@ -2843,7 +2795,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.116
+      "best_score": 0.0
     },
     {
       "id": "2603.07550",
@@ -2865,7 +2817,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.116
+      "best_score": 0.0
     },
     {
       "id": "2603.07534",
@@ -2886,7 +2838,7 @@
         "cs.CL"
       ],
       "matched_topics": [],
-      "best_score": 0.112
+      "best_score": 0.0
     },
     {
       "id": "2603.07666",
@@ -2912,7 +2864,7 @@
         "cs.AI"
       ],
       "matched_topics": [],
-      "best_score": 0.111
+      "best_score": 0.0
     },
     {
       "id": "2603.07336",
@@ -2936,7 +2888,7 @@
         "cs.NI"
       ],
       "matched_topics": [],
-      "best_score": 0.08
+      "best_score": 0.0
     },
     {
       "id": "2603.07566",
@@ -2956,7 +2908,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.077
+      "best_score": 0.0
     },
     {
       "id": "2603.07492",
@@ -2979,7 +2931,7 @@
         "cs.LG"
       ],
       "matched_topics": [],
-      "best_score": 0.007
+      "best_score": 0.0
     }
   ]
 }
