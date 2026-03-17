@@ -142,7 +142,7 @@ body {
 .content { max-width: 800px; margin: 0 auto; padding: 20px 24px 80px; }
 
 /* ── Section divider ── */
-.section-divider { display: flex; align-items: center; gap: 12px; margin: 36px 0 18px; }
+.section-divider { display: flex; align-items: center; gap: 12px; margin: 36px 0 18px; scroll-margin-top: 120px; }
 .section-divider-line { flex: 1; height: 1px; background: #e2e8f0; }
 .section-divider-label {
   font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
@@ -180,6 +180,19 @@ body {
 .pdf-link { margin-left: auto; font-size: 12px; font-weight: 600; color: #64748b; text-decoration: none; }
 .pdf-link:hover { color: #3b82f6; }
 
+.backfilled-badge {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  color: #92400e; background: #fffbeb; border: 1.5px solid #fcd34d;
+  border-radius: 999px; padding: 2px 8px; margin-bottom: 8px;
+}
+
+.method-badge {
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 999px; border: 1px solid; margin-left: 4px;
+}
+.method-keyword  { color: #166534; background: #dcfce7; border-color: #86efac; }
+.method-semantic { color: #1e40af; background: #dbeafe; border-color: #93c5fd; }
+
 /* ── Pagination ── */
 .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 28px; }
 .page-btn {
@@ -209,3 +222,50 @@ body {
   margin: 0 auto 16px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+
+  /* Header: tighten padding, let meta wrap below title */
+  .sticky-top { padding: 10px 14px 0; }
+  .header-row { gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .header-title { font-size: 16px; letter-spacing: -0.2px; }
+  .header-label { font-size: 9px; }
+  .header-meta {
+    margin-left: 0;             /* pull off auto so it wraps naturally */
+    width: 100%;                /* full row when wrapped */
+    font-size: 12px;
+    padding-bottom: 6px;
+  }
+
+  /* Tabs: smaller tap targets */
+  .tab { padding: 8px 12px; font-size: 12px; }
+  .tab-count { font-size: 10px; padding: 1px 5px; }
+
+  /* Filter chips */
+  .filter-bar { padding: 10px 14px; gap: 6px; }
+  .chip { padding: 5px 12px; font-size: 11px; }
+
+  /* Content area */
+  .content { padding: 14px 14px 60px; }
+
+  /* Paper cards */
+  .paper { padding: 14px 14px; margin-bottom: 10px; border-radius: 8px; }
+  .paper-title { font-size: 15px; margin-bottom: 4px; }
+  .paper-authors { font-size: 12px; margin-bottom: 8px; }
+  .abstract-preview, .abstract-full { font-size: 14px; line-height: 1.65; }
+  .expand-btn { font-size: 11px; }
+  .paper-footer { gap: 5px; margin-top: 12px; }
+  .topic-chip { font-size: 10px; padding: 2px 8px; }
+  .pdf-link { font-size: 11px; }
+
+  /* Section divider: allow label to wrap instead of overflow */
+  .section-divider { gap: 8px; margin: 24px 0 12px; scroll-margin-top: 90px; white-space: normal; text-align: center; font-size: 10px; }
+
+  /* Pagination: smaller buttons, allow wrap */
+  .pagination { gap: 4px; flex-wrap: wrap; margin-top: 20px; }
+  .page-btn { padding: 6px 10px; font-size: 12px; }
+
+  /* Sidebar: full-width on very small screens */
+  .sidebar { width: min(300px, 88vw); }
+}
