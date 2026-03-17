@@ -222,7 +222,20 @@ def filter_papers(
             best_semantic_score=all_best_scores.get(pid, 0.0),
         ))
 
-    matched.sort(key=lambda r: r.paper.published, reverse=True)
+    def _rank(r: MatchResult) -> tuple:
+        """
+        Sort key — lower tuple = higher rank (sort ascending, then reverse).
+        Tier 0: keyword + semantic match (most confident)
+        Tier 1: keyword-only (exact term hit — precise but no score)
+        Tier 2: semantic-only (ranked by score descending)
+        Within each tier: best_score descending (keyword gets synthetic 1.0)
+        """
+        tier = 0 if r.match_method == "both" else \
+               1 if r.match_method == "keyword" else 2
+        score = r.best_semantic_score if r.match_method != "keyword" else 1.0
+        return (tier, -score)
+
+    matched.sort(key=_rank)
 
     # ── Unmatched results — sorted by semantic proximity ──
     unmatched = []

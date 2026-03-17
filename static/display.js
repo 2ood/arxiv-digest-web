@@ -2,7 +2,13 @@
  * display.js — Shared rendering logic for index.html and date.html.
  *
  * Data contract (papers in JSON):
- *   { id, title, abstract, authors[], url, matched_topics[], best_score }
+ *   { id, title, abstract, authors[], url, matched_topics[], match_method,
+ *     best_score, backfilled? }
+ *
+ * Papers arrive pre-sorted by rank from the pipeline:
+ *   1. keyword + semantic  ("both")
+ *   2. keyword-only        ("keyword")
+ *   3. semantic-only       ("semantic", descending by score)
  */
 
 const DigestDisplay = (() => {
@@ -22,6 +28,17 @@ const DigestDisplay = (() => {
   const IRREL_STYLE = {
     background: "#f1f5f9", color: "#94a3b8", borderColor: "#e2e8f0"
   };
+
+  // ── Match method badge ─────────────────────────────────────────────────────
+  function _methodBadge(method) {
+    if (method === "keyword" || method === "both") {
+      return `<span class="method-badge method-keyword">keyword</span>`;
+    }
+    if (method === "semantic") {
+      return `<span class="method-badge method-semantic">semantic</span>`;
+    }
+    return "";
+  }
 
   // ── Topic style maps ───────────────────────────────────────────────────────
   let activeStyles   = {};
@@ -211,17 +228,21 @@ const DigestDisplay = (() => {
       : (p.matched_topics || []).map(t => {
           const s = activeStyles[t] || IRREL_STYLE;
           return `<span class="topic-chip" style="background:${s.background};color:${s.color};border-color:${s.borderColor}">${t}</span>`;
-        }).join("");
+        }).join("") + _methodBadge(p.match_method);
 
     const authorsArr = p.authors || [];
     const authorsStr = authorsArr.slice(0, 3).join(", ") + (authorsArr.length > 3 ? " et al." : "");
     const uid    = p.id.replace(/[^a-zA-Z0-9]/g, "-");
     const pdfUrl = p.url.replace("/abs/", "/pdf/");
+    const backfilledBadge = p.backfilled
+      ? `<span class="backfilled-badge">⚡ Late addition</span>`
+      : "";
 
     const card = document.createElement("div");
     card.className = "paper" + (isIrrelevant ? " irrelevant" : "");
     card.style.borderLeftColor = accent;
     card.innerHTML = `
+      ${backfilledBadge}
       <a class="paper-title" href="${p.url}" target="_blank">${p.title}</a>
       <div class="paper-authors">${authorsStr}</div>
       <div class="abstract-preview" id="pv-${uid}">${preview}</div>

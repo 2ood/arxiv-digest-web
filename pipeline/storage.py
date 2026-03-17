@@ -43,7 +43,8 @@ from fetcher import Paper
 from filter  import MatchResult
 
 RETENTION_DAYS = 90
-KST = timezone(timedelta(hours=9))
+KST = timezone(timedelta(hours=9))  # kept for fetched_at display only
+UTC = timezone.utc
 
 
 def _papers_dir(root: Path) -> Path:
@@ -69,6 +70,7 @@ def _paper_to_dict(p: Paper, match: MatchResult | None) -> dict:
         "updated":        p.updated.isoformat(),
         "categories":     p.categories,
         "matched_topics": match.matched_topics if match else [],
+        "match_method":   match.match_method   if match else "none",
         "best_score":     round(match.best_semantic_score, 3) if match else 0.0,
     }
 
@@ -148,6 +150,7 @@ def load_matched_summaries(root: Path, d: date):
             authors        = p["authors"],
             abstract       = p["abstract"],
             matched_topics = p["matched_topics"],
+            backfilled     = p.get("backfilled", False),
         )
         for p in papers if p.get("matched_topics")
     ]
@@ -156,6 +159,50 @@ def load_matched_summaries(root: Path, d: date):
 
 def date_has_data(root: Path, d: date) -> bool:
     return _path_for_date(root, d).exists()
+
+
+def load_existing_ids(root: Path, d: date) -> set[str]:
+    """Return the set of paper IDs already stored for a given date."""
+    path = _path_for_date(root, d)
+    if not path.exists():
+        return set()
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return {p["id"] for p in payload.get("papers", [])}
+
+
+def patch_papers(
+    root: Path,
+    d: date,
+    new_matched: list[MatchResult],
+    new_unmatched: list[MatchResult],
+) -> None:
+    """
+    Prepend backfilled papers to an existing day's JSON.
+    New matched papers go to the very top; new unmatched appended at the end.
+    Each backfilled record gets backfilled=true so the frontend can badge them.
+    """
+    path = _path_for_date(root, d)
+    if not path.exists():
+        return
+
+    payload      = json.loads(path.read_text(encoding="utf-8"))
+    existing     = payload["papers"]
+
+    def to_dict_backfilled(r: MatchResult) -> dict:
+        d = _paper_to_dict(r.paper, r)
+        d["backfilled"] = True
+        return d
+
+    new_matched_dicts   = [to_dict_backfilled(r) for r in new_matched]
+    new_unmatched_dicts = [to_dict_backfilled(r) for r in new_unmatched]
+
+    # Matched backfills at top, existing papers in middle, unmatched at end
+    payload["papers"] = new_matched_dicts + existing + new_unmatched_dicts
+    payload["patched_at"] = datetime.now(UTC).isoformat()
+
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[storage] Patched {len(new_matched_dicts)} matched + "
+          f"{len(new_unmatched_dicts)} unmatched backfills → {path.name}")
 
 
 def list_available_dates(root: Path) -> list[date]:
@@ -194,7 +241,7 @@ def update_available_dates(root: Path) -> None:
     }
 
     payload = {
-        "updated_at": datetime.now(KST).isoformat(),
+        "updated_at": datetime.now(UTC).isoformat(),
         "latest":     dates[0].isoformat(),
         "dates":      plain,
     }
@@ -208,7 +255,7 @@ def update_available_dates(root: Path) -> None:
 
 def prune_old_files(root: Path, retention_days: int = RETENTION_DAYS) -> None:
     """Delete paper JSON files older than retention_days."""
-    cutoff = datetime.now(KST).date() - timedelta(days=retention_days)
+    cutoff = datetime.now(UTC).date() - timedelta(days=retention_days)
     pruned = 0
     for f in _papers_dir(root).glob("????-??-??.json"):
         try:

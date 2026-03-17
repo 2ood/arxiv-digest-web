@@ -180,6 +180,19 @@ body {
 .pdf-link { margin-left: auto; font-size: 12px; font-weight: 600; color: #64748b; text-decoration: none; }
 .pdf-link:hover { color: #3b82f6; }
 
+.backfilled-badge {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  color: #92400e; background: #fffbeb; border: 1.5px solid #fcd34d;
+  border-radius: 999px; padding: 2px 8px; margin-bottom: 8px;
+}
+
+.method-badge {
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 999px; border: 1px solid; margin-left: 4px;
+}
+.method-keyword  { color: #166534; background: #dcfce7; border-color: #86efac; }
+.method-semantic { color: #1e40af; background: #dbeafe; border-color: #93c5fd; }
+
 /* ── Pagination ── */
 .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 28px; }
 .page-btn {

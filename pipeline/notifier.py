@@ -26,24 +26,28 @@ from email.message import EmailMessage
 # ── Types ─────────────────────────────────────────────────────────────────────
 
 class PaperSummary:
-    __slots__ = ("title", "url", "authors", "abstract", "matched_topics")
+    __slots__ = ("title", "url", "authors", "abstract", "matched_topics", "backfilled")
 
     def __init__(self, title: str, url: str, authors: list[str],
-                 abstract: str, matched_topics: list[str]):
+                 abstract: str, matched_topics: list[str],
+                 backfilled: bool = False):
         self.title          = title
         self.url            = url
         self.authors        = authors
         self.abstract       = abstract
         self.matched_topics = matched_topics
+        self.backfilled     = backfilled
 
 
 class DaySummary:
-    __slots__ = ("day", "matched", "total")
+    __slots__ = ("day", "matched", "total", "backfill_count")
 
-    def __init__(self, day: date, matched: list[PaperSummary], total: int):
-        self.day     = day
-        self.matched = matched
-        self.total   = total
+    def __init__(self, day: date, matched: list[PaperSummary], total: int,
+                 backfill_count: int = 0):
+        self.day            = day
+        self.matched        = matched
+        self.total          = total
+        self.backfill_count = backfill_count
 
 
 # ── Date helpers ──────────────────────────────────────────────────────────────
@@ -154,6 +158,16 @@ def _build_html(summaries: list[DaySummary], site_url: str | None) -> str:
               {overflow_note}
             </div>"""
 
+        late_banner = ""
+        if summary.backfill_count > 0:
+            n = summary.backfill_count
+            late_banner = f"""
+          <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;
+                      padding:10px 16px;margin-bottom:18px;font-size:13px;color:#92400e;">
+            ⚡ <strong>{n} late addition{'s' if n != 1 else ''}</strong> —
+            paper{'s' if n != 1 else ''} missed on the original run and added retroactively.
+          </div>"""
+
         day_html += f"""
         <div style="margin-bottom:40px;padding-top:1em;">
           <div style="border-bottom:2px solid #e2e8f0;padding-bottom:12px;
@@ -170,6 +184,7 @@ def _build_html(summaries: list[DaySummary], site_url: str | None) -> str:
               {len(summary.matched)} matched &nbsp;·&nbsp; {summary.total} total
             </div>
           </div>
+          {late_banner}
           {topic_sections}
         </div>"""
 

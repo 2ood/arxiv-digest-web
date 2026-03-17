@@ -25,8 +25,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 from fetcher   import fetch_recent_days
 from filter    import filter_papers, Topic
 from storage   import (save_papers, date_has_data, list_available_dates,
-                       load_papers, load_matched_summaries,
-                       update_available_dates, prune_old_files)
+                       load_papers, load_existing_ids, patch_papers,
+                       load_matched_summaries, update_available_dates,
+                       prune_old_files)
 from notifier  import send_digest, DaySummary, PaperSummary
 from terms     import load_or_generate, regenerate as regenerate_terms
 
@@ -77,34 +78,122 @@ def filter_and_save(day: date, papers: list, topics: list[Topic], config: dict) 
             authors        = r.paper.authors,
             abstract       = r.paper.abstract,
             matched_topics = r.matched_topics,
+            backfilled     = False,
         )
         for r in matched
     ]
-    return DaySummary(day=day, matched=paper_summaries, total=len(matched) + len(unmatched))
+    return DaySummary(day=day, matched=paper_summaries,
+                      total=len(matched) + len(unmatched))
+
+
+BACKFILL_DAYS = 2   # how many already-stored days to check for late arrivals
+
+
+def backfill_and_patch(
+    papers_by_date: dict,
+    stored: list,
+    enabled: list[Topic],
+    config: dict,
+) -> list[DaySummary]:
+    """
+    For each of the most recent BACKFILL_DAYS already-stored dates, diff the
+    freshly fetched papers against what's already on disk. Filter and patch in
+    any new arrivals, marking them backfilled=True.
+
+    Returns a list of DaySummary for days where backfills were found
+    (used to annotate the notification email).
+    """
+    backfill_summaries = []
+    check_days = stored[:BACKFILL_DAYS]
+
+    for day in check_days:
+        fetched = papers_by_date.get(day, [])
+        if not fetched:
+            continue
+
+        existing_ids = load_existing_ids(ROOT, day)
+        new_papers   = [p for p in fetched if p.id not in existing_ids]
+
+        if not new_papers:
+            print(f"[main] Backfill {day}: no new papers found.")
+            continue
+
+        print(f"\n[main] Backfill {day}: {len(new_papers)} new paper(s) found — filtering…")
+        matched, unmatched = filter_papers(
+            papers              = new_papers,
+            topics              = enabled,
+            embedding_threshold = config.get("embedding_threshold", 0.35),
+            seen_ids            = set(),
+        )
+        print(f"[main] Backfill {day}: {len(matched)} matched, {len(unmatched)} unmatched.")
+        patch_papers(ROOT, day, matched, unmatched)
+
+        backfill_count = len(matched)
+        if backfill_count > 0:
+            paper_summaries = [
+                PaperSummary(
+                    title          = r.paper.title,
+                    url            = r.paper.url,
+                    authors        = r.paper.authors,
+                    abstract       = r.paper.abstract,
+                    matched_topics = r.matched_topics,
+                    backfilled     = True,
+                )
+                for r in matched
+            ]
+            backfill_summaries.append(DaySummary(
+                day            = day,
+                matched        = paper_summaries,
+                total          = len(matched) + len(unmatched),
+                backfill_count = backfill_count,
+            ))
+
+    return backfill_summaries
 
 
 def run_normal(config: dict, enabled: list[Topic], cats: list[str], max_res: int) -> list[DaySummary]:
-    """Default mode: fetch and filter only days missing from storage."""
+    """Default mode: fetch missing days + backfill check on recent stored days."""
     today   = datetime.now(UTC).date()
+    stored  = list_available_dates(ROOT)
     missing = [today - timedelta(days=i) for i in range(MAX_TABS)
                if not date_has_data(ROOT, today - timedelta(days=i))]
 
-    if not missing:
-        print("[main] All days already in storage — nothing to fetch.")
+    # Widen fetch window to cover missing days + BACKFILL_DAYS of stored days
+    stored_to_check = stored[:BACKFILL_DAYS]
+    all_days_needed = sorted(set(missing) | set(stored_to_check), reverse=False)
+
+    if not all_days_needed:
+        print("[main] All days already in storage — running backfill check only.")
+        all_days_needed = stored_to_check
+
+    if not all_days_needed:
+        print("[main] Nothing to fetch.")
         return []
 
-    print(f"[main] Days missing from storage: {missing}")
-    num_days       = (today - min(missing)).days + 1
+    oldest    = min(all_days_needed)
+    num_days  = (today - oldest).days + 1
+    print(f"[main] Fetching {num_days} days "
+          f"({oldest} → {today}, covers {len(missing)} missing + "
+          f"{len(stored_to_check)} backfill check)…")
     papers_by_date = fetch_recent_days(categories=cats, max_results=max_res,
                                        num_days=num_days)
+
+    # ── Process missing days ──────────────────────────────────────────────────
     summaries = []
-    for day in missing:
+    for day in sorted(missing, reverse=True):
         papers = papers_by_date.get(day, [])
         if papers:
             print(f"\n[main] Filtering {day} ({len(papers)} papers)…")
             summaries.append(filter_and_save(day, papers, enabled, config))
         else:
             print(f"[main] {day}: no papers found (weekend or holiday?).")
+
+    # ── Backfill check on already-stored days ─────────────────────────────────
+    backfill_summaries = backfill_and_patch(
+        papers_by_date, stored_to_check, enabled, config
+    )
+    summaries.extend(backfill_summaries)
+
     return summaries
 
 

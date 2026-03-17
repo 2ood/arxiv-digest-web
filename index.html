@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>arXiv Digest</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
   <link rel="stylesheet" href="static/global.css">
 </head>
 <body>
@@ -115,7 +116,7 @@ async function boot() {
   const allDates = [];
   Object.entries(datesIndex.dates).sort().reverse().forEach(([y, months]) => {
     Object.entries(months).sort().reverse().forEach(([m, days]) => {
-      days.slice().sort().reverse().forEach(d => {
+      days.slice().sort((a, b) => Number(b) - Number(a)).forEach(d => {
         allDates.push(`${y}-${m}-${d}`);
       });
     });
