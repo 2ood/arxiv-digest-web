@@ -30,7 +30,7 @@ categories:
   - cs.CL
 
 # Max papers to fetch per run
-max_results: 2000
+max_results: 4000
 
 # Semantic similarity threshold (0.0–1.0, lower = more results)
 embedding_threshold: 0.35

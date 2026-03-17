@@ -1,29 +1,82 @@
 {
   "date": "2026-03-10",
-  "fetched_at": "2026-03-17T11:02:50.615839+09:00",
+  "fetched_at": "2026-03-17T11:22:29.888752+09:00",
   "papers": [
     {
-      "id": "2603.08468",
-      "title": "Integrating Lagrangian Neural Networks into the Dyna Framework for Reinforcement Learning",
-      "abstract": "Model-based reinforcement learning (MBRL) is sample-efficient but depends on the accuracy of the learned dynamics, which are often modeled using black-box methods that do not adhere to physical laws. Those methods tend to produce inaccurate predictions when presented with data that differ from the original training set. In this work, we employ Lagrangian neural networks (LNNs), which enforce an underlying Lagrangian structure to train the model within a Dyna-based MBRL framework. Furthermore, we train the LNN using stochastic gradient-based and state-estimation-based optimizers to learn the network's weights. The state-estimation-based method converges faster than the stochastic gradient-based method during neural network training. Simulation results are provided to illustrate the effectiveness of the proposed LNN-based Dyna framework for MBRL.",
+      "id": "2603.08706",
+      "title": "Agentic Critical Training",
+      "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
       "authors": [
-        "Shreya Das",
-        "Kundan Kumar",
-        "Muhammad Iqbal",
-        "Outi Savolainen",
-        "Dominik Baumann",
-        "Laura Ruotsalainen",
-        "Simo Särkkä"
+        "Weize Liu",
+        "Minghui Liu",
+        "Sy-Tuyen Ho",
+        "Souradip Chakraborty",
+        "Xiyao Wang",
+        "Furong Huang"
       ],
-      "url": "https://arxiv.org/abs/2603.08468",
-      "published": "2026-03-09T15:06:10+00:00",
-      "updated": "2026-03-09T15:06:10+00:00",
+      "url": "https://arxiv.org/abs/2603.08706",
+      "published": "2026-03-09T17:58:56+00:00",
+      "updated": "2026-03-09T17:58:56+00:00",
       "categories": [
-        "eess.SY",
+        "cs.AI",
+        "cs.CL",
         "cs.LG"
       ],
       "matched_topics": [
-        "Neural Network Training Methods"
+        "Neural Network Training Methods",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08546",
+      "title": "Interactive World Simulator for Robot Policy Training and Evaluation",
+      "abstract": "Action-conditioned video prediction models (often referred to as world models) have shown strong potential for robotics applications, but existing approaches are often slow and struggle to capture physically consistent interactions over long horizons, limiting their usefulness for scalable robot policy training and evaluation. We present Interactive World Simulator, a framework for building interactive world models from a moderate-sized robot interaction dataset. Our approach leverages consistency models for both image decoding and latent-space dynamics prediction, enabling fast and stable simulation of physical interactions. In our experiments, the learned world models produce interaction-consistent pixel-level predictions and support stable long-horizon interactions for more than 10 minutes at 15 FPS on a single RTX 4090 GPU. Our framework enables scalable demonstration collection solely within the world models to train state-of-the-art imitation policies. Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, we find that policies trained on world-model-generated data perform comparably to those trained on the same amount of real-world data. Additionally, we evaluate policies both within the world models and in the real world across diverse tasks, and observe a strong correlation between simulated and real-world performance. Together, these results establish the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.",
+      "authors": [
+        "Yixuan Wang",
+        "Rhythm Syed",
+        "Fangyu Wu",
+        "Mengchao Zhang",
+        "Aykut Onol",
+        "Jose Barreiros",
+        "Hooshang Nayyeri",
+        "Tony Dear",
+        "Huan Zhang",
+        "Yunzhu Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.08546",
+      "published": "2026-03-09T16:13:32+00:00",
+      "updated": "2026-03-09T16:13:32+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08682",
+      "title": "Structural Causal Bottleneck Models",
+      "abstract": "We introduce structural causal bottleneck models (SCBMs), a novel class of structural causal models. At the core of SCBMs lies the assumption that causal effects between high-dimensional variables only depend on low-dimensional summary statistics, or bottlenecks, of the causes. SCBMs provide a flexible framework for task-specific dimension reduction while being estimable via standard, simple learning algorithms in practice. We analyse identifiability in SCBMs, connect them to information bottlenecks in the sense of Tishby & Zaslavsky (2015), and illustrate how to estimate them experimentally. We also demonstrate the benefit of bottlenecks for effect estimation in low-sample transfer learning settings. We argue that SCBMs provide an alternative to existing causal dimension reduction frameworks like causal representation learning or causal abstraction learning.",
+      "authors": [
+        "Simon Bing",
+        "Jonas Wahl",
+        "Jakob Runge"
+      ],
+      "url": "https://arxiv.org/abs/2603.08682",
+      "published": "2026-03-09T17:50:10+00:00",
+      "updated": "2026-03-09T17:50:10+00:00",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
       ],
       "match_method": "keyword",
       "best_score": 0.0
@@ -51,22 +104,24 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.04384",
-      "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
-      "abstract": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
+      "id": "2603.08707",
+      "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
+      "abstract": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
       "authors": [
-        "Zijian Chen",
-        "Xueguang Ma",
-        "Shengyao Zhuang",
-        "Jimmy Lin",
-        "Akari Asai",
-        "Victor Zhong"
+        "Azul Garza",
+        "Renée Rosillo",
+        "Rodrigo Mendoza-Smith",
+        "David Salinas",
+        "Andrew Robert Williams",
+        "Arjun Ashok",
+        "Mononito Goswami",
+        "José Martín Juárez"
       ],
-      "url": "https://arxiv.org/abs/2603.04384",
-      "published": "2026-03-04T18:47:26+00:00",
-      "updated": "2026-03-09T17:53:48+00:00",
+      "url": "https://arxiv.org/abs/2603.08707",
+      "published": "2026-03-09T17:59:00+00:00",
+      "updated": "2026-03-09T17:59:00+00:00",
       "categories": [
-        "cs.CL"
+        "cs.LG"
       ],
       "matched_topics": [
         "Interpretability"
@@ -100,6 +155,30 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.04384",
+      "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
+      "abstract": "Deep Research agents are rapidly emerging as primary consumers of modern retrieval systems. Unlike human users who issue and refine queries without documenting their intermediate thought processes, Deep Research agents generate explicit natural language reasoning before each search call, revealing rich intent and contextual information that existing retrievers entirely ignore. To exploit this overlooked signal, we introduce: (1) Reasoning-Aware Retrieval, a retrieval paradigm that jointly embeds the agent's reasoning trace alongside its query; and (2) DR-Synth, a data synthesis method that generates Deep Research retriever training data from standard QA datasets. We demonstrate that both components are independently effective, and their combination yields a trained embedding model, AgentIR-4B, with substantial gains. On the challenging BrowseComp-Plus benchmark, AgentIR-4B achieves 68\\% accuracy with the open-weight agent Tongyi-DeepResearch, compared to 50\\% with conventional embedding models twice its size, and 37\\% with BM25. Code and data are available at: https://texttron.github.io/AgentIR/.",
+      "authors": [
+        "Zijian Chen",
+        "Xueguang Ma",
+        "Shengyao Zhuang",
+        "Jimmy Lin",
+        "Akari Asai",
+        "Victor Zhong"
+      ],
+      "url": "https://arxiv.org/abs/2603.04384",
+      "published": "2026-03-04T18:47:26+00:00",
+      "updated": "2026-03-09T17:53:48+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
       "id": "2603.08526",
       "title": "Towards Effective and Efficient Graph Alignment without Supervision",
       "abstract": "Unsupervised graph alignment aims to find the node correspondence across different graphs without any anchor node pairs. Despite the recent efforts utilizing deep learning-based techniques, such as the embedding and optimal transport (OT)-based approaches, we observe their limitations in terms of model accuracy-efficiency tradeoff. By focusing on the exploitation of local and global graph information, we formalize them as the ``local representation, global alignment'' paradigm, and present a new ``global representation and alignment'' paradigm to resolve the mismatch between the two phases in the alignment process. We then propose \\underline{Gl}obal representation and \\underline{o}ptimal transport-\\underline{b}ased \\underline{Align}ment (\\texttt{GlobAlign}), and its variant, \\texttt{GlobAlign-E}, for better \\underline{E}fficiency. Our methods are equipped with the global attention mechanism and a hierarchical cross-graph transport cost, able to capture long-range and implicit node dependencies beyond the local graph structure. Furthermore, \\texttt{GlobAlign-E} successfully closes the time complexity gap between representative embedding and OT-based methods, reducing OT's cubic complexity to quadratic terms. Through extensive experiments, our methods demonstrate superior performance, with up to a 20\\% accuracy improvement over the best competitor. Meanwhile, \\texttt{GlobAlign-E} achieves the best efficiency, with an order of magnitude speedup against existing OT-based methods.",
@@ -124,20 +203,99 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08647",
-      "title": "Grow, Don't Overwrite: Fine-tuning Without Forgetting",
-      "abstract": "Adapting pre-trained models to specialized tasks often leads to catastrophic forgetting, where new knowledge overwrites foundational capabilities. Existing methods either compromise performance on the new task or struggle to balance training stability with efficient reuse of pre-trained knowledge. We introduce a novel function-preserving expansion method that resolves this dilemma. Our technique expands model capacity by replicating pre-trained parameters within transformer submodules and applying a scaling correction that guarantees the expanded model is mathematically identical to the original at initialization, enabling stable training while exploiting existing knowledge. Empirically, our method eliminates the trade-off between plasticity and stability, matching the performance of full fine-tuning on downstream tasks without any degradation of the model's original capabilities. Furthermore, we demonstrate the modularity of our approach, showing that by selectively expanding a small subset of layers we can achieve the same performance as full fine-tuning at a fraction of the computational cost.",
+      "id": "2603.08486",
+      "title": "Visual Self-Fulfilling Alignment: Shaping Safety-Oriented Personas via Threat-Related Images",
+      "abstract": "Multimodal large language models (MLLMs) face safety misalignment, where visual inputs enable harmful outputs. To address this, existing methods require explicit safety labels or contrastive data; yet, threat-related concepts are concrete and visually depictable, while safety concepts, like helpfulness, are abstract and lack visual referents. Inspired by the Self-Fulfilling mechanism underlying emergent misalignment, we propose Visual Self-Fulfilling Alignment (VSFA). VSFA fine-tunes vision-language models (VLMs) on neutral VQA tasks constructed around threat-related images, without any safety labels. Through repeated exposure to threat-related visual content, models internalize the implicit semantics of vigilance and caution, shaping safety-oriented personas. Experiments across multiple VLMs and safety benchmarks demonstrate that VSFA reduces the attack success rate, improves response quality, and mitigates over-refusal while preserving general capabilities. Our work extends the self-fulfilling mechanism from text to visual modalities, offering a label-free approach to VLMs alignment.",
       "authors": [
-        "Dyah Adila",
-        "Hanna Mazzawi",
-        "Benoit Dherin",
-        "Xavier Gonzalvo"
+        "Qishun Yang",
+        "Shu Yang",
+        "Lijie Hu",
+        "Di Wang"
       ],
-      "url": "https://arxiv.org/abs/2603.08647",
-      "published": "2026-03-09T17:26:03+00:00",
-      "updated": "2026-03-09T17:26:03+00:00",
+      "url": "https://arxiv.org/abs/2603.08486",
+      "published": "2026-03-09T15:20:53+00:00",
+      "updated": "2026-03-09T15:20:53+00:00",
       "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08501",
+      "title": "Fanar-Sadiq: A Multi-Agent Architecture for Grounded Islamic QA",
+      "abstract": "Large language models (LLMs) can answer religious knowledge queries fluently, yet they often hallucinate and misattribute sources, which is especially consequential in Islamic settings where users expect grounding in canonical texts (Qur'an and Hadith) and jurisprudential (fiqh) nuance. Retrieval-augmented generation (RAG) reduces some of these limitations by grounding generation in external evidence. However, a single ``retrieve-then-generate'' pipeline is limited to deal with the diversity of Islamic queries.Users may request verbatim scripture, fatwa-style guidance with citations or rule-constrained computations such as zakat and inheritance that require strict arithmetic and legal invariants. In this work, we present a bilingual (Arabic/English) multi-agent Islamic assistant, called Fanar-Sadiq, which is a core component of the Fanar AI platform. Fanar-Sadiq routes Islamic-related queries to specialized modules within an agentic, tool-using architecture. The system supports intent-aware routing, retrieval-grounded fiqh answers with deterministic citation normalization and verification traces, exact verse lookup with quotation validation, and deterministic calculators for Sunni zakat and inheritance with madhhab-sensitive branching. We evaluate the complete end-to-end system on public Islamic QA benchmarks and demonstrate effectiveness and efficiency. Our system is currently publicly and freely accessible through API and a Web application, and has been accessed $\\approx$1.9M times in less than a year.",
+      "authors": [
+        "Ummar Abbas",
+        "Mourad Ouzzani",
+        "Mohamed Y. Eltabakh",
+        "Omar Sinan",
+        "Gagan Bhatia",
+        "Hamdy Mubarak",
+        "Majd Hawasly",
+        "Mohammed Qusay Hashim",
+        "Kareem Darwish",
+        "Firoj Alam"
+      ],
+      "url": "https://arxiv.org/abs/2603.08501",
+      "published": "2026-03-09T15:35:12+00:00",
+      "updated": "2026-03-09T15:35:12+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08468",
+      "title": "Integrating Lagrangian Neural Networks into the Dyna Framework for Reinforcement Learning",
+      "abstract": "Model-based reinforcement learning (MBRL) is sample-efficient but depends on the accuracy of the learned dynamics, which are often modeled using black-box methods that do not adhere to physical laws. Those methods tend to produce inaccurate predictions when presented with data that differ from the original training set. In this work, we employ Lagrangian neural networks (LNNs), which enforce an underlying Lagrangian structure to train the model within a Dyna-based MBRL framework. Furthermore, we train the LNN using stochastic gradient-based and state-estimation-based optimizers to learn the network's weights. The state-estimation-based method converges faster than the stochastic gradient-based method during neural network training. Simulation results are provided to illustrate the effectiveness of the proposed LNN-based Dyna framework for MBRL.",
+      "authors": [
+        "Shreya Das",
+        "Kundan Kumar",
+        "Muhammad Iqbal",
+        "Outi Savolainen",
+        "Dominik Baumann",
+        "Laura Ruotsalainen",
+        "Simo Särkkä"
+      ],
+      "url": "https://arxiv.org/abs/2603.08468",
+      "published": "2026-03-09T15:06:10+00:00",
+      "updated": "2026-03-09T15:06:10+00:00",
+      "categories": [
+        "eess.SY",
         "cs.LG"
+      ],
+      "matched_topics": [
+        "Neural Network Training Methods"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08683",
+      "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
+      "abstract": "Autoregressive \"language\" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.",
+      "authors": [
+        "Phillip Long",
+        "Zachary Novack",
+        "Chris Donahue"
+      ],
+      "url": "https://arxiv.org/abs/2603.08683",
+      "published": "2026-03-09T17:52:02+00:00",
+      "updated": "2026-03-09T17:52:02+00:00",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.LG",
+        "eess.AS"
       ],
       "matched_topics": [
         "Interpretability"
@@ -173,25 +331,100 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08558",
-      "title": "Impact of Connectivity on Laplacian Representations in Reinforcement Learning",
-      "abstract": "Learning compact state representations in Markov Decision Processes (MDPs) has proven crucial for addressing the curse of dimensionality in large-scale reinforcement learning (RL) problems. Existing principled approaches leverage structural priors on the MDP by constructing state representations as linear combinations of the state-graph Laplacian eigenvectors. When the transition graph is unknown or the state space is prohibitively large, the graph spectral features can be estimated directly via sample trajectories. In this work, we prove an upper bound on the approximation error of linear value function approximation under the learned spectral features. We show how this error scales with the algebraic connectivity of the state-graph, grounding the approximation quality in the topological structure of the MDP. We further bound the error introduced by the eigenvector estimation itself, leading to an end-to-end error decomposition across the representation learning pipeline. Additionally, our expression of the Laplacian operator for the RL setting, although equivalent to existing ones, prevents some common misunderstandings, of which we show some examples from the literature. Our results hold for general (non-uniform) policies without any assumptions on the symmetry of the induced transition kernel. We validate our theoretical findings with numerical simulations on gridworld environments.",
+      "id": "2603.08544",
+      "title": "The Neural Compass: Probabilistic Relative Feature Fields for Robotic Search",
+      "abstract": "Object co-occurrences provide a key cue for finding objects successfully and efficiently in unfamiliar environments. Typically, one looks for cups in kitchens and views fridges as evidence of being in a kitchen. Such priors have also been exploited in artificial agents, but they are typically learned from explicitly labeled data or queried from language models. It is still unclear whether these relations can be learned implicitly from unlabeled observations alone. In this work, we address this problem and propose ProReFF, a feature field model trained to predict relative distributions of features obtained from pre-trained vision language models. In addition, we introduce a learning-based strategy that enables training from unlabeled and potentially contradictory data by aligning inconsistent observations into a coherent relative distribution. For the downstream object search task, we propose an agent that leverages predicted feature distributions as a semantic prior to guide exploration toward regions with a high likelihood of containing the object. We present extensive evaluations demonstrating that ProReFF captures meaningful relative feature distributions in natural scenes and provides insight into the impact of our proposed alignment step. We further evaluate the performance of our search agent in 100 challenges in the Matterport3D simulator, comparing with feature-based baselines and human participants. The proposed agent is 20% more efficient than the strongest baseline and achieves up to 80% of human performance.",
       "authors": [
-        "Tommaso Giorgi",
-        "Pierriccardo Olivieri",
-        "Keyue Jiang",
-        "Laura Toni",
-        "Matteo Papini"
+        "Gabriele Somaschini",
+        "Adrian Röfer",
+        "Abhinav Valada"
       ],
-      "url": "https://arxiv.org/abs/2603.08558",
-      "published": "2026-03-09T16:20:31+00:00",
-      "updated": "2026-03-09T16:20:31+00:00",
+      "url": "https://arxiv.org/abs/2603.08544",
+      "published": "2026-03-09T16:11:05+00:00",
+      "updated": "2026-03-09T16:11:05+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08704",
+      "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
+      "abstract": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
+      "authors": [
+        "Akshay Gulati",
+        "Kanha Singhania",
+        "Tushar Banga",
+        "Parth Arora",
+        "Anshul Verma",
+        "Vaibhav Kumar Singh",
+        "Agyapal Digra",
+        "Jayant Singh Bisht",
+        "Danish Sharma",
+        "Varun Singla",
+        "Shubh Garg"
+      ],
+      "url": "https://arxiv.org/abs/2603.08704",
+      "published": "2026-03-09T17:58:54+00:00",
+      "updated": "2026-03-09T17:58:54+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08495",
+      "title": "Efficient Credal Prediction through Decalibration",
+      "abstract": "A reliable representation of uncertainty is essential for the application of modern machine learning methods in safety-critical settings. In this regard, the use of credal sets (i.e., convex sets of probability distributions) has recently been proposed as a suitable approach to representing epistemic uncertainty. However, as with other approaches to epistemic uncertainty, training credal predictors is computationally complex and usually involves (re-)training an ensemble of models. The resulting computational complexity prevents their adoption for complex models such as foundation models and multi-modal systems. To address this problem, we propose an efficient method for credal prediction that is grounded in the notion of relative likelihood and inspired by techniques for the calibration of probabilistic classifiers. For each class label, our method predicts a range of plausible probabilities in the form of an interval. To produce the lower and upper bounds of these intervals, we propose a technique that we refer to as decalibration. Extensive experiments show that our method yields credal sets with strong performance across diverse tasks, including coverage-efficiency evaluation, out-of-distribution detection, and in-context learning. Notably, we demonstrate credal prediction on models such as TabPFN and CLIP -- architectures for which the construction of credal sets was previously infeasible.",
+      "authors": [
+        "Paul Hofman",
+        "Timo Löhr",
+        "Maximilian Muschalik",
+        "Yusuf Sale",
+        "Eyke Hüllermeier"
+      ],
+      "url": "https://arxiv.org/abs/2603.08495",
+      "published": "2026-03-09T15:30:10+00:00",
+      "updated": "2026-03-09T15:30:10+00:00",
       "categories": [
         "cs.LG",
         "stat.ML"
       ],
       "matched_topics": [
-        "Graph Neural Networks"
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08659",
+      "title": "CODA: Difficulty-Aware Compute Allocation for Adaptive Reasoning",
+      "abstract": "The emergence of large reasoning models demonstrates that scaling inference-time compute significantly enhances performance on complex tasks. However, it often falls into another trap: overthinking simple problems, where repetitive rationales yield minimal accuracy gains at a disproportionately high cost. This motivates adaptive reasoning: dynamically aligning reasoning depth with instance difficulty. In this paper, we study adaptive reasoning from an optimality perspective, formalizing it as a utility maximization problem where tokens are allocated until the marginal accuracy gain falls below the incremental cost. Based on this, we propose CODA (Compute Allocation by Difficulty Awareness), a method that operationalizes this principle by allocating tokens via a policy-internal difficulty signal. Specifically, CODA estimates difficulty via group-based rollouts and maps it to two non-negative gates that modulate a length-dependent shaping term on top of the binary base reward. The easy-side gate penalizes verbosity on simple instances, whereas the hard-side gate encourages more deliberative rollouts on challenging ones. Across model scales and benchmarks, CODA achieves adaptive reasoning without external annotations or user-provided budgets: on easy tasks, CODA reduces token costs by over 60% while maintaining strong accuracy, whereas on hard tasks it incentivizes more deliberative rollouts to maximize performance.",
+      "authors": [
+        "Siye Wu",
+        "Jian Xie",
+        "Yikai Zhang",
+        "Yanghua Xiao"
+      ],
+      "url": "https://arxiv.org/abs/2603.08659",
+      "published": "2026-03-09T17:37:15+00:00",
+      "updated": "2026-03-09T17:37:15+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
       ],
       "match_method": "keyword",
       "best_score": 0.0
@@ -224,28 +457,23 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08640",
-      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
-      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
+      "id": "2603.08651",
+      "title": "Group Entropies and Mirror Duality: A Class of Flexible Mirror Descent Updates for Machine Learning",
+      "abstract": "We introduce a comprehensive theoretical and algorithmic framework that bridges formal group theory and group entropies with modern machine learning, paving the way for an infinite, flexible family of Mirror Descent (MD) optimization algorithms. Our approach exploits the rich structure of group entropies, which are generalized entropic functionals governed by group composition laws, encompassing and significantly extending all trace-form entropies such as the Shannon, Tsallis, and Kaniadakis families. By leveraging group-theoretical mirror maps (or link functions) in MD, expressed via multi-parametric generalized logarithms and their inverses (group exponentials), we achieve highly flexible and adaptable MD updates that can be tailored to diverse data geometries and statistical distributions. To this end, we introduce the notion of \\textit{mirror duality}, which allows us to seamlessly switch or interchange group-theoretical link functions with their inverses, subject to specific learning rate constraints. By tuning or learning the hyperparameters of the group logarithms enables us to adapt the model to the statistical properties of the training distribution, while simultaneously ensuring desirable convergence characteristics via fine-tuning. This generality not only provides greater flexibility and improved convergence properties, but also opens new perspectives for applications in machine learning and deep learning by expanding the design of regularizers and natural gradient algorithms. We extensively evaluate the validity, robustness, and performance of the proposed updates on large-scale, simplex-constrained quadratic programming problems.",
       "authors": [
-        "Ben Rank",
-        "Hardik Bhatnagar",
-        "Ameya Prabhu",
-        "Shira Eisenberg",
-        "Karina Nguyen",
-        "Matthias Bethge",
-        "Maksym Andriushchenko"
+        "Andrzej Cichocki",
+        "Piergiulio Tempesta"
       ],
-      "url": "https://arxiv.org/abs/2603.08640",
-      "published": "2026-03-09T17:18:00+00:00",
-      "updated": "2026-03-09T17:18:00+00:00",
+      "url": "https://arxiv.org/abs/2603.08651",
+      "published": "2026-03-09T17:31:03+00:00",
+      "updated": "2026-03-09T17:31:03+00:00",
       "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.LG"
+        "cs.LG",
+        "hep-th",
+        "math-ph"
       ],
       "matched_topics": [
-        "Interpretability"
+        "Artificial Consciousness"
       ],
       "match_method": "keyword",
       "best_score": 0.0
@@ -275,26 +503,50 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08704",
-      "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
-      "abstract": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
+      "id": "2603.08652",
+      "title": "CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation",
+      "abstract": "Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the reasoning process as executable code, enabling explicit and verifiable intermediate planning for image generation. Given a text prompt, CoCo first generates executable code that specifies the structural layout of the scene, which is then executed in a sandboxed environment to render a deterministic draft image. The model subsequently refines this draft through fine-grained image editing to produce the final high-fidelity result. To support this training paradigm, we construct CoCo-10K, a curated dataset containing structured draft-final image pairs designed to teach both structured draft construction and corrective visual refinement. Empirical evaluations on StructT2IBench, OneIG-Bench, and LongText-Bench show that CoCo achieves improvements of +68.83%, +54.8%, and +41.23% over direct generation, while also outperforming other generation methods empowered by CoT. These results demonstrate that executable code is an effective and reliable reasoning paradigm for precise, controllable, and structured text-to-image generation. The code is available at: https://github.com/micky-li-hd/CoCo",
       "authors": [
-        "Akshay Gulati",
-        "Kanha Singhania",
-        "Tushar Banga",
-        "Parth Arora",
-        "Anshul Verma",
-        "Vaibhav Kumar Singh",
-        "Agyapal Digra",
-        "Jayant Singh Bisht",
-        "Danish Sharma",
-        "Varun Singla",
-        "Shubh Garg"
+        "Haodong Li",
+        "Chunmei Qing",
+        "Huanyu Zhang",
+        "Dongzhi Jiang",
+        "Yihang Zou",
+        "Hongbo Peng",
+        "Dingming Li",
+        "Yuhong Dai",
+        "ZePeng Lin",
+        "Juanxi Tian",
+        "Yi Zhou",
+        "Siqi Dai",
+        "Jingwei Wu"
       ],
-      "url": "https://arxiv.org/abs/2603.08704",
-      "published": "2026-03-09T17:58:54+00:00",
-      "updated": "2026-03-09T17:58:54+00:00",
+      "url": "https://arxiv.org/abs/2603.08652",
+      "published": "2026-03-09T17:31:16+00:00",
+      "updated": "2026-03-09T17:31:16+00:00",
       "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08709",
+      "title": "Scale Space Diffusion",
+      "abstract": "Diffusion models degrade images through noise, and reversing this process reveals an information hierarchy across timesteps. Scale-space theory exhibits a similar hierarchy via low-pass filtering. We formalize this connection and show that highly noisy diffusion states contain no more information than small, downsampled images - raising the question of why they must be processed at full resolution. To address this, we fuse scale spaces into the diffusion process by formulating a family of diffusion models with generalized linear degradations and practical implementations. Using downsampling as the degradation yields our proposed Scale Space Diffusion. To support Scale Space Diffusion, we introduce Flexi-UNet, a UNet variant that performs resolution-preserving and resolution-increasing denoising using only the necessary parts of the network. We evaluate our framework on CelebA and ImageNet and analyze its scaling behavior across resolutions and network depths. Our project website ( https://prateksha.github.io/projects/scale-space-diffusion/ ) is available publicly.",
+      "authors": [
+        "Soumik Mukhopadhyay",
+        "Prateksha Udhayanan",
+        "Abhinav Shrivastava"
+      ],
+      "url": "https://arxiv.org/abs/2603.08709",
+      "published": "2026-03-09T17:59:42+00:00",
+      "updated": "2026-03-09T17:59:42+00:00",
+      "categories": [
+        "cs.CV",
         "cs.AI"
       ],
       "matched_topics": [
@@ -347,276 +599,23 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08478",
-      "title": "STRIDE: Structured Lagrangian and Stochastic Residual Dynamics via Flow Matching",
-      "abstract": "Robotic systems operating in unstructured environments must operate under significant uncertainty arising from intermittent contacts, frictional variability, and unmodeled compliance. While recent model-free approaches have demonstrated impressive performance, many deployment settings still require predictive models that support planning, constraint handling, and online adaptation. Analytical rigid-body models provide strong physical structure but often fail to capture complex interaction effects, whereas purely data-driven models may violate physical consistency, exhibit data bias, and accumulate long-horizon drift. In this work, we propose STRIDE, a dynamics learning framework that explicitly separates conservative rigid-body mechanics from uncertain, effectively stochastic non-conservative interaction effects. The structured component is modeled using a Lagrangian Neural Network (LNN) to preserve energy-consistent inertial dynamics, while residual interaction forces are represented using Conditional Flow Matching (CFM) to capture multi-modal interaction phenomena. The two components are trained jointly end-to-end, enabling the model to retain physical structure while representing complex stochastic behavior. We evaluate STRIDE on systems of increasing complexity, including a pendulum, the Unitree Go1 quadruped, and the Unitree G1 humanoid. Results show 20% reduction in long-horizon prediction error and 30% reduction in contact force prediction error compared to deterministic residual baselines, supporting more reliable model-based control in uncertain robotic environments.",
+      "id": "2603.08483",
+      "title": "X-AVDT: Audio-Visual Cross-Attention for Robust Deepfake Detection",
+      "abstract": "The surge of highly realistic synthetic videos produced by contemporary generative systems has significantly increased the risk of malicious use, challenging both humans and existing detectors. Against this backdrop, we take a generator-side view and observe that internal cross-attention mechanisms in these models encode fine-grained speech-motion alignment, offering useful correspondence cues for forgery detection. Building on this insight, we propose X-AVDT, a robust and generalizable deepfake detector that probes generator-internal audio-visual signals accessed via DDIM inversion to expose these cues. X-AVDT extracts two complementary signals: (i) a video composite capturing inversion-induced discrepancies, and (ii) an audio-visual cross-attention feature reflecting modality alignment enforced during generation. To enable faithful cross-generator evaluation, we further introduce MMDF, a new multimodal deepfake dataset spanning diverse manipulation types and rapidly evolving synthesis paradigms, including GANs, diffusion, and flow-matching. Extensive experiments demonstrate that X-AVDT achieves leading performance on MMDF and generalizes strongly to external benchmarks and unseen generators, outperforming existing methods with accuracy improved by 13.1%. Our findings highlight the importance of leveraging internal audio-visual consistency cues for robustness to future generators in deepfake detection.",
       "authors": [
-        "Prakrut Kotecha",
-        "Ganga Nair B",
-        "Shishir Kolathaya"
+        "Youngseo Kim",
+        "Kwan Yun",
+        "Seokhyeon Hong",
+        "Sihun Cha",
+        "Colette Suhjung Koo",
+        "Junyong Noh"
       ],
-      "url": "https://arxiv.org/abs/2603.08478",
-      "published": "2026-03-09T15:15:21+00:00",
-      "updated": "2026-03-09T15:15:21+00:00",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08546",
-      "title": "Interactive World Simulator for Robot Policy Training and Evaluation",
-      "abstract": "Action-conditioned video prediction models (often referred to as world models) have shown strong potential for robotics applications, but existing approaches are often slow and struggle to capture physically consistent interactions over long horizons, limiting their usefulness for scalable robot policy training and evaluation. We present Interactive World Simulator, a framework for building interactive world models from a moderate-sized robot interaction dataset. Our approach leverages consistency models for both image decoding and latent-space dynamics prediction, enabling fast and stable simulation of physical interactions. In our experiments, the learned world models produce interaction-consistent pixel-level predictions and support stable long-horizon interactions for more than 10 minutes at 15 FPS on a single RTX 4090 GPU. Our framework enables scalable demonstration collection solely within the world models to train state-of-the-art imitation policies. Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, we find that policies trained on world-model-generated data perform comparably to those trained on the same amount of real-world data. Additionally, we evaluate policies both within the world models and in the real world across diverse tasks, and observe a strong correlation between simulated and real-world performance. Together, these results establish the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.",
-      "authors": [
-        "Yixuan Wang",
-        "Rhythm Syed",
-        "Fangyu Wu",
-        "Mengchao Zhang",
-        "Aykut Onol",
-        "Jose Barreiros",
-        "Hooshang Nayyeri",
-        "Tony Dear",
-        "Huan Zhang",
-        "Yunzhu Li"
-      ],
-      "url": "https://arxiv.org/abs/2603.08546",
-      "published": "2026-03-09T16:13:32+00:00",
-      "updated": "2026-03-09T16:13:32+00:00",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08651",
-      "title": "Group Entropies and Mirror Duality: A Class of Flexible Mirror Descent Updates for Machine Learning",
-      "abstract": "We introduce a comprehensive theoretical and algorithmic framework that bridges formal group theory and group entropies with modern machine learning, paving the way for an infinite, flexible family of Mirror Descent (MD) optimization algorithms. Our approach exploits the rich structure of group entropies, which are generalized entropic functionals governed by group composition laws, encompassing and significantly extending all trace-form entropies such as the Shannon, Tsallis, and Kaniadakis families. By leveraging group-theoretical mirror maps (or link functions) in MD, expressed via multi-parametric generalized logarithms and their inverses (group exponentials), we achieve highly flexible and adaptable MD updates that can be tailored to diverse data geometries and statistical distributions. To this end, we introduce the notion of \\textit{mirror duality}, which allows us to seamlessly switch or interchange group-theoretical link functions with their inverses, subject to specific learning rate constraints. By tuning or learning the hyperparameters of the group logarithms enables us to adapt the model to the statistical properties of the training distribution, while simultaneously ensuring desirable convergence characteristics via fine-tuning. This generality not only provides greater flexibility and improved convergence properties, but also opens new perspectives for applications in machine learning and deep learning by expanding the design of regularizers and natural gradient algorithms. We extensively evaluate the validity, robustness, and performance of the proposed updates on large-scale, simplex-constrained quadratic programming problems.",
-      "authors": [
-        "Andrzej Cichocki",
-        "Piergiulio Tempesta"
-      ],
-      "url": "https://arxiv.org/abs/2603.08651",
-      "published": "2026-03-09T17:31:03+00:00",
-      "updated": "2026-03-09T17:31:03+00:00",
-      "categories": [
-        "cs.LG",
-        "hep-th",
-        "math-ph"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08706",
-      "title": "Agentic Critical Training",
-      "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
-      "authors": [
-        "Weize Liu",
-        "Minghui Liu",
-        "Sy-Tuyen Ho",
-        "Souradip Chakraborty",
-        "Xiyao Wang",
-        "Furong Huang"
-      ],
-      "url": "https://arxiv.org/abs/2603.08706",
-      "published": "2026-03-09T17:58:56+00:00",
-      "updated": "2026-03-09T17:58:56+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Neural Network Training Methods",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08501",
-      "title": "Fanar-Sadiq: A Multi-Agent Architecture for Grounded Islamic QA",
-      "abstract": "Large language models (LLMs) can answer religious knowledge queries fluently, yet they often hallucinate and misattribute sources, which is especially consequential in Islamic settings where users expect grounding in canonical texts (Qur'an and Hadith) and jurisprudential (fiqh) nuance. Retrieval-augmented generation (RAG) reduces some of these limitations by grounding generation in external evidence. However, a single ``retrieve-then-generate'' pipeline is limited to deal with the diversity of Islamic queries.Users may request verbatim scripture, fatwa-style guidance with citations or rule-constrained computations such as zakat and inheritance that require strict arithmetic and legal invariants. In this work, we present a bilingual (Arabic/English) multi-agent Islamic assistant, called Fanar-Sadiq, which is a core component of the Fanar AI platform. Fanar-Sadiq routes Islamic-related queries to specialized modules within an agentic, tool-using architecture. The system supports intent-aware routing, retrieval-grounded fiqh answers with deterministic citation normalization and verification traces, exact verse lookup with quotation validation, and deterministic calculators for Sunni zakat and inheritance with madhhab-sensitive branching. We evaluate the complete end-to-end system on public Islamic QA benchmarks and demonstrate effectiveness and efficiency. Our system is currently publicly and freely accessible through API and a Web application, and has been accessed $\\approx$1.9M times in less than a year.",
-      "authors": [
-        "Ummar Abbas",
-        "Mourad Ouzzani",
-        "Mohamed Y. Eltabakh",
-        "Omar Sinan",
-        "Gagan Bhatia",
-        "Hamdy Mubarak",
-        "Majd Hawasly",
-        "Mohammed Qusay Hashim",
-        "Kareem Darwish",
-        "Firoj Alam"
-      ],
-      "url": "https://arxiv.org/abs/2603.08501",
-      "published": "2026-03-09T15:35:12+00:00",
-      "updated": "2026-03-09T15:35:12+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08652",
-      "title": "CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation",
-      "abstract": "Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the reasoning process as executable code, enabling explicit and verifiable intermediate planning for image generation. Given a text prompt, CoCo first generates executable code that specifies the structural layout of the scene, which is then executed in a sandboxed environment to render a deterministic draft image. The model subsequently refines this draft through fine-grained image editing to produce the final high-fidelity result. To support this training paradigm, we construct CoCo-10K, a curated dataset containing structured draft-final image pairs designed to teach both structured draft construction and corrective visual refinement. Empirical evaluations on StructT2IBench, OneIG-Bench, and LongText-Bench show that CoCo achieves improvements of +68.83%, +54.8%, and +41.23% over direct generation, while also outperforming other generation methods empowered by CoT. These results demonstrate that executable code is an effective and reliable reasoning paradigm for precise, controllable, and structured text-to-image generation. The code is available at: https://github.com/micky-li-hd/CoCo",
-      "authors": [
-        "Haodong Li",
-        "Chunmei Qing",
-        "Huanyu Zhang",
-        "Dongzhi Jiang",
-        "Yihang Zou",
-        "Hongbo Peng",
-        "Dingming Li",
-        "Yuhong Dai",
-        "ZePeng Lin",
-        "Juanxi Tian",
-        "Yi Zhou",
-        "Siqi Dai",
-        "Jingwei Wu"
-      ],
-      "url": "https://arxiv.org/abs/2603.08652",
-      "published": "2026-03-09T17:31:16+00:00",
-      "updated": "2026-03-09T17:31:16+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08707",
-      "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
-      "abstract": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
-      "authors": [
-        "Azul Garza",
-        "Renée Rosillo",
-        "Rodrigo Mendoza-Smith",
-        "David Salinas",
-        "Andrew Robert Williams",
-        "Arjun Ashok",
-        "Mononito Goswami",
-        "José Martín Juárez"
-      ],
-      "url": "https://arxiv.org/abs/2603.08707",
-      "published": "2026-03-09T17:59:00+00:00",
-      "updated": "2026-03-09T17:59:00+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08709",
-      "title": "Scale Space Diffusion",
-      "abstract": "Diffusion models degrade images through noise, and reversing this process reveals an information hierarchy across timesteps. Scale-space theory exhibits a similar hierarchy via low-pass filtering. We formalize this connection and show that highly noisy diffusion states contain no more information than small, downsampled images - raising the question of why they must be processed at full resolution. To address this, we fuse scale spaces into the diffusion process by formulating a family of diffusion models with generalized linear degradations and practical implementations. Using downsampling as the degradation yields our proposed Scale Space Diffusion. To support Scale Space Diffusion, we introduce Flexi-UNet, a UNet variant that performs resolution-preserving and resolution-increasing denoising using only the necessary parts of the network. We evaluate our framework on CelebA and ImageNet and analyze its scaling behavior across resolutions and network depths. Our project website ( https://prateksha.github.io/projects/scale-space-diffusion/ ) is available publicly.",
-      "authors": [
-        "Soumik Mukhopadhyay",
-        "Prateksha Udhayanan",
-        "Abhinav Shrivastava"
-      ],
-      "url": "https://arxiv.org/abs/2603.08709",
-      "published": "2026-03-09T17:59:42+00:00",
-      "updated": "2026-03-09T17:59:42+00:00",
+      "url": "https://arxiv.org/abs/2603.08483",
+      "published": "2026-03-09T15:18:42+00:00",
+      "updated": "2026-03-09T15:18:42+00:00",
       "categories": [
         "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08495",
-      "title": "Efficient Credal Prediction through Decalibration",
-      "abstract": "A reliable representation of uncertainty is essential for the application of modern machine learning methods in safety-critical settings. In this regard, the use of credal sets (i.e., convex sets of probability distributions) has recently been proposed as a suitable approach to representing epistemic uncertainty. However, as with other approaches to epistemic uncertainty, training credal predictors is computationally complex and usually involves (re-)training an ensemble of models. The resulting computational complexity prevents their adoption for complex models such as foundation models and multi-modal systems. To address this problem, we propose an efficient method for credal prediction that is grounded in the notion of relative likelihood and inspired by techniques for the calibration of probabilistic classifiers. For each class label, our method predicts a range of plausible probabilities in the form of an interval. To produce the lower and upper bounds of these intervals, we propose a technique that we refer to as decalibration. Extensive experiments show that our method yields credal sets with strong performance across diverse tasks, including coverage-efficiency evaluation, out-of-distribution detection, and in-context learning. Notably, we demonstrate credal prediction on models such as TabPFN and CLIP -- architectures for which the construction of credal sets was previously infeasible.",
-      "authors": [
-        "Paul Hofman",
-        "Timo Löhr",
-        "Maximilian Muschalik",
-        "Yusuf Sale",
-        "Eyke Hüllermeier"
-      ],
-      "url": "https://arxiv.org/abs/2603.08495",
-      "published": "2026-03-09T15:30:10+00:00",
-      "updated": "2026-03-09T15:30:10+00:00",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08683",
-      "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
-      "abstract": "Autoregressive \"language\" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.",
-      "authors": [
-        "Phillip Long",
-        "Zachary Novack",
-        "Chris Donahue"
-      ],
-      "url": "https://arxiv.org/abs/2603.08683",
-      "published": "2026-03-09T17:52:02+00:00",
-      "updated": "2026-03-09T17:52:02+00:00",
-      "categories": [
-        "cs.SD",
         "cs.AI",
-        "cs.LG",
-        "eess.AS"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08682",
-      "title": "Structural Causal Bottleneck Models",
-      "abstract": "We introduce structural causal bottleneck models (SCBMs), a novel class of structural causal models. At the core of SCBMs lies the assumption that causal effects between high-dimensional variables only depend on low-dimensional summary statistics, or bottlenecks, of the causes. SCBMs provide a flexible framework for task-specific dimension reduction while being estimable via standard, simple learning algorithms in practice. We analyse identifiability in SCBMs, connect them to information bottlenecks in the sense of Tishby & Zaslavsky (2015), and illustrate how to estimate them experimentally. We also demonstrate the benefit of bottlenecks for effect estimation in low-sample transfer learning settings. We argue that SCBMs provide an alternative to existing causal dimension reduction frameworks like causal representation learning or causal abstraction learning.",
-      "authors": [
-        "Simon Bing",
-        "Jonas Wahl",
-        "Jakob Runge"
-      ],
-      "url": "https://arxiv.org/abs/2603.08682",
-      "published": "2026-03-09T17:50:10+00:00",
-      "updated": "2026-03-09T17:50:10+00:00",
-      "categories": [
-        "stat.ML",
         "cs.LG"
       ],
       "matched_topics": [
@@ -654,43 +653,71 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08544",
-      "title": "The Neural Compass: Probabilistic Relative Feature Fields for Robotic Search",
-      "abstract": "Object co-occurrences provide a key cue for finding objects successfully and efficiently in unfamiliar environments. Typically, one looks for cups in kitchens and views fridges as evidence of being in a kitchen. Such priors have also been exploited in artificial agents, but they are typically learned from explicitly labeled data or queried from language models. It is still unclear whether these relations can be learned implicitly from unlabeled observations alone. In this work, we address this problem and propose ProReFF, a feature field model trained to predict relative distributions of features obtained from pre-trained vision language models. In addition, we introduce a learning-based strategy that enables training from unlabeled and potentially contradictory data by aligning inconsistent observations into a coherent relative distribution. For the downstream object search task, we propose an agent that leverages predicted feature distributions as a semantic prior to guide exploration toward regions with a high likelihood of containing the object. We present extensive evaluations demonstrating that ProReFF captures meaningful relative feature distributions in natural scenes and provides insight into the impact of our proposed alignment step. We further evaluate the performance of our search agent in 100 challenges in the Matterport3D simulator, comparing with feature-based baselines and human participants. The proposed agent is 20% more efficient than the strongest baseline and achieves up to 80% of human performance.",
+      "id": "2603.08558",
+      "title": "Impact of Connectivity on Laplacian Representations in Reinforcement Learning",
+      "abstract": "Learning compact state representations in Markov Decision Processes (MDPs) has proven crucial for addressing the curse of dimensionality in large-scale reinforcement learning (RL) problems. Existing principled approaches leverage structural priors on the MDP by constructing state representations as linear combinations of the state-graph Laplacian eigenvectors. When the transition graph is unknown or the state space is prohibitively large, the graph spectral features can be estimated directly via sample trajectories. In this work, we prove an upper bound on the approximation error of linear value function approximation under the learned spectral features. We show how this error scales with the algebraic connectivity of the state-graph, grounding the approximation quality in the topological structure of the MDP. We further bound the error introduced by the eigenvector estimation itself, leading to an end-to-end error decomposition across the representation learning pipeline. Additionally, our expression of the Laplacian operator for the RL setting, although equivalent to existing ones, prevents some common misunderstandings, of which we show some examples from the literature. Our results hold for general (non-uniform) policies without any assumptions on the symmetry of the induced transition kernel. We validate our theoretical findings with numerical simulations on gridworld environments.",
       "authors": [
-        "Gabriele Somaschini",
-        "Adrian Röfer",
-        "Abhinav Valada"
+        "Tommaso Giorgi",
+        "Pierriccardo Olivieri",
+        "Keyue Jiang",
+        "Laura Toni",
+        "Matteo Papini"
       ],
-      "url": "https://arxiv.org/abs/2603.08544",
-      "published": "2026-03-09T16:11:05+00:00",
-      "updated": "2026-03-09T16:11:05+00:00",
+      "url": "https://arxiv.org/abs/2603.08558",
+      "published": "2026-03-09T16:20:31+00:00",
+      "updated": "2026-03-09T16:20:31+00:00",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08478",
+      "title": "STRIDE: Structured Lagrangian and Stochastic Residual Dynamics via Flow Matching",
+      "abstract": "Robotic systems operating in unstructured environments must operate under significant uncertainty arising from intermittent contacts, frictional variability, and unmodeled compliance. While recent model-free approaches have demonstrated impressive performance, many deployment settings still require predictive models that support planning, constraint handling, and online adaptation. Analytical rigid-body models provide strong physical structure but often fail to capture complex interaction effects, whereas purely data-driven models may violate physical consistency, exhibit data bias, and accumulate long-horizon drift. In this work, we propose STRIDE, a dynamics learning framework that explicitly separates conservative rigid-body mechanics from uncertain, effectively stochastic non-conservative interaction effects. The structured component is modeled using a Lagrangian Neural Network (LNN) to preserve energy-consistent inertial dynamics, while residual interaction forces are represented using Conditional Flow Matching (CFM) to capture multi-modal interaction phenomena. The two components are trained jointly end-to-end, enabling the model to retain physical structure while representing complex stochastic behavior. We evaluate STRIDE on systems of increasing complexity, including a pendulum, the Unitree Go1 quadruped, and the Unitree G1 humanoid. Results show 20% reduction in long-horizon prediction error and 30% reduction in contact force prediction error compared to deterministic residual baselines, supporting more reliable model-based control in uncertain robotic environments.",
+      "authors": [
+        "Prakrut Kotecha",
+        "Ganga Nair B",
+        "Shishir Kolathaya"
+      ],
+      "url": "https://arxiv.org/abs/2603.08478",
+      "published": "2026-03-09T15:15:21+00:00",
+      "updated": "2026-03-09T15:15:21+00:00",
       "categories": [
         "cs.RO",
         "cs.LG"
       ],
       "matched_topics": [
-        "Artificial Consciousness",
         "Interpretability"
       ],
       "match_method": "keyword",
       "best_score": 0.0
     },
     {
-      "id": "2603.08659",
-      "title": "CODA: Difficulty-Aware Compute Allocation for Adaptive Reasoning",
-      "abstract": "The emergence of large reasoning models demonstrates that scaling inference-time compute significantly enhances performance on complex tasks. However, it often falls into another trap: overthinking simple problems, where repetitive rationales yield minimal accuracy gains at a disproportionately high cost. This motivates adaptive reasoning: dynamically aligning reasoning depth with instance difficulty. In this paper, we study adaptive reasoning from an optimality perspective, formalizing it as a utility maximization problem where tokens are allocated until the marginal accuracy gain falls below the incremental cost. Based on this, we propose CODA (Compute Allocation by Difficulty Awareness), a method that operationalizes this principle by allocating tokens via a policy-internal difficulty signal. Specifically, CODA estimates difficulty via group-based rollouts and maps it to two non-negative gates that modulate a length-dependent shaping term on top of the binary base reward. The easy-side gate penalizes verbosity on simple instances, whereas the hard-side gate encourages more deliberative rollouts on challenging ones. Across model scales and benchmarks, CODA achieves adaptive reasoning without external annotations or user-provided budgets: on easy tasks, CODA reduces token costs by over 60% while maintaining strong accuracy, whereas on hard tasks it incentivizes more deliberative rollouts to maximize performance.",
+      "id": "2603.08640",
+      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
       "authors": [
-        "Siye Wu",
-        "Jian Xie",
-        "Yikai Zhang",
-        "Yanghua Xiao"
+        "Ben Rank",
+        "Hardik Bhatnagar",
+        "Ameya Prabhu",
+        "Shira Eisenberg",
+        "Karina Nguyen",
+        "Matthias Bethge",
+        "Maksym Andriushchenko"
       ],
-      "url": "https://arxiv.org/abs/2603.08659",
-      "published": "2026-03-09T17:37:15+00:00",
-      "updated": "2026-03-09T17:37:15+00:00",
+      "url": "https://arxiv.org/abs/2603.08640",
+      "published": "2026-03-09T17:18:00+00:00",
+      "updated": "2026-03-09T17:18:00+00:00",
       "categories": [
-        "cs.CL"
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
       ],
       "matched_topics": [
         "Interpretability"
@@ -699,21 +726,20 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.08486",
-      "title": "Visual Self-Fulfilling Alignment: Shaping Safety-Oriented Personas via Threat-Related Images",
-      "abstract": "Multimodal large language models (MLLMs) face safety misalignment, where visual inputs enable harmful outputs. To address this, existing methods require explicit safety labels or contrastive data; yet, threat-related concepts are concrete and visually depictable, while safety concepts, like helpfulness, are abstract and lack visual referents. Inspired by the Self-Fulfilling mechanism underlying emergent misalignment, we propose Visual Self-Fulfilling Alignment (VSFA). VSFA fine-tunes vision-language models (VLMs) on neutral VQA tasks constructed around threat-related images, without any safety labels. Through repeated exposure to threat-related visual content, models internalize the implicit semantics of vigilance and caution, shaping safety-oriented personas. Experiments across multiple VLMs and safety benchmarks demonstrate that VSFA reduces the attack success rate, improves response quality, and mitigates over-refusal while preserving general capabilities. Our work extends the self-fulfilling mechanism from text to visual modalities, offering a label-free approach to VLMs alignment.",
+      "id": "2603.08647",
+      "title": "Grow, Don't Overwrite: Fine-tuning Without Forgetting",
+      "abstract": "Adapting pre-trained models to specialized tasks often leads to catastrophic forgetting, where new knowledge overwrites foundational capabilities. Existing methods either compromise performance on the new task or struggle to balance training stability with efficient reuse of pre-trained knowledge. We introduce a novel function-preserving expansion method that resolves this dilemma. Our technique expands model capacity by replicating pre-trained parameters within transformer submodules and applying a scaling correction that guarantees the expanded model is mathematically identical to the original at initialization, enabling stable training while exploiting existing knowledge. Empirically, our method eliminates the trade-off between plasticity and stability, matching the performance of full fine-tuning on downstream tasks without any degradation of the model's original capabilities. Furthermore, we demonstrate the modularity of our approach, showing that by selectively expanding a small subset of layers we can achieve the same performance as full fine-tuning at a fraction of the computational cost.",
       "authors": [
-        "Qishun Yang",
-        "Shu Yang",
-        "Lijie Hu",
-        "Di Wang"
+        "Dyah Adila",
+        "Hanna Mazzawi",
+        "Benoit Dherin",
+        "Xavier Gonzalvo"
       ],
-      "url": "https://arxiv.org/abs/2603.08486",
-      "published": "2026-03-09T15:20:53+00:00",
-      "updated": "2026-03-09T15:20:53+00:00",
+      "url": "https://arxiv.org/abs/2603.08647",
+      "published": "2026-03-09T17:26:03+00:00",
+      "updated": "2026-03-09T17:26:03+00:00",
       "categories": [
-        "cs.CV",
-        "cs.AI"
+        "cs.LG"
       ],
       "matched_topics": [
         "Interpretability"
@@ -737,32 +763,6 @@
       "categories": [
         "cs.LG",
         "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08483",
-      "title": "X-AVDT: Audio-Visual Cross-Attention for Robust Deepfake Detection",
-      "abstract": "The surge of highly realistic synthetic videos produced by contemporary generative systems has significantly increased the risk of malicious use, challenging both humans and existing detectors. Against this backdrop, we take a generator-side view and observe that internal cross-attention mechanisms in these models encode fine-grained speech-motion alignment, offering useful correspondence cues for forgery detection. Building on this insight, we propose X-AVDT, a robust and generalizable deepfake detector that probes generator-internal audio-visual signals accessed via DDIM inversion to expose these cues. X-AVDT extracts two complementary signals: (i) a video composite capturing inversion-induced discrepancies, and (ii) an audio-visual cross-attention feature reflecting modality alignment enforced during generation. To enable faithful cross-generator evaluation, we further introduce MMDF, a new multimodal deepfake dataset spanning diverse manipulation types and rapidly evolving synthesis paradigms, including GANs, diffusion, and flow-matching. Extensive experiments demonstrate that X-AVDT achieves leading performance on MMDF and generalizes strongly to external benchmarks and unseen generators, outperforming existing methods with accuracy improved by 13.1%. Our findings highlight the importance of leveraging internal audio-visual consistency cues for robustness to future generators in deepfake detection.",
-      "authors": [
-        "Youngseo Kim",
-        "Kwan Yun",
-        "Seokhyeon Hong",
-        "Sihun Cha",
-        "Colette Suhjung Koo",
-        "Junyong Noh"
-      ],
-      "url": "https://arxiv.org/abs/2603.08483",
-      "published": "2026-03-09T15:18:42+00:00",
-      "updated": "2026-03-09T15:18:42+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
       ],
       "matched_topics": [
         "Interpretability"

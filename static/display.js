@@ -228,7 +228,7 @@ const DigestDisplay = (() => {
       : (p.matched_topics || []).map(t => {
           const s = activeStyles[t] || IRREL_STYLE;
           return `<span class="topic-chip" style="background:${s.background};color:${s.color};border-color:${s.borderColor}">${t}</span>`;
-        }).join("") + _methodBadge(p.match_method);
+        }).join("");
 
     const authorsArr = p.authors || [];
     const authorsStr = authorsArr.slice(0, 3).join(", ") + (authorsArr.length > 3 ? " et al." : "");

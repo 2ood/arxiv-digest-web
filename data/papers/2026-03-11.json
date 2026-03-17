@@ -1,168 +1,22 @@
 {
   "date": "2026-03-11",
-  "fetched_at": "2026-03-17T11:02:48.096377+09:00",
+  "fetched_at": "2026-03-17T11:22:27.562533+09:00",
   "papers": [
     {
-      "id": "2603.09865",
-      "title": "GAST: Gradient-aligned Sparse Tuning of Large Language Models with Data-layer Selection",
-      "abstract": "Parameter-Efficient Fine-Tuning (PEFT) has become a key strategy for adapting large language models, with recent advances in sparse tuning reducing overhead by selectively updating key parameters or subsets of data. Existing approaches generally focus on two distinct paradigms: layer-selective methods aiming to fine-tune critical layers to minimize computational load, and data-selective methods aiming to select effective training subsets to boost training. However, current methods typically overlook the fact that different data points contribute varying degrees to distinct model layers, and they often discard potentially valuable information from data perceived as of low quality. To address these limitations, we propose Gradient-aligned Sparse Tuning (GAST), an innovative method that simultaneously performs selective fine-tuning at both data and layer dimensions as integral components of a unified optimization strategy. GAST specifically targets redundancy in information by employing a layer-sparse strategy that adaptively selects the most impactful data points for each layer, providing a more comprehensive and sophisticated solution than approaches restricted to a single dimension. Experiments demonstrate that GAST consistently outperforms baseline methods, establishing a promising direction for future research in PEFT strategies.",
+      "id": "2603.09890",
+      "title": "Influencing LLM Multi-Agent Dialogue via Policy-Parameterized Prompts",
+      "abstract": "Large Language Models (LLMs) have emerged as a new paradigm for multi-agent systems. However, existing research on the behaviour of LLM-based multi-agents relies on ad hoc prompts and lacks a principled policy perspective. Different from reinforcement learning, we investigate whether prompt-as-action can be parameterized so as to construct a lightweight policy which consists of a sequence of state-action pairs to influence conversational behaviours without training. Our framework regards prompts as actions executed by LLMs, and dynamically constructs prompts through five components based on the current state of the agent. To test the effectiveness of parameterized control, we evaluated the dialogue flow based on five indicators: responsiveness, rebuttal, evidence usage, non-repetition, and stance shift. We conduct experiments using different LLM-driven agents in two discussion scenarios related to the general public and show that prompt parameterization can influence the dialogue dynamics. This result shows that policy-parameterised prompts offer a simple and effective mechanism to influence the dialogue process, which will help the research of multi-agent systems in the direction of social simulation.",
       "authors": [
-        "Kai Yao",
-        "Zhenghan Song",
-        "Kaixin Wu",
-        "Mingjie Zhong",
-        "Danzhao Cheng",
-        "Zhaorui Tan",
-        "Yixin Ji",
-        "Penglei Gao"
+        "Hongbo Bo",
+        "Jingyu Hu",
+        "Weiru Liu"
       ],
-      "url": "https://arxiv.org/abs/2603.09865",
-      "published": "2026-03-10T16:28:48+00:00",
-      "updated": "2026-03-10T16:28:48+00:00",
+      "url": "https://arxiv.org/abs/2603.09890",
+      "published": "2026-03-10T16:47:25+00:00",
+      "updated": "2026-03-10T16:47:25+00:00",
       "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09803",
-      "title": "Good Reasoning Makes Good Demonstrations: Implicit Reasoning Quality Supervision via In-Context Reinforcement Learning",
-      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) improves reasoning in large language models but treats all correct solutions equally, potentially reinforcing flawed traces that get correct answers by chance. We observe that better reasoning are better teachers: high-quality solutions serve as more effective demonstrations than low-quality ones. We term this teaching ability Demonstration Utility, and show that the policy model's own in-context learning ability provides an efficient way to measure it, yielding a quality signal termed Evidence Gain. To employ this signal during training, we introduce In-Context RLVR. By Bayesian analysis, we show that this objective implicitly reweights rewards by Evidence Gain, assigning higher weights to high-quality traces and lower weights to low-quality ones, without requiring costly computation or external evaluators. Experiments on mathematical benchmarks show improvements in both accuracy and reasoning quality over standard RLVR.",
-      "authors": [
-        "Tiehua Mei",
-        "Minxuan Lv",
-        "Leiyu Pan",
-        "Zhenpeng Su",
-        "Hongru Hou",
-        "Hengrui Chen",
-        "Ao Xu",
-        "Deqing Yang"
-      ],
-      "url": "https://arxiv.org/abs/2603.09803",
-      "published": "2026-03-10T15:33:07+00:00",
-      "updated": "2026-03-10T15:33:07+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.06731",
-      "title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks",
-      "abstract": "We present the design and implementation of PolyBlocks, a modular and reusable MLIR-based compiler infrastructure for AI programming frameworks and AI chips. PolyBlocks is based on pass pipelines that compose transformations on loop nests and SSA, primarily relying on lightweight affine access analysis; the transformations are stitched together in specialized ways to realize high-performance code automatically by the use of analytical cost models and heuristics. The optimizations in these passes include multi-level tiling, fusion, on-chip scratchpad usage, mapping matmuls and convolutions to matrix units, fusing the attention layer, and several other transformations for parallelism and locality. They have been developed in a way that makes it easy to build PolyBlocks-based compilers to target new chips, reusing much of the infrastructure. PolyBlocks' design and architecture enable fully automatic code generation from high-level frameworks to low-level target-specific intrinsics.   Experimental results from evaluating PolyBlocks-powered just-in-time compilation for PyTorch and JAX targeting NVIDIA GPUs show that it is able to match or outperform Torch Inductor and XLA in several cases, although the latter rely on a combination of vendor libraries and code generation. For individual operators like matmuls and convolutions, PolyBlocks-generated code is competitive with the best vendor-tuned libraries or hand-written kernels.",
-      "authors": [
-        "Uday Bondhugula",
-        "Akshay Baviskar",
-        "Navdeep Katel",
-        "Vimal Patel",
-        "Anoop JS",
-        "Arnab Dutta"
-      ],
-      "url": "https://arxiv.org/abs/2603.06731",
-      "published": "2026-03-06T03:45:50+00:00",
-      "updated": "2026-03-10T17:20:46+00:00",
-      "categories": [
-        "cs.PL",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09872",
-      "title": "N-gram-like Language Models Predict Reading Time Best",
-      "abstract": "Recent work has found that contemporary language models such as transformers can become so good at next-word prediction that the probabilities they calculate become worse for predicting reading time. In this paper, we propose that this can be explained by reading time being sensitive to simple n-gram statistics rather than the more complex statistics learned by state-of-the-art transformer language models. We demonstrate that the neural language models whose predictions are most correlated with n-gram probability are also those that calculate probabilities that are the most correlated with eye-tracking-based metrics of reading time on naturalistic text.",
-      "authors": [
-        "James A. Michaelov",
-        "Roger P. Levy"
-      ],
-      "url": "https://arxiv.org/abs/2603.09872",
-      "published": "2026-03-10T16:35:41+00:00",
-      "updated": "2026-03-10T16:35:41+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.05228",
-      "title": "The Geometric Inductive Bias of Grokking: Bypassing Phase Transitions via Architectural Topology",
-      "abstract": "Mechanistic interpretability typically relies on post-hoc analysis of trained networks. We instead adopt an interventional approach: testing hypotheses a priori by modifying architectural topology to observe training dynamics. We study grokking - delayed generalization in Transformers trained on cyclic modular addition (Zp) - investigating if specific architectural degrees of freedom prolong the memorization phase.   We identify two independent structural factors in standard Transformers: unbounded representational magnitude and data-dependent attention routing. First, we introduce a fully bounded spherical topology enforcing L2 normalization throughout the residual stream and an unembedding matrix with a fixed temperature scale. This removes magnitude-based degrees of freedom, reducing grokking onset time by over 20x without weight decay. Second, a Uniform Attention Ablation overrides data-dependent query-key routing with a uniform distribution, reducing the attention layer to a Continuous Bag-of-Words (CBOW) aggregator. Despite removing adaptive routing, these models achieve 100% generalization across all seeds and bypass the grokking delay entirely.   To evaluate whether this acceleration is a task-specific geometric alignment rather than a generic optimization stabilizer, we use non-commutative S5 permutation composition as a negative control. Enforcing spherical constraints on S5 does not accelerate generalization. This suggests eliminating the memorization phase depends strongly on aligning architectural priors with the task's intrinsic symmetries. Together, these findings provide interventional evidence that architectural degrees of freedom substantially influence grokking, suggesting a predictive structural perspective on training dynamics.",
-      "authors": [
-        "Alper Yıldırım"
-      ],
-      "url": "https://arxiv.org/abs/2603.05228",
-      "published": "2026-03-05T14:41:01+00:00",
-      "updated": "2026-03-10T17:16:04+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09771",
-      "title": "Ego: Embedding-Guided Personalization of Vision-Language Models",
-      "abstract": "AI assistants that support humans in daily life are becoming increasingly feasible, driven by the rapid advancements in multimodal language models. A key challenge lies in overcoming the generic nature of these models to deliver personalized experiences. Existing approaches to personalizing large vision language models often rely on additional training stages, which limit generality and scalability, or on engineered pipelines with external pre-trained modules, which hinder deployment efficiency. In this work, we propose an efficient personalization method that leverages the model's inherent ability to capture personalized concepts. Specifically, we extract visual tokens that predominantly represent the target concept by utilizing the model's internal attention mechanisms. These tokens serve as a memory of that specific concept, enabling the model to recall and describe it when it appears in test images. We conduct a comprehensive and unified evaluation of our approach and SOTA methods across various personalization settings including single-concept, multi-concept, and video personalization, demonstrating strong performance gains with minimal personalization overhead.",
-      "authors": [
-        "Soroush Seifi",
-        "Simon Gardier",
-        "Vaggelis Dorovatas",
-        "Daniel Olmeda Reino",
-        "Rahaf Aljundi"
-      ],
-      "url": "https://arxiv.org/abs/2603.09771",
-      "published": "2026-03-10T15:10:41+00:00",
-      "updated": "2026-03-10T15:10:41+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.08640",
-      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
-      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
-      "authors": [
-        "Ben Rank",
-        "Hardik Bhatnagar",
-        "Ameya Prabhu",
-        "Shira Eisenberg",
-        "Karina Nguyen",
-        "Matthias Bethge",
-        "Maksym Andriushchenko"
-      ],
-      "url": "https://arxiv.org/abs/2603.08640",
-      "published": "2026-03-09T17:18:00+00:00",
-      "updated": "2026-03-10T15:55:40+00:00",
-      "categories": [
-        "cs.SE",
         "cs.AI",
-        "cs.LG"
+        "cs.MA"
       ],
       "matched_topics": [
         "Interpretability"
@@ -171,18 +25,22 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.09815",
-      "title": "Correction of Transformer-Based Models with Smoothing Pseudo-Projector",
-      "abstract": "The pseudo-projector is a lightweight modification that can be integrated into existing language models and other neural networks without altering their core architecture. It can be viewed as a hidden-representation corrector that reduces sensitivity to noise by suppressing directions induced by label-irrelevant input content. The design is inspired by the multigrid (MG) paradigm, originally developed to accelerate the convergence of iterative solvers for partial differential equations and boundary value problems, and later extended to more general linear systems through algebraic multigrid methods. We refer to the method as a pseudo-projector because its linear prototype corresponds to a strictly idempotent orthogonal projector, whereas the practical formulation employs learnable restriction and prolongation operators and therefore does not, in general, satisfy the properties of an exact orthogonal projection. We evaluate the proposed approach on transformer-based text classification tasks, as well as controlled synthetic benchmarks, demonstrating its effectiveness in improving training dynamics and robustness. Experimental results, together with supporting theoretical heuristics, indicate consistent improvements in training behavior across a range of settings, with no adverse effects observed otherwise. Our next step will be to extend this approach to language models.",
+      "id": "2603.09951",
+      "title": "Towards a Neural Debugger for Python",
+      "abstract": "Training large language models (LLMs) on Python execution traces grounds them in code execution and enables the line-by-line execution prediction of whole Python programs, effectively turning them into neural interpreters (FAIR CodeGen Team et al., 2025). However, developers rarely execute programs step by step; instead, they use debuggers to stop execution at certain breakpoints and step through relevant portions only while inspecting or modifying program variables. Existing neural interpreter approaches lack such interactive control. To address this limitation, we introduce neural debuggers: language models that emulate traditional debuggers, supporting operations such as stepping into, over, or out of functions, as well as setting breakpoints at specific source lines. We show that neural debuggers -- obtained via fine-tuning large LLMs or pre-training smaller models from scratch -- can reliably model both forward execution (predicting future states and outputs) and inverse execution (inferring prior states or inputs) conditioned on debugger actions. Evaluated on CruxEval, our models achieve strong performance on both output and input prediction tasks, demonstrating robust conditional execution modeling. Our work takes first steps towards future agentic coding systems in which neural debuggers serve as a world model for simulated debugging environments, providing execution feedback or enabling agents to interact with real debugging tools. This capability lays the foundation for more powerful code generation, program understanding, and automated debugging.",
       "authors": [
-        "Vitaly Bulgakov"
+        "Maximilian Beck",
+        "Jonas Gehring",
+        "Jannik Kossen",
+        "Gabriel Synnaeve"
       ],
-      "url": "https://arxiv.org/abs/2603.09815",
-      "published": "2026-03-10T15:42:46+00:00",
-      "updated": "2026-03-10T15:42:46+00:00",
+      "url": "https://arxiv.org/abs/2603.09951",
+      "published": "2026-03-10T17:47:05+00:00",
+      "updated": "2026-03-10T17:47:05+00:00",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "cs.AI",
+        "cs.SE"
       ],
       "matched_topics": [
         "Interpretability"
@@ -213,21 +71,65 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.09961",
-      "title": "BEACON: Language-Conditioned Navigation Affordance Prediction under Occlusion",
-      "abstract": "Language-conditioned local navigation requires a robot to infer a nearby traversable target location from its current observation and an open-vocabulary, relational instruction. Existing vision-language spatial grounding methods usually rely on vision-language models (VLMs) to reason in image space, producing 2D predictions tied to visible pixels. As a result, they struggle to infer target locations in occluded regions, typically caused by furniture or moving humans. To address this issue, we propose BEACON, which predicts an ego-centric Bird's-Eye View (BEV) affordance heatmap over a bounded local region including occluded areas. Given an instruction and surround-view RGB-D observations from four directions around the robot, BEACON predicts the BEV heatmap by injecting spatial cues into a VLM and fusing the VLM's output with depth-derived BEV features. Using an occlusion-aware dataset built in the Habitat simulator, we conduct detailed experimental analysis to validate both our BEV space formulation and the design choices of each module. Our method improves the accuracy averaged across geodesic thresholds by 22.74 percentage points over the state-of-the-art image-space baseline on the validation subset with occluded target locations. Our project page is: https://xin-yu-gao.github.io/beacon.",
+      "id": "2603.09916",
+      "title": "AI-Enabled Data-driven Intelligence for Spectrum Demand Estimation",
+      "abstract": "Accurately forecasting spectrum demand is a key component for efficient spectrum resource allocation and management. With the rapid growth in demand for wireless services, mobile network operators and regulators face increasing challenges in ensuring adequate spectrum availability. This paper presents a data-driven approach leveraging artificial intelligence (AI) and machine learning (ML) to estimate and manage spectrum demand. The approach uses multiple proxies of spectrum demand, drawing from site license data and derived from crowdsourced data. These proxies are validated against real-world mobile network traffic data to ensure reliability, achieving an R$^2$ value of 0.89 for an enhanced proxy. The proposed ML models are tested and validated across five major Canadian cities, demonstrating their generalizability and robustness. These contributions assist spectrum regulators in dynamic spectrum planning, enabling better resource allocation and policy adjustments to meet future network demands.",
       "authors": [
-        "Xinyu Gao",
-        "Gang Chen",
-        "Javier Alonso-Mora"
+        "Colin Brown",
+        "Mohamad Alkadamani",
+        "Halim Yanikomeroglu"
       ],
-      "url": "https://arxiv.org/abs/2603.09961",
-      "published": "2026-03-10T17:56:16+00:00",
-      "updated": "2026-03-10T17:56:16+00:00",
+      "url": "https://arxiv.org/abs/2603.09916",
+      "published": "2026-03-10T17:11:36+00:00",
+      "updated": "2026-03-10T17:11:36+00:00",
       "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
+        "eess.SY",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09868",
+      "title": "CarbonBench: A Global Benchmark for Upscaling of Carbon Fluxes Using Zero-Shot Learning",
+      "abstract": "Accurately quantifying terrestrial carbon exchange is essential for climate policy and carbon accounting, yet models must generalize to ecosystems underrepresented in sparse eddy covariance observations. Despite this challenge being a natural instance of zero-shot spatial transfer learning for time series regression, no standardized benchmark exists to rigorously evaluate model performance across geographically distinct locations with different climate regimes and vegetation types.   We introduce CarbonBench, the first benchmark for zero-shot spatial transfer in carbon flux upscaling. CarbonBench comprises over 1.3 million daily observations from 567 flux tower sites globally (2000-2024). It provides: (1) stratified evaluation protocols that explicitly test generalization across unseen vegetation types and climate regimes, separating spatial transfer from temporal autocorrelation; (2) a harmonized set of remote sensing and meteorological features to enable flexible architecture design; and (3) baselines ranging from tree-based methods to domain-generalization architectures. By bridging machine learning methodologies and Earth system science, CarbonBench aims to enable systematic comparison of transfer learning methods, serves as a testbed for regression under distribution shift, and contributes to the next-generation climate modeling efforts.",
+      "authors": [
+        "Aleksei Rozanov",
+        "Arvind Renganathan",
+        "Yimeng Zhang",
+        "Vipin Kumar"
+      ],
+      "url": "https://arxiv.org/abs/2603.09868",
+      "published": "2026-03-10T16:33:28+00:00",
+      "updated": "2026-03-10T16:33:28+00:00",
+      "categories": [
+        "cs.LG",
+        "physics.ao-ph"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.05228",
+      "title": "The Geometric Inductive Bias of Grokking: Bypassing Phase Transitions via Architectural Topology",
+      "abstract": "Mechanistic interpretability typically relies on post-hoc analysis of trained networks. We instead adopt an interventional approach: testing hypotheses a priori by modifying architectural topology to observe training dynamics. We study grokking - delayed generalization in Transformers trained on cyclic modular addition (Zp) - investigating if specific architectural degrees of freedom prolong the memorization phase.   We identify two independent structural factors in standard Transformers: unbounded representational magnitude and data-dependent attention routing. First, we introduce a fully bounded spherical topology enforcing L2 normalization throughout the residual stream and an unembedding matrix with a fixed temperature scale. This removes magnitude-based degrees of freedom, reducing grokking onset time by over 20x without weight decay. Second, a Uniform Attention Ablation overrides data-dependent query-key routing with a uniform distribution, reducing the attention layer to a Continuous Bag-of-Words (CBOW) aggregator. Despite removing adaptive routing, these models achieve 100% generalization across all seeds and bypass the grokking delay entirely.   To evaluate whether this acceleration is a task-specific geometric alignment rather than a generic optimization stabilizer, we use non-commutative S5 permutation composition as a negative control. Enforcing spherical constraints on S5 does not accelerate generalization. This suggests eliminating the memorization phase depends strongly on aligning architectural priors with the task's intrinsic symmetries. Together, these findings provide interventional evidence that architectural degrees of freedom substantially influence grokking, suggesting a predictive structural perspective on training dynamics.",
+      "authors": [
+        "Alper Yıldırım"
+      ],
+      "url": "https://arxiv.org/abs/2603.05228",
+      "published": "2026-03-05T14:41:01+00:00",
+      "updated": "2026-03-10T17:16:04+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
       ],
       "matched_topics": [
         "Interpretability"
@@ -236,23 +138,17 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.09827",
-      "title": "MA-EgoQA: Question Answering over Egocentric Videos from Multiple Embodied Agents",
-      "abstract": "As embodied models become powerful, humans will collaborate with multiple embodied AI agents at their workplace or home in the future. To ensure better communication between human users and the multi-agent system, it is crucial to interpret incoming information from agents in parallel and refer to the appropriate context for each query. Existing challenges include effectively compressing and communicating high volumes of individual sensory inputs in the form of video and correctly aggregating multiple egocentric videos to construct system-level memory. In this work, we first formally define a novel problem of understanding multiple long-horizon egocentric videos simultaneously collected from embodied agents. To facilitate research in this direction, we introduce MultiAgent-EgoQA (MA-EgoQA), a benchmark designed to systemically evaluate existing models in our scenario. MA-EgoQA provides 1.7k questions unique to multiple egocentric streams, spanning five categories: social interaction, task coordination, theory-of-mind, temporal reasoning, and environmental interaction. We further propose a simple baseline model for MA-EgoQA named EgoMAS, which leverages shared memory across embodied agents and agent-wise dynamic retrieval. Through comprehensive evaluation across diverse baselines and EgoMAS on MA-EgoQA, we find that current approaches are unable to effectively handle multiple egocentric streams, highlighting the need for future advances in system-level understanding across the agents. The code and benchmark are available at https://ma-egoqa.github.io.",
+      "id": "2603.09815",
+      "title": "Correction of Transformer-Based Models with Smoothing Pseudo-Projector",
+      "abstract": "The pseudo-projector is a lightweight modification that can be integrated into existing language models and other neural networks without altering their core architecture. It can be viewed as a hidden-representation corrector that reduces sensitivity to noise by suppressing directions induced by label-irrelevant input content. The design is inspired by the multigrid (MG) paradigm, originally developed to accelerate the convergence of iterative solvers for partial differential equations and boundary value problems, and later extended to more general linear systems through algebraic multigrid methods. We refer to the method as a pseudo-projector because its linear prototype corresponds to a strictly idempotent orthogonal projector, whereas the practical formulation employs learnable restriction and prolongation operators and therefore does not, in general, satisfy the properties of an exact orthogonal projection. We evaluate the proposed approach on transformer-based text classification tasks, as well as controlled synthetic benchmarks, demonstrating its effectiveness in improving training dynamics and robustness. Experimental results, together with supporting theoretical heuristics, indicate consistent improvements in training behavior across a range of settings, with no adverse effects observed otherwise. Our next step will be to extend this approach to language models.",
       "authors": [
-        "Kangsan Kim",
-        "Yanlai Yang",
-        "Suji Kim",
-        "Woongyeong Yeo",
-        "Youngwan Lee",
-        "Mengye Ren",
-        "Sung Ju Hwang"
+        "Vitaly Bulgakov"
       ],
-      "url": "https://arxiv.org/abs/2603.09827",
-      "published": "2026-03-10T15:48:35+00:00",
-      "updated": "2026-03-10T15:48:35+00:00",
+      "url": "https://arxiv.org/abs/2603.09815",
+      "published": "2026-03-10T15:42:46+00:00",
+      "updated": "2026-03-10T15:42:46+00:00",
       "categories": [
-        "cs.CV",
+        "cs.LG",
         "cs.AI"
       ],
       "matched_topics": [
@@ -283,177 +179,20 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.09909",
-      "title": "MedMASLab: A Unified Orchestration Framework for Benchmarking Multimodal Medical Multi-Agent Systems",
-      "abstract": "While Multi-Agent Systems (MAS) show potential for complex clinical decision support, the field remains hindered by architectural fragmentation and the lack of standardized multimodal integration. Current medical MAS research suffers from non-uniform data ingestion pipelines, inconsistent visual-reasoning evaluation, and a lack of cross-specialty benchmarking. To address these challenges, we present MedMASLab, a unified framework and benchmarking platform for multimodal medical multi-agent systems. MedMASLab introduces: (1) A standardized multimodal agent communication protocol that enables seamless integration of 11 heterogeneous MAS architectures across 24 medical modalities. (2) An automated clinical reasoning evaluator, a zero-shot semantic evaluation paradigm that overcomes the limitations of lexical string-matching by leveraging large vision-language models to verify diagnostic logic and visual grounding. (3) The most extensive benchmark to date, spanning 11 organ systems and 473 diseases, standardizing data from 11 clinical benchmarks. Our systematic evaluation reveals a critical domain-specific performance gap: while MAS improves reasoning depth, current architectures exhibit significant fragility when transitioning between specialized medical sub-domains. We provide a rigorous ablation of interaction mechanisms and cost-performance trade-offs, establishing a new technical baseline for future autonomous clinical systems. The source code and data is publicly available at: https://github.com/NUS-Project/MedMASLab/",
+      "id": "2603.09938",
+      "title": "Model Merging in the Era of Large Language Models: Methods, Applications, and Future Directions",
+      "abstract": "Model merging has emerged as a transformative paradigm for combining the capabilities of multiple neural networks into a single unified model without additional training. With the rapid proliferation of fine-tuned large language models~(LLMs), merging techniques offer a computationally efficient alternative to ensembles and full retraining, enabling practitioners to compose specialized capabilities at minimal cost. This survey presents a comprehensive and structured examination of model merging in the LLM era through the \\textbf{FUSE} taxonomy, a four-dimensional framework organized along \\textbf{F}oundations, \\textbf{U}nification Strategies, \\textbf{S}cenarios, and \\textbf{E}cosystem. We first establish the theoretical underpinnings of merging, including loss landscape geometry, mode connectivity, and the linear mode connectivity hypothesis. We then systematically review the algorithmic landscape, spanning weight averaging, task vector arithmetic, sparsification-enhanced methods, mixture-of-experts architectures, and evolutionary optimization approaches. For each method family, we analyze the core formulation, highlight representative works, and discuss practical trade-offs. We further examine downstream applications across multi-task learning, safety alignment, domain specialization, multilingual transfer, and federated learning. Finally, we survey the supporting ecosystem of open-source tools, community platforms, and evaluation benchmarks, and identify key open challenges including theoretical gaps, scalability barriers, and standardization needs. This survey aims to equip researchers and practitioners with a structured foundation for advancing model merging.",
       "authors": [
-        "Yunhang Qian",
-        "Xiaobin Hu",
-        "Jiaquan Yu",
-        "Siyang Xin",
-        "Xiaokun Chen",
-        "Jiangning Zhang",
-        "Peng-Tao Jiang",
-        "Jiawei Liu",
-        "Hongwei Bran Li"
+        "Mingyang Song",
+        "Mao Zheng"
       ],
-      "url": "https://arxiv.org/abs/2603.09909",
-      "published": "2026-03-10T17:03:11+00:00",
-      "updated": "2026-03-10T17:03:11+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09774",
-      "title": "World2Mind: Cognition Toolkit for Allocentric Spatial Reasoning in Foundation Models",
-      "abstract": "Achieving robust spatial reasoning remains a fundamental challenge for current Multimodal Foundation Models (MFMs). Existing methods either overfit statistical shortcuts via 3D grounding data or remain confined to 2D visual perception, limiting both spatial reasoning accuracy and generalization in unseen scenarios. Inspired by the spatial cognitive mapping mechanisms of biological intelligence, we propose World2Mind, a training-free spatial intelligence toolkit. At its core, World2Mind leverages 3D reconstruction and instance segmentation models to construct structured spatial cognitive maps, empowering MFMs to proactively acquire targeted spatial knowledge regarding interested landmarks and routes of interest. To provide robust geometric-topological priors, World2Mind synthesizes an Allocentric-Spatial Tree (AST) that uses elliptical parameters to model the top-down layout of landmarks accurately. To mitigate the inherent inaccuracies of 3D reconstruction, we introduce a three-stage reasoning chain comprising tool invocation assessment, modality-decoupled cue collection, and geometry-semantics interwoven reasoning. Extensive experiments demonstrate that World2Mind boosts the performance of frontier models, such as GPT-5.2, by 5%~18%. Astonishingly, relying solely on the AST-structured text, purely text-only foundation models can perform complex 3D spatial reasoning, achieving performance approaching that of advanced multimodal models.",
-      "authors": [
-        "Shouwei Ruan",
-        "Bin Wang",
-        "Zhenyu Wu",
-        "Qihui Zhu",
-        "Yuxiang Zhang",
-        "Hang Su",
-        "Yubin Wang"
-      ],
-      "url": "https://arxiv.org/abs/2603.09774",
-      "published": "2026-03-10T15:12:14+00:00",
-      "updated": "2026-03-10T15:12:14+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09821",
-      "title": "One-Eval: An Agentic System for Automated and Traceable LLM Evaluation",
-      "abstract": "Reliable evaluation is essential for developing and deploying large language models, yet in practice it often requires substantial manual effort: practitioners must identify appropriate benchmarks, reproduce heterogeneous evaluation codebases, configure dataset schema mappings, and interpret aggregated metrics. To address these challenges, we present One-Eval, an agentic evaluation system that converts natural-language evaluation requests into executable, traceable, and customizable evaluation workflows. One-Eval integrates (i) NL2Bench for intent structuring and personalized benchmark planning, (ii) BenchResolve for benchmark resolution, automatic dataset acquisition, and schema normalization to ensure executability, and (iii) Metrics \\& Reporting for task-aware metric selection and decision-oriented reporting beyond scalar scores. The system further incorporates human-in-the-loop checkpoints for review, editing, and rollback, while preserving sample evidence trails for debugging and auditability. Experiments show that One-Eval can execute end-to-end evaluations from diverse natural-language requests with minimal user effort, supporting more efficient and reproducible evaluation in industrial settings. Our framework is publicly available at https://github.com/OpenDCAI/One-Eval.",
-      "authors": [
-        "Chengyu Shen",
-        "Yanheng Hou",
-        "Minghui Pan",
-        "Runming He",
-        "Zhen Hao Wong",
-        "Meiyi Qiang",
-        "Zhou Liu",
-        "Hao Liang",
-        "Peichao Lai",
-        "Zeang Sheng",
-        "Wentao Zhang"
-      ],
-      "url": "https://arxiv.org/abs/2603.09821",
-      "published": "2026-03-10T15:45:51+00:00",
-      "updated": "2026-03-10T15:45:51+00:00",
+      "url": "https://arxiv.org/abs/2603.09938",
+      "published": "2026-03-10T17:31:55+00:00",
+      "updated": "2026-03-10T17:31:55+00:00",
       "categories": [
         "cs.CL"
       ],
       "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09942",
-      "title": "Towards Flexible Spectrum Access: Data-Driven Insights into Spectrum Demand",
-      "abstract": "In the diverse landscape of 6G networks, where wireless connectivity demands surge and spectrum resources remain limited, flexible spectrum access becomes paramount. The success of crafting such schemes hinges on our ability to accurately characterize spectrum demand patterns across space and time. This paper presents a data-driven methodology for estimating spectrum demand variations over space and identifying key drivers of these variations in the mobile broadband landscape. By leveraging geospatial analytics and machine learning, the methodology is applied to a case study in Canada to estimate spectrum demand dynamics in urban regions. Our proposed model captures 70\\% of the variability in spectrum demand when trained on one urban area and tested on another. These insights empower regulators to navigate the complexities of 6G networks and devise effective policies to meet future network demands.",
-      "authors": [
-        "Mohamad Alkadamani",
-        "Amir Ghasemi",
-        "Halim Yanikomeroglu"
-      ],
-      "url": "https://arxiv.org/abs/2603.09942",
-      "published": "2026-03-10T17:34:16+00:00",
-      "updated": "2026-03-10T17:34:16+00:00",
-      "categories": [
-        "eess.SY",
-        "cs.AI",
-        "cs.NI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09972",
-      "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
-      "abstract": "A central idea in mechanistic interpretability is that neural networks represent more features than they have dimensions, arranging them in superposition to form an over-complete basis. This framing has been influential, motivating dictionary learning approaches such as sparse autoencoders. However, superposition has mostly been studied in idealized settings where features are sparse and uncorrelated. In these settings, superposition is typically understood as introducing interference that must be minimized geometrically and filtered out by non-linearities such as ReLUs, yielding local structures like regular polytopes. We show that this account is incomplete for realistic data by introducing Bag-of-Words Superposition (BOWS), a controlled setting to encode binary bag-of-words representations of internet text in superposition. Using BOWS, we find that when features are correlated, interference can be constructive rather than just noise to be filtered out. This is achieved by arranging features according to their co-activation patterns, making interference between active features constructive, while still using ReLUs to avoid false positives. We show that this kind of arrangement is more prevalent in models trained with weight decay and naturally gives rise to semantic clusters and cyclical structures which have been observed in real language models yet were not explained by the standard picture of superposition. Code for this paper can be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.",
-      "authors": [
-        "Lucas Prieto",
-        "Edward Stevinson",
-        "Melih Barsbey",
-        "Tolga Birdal",
-        "Pedro A. M. Mediano"
-      ],
-      "url": "https://arxiv.org/abs/2603.09972",
-      "published": "2026-03-10T17:59:02+00:00",
-      "updated": "2026-03-10T17:59:02+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09778",
-      "title": "First Estimation of Model Parameters for Neutrino-Induced Nucleon Knockout Using Simulation-Based Inference",
-      "abstract": "To enable an accurate determination of oscillation parameters, accelerator-based neutrino experiments require detailed simulations of nuclear interaction physics in the GeV regime. While substantial effort from both theory and experiment is currently being invested to improve the fidelity of these simulations, their present deficiencies typically oblige experimental collaborations to resort to empirical tuning of simulation model parameters. As the precision requirements of the field continue to become more stringent, machine learning techniques may provide a powerful means of handling corresponding growth in the complexity of future neutrino interaction model tuning exercises. To study the suitability of simulation-based inference (SBI) for this physics application, in this paper we revisit a tuned configuration of the GENIE neutrino event generator that was originally developed by the MicroBooNE collaboration. Despite closely reproducing the adopted values of four physics parameters when confronted with the tuned cross-section predictions as input, we find that our trained SBI algorithm prefers modestly different values (within MicroBooNE's assigned uncertainties) and achieves slightly better goodness-of-fit when inference is run on the experimental data set originally used by MicroBooNE. We also find that our trained algorithm can create a fair approximation of an alternative neutrino scattering simulation, NuWro, that shares only a subset of its physics model parameters with GENIE.",
-      "authors": [
-        "Karla Tame-Narvaez",
-        "Steven Gardiner",
-        "Aleksandra Ćiprijanović",
-        "Giuseppe Cerati"
-      ],
-      "url": "https://arxiv.org/abs/2603.09778",
-      "published": "2026-03-10T15:14:40+00:00",
-      "updated": "2026-03-10T15:14:40+00:00",
-      "categories": [
-        "hep-ph",
-        "cs.AI",
-        "hep-ex",
-        "physics.comp-ph"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09916",
-      "title": "AI-Enabled Data-driven Intelligence for Spectrum Demand Estimation",
-      "abstract": "Accurately forecasting spectrum demand is a key component for efficient spectrum resource allocation and management. With the rapid growth in demand for wireless services, mobile network operators and regulators face increasing challenges in ensuring adequate spectrum availability. This paper presents a data-driven approach leveraging artificial intelligence (AI) and machine learning (ML) to estimate and manage spectrum demand. The approach uses multiple proxies of spectrum demand, drawing from site license data and derived from crowdsourced data. These proxies are validated against real-world mobile network traffic data to ensure reliability, achieving an R$^2$ value of 0.89 for an enhanced proxy. The proposed ML models are tested and validated across five major Canadian cities, demonstrating their generalizability and robustness. These contributions assist spectrum regulators in dynamic spectrum planning, enabling better resource allocation and policy adjustments to meet future network demands.",
-      "authors": [
-        "Colin Brown",
-        "Mohamad Alkadamani",
-        "Halim Yanikomeroglu"
-      ],
-      "url": "https://arxiv.org/abs/2603.09916",
-      "published": "2026-03-10T17:11:36+00:00",
-      "updated": "2026-03-10T17:11:36+00:00",
-      "categories": [
-        "eess.SY",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
         "Interpretability"
       ],
       "match_method": "keyword",
@@ -486,197 +225,6 @@
       "best_score": 0.0
     },
     {
-      "id": "2603.09853",
-      "title": "SCENEBench: An Audio Understanding Benchmark Grounded in Assistive and Industrial Use Cases",
-      "abstract": "Advances in large language models (LLMs) have enabled significant capabilities in audio processing, resulting in state-of-the-art models now known as Large Audio Language Models (LALMs). However, minimal work has been done to measure audio understanding beyond automatic speech recognition (ASR). This paper closes that gap by proposing a benchmark suite, SCENEBench (Spatial, Cross-lingual, Environmental, Non-speech Evaluation), that targets a broad form of audio comprehension across four real-world categories: background sound understanding, noise localization, cross-linguistic speech understanding, and vocal characterizer recognition. These four categories are selected based on understudied needs from accessibility technology and industrial noise monitoring. In addition to performance, we also measure model latency. The purpose of this benchmark suite is to assess audio beyond just what words are said - rather, how they are said and the non-speech components of the audio. Because our audio samples are synthetically constructed (e.g., by overlaying two natural audio samples), we further validate our benchmark against 20 natural audio items per task, sub-sampled from existing datasets to match our task criteria, to assess ecological validity. We assess five state-of-the-art LALMs and find critical gaps: performance varies across tasks, with some tasks performing below random chance and others achieving high accuracy. These results provide direction for targeted improvements in model capabilities.",
-      "authors": [
-        "Laya Iyer",
-        "Angelina Wang",
-        "Sanmi Koyejo"
-      ],
-      "url": "https://arxiv.org/abs/2603.09853",
-      "published": "2026-03-10T16:15:12+00:00",
-      "updated": "2026-03-10T16:15:12+00:00",
-      "categories": [
-        "cs.SD",
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09787",
-      "title": "What is Missing? Explaining Neurons Activated by Absent Concepts",
-      "abstract": "Explainable artificial intelligence (XAI) aims to provide human-interpretable insights into the behavior of deep neural networks (DNNs), typically by estimating a simplified causal structure of the model. In existing work, this causal structure often includes relationships where the presence of a concept is associated with a strong activation of a neuron. For example, attribution methods primarily identify input pixels that contribute most to a prediction, and feature visualization methods reveal inputs that cause high activation of a target neuron - the former implicitly assuming that the relevant information resides in the input, and the latter that neurons encode the presence of concepts. However, a largely overlooked type of causal relationship is that of encoded absences, where the absence of a concept increases neural activation. In this work, we show that such missing but relevant concepts are common and that mainstream XAI methods struggle to reveal them when applied in their standard form. To address this, we propose two simple extensions to attribution and feature visualization techniques that uncover encoded absences. Across experiments, we show how mainstream XAI methods can be used to reveal and explain encoded absences, how ImageNet models exploit them, and that debiasing can be improved when considering them.",
-      "authors": [
-        "Robin Hesse",
-        "Simone Schaub-Meyer",
-        "Janina Hesse",
-        "Bernt Schiele",
-        "Stefan Roth"
-      ],
-      "url": "https://arxiv.org/abs/2603.09787",
-      "published": "2026-03-10T15:21:52+00:00",
-      "updated": "2026-03-10T15:21:52+00:00",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09951",
-      "title": "Towards a Neural Debugger for Python",
-      "abstract": "Training large language models (LLMs) on Python execution traces grounds them in code execution and enables the line-by-line execution prediction of whole Python programs, effectively turning them into neural interpreters (FAIR CodeGen Team et al., 2025). However, developers rarely execute programs step by step; instead, they use debuggers to stop execution at certain breakpoints and step through relevant portions only while inspecting or modifying program variables. Existing neural interpreter approaches lack such interactive control. To address this limitation, we introduce neural debuggers: language models that emulate traditional debuggers, supporting operations such as stepping into, over, or out of functions, as well as setting breakpoints at specific source lines. We show that neural debuggers -- obtained via fine-tuning large LLMs or pre-training smaller models from scratch -- can reliably model both forward execution (predicting future states and outputs) and inverse execution (inferring prior states or inputs) conditioned on debugger actions. Evaluated on CruxEval, our models achieve strong performance on both output and input prediction tasks, demonstrating robust conditional execution modeling. Our work takes first steps towards future agentic coding systems in which neural debuggers serve as a world model for simulated debugging environments, providing execution feedback or enabling agents to interact with real debugging tools. This capability lays the foundation for more powerful code generation, program understanding, and automated debugging.",
-      "authors": [
-        "Maximilian Beck",
-        "Jonas Gehring",
-        "Jannik Kossen",
-        "Gabriel Synnaeve"
-      ],
-      "url": "https://arxiv.org/abs/2603.09951",
-      "published": "2026-03-10T17:47:05+00:00",
-      "updated": "2026-03-10T17:47:05+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09890",
-      "title": "Influencing LLM Multi-Agent Dialogue via Policy-Parameterized Prompts",
-      "abstract": "Large Language Models (LLMs) have emerged as a new paradigm for multi-agent systems. However, existing research on the behaviour of LLM-based multi-agents relies on ad hoc prompts and lacks a principled policy perspective. Different from reinforcement learning, we investigate whether prompt-as-action can be parameterized so as to construct a lightweight policy which consists of a sequence of state-action pairs to influence conversational behaviours without training. Our framework regards prompts as actions executed by LLMs, and dynamically constructs prompts through five components based on the current state of the agent. To test the effectiveness of parameterized control, we evaluated the dialogue flow based on five indicators: responsiveness, rebuttal, evidence usage, non-repetition, and stance shift. We conduct experiments using different LLM-driven agents in two discussion scenarios related to the general public and show that prompt parameterization can influence the dialogue dynamics. This result shows that policy-parameterised prompts offer a simple and effective mechanism to influence the dialogue process, which will help the research of multi-agent systems in the direction of social simulation.",
-      "authors": [
-        "Hongbo Bo",
-        "Jingyu Hu",
-        "Weiru Liu"
-      ],
-      "url": "https://arxiv.org/abs/2603.09890",
-      "published": "2026-03-10T16:47:25+00:00",
-      "updated": "2026-03-10T16:47:25+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09859",
-      "title": "A Graph-Based Approach to Spectrum Demand Prediction Using Hierarchical Attention Networks",
-      "abstract": "The surge in wireless connectivity demand, coupled with the finite nature of spectrum resources, compels the development of efficient spectrum management approaches. Spectrum sharing presents a promising avenue, although it demands precise characterization of spectrum demand for informed policy-making. This paper introduces HR-GAT, a hierarchical resolution graph attention network model, designed to predict spectrum demand using geospatial data. HR-GAT adeptly handles complex spatial demand patterns and resolves issues of spatial autocorrelation that usually challenge standard machine learning models, often resulting in poor generalization. Tested across five major Canadian cities, HR-GAT improves predictive accuracy of spectrum demand by 21% over eight baseline models, underscoring its superior performance and reliability.",
-      "authors": [
-        "Mohamad Alkadamani",
-        "Halim Yanikomeroglu",
-        "Amir Ghasemi"
-      ],
-      "url": "https://arxiv.org/abs/2603.09859",
-      "published": "2026-03-10T16:20:51+00:00",
-      "updated": "2026-03-10T16:20:51+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.NI",
-        "eess.SY"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Graph Neural Networks",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09868",
-      "title": "CarbonBench: A Global Benchmark for Upscaling of Carbon Fluxes Using Zero-Shot Learning",
-      "abstract": "Accurately quantifying terrestrial carbon exchange is essential for climate policy and carbon accounting, yet models must generalize to ecosystems underrepresented in sparse eddy covariance observations. Despite this challenge being a natural instance of zero-shot spatial transfer learning for time series regression, no standardized benchmark exists to rigorously evaluate model performance across geographically distinct locations with different climate regimes and vegetation types.   We introduce CarbonBench, the first benchmark for zero-shot spatial transfer in carbon flux upscaling. CarbonBench comprises over 1.3 million daily observations from 567 flux tower sites globally (2000-2024). It provides: (1) stratified evaluation protocols that explicitly test generalization across unseen vegetation types and climate regimes, separating spatial transfer from temporal autocorrelation; (2) a harmonized set of remote sensing and meteorological features to enable flexible architecture design; and (3) baselines ranging from tree-based methods to domain-generalization architectures. By bridging machine learning methodologies and Earth system science, CarbonBench aims to enable systematic comparison of transfer learning methods, serves as a testbed for regression under distribution shift, and contributes to the next-generation climate modeling efforts.",
-      "authors": [
-        "Aleksei Rozanov",
-        "Arvind Renganathan",
-        "Yimeng Zhang",
-        "Vipin Kumar"
-      ],
-      "url": "https://arxiv.org/abs/2603.09868",
-      "published": "2026-03-10T16:33:28+00:00",
-      "updated": "2026-03-10T16:33:28+00:00",
-      "categories": [
-        "cs.LG",
-        "physics.ao-ph"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09940",
-      "title": "SignalMC-MED: A Multimodal Benchmark for Evaluating Biosignal Foundation Models on Single-Lead ECG and PPG",
-      "abstract": "Recent biosignal foundation models (FMs) have demonstrated promising performance across diverse clinical prediction tasks, yet systematic evaluation on long-duration multimodal data remains limited. We introduce SignalMC-MED, a benchmark for evaluating biosignal FMs on synchronized single-lead electrocardiogram (ECG) and photoplethysmogram (PPG) data. Derived from the MC-MED dataset, SignalMC-MED comprises 22,256 visits with 10-minute overlapping ECG and PPG signals, and includes 20 clinically relevant tasks spanning prediction of demographics, emergency department disposition, laboratory value regression, and detection of prior ICD-10 diagnoses. Using this benchmark, we perform a systematic evaluation of representative time-series and biosignal FMs across ECG-only, PPG-only, and ECG + PPG settings. We find that domain-specific biosignal FMs consistently outperform general time-series models, and that multimodal ECG + PPG fusion yields robust improvements over unimodal inputs. Moreover, using the full 10-minute signal consistently outperforms shorter segments, and larger model variants do not reliably outperform smaller ones. Hand-crafted ECG domain features provide a strong baseline and offer complementary value when combined with learned FM representations. Together, these results establish SignalMC-MED as a standardized benchmark and provide practical guidance for evaluating and deploying biosignal FMs.",
-      "authors": [
-        "Fredrik K. Gustafsson",
-        "Xiao Gu",
-        "Mattia Carletti",
-        "Patitapaban Palo",
-        "David W. Eyre",
-        "David A. Clifton"
-      ],
-      "url": "https://arxiv.org/abs/2603.09940",
-      "published": "2026-03-10T17:32:28+00:00",
-      "updated": "2026-03-10T17:32:28+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09892",
-      "title": "MSSR: Memory-Aware Adaptive Replay for Continual LLM Fine-Tuning",
-      "abstract": "Continual fine-tuning of large language models (LLMs) is becoming increasingly crucial as these models are deployed in dynamic environments where tasks and data distributions evolve over time. While strong adaptability enables rapid acquisition of new knowledge, it also exposes LLMs to catastrophic forgetting, where previously learned skills degrade during sequential training. Existing replay-based strategies, such as fixed interleaved replay, accuracy-supervised, and loss-driven scheduling, remain limited: some depend on heuristic rules and provide only partial mitigation of forgetting, while others improve performance but incur substantial computational overhead. Motivated by retention dynamics under sequential fine-tuning, we propose Memory-Inspired Sampler and Scheduler Replay (MSSR), an experience replay framework that estimates sample-level memory strength and schedules rehearsal at adaptive intervals to mitigate catastrophic forgetting while maintaining fast adaptation. Extensive experiments across three backbone models and 11 sequential tasks show that MSSR consistently outperforms state-of-the-art replay baselines, with particularly strong gains on reasoning-intensive and multiple-choice benchmarks.",
-      "authors": [
-        "Yiyang Lu",
-        "Yu He",
-        "Jianlong Chen",
-        "Hongyuan Zha"
-      ],
-      "url": "https://arxiv.org/abs/2603.09892",
-      "published": "2026-03-10T16:49:44+00:00",
-      "updated": "2026-03-10T16:49:44+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
       "id": "2603.09957",
       "title": "Think Before You Lie: How Reasoning Improves Honesty",
       "abstract": "While existing evaluations of large language models (LLMs) measure deception rates, the underlying conditions that give rise to deceptive behavior are poorly understood. We investigate this question using a novel dataset of realistic moral trade-offs where honesty incurs variable costs. Contrary to humans, who tend to become less honest given time to deliberate (Capraro, 2017; Capraro et al., 2019), we find that reasoning consistently increases honesty across scales and for several LLM families. This effect is not only a function of the reasoning content, as reasoning traces are often poor predictors of final behaviors. Rather, we show that the underlying geometry of the representational space itself contributes to the effect. Namely, we observe that deceptive regions within this space are metastable: deceptive answers are more easily destabilized by input paraphrasing, output resampling, and activation noise than honest ones. We interpret the effect of reasoning in this vein: generating deliberative tokens as part of moral reasoning entails the traversal of a biased representational space, ultimately nudging the model toward its more stable, honest defaults.",
@@ -698,113 +246,6 @@
         "cs.AI",
         "cs.CL",
         "cs.LG"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09786",
-      "title": "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth",
-      "abstract": "Large language models (LLMs) tend to externalize their reasoning in their chain of thought, making the chain of thought a good target for monitoring. This is partially an inherent feature of the Transformer architecture: sufficiently long serial cognition must pass through the chain of thought (Korbak et al., 2025). We formalize this argument through the notion of opaque serial depth, given by the length of the longest computation that can be done without the use of interpretable intermediate steps like chain of thought. Given this formalization, we compute numeric upper bounds on the opaque serial depth of Gemma 3 models, as well as asymptotic results for additional architectures beyond standard LLMs. We also open-source an automated method that can calculate upper bounds on the opaque serial depth of arbitrary neural networks, and use it to demonstrate that Mixture-of-Experts models likely have lower depth than dense models. Overall, our results suggest that opaque serial depth is a useful tool for understanding the potential for models to do significant reasoning that is not externalized.",
-      "authors": [
-        "Jonah Brown-Cohen",
-        "David Lindner",
-        "Rohin Shah"
-      ],
-      "url": "https://arxiv.org/abs/2603.09786",
-      "published": "2026-03-10T15:21:42+00:00",
-      "updated": "2026-03-10T15:21:42+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09785",
-      "title": "EPIC-EuroParl-UdS: Information-Theoretic Perspectives on Translation and Interpreting",
-      "abstract": "This paper introduces an updated and combined version of the bidirectional English-German EPIC-UdS (spoken) and EuroParl-UdS (written) corpora containing original European Parliament speeches as well as their translations and interpretations. The new version corrects metadata and text errors identified through previous use, refines the content, updates linguistic annotations, and adds new layers, including word alignment and word-level surprisal indices. The combined resource is designed to support research using information-theoretic approaches to language variation, particularly studies comparing written and spoken modes, and examining disfluencies in speech, as well as traditional translationese studies, including parallel (source vs. target) and comparable (original vs. translated) analyses. The paper outlines the updates introduced in this release, summarises previous results based on the corpus, and presents a new illustrative study. The study validates the integrity of the rebuilt spoken data and evaluates probabilistic measures derived from base and fine-tuned GPT-2 and machine translation models on the task of filler particles prediction in interpreting.",
-      "authors": [
-        "Maria Kunilovskaya",
-        "Christina Pollkläsener"
-      ],
-      "url": "https://arxiv.org/abs/2603.09785",
-      "published": "2026-03-10T15:20:40+00:00",
-      "updated": "2026-03-10T15:20:40+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09789",
-      "title": "A Hybrid Quantum-Classical Framework for Financial Volatility Forecasting Based on Quantum Circuit Born Machines",
-      "abstract": "Accurate forecasting of financial market volatility is crucial for risk management, option pricing, and portfolio optimization. Traditional econometric models and classical machine learning methods face challenges in handling the inherent non-linear and non-stationary characteristics of financial time series. In recent years, the rapid development of quantum computing has provided a new paradigm for solving complex optimization and sampling problems. This paper proposes a novel hybrid quantum-classical computing framework aimed at combining the powerful representation capabilities of classical neural networks with the unique advantages of quantum models. For the specific task of financial market volatility forecasting, we designed and implemented a hybrid model based on this framework, which combines a Long Short-Term Memory (LSTM) network with a Quantum Circuit Born Machine (QCBM). The LSTM is responsible for extracting complex dynamic features from historical time series data, while the QCBM serves as a learnable prior module, providing the model with a high-quality prior distribution to guide the forecasting process. We evaluated the model on two real financial datasets consisting of 5-minute high-frequency data from the Shanghai Stock Exchange (SSE) Composite Index and CSI 300 Index. Experimental results show that, compared to a purely classical LSTM baseline model, our hybrid quantum-classical model demonstrates significant advantages across multiple key metrics, including Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and QLIKE loss, proving the great potential of quantum computing in enhancing the capabilities of financial forecasting models. More broadly, the proposed hybrid framework offers a flexible architecture that may be adapted to other machine learning tasks involving high-dimensional, complex, or non-linear data distributions.",
-      "authors": [
-        "Yixiong Chen"
-      ],
-      "url": "https://arxiv.org/abs/2603.09789",
-      "published": "2026-03-10T15:23:41+00:00",
-      "updated": "2026-03-10T15:23:41+00:00",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "quant-ph"
-      ],
-      "matched_topics": [
-        "Artificial Consciousness",
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09938",
-      "title": "Model Merging in the Era of Large Language Models: Methods, Applications, and Future Directions",
-      "abstract": "Model merging has emerged as a transformative paradigm for combining the capabilities of multiple neural networks into a single unified model without additional training. With the rapid proliferation of fine-tuned large language models~(LLMs), merging techniques offer a computationally efficient alternative to ensembles and full retraining, enabling practitioners to compose specialized capabilities at minimal cost. This survey presents a comprehensive and structured examination of model merging in the LLM era through the \\textbf{FUSE} taxonomy, a four-dimensional framework organized along \\textbf{F}oundations, \\textbf{U}nification Strategies, \\textbf{S}cenarios, and \\textbf{E}cosystem. We first establish the theoretical underpinnings of merging, including loss landscape geometry, mode connectivity, and the linear mode connectivity hypothesis. We then systematically review the algorithmic landscape, spanning weight averaging, task vector arithmetic, sparsification-enhanced methods, mixture-of-experts architectures, and evolutionary optimization approaches. For each method family, we analyze the core formulation, highlight representative works, and discuss practical trade-offs. We further examine downstream applications across multi-task learning, safety alignment, domain specialization, multilingual transfer, and federated learning. Finally, we survey the supporting ecosystem of open-source tools, community platforms, and evaluation benchmarks, and identify key open challenges including theoretical gaps, scalability barriers, and standardization needs. This survey aims to equip researchers and practitioners with a structured foundation for advancing model merging.",
-      "authors": [
-        "Mingyang Song",
-        "Mao Zheng"
-      ],
-      "url": "https://arxiv.org/abs/2603.09938",
-      "published": "2026-03-10T17:31:55+00:00",
-      "updated": "2026-03-10T17:31:55+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_topics": [
-        "Interpretability"
-      ],
-      "match_method": "keyword",
-      "best_score": 0.0
-    },
-    {
-      "id": "2603.09970",
-      "title": "CREATE: Testing LLMs for Associative Creativity",
-      "abstract": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
-      "authors": [
-        "Manya Wadhwa",
-        "Tiasa Singha Roy",
-        "Harvey Lederman",
-        "Junyi Jessy Li",
-        "Greg Durrett"
-      ],
-      "url": "https://arxiv.org/abs/2603.09970",
-      "published": "2026-03-10T17:58:44+00:00",
-      "updated": "2026-03-10T17:58:44+00:00",
-      "categories": [
-        "cs.CL"
       ],
       "matched_topics": [
         "Interpretability"
@@ -861,6 +302,489 @@
       "best_score": 0.0
     },
     {
+      "id": "2603.09970",
+      "title": "CREATE: Testing LLMs for Associative Creativity",
+      "abstract": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
+      "authors": [
+        "Manya Wadhwa",
+        "Tiasa Singha Roy",
+        "Harvey Lederman",
+        "Junyi Jessy Li",
+        "Greg Durrett"
+      ],
+      "url": "https://arxiv.org/abs/2603.09970",
+      "published": "2026-03-10T17:58:44+00:00",
+      "updated": "2026-03-10T17:58:44+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09821",
+      "title": "One-Eval: An Agentic System for Automated and Traceable LLM Evaluation",
+      "abstract": "Reliable evaluation is essential for developing and deploying large language models, yet in practice it often requires substantial manual effort: practitioners must identify appropriate benchmarks, reproduce heterogeneous evaluation codebases, configure dataset schema mappings, and interpret aggregated metrics. To address these challenges, we present One-Eval, an agentic evaluation system that converts natural-language evaluation requests into executable, traceable, and customizable evaluation workflows. One-Eval integrates (i) NL2Bench for intent structuring and personalized benchmark planning, (ii) BenchResolve for benchmark resolution, automatic dataset acquisition, and schema normalization to ensure executability, and (iii) Metrics \\& Reporting for task-aware metric selection and decision-oriented reporting beyond scalar scores. The system further incorporates human-in-the-loop checkpoints for review, editing, and rollback, while preserving sample evidence trails for debugging and auditability. Experiments show that One-Eval can execute end-to-end evaluations from diverse natural-language requests with minimal user effort, supporting more efficient and reproducible evaluation in industrial settings. Our framework is publicly available at https://github.com/OpenDCAI/One-Eval.",
+      "authors": [
+        "Chengyu Shen",
+        "Yanheng Hou",
+        "Minghui Pan",
+        "Runming He",
+        "Zhen Hao Wong",
+        "Meiyi Qiang",
+        "Zhou Liu",
+        "Hao Liang",
+        "Peichao Lai",
+        "Zeang Sheng",
+        "Wentao Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2603.09821",
+      "published": "2026-03-10T15:45:51+00:00",
+      "updated": "2026-03-10T15:45:51+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.08640",
+      "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+      "abstract": "AI agents have become surprisingly proficient at software engineering over the past year, largely due to improvements in reasoning capabilities. This raises a deeper question: can these systems extend their capabilities to automate AI research itself? In this paper, we explore post-training, the critical phase that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark how well LLM agents can perform post-training autonomously under bounded compute constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies to the agents and instead give them full autonomy to find necessary information on the web, run experiments, and curate data. We find that frontier agents make substantial progress but generally lag behind instruction-tuned LLMs from leading providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models. However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1 Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model. We also observe several failure modes worth flagging. Agents sometimes engage in reward hacking: training on the test set, downloading existing instruction-tuned checkpoints instead of training their own, and using API keys they find to generate synthetic data without authorization. These behaviors are concerning and highlight the importance of careful sandboxing as these systems become more capable. Overall, we hope PostTrainBench will be useful for tracking progress in AI R&D automation and for studying the risks that come with it. Website and code are available at https://posttrainbench.com/.",
+      "authors": [
+        "Ben Rank",
+        "Hardik Bhatnagar",
+        "Ameya Prabhu",
+        "Shira Eisenberg",
+        "Karina Nguyen",
+        "Matthias Bethge",
+        "Maksym Andriushchenko"
+      ],
+      "url": "https://arxiv.org/abs/2603.08640",
+      "published": "2026-03-09T17:18:00+00:00",
+      "updated": "2026-03-10T15:55:40+00:00",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09942",
+      "title": "Towards Flexible Spectrum Access: Data-Driven Insights into Spectrum Demand",
+      "abstract": "In the diverse landscape of 6G networks, where wireless connectivity demands surge and spectrum resources remain limited, flexible spectrum access becomes paramount. The success of crafting such schemes hinges on our ability to accurately characterize spectrum demand patterns across space and time. This paper presents a data-driven methodology for estimating spectrum demand variations over space and identifying key drivers of these variations in the mobile broadband landscape. By leveraging geospatial analytics and machine learning, the methodology is applied to a case study in Canada to estimate spectrum demand dynamics in urban regions. Our proposed model captures 70\\% of the variability in spectrum demand when trained on one urban area and tested on another. These insights empower regulators to navigate the complexities of 6G networks and devise effective policies to meet future network demands.",
+      "authors": [
+        "Mohamad Alkadamani",
+        "Amir Ghasemi",
+        "Halim Yanikomeroglu"
+      ],
+      "url": "https://arxiv.org/abs/2603.09942",
+      "published": "2026-03-10T17:34:16+00:00",
+      "updated": "2026-03-10T17:34:16+00:00",
+      "categories": [
+        "eess.SY",
+        "cs.AI",
+        "cs.NI"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09787",
+      "title": "What is Missing? Explaining Neurons Activated by Absent Concepts",
+      "abstract": "Explainable artificial intelligence (XAI) aims to provide human-interpretable insights into the behavior of deep neural networks (DNNs), typically by estimating a simplified causal structure of the model. In existing work, this causal structure often includes relationships where the presence of a concept is associated with a strong activation of a neuron. For example, attribution methods primarily identify input pixels that contribute most to a prediction, and feature visualization methods reveal inputs that cause high activation of a target neuron - the former implicitly assuming that the relevant information resides in the input, and the latter that neurons encode the presence of concepts. However, a largely overlooked type of causal relationship is that of encoded absences, where the absence of a concept increases neural activation. In this work, we show that such missing but relevant concepts are common and that mainstream XAI methods struggle to reveal them when applied in their standard form. To address this, we propose two simple extensions to attribution and feature visualization techniques that uncover encoded absences. Across experiments, we show how mainstream XAI methods can be used to reveal and explain encoded absences, how ImageNet models exploit them, and that debiasing can be improved when considering them.",
+      "authors": [
+        "Robin Hesse",
+        "Simone Schaub-Meyer",
+        "Janina Hesse",
+        "Bernt Schiele",
+        "Stefan Roth"
+      ],
+      "url": "https://arxiv.org/abs/2603.09787",
+      "published": "2026-03-10T15:21:52+00:00",
+      "updated": "2026-03-10T15:21:52+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09803",
+      "title": "Good Reasoning Makes Good Demonstrations: Implicit Reasoning Quality Supervision via In-Context Reinforcement Learning",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) improves reasoning in large language models but treats all correct solutions equally, potentially reinforcing flawed traces that get correct answers by chance. We observe that better reasoning are better teachers: high-quality solutions serve as more effective demonstrations than low-quality ones. We term this teaching ability Demonstration Utility, and show that the policy model's own in-context learning ability provides an efficient way to measure it, yielding a quality signal termed Evidence Gain. To employ this signal during training, we introduce In-Context RLVR. By Bayesian analysis, we show that this objective implicitly reweights rewards by Evidence Gain, assigning higher weights to high-quality traces and lower weights to low-quality ones, without requiring costly computation or external evaluators. Experiments on mathematical benchmarks show improvements in both accuracy and reasoning quality over standard RLVR.",
+      "authors": [
+        "Tiehua Mei",
+        "Minxuan Lv",
+        "Leiyu Pan",
+        "Zhenpeng Su",
+        "Hongru Hou",
+        "Hengrui Chen",
+        "Ao Xu",
+        "Deqing Yang"
+      ],
+      "url": "https://arxiv.org/abs/2603.09803",
+      "published": "2026-03-10T15:33:07+00:00",
+      "updated": "2026-03-10T15:33:07+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09909",
+      "title": "MedMASLab: A Unified Orchestration Framework for Benchmarking Multimodal Medical Multi-Agent Systems",
+      "abstract": "While Multi-Agent Systems (MAS) show potential for complex clinical decision support, the field remains hindered by architectural fragmentation and the lack of standardized multimodal integration. Current medical MAS research suffers from non-uniform data ingestion pipelines, inconsistent visual-reasoning evaluation, and a lack of cross-specialty benchmarking. To address these challenges, we present MedMASLab, a unified framework and benchmarking platform for multimodal medical multi-agent systems. MedMASLab introduces: (1) A standardized multimodal agent communication protocol that enables seamless integration of 11 heterogeneous MAS architectures across 24 medical modalities. (2) An automated clinical reasoning evaluator, a zero-shot semantic evaluation paradigm that overcomes the limitations of lexical string-matching by leveraging large vision-language models to verify diagnostic logic and visual grounding. (3) The most extensive benchmark to date, spanning 11 organ systems and 473 diseases, standardizing data from 11 clinical benchmarks. Our systematic evaluation reveals a critical domain-specific performance gap: while MAS improves reasoning depth, current architectures exhibit significant fragility when transitioning between specialized medical sub-domains. We provide a rigorous ablation of interaction mechanisms and cost-performance trade-offs, establishing a new technical baseline for future autonomous clinical systems. The source code and data is publicly available at: https://github.com/NUS-Project/MedMASLab/",
+      "authors": [
+        "Yunhang Qian",
+        "Xiaobin Hu",
+        "Jiaquan Yu",
+        "Siyang Xin",
+        "Xiaokun Chen",
+        "Jiangning Zhang",
+        "Peng-Tao Jiang",
+        "Jiawei Liu",
+        "Hongwei Bran Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.09909",
+      "published": "2026-03-10T17:03:11+00:00",
+      "updated": "2026-03-10T17:03:11+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09853",
+      "title": "SCENEBench: An Audio Understanding Benchmark Grounded in Assistive and Industrial Use Cases",
+      "abstract": "Advances in large language models (LLMs) have enabled significant capabilities in audio processing, resulting in state-of-the-art models now known as Large Audio Language Models (LALMs). However, minimal work has been done to measure audio understanding beyond automatic speech recognition (ASR). This paper closes that gap by proposing a benchmark suite, SCENEBench (Spatial, Cross-lingual, Environmental, Non-speech Evaluation), that targets a broad form of audio comprehension across four real-world categories: background sound understanding, noise localization, cross-linguistic speech understanding, and vocal characterizer recognition. These four categories are selected based on understudied needs from accessibility technology and industrial noise monitoring. In addition to performance, we also measure model latency. The purpose of this benchmark suite is to assess audio beyond just what words are said - rather, how they are said and the non-speech components of the audio. Because our audio samples are synthetically constructed (e.g., by overlaying two natural audio samples), we further validate our benchmark against 20 natural audio items per task, sub-sampled from existing datasets to match our task criteria, to assess ecological validity. We assess five state-of-the-art LALMs and find critical gaps: performance varies across tasks, with some tasks performing below random chance and others achieving high accuracy. These results provide direction for targeted improvements in model capabilities.",
+      "authors": [
+        "Laya Iyer",
+        "Angelina Wang",
+        "Sanmi Koyejo"
+      ],
+      "url": "https://arxiv.org/abs/2603.09853",
+      "published": "2026-03-10T16:15:12+00:00",
+      "updated": "2026-03-10T16:15:12+00:00",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09961",
+      "title": "BEACON: Language-Conditioned Navigation Affordance Prediction under Occlusion",
+      "abstract": "Language-conditioned local navigation requires a robot to infer a nearby traversable target location from its current observation and an open-vocabulary, relational instruction. Existing vision-language spatial grounding methods usually rely on vision-language models (VLMs) to reason in image space, producing 2D predictions tied to visible pixels. As a result, they struggle to infer target locations in occluded regions, typically caused by furniture or moving humans. To address this issue, we propose BEACON, which predicts an ego-centric Bird's-Eye View (BEV) affordance heatmap over a bounded local region including occluded areas. Given an instruction and surround-view RGB-D observations from four directions around the robot, BEACON predicts the BEV heatmap by injecting spatial cues into a VLM and fusing the VLM's output with depth-derived BEV features. Using an occlusion-aware dataset built in the Habitat simulator, we conduct detailed experimental analysis to validate both our BEV space formulation and the design choices of each module. Our method improves the accuracy averaged across geodesic thresholds by 22.74 percentage points over the state-of-the-art image-space baseline on the validation subset with occluded target locations. Our project page is: https://xin-yu-gao.github.io/beacon.",
+      "authors": [
+        "Xinyu Gao",
+        "Gang Chen",
+        "Javier Alonso-Mora"
+      ],
+      "url": "https://arxiv.org/abs/2603.09961",
+      "published": "2026-03-10T17:56:16+00:00",
+      "updated": "2026-03-10T17:56:16+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09859",
+      "title": "A Graph-Based Approach to Spectrum Demand Prediction Using Hierarchical Attention Networks",
+      "abstract": "The surge in wireless connectivity demand, coupled with the finite nature of spectrum resources, compels the development of efficient spectrum management approaches. Spectrum sharing presents a promising avenue, although it demands precise characterization of spectrum demand for informed policy-making. This paper introduces HR-GAT, a hierarchical resolution graph attention network model, designed to predict spectrum demand using geospatial data. HR-GAT adeptly handles complex spatial demand patterns and resolves issues of spatial autocorrelation that usually challenge standard machine learning models, often resulting in poor generalization. Tested across five major Canadian cities, HR-GAT improves predictive accuracy of spectrum demand by 21% over eight baseline models, underscoring its superior performance and reliability.",
+      "authors": [
+        "Mohamad Alkadamani",
+        "Halim Yanikomeroglu",
+        "Amir Ghasemi"
+      ],
+      "url": "https://arxiv.org/abs/2603.09859",
+      "published": "2026-03-10T16:20:51+00:00",
+      "updated": "2026-03-10T16:20:51+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.NI",
+        "eess.SY"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Graph Neural Networks",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09872",
+      "title": "N-gram-like Language Models Predict Reading Time Best",
+      "abstract": "Recent work has found that contemporary language models such as transformers can become so good at next-word prediction that the probabilities they calculate become worse for predicting reading time. In this paper, we propose that this can be explained by reading time being sensitive to simple n-gram statistics rather than the more complex statistics learned by state-of-the-art transformer language models. We demonstrate that the neural language models whose predictions are most correlated with n-gram probability are also those that calculate probabilities that are the most correlated with eye-tracking-based metrics of reading time on naturalistic text.",
+      "authors": [
+        "James A. Michaelov",
+        "Roger P. Levy"
+      ],
+      "url": "https://arxiv.org/abs/2603.09872",
+      "published": "2026-03-10T16:35:41+00:00",
+      "updated": "2026-03-10T16:35:41+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09771",
+      "title": "Ego: Embedding-Guided Personalization of Vision-Language Models",
+      "abstract": "AI assistants that support humans in daily life are becoming increasingly feasible, driven by the rapid advancements in multimodal language models. A key challenge lies in overcoming the generic nature of these models to deliver personalized experiences. Existing approaches to personalizing large vision language models often rely on additional training stages, which limit generality and scalability, or on engineered pipelines with external pre-trained modules, which hinder deployment efficiency. In this work, we propose an efficient personalization method that leverages the model's inherent ability to capture personalized concepts. Specifically, we extract visual tokens that predominantly represent the target concept by utilizing the model's internal attention mechanisms. These tokens serve as a memory of that specific concept, enabling the model to recall and describe it when it appears in test images. We conduct a comprehensive and unified evaluation of our approach and SOTA methods across various personalization settings including single-concept, multi-concept, and video personalization, demonstrating strong performance gains with minimal personalization overhead.",
+      "authors": [
+        "Soroush Seifi",
+        "Simon Gardier",
+        "Vaggelis Dorovatas",
+        "Daniel Olmeda Reino",
+        "Rahaf Aljundi"
+      ],
+      "url": "https://arxiv.org/abs/2603.09771",
+      "published": "2026-03-10T15:10:41+00:00",
+      "updated": "2026-03-10T15:10:41+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09972",
+      "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
+      "abstract": "A central idea in mechanistic interpretability is that neural networks represent more features than they have dimensions, arranging them in superposition to form an over-complete basis. This framing has been influential, motivating dictionary learning approaches such as sparse autoencoders. However, superposition has mostly been studied in idealized settings where features are sparse and uncorrelated. In these settings, superposition is typically understood as introducing interference that must be minimized geometrically and filtered out by non-linearities such as ReLUs, yielding local structures like regular polytopes. We show that this account is incomplete for realistic data by introducing Bag-of-Words Superposition (BOWS), a controlled setting to encode binary bag-of-words representations of internet text in superposition. Using BOWS, we find that when features are correlated, interference can be constructive rather than just noise to be filtered out. This is achieved by arranging features according to their co-activation patterns, making interference between active features constructive, while still using ReLUs to avoid false positives. We show that this kind of arrangement is more prevalent in models trained with weight decay and naturally gives rise to semantic clusters and cyclical structures which have been observed in real language models yet were not explained by the standard picture of superposition. Code for this paper can be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.",
+      "authors": [
+        "Lucas Prieto",
+        "Edward Stevinson",
+        "Melih Barsbey",
+        "Tolga Birdal",
+        "Pedro A. M. Mediano"
+      ],
+      "url": "https://arxiv.org/abs/2603.09972",
+      "published": "2026-03-10T17:59:02+00:00",
+      "updated": "2026-03-10T17:59:02+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09789",
+      "title": "A Hybrid Quantum-Classical Framework for Financial Volatility Forecasting Based on Quantum Circuit Born Machines",
+      "abstract": "Accurate forecasting of financial market volatility is crucial for risk management, option pricing, and portfolio optimization. Traditional econometric models and classical machine learning methods face challenges in handling the inherent non-linear and non-stationary characteristics of financial time series. In recent years, the rapid development of quantum computing has provided a new paradigm for solving complex optimization and sampling problems. This paper proposes a novel hybrid quantum-classical computing framework aimed at combining the powerful representation capabilities of classical neural networks with the unique advantages of quantum models. For the specific task of financial market volatility forecasting, we designed and implemented a hybrid model based on this framework, which combines a Long Short-Term Memory (LSTM) network with a Quantum Circuit Born Machine (QCBM). The LSTM is responsible for extracting complex dynamic features from historical time series data, while the QCBM serves as a learnable prior module, providing the model with a high-quality prior distribution to guide the forecasting process. We evaluated the model on two real financial datasets consisting of 5-minute high-frequency data from the Shanghai Stock Exchange (SSE) Composite Index and CSI 300 Index. Experimental results show that, compared to a purely classical LSTM baseline model, our hybrid quantum-classical model demonstrates significant advantages across multiple key metrics, including Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and QLIKE loss, proving the great potential of quantum computing in enhancing the capabilities of financial forecasting models. More broadly, the proposed hybrid framework offers a flexible architecture that may be adapted to other machine learning tasks involving high-dimensional, complex, or non-linear data distributions.",
+      "authors": [
+        "Yixiong Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.09789",
+      "published": "2026-03-10T15:23:41+00:00",
+      "updated": "2026-03-10T15:23:41+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "quant-ph"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.06731",
+      "title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks",
+      "abstract": "We present the design and implementation of PolyBlocks, a modular and reusable MLIR-based compiler infrastructure for AI programming frameworks and AI chips. PolyBlocks is based on pass pipelines that compose transformations on loop nests and SSA, primarily relying on lightweight affine access analysis; the transformations are stitched together in specialized ways to realize high-performance code automatically by the use of analytical cost models and heuristics. The optimizations in these passes include multi-level tiling, fusion, on-chip scratchpad usage, mapping matmuls and convolutions to matrix units, fusing the attention layer, and several other transformations for parallelism and locality. They have been developed in a way that makes it easy to build PolyBlocks-based compilers to target new chips, reusing much of the infrastructure. PolyBlocks' design and architecture enable fully automatic code generation from high-level frameworks to low-level target-specific intrinsics.   Experimental results from evaluating PolyBlocks-powered just-in-time compilation for PyTorch and JAX targeting NVIDIA GPUs show that it is able to match or outperform Torch Inductor and XLA in several cases, although the latter rely on a combination of vendor libraries and code generation. For individual operators like matmuls and convolutions, PolyBlocks-generated code is competitive with the best vendor-tuned libraries or hand-written kernels.",
+      "authors": [
+        "Uday Bondhugula",
+        "Akshay Baviskar",
+        "Navdeep Katel",
+        "Vimal Patel",
+        "Anoop JS",
+        "Arnab Dutta"
+      ],
+      "url": "https://arxiv.org/abs/2603.06731",
+      "published": "2026-03-06T03:45:50+00:00",
+      "updated": "2026-03-10T17:20:46+00:00",
+      "categories": [
+        "cs.PL",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09940",
+      "title": "SignalMC-MED: A Multimodal Benchmark for Evaluating Biosignal Foundation Models on Single-Lead ECG and PPG",
+      "abstract": "Recent biosignal foundation models (FMs) have demonstrated promising performance across diverse clinical prediction tasks, yet systematic evaluation on long-duration multimodal data remains limited. We introduce SignalMC-MED, a benchmark for evaluating biosignal FMs on synchronized single-lead electrocardiogram (ECG) and photoplethysmogram (PPG) data. Derived from the MC-MED dataset, SignalMC-MED comprises 22,256 visits with 10-minute overlapping ECG and PPG signals, and includes 20 clinically relevant tasks spanning prediction of demographics, emergency department disposition, laboratory value regression, and detection of prior ICD-10 diagnoses. Using this benchmark, we perform a systematic evaluation of representative time-series and biosignal FMs across ECG-only, PPG-only, and ECG + PPG settings. We find that domain-specific biosignal FMs consistently outperform general time-series models, and that multimodal ECG + PPG fusion yields robust improvements over unimodal inputs. Moreover, using the full 10-minute signal consistently outperforms shorter segments, and larger model variants do not reliably outperform smaller ones. Hand-crafted ECG domain features provide a strong baseline and offer complementary value when combined with learned FM representations. Together, these results establish SignalMC-MED as a standardized benchmark and provide practical guidance for evaluating and deploying biosignal FMs.",
+      "authors": [
+        "Fredrik K. Gustafsson",
+        "Xiao Gu",
+        "Mattia Carletti",
+        "Patitapaban Palo",
+        "David W. Eyre",
+        "David A. Clifton"
+      ],
+      "url": "https://arxiv.org/abs/2603.09940",
+      "published": "2026-03-10T17:32:28+00:00",
+      "updated": "2026-03-10T17:32:28+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09786",
+      "title": "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth",
+      "abstract": "Large language models (LLMs) tend to externalize their reasoning in their chain of thought, making the chain of thought a good target for monitoring. This is partially an inherent feature of the Transformer architecture: sufficiently long serial cognition must pass through the chain of thought (Korbak et al., 2025). We formalize this argument through the notion of opaque serial depth, given by the length of the longest computation that can be done without the use of interpretable intermediate steps like chain of thought. Given this formalization, we compute numeric upper bounds on the opaque serial depth of Gemma 3 models, as well as asymptotic results for additional architectures beyond standard LLMs. We also open-source an automated method that can calculate upper bounds on the opaque serial depth of arbitrary neural networks, and use it to demonstrate that Mixture-of-Experts models likely have lower depth than dense models. Overall, our results suggest that opaque serial depth is a useful tool for understanding the potential for models to do significant reasoning that is not externalized.",
+      "authors": [
+        "Jonah Brown-Cohen",
+        "David Lindner",
+        "Rohin Shah"
+      ],
+      "url": "https://arxiv.org/abs/2603.09786",
+      "published": "2026-03-10T15:21:42+00:00",
+      "updated": "2026-03-10T15:21:42+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09785",
+      "title": "EPIC-EuroParl-UdS: Information-Theoretic Perspectives on Translation and Interpreting",
+      "abstract": "This paper introduces an updated and combined version of the bidirectional English-German EPIC-UdS (spoken) and EuroParl-UdS (written) corpora containing original European Parliament speeches as well as their translations and interpretations. The new version corrects metadata and text errors identified through previous use, refines the content, updates linguistic annotations, and adds new layers, including word alignment and word-level surprisal indices. The combined resource is designed to support research using information-theoretic approaches to language variation, particularly studies comparing written and spoken modes, and examining disfluencies in speech, as well as traditional translationese studies, including parallel (source vs. target) and comparable (original vs. translated) analyses. The paper outlines the updates introduced in this release, summarises previous results based on the corpus, and presents a new illustrative study. The study validates the integrity of the rebuilt spoken data and evaluates probabilistic measures derived from base and fine-tuned GPT-2 and machine translation models on the task of filler particles prediction in interpreting.",
+      "authors": [
+        "Maria Kunilovskaya",
+        "Christina Pollkläsener"
+      ],
+      "url": "https://arxiv.org/abs/2603.09785",
+      "published": "2026-03-10T15:20:40+00:00",
+      "updated": "2026-03-10T15:20:40+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09774",
+      "title": "World2Mind: Cognition Toolkit for Allocentric Spatial Reasoning in Foundation Models",
+      "abstract": "Achieving robust spatial reasoning remains a fundamental challenge for current Multimodal Foundation Models (MFMs). Existing methods either overfit statistical shortcuts via 3D grounding data or remain confined to 2D visual perception, limiting both spatial reasoning accuracy and generalization in unseen scenarios. Inspired by the spatial cognitive mapping mechanisms of biological intelligence, we propose World2Mind, a training-free spatial intelligence toolkit. At its core, World2Mind leverages 3D reconstruction and instance segmentation models to construct structured spatial cognitive maps, empowering MFMs to proactively acquire targeted spatial knowledge regarding interested landmarks and routes of interest. To provide robust geometric-topological priors, World2Mind synthesizes an Allocentric-Spatial Tree (AST) that uses elliptical parameters to model the top-down layout of landmarks accurately. To mitigate the inherent inaccuracies of 3D reconstruction, we introduce a three-stage reasoning chain comprising tool invocation assessment, modality-decoupled cue collection, and geometry-semantics interwoven reasoning. Extensive experiments demonstrate that World2Mind boosts the performance of frontier models, such as GPT-5.2, by 5%~18%. Astonishingly, relying solely on the AST-structured text, purely text-only foundation models can perform complex 3D spatial reasoning, achieving performance approaching that of advanced multimodal models.",
+      "authors": [
+        "Shouwei Ruan",
+        "Bin Wang",
+        "Zhenyu Wu",
+        "Qihui Zhu",
+        "Yuxiang Zhang",
+        "Hang Su",
+        "Yubin Wang"
+      ],
+      "url": "https://arxiv.org/abs/2603.09774",
+      "published": "2026-03-10T15:12:14+00:00",
+      "updated": "2026-03-10T15:12:14+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09778",
+      "title": "First Estimation of Model Parameters for Neutrino-Induced Nucleon Knockout Using Simulation-Based Inference",
+      "abstract": "To enable an accurate determination of oscillation parameters, accelerator-based neutrino experiments require detailed simulations of nuclear interaction physics in the GeV regime. While substantial effort from both theory and experiment is currently being invested to improve the fidelity of these simulations, their present deficiencies typically oblige experimental collaborations to resort to empirical tuning of simulation model parameters. As the precision requirements of the field continue to become more stringent, machine learning techniques may provide a powerful means of handling corresponding growth in the complexity of future neutrino interaction model tuning exercises. To study the suitability of simulation-based inference (SBI) for this physics application, in this paper we revisit a tuned configuration of the GENIE neutrino event generator that was originally developed by the MicroBooNE collaboration. Despite closely reproducing the adopted values of four physics parameters when confronted with the tuned cross-section predictions as input, we find that our trained SBI algorithm prefers modestly different values (within MicroBooNE's assigned uncertainties) and achieves slightly better goodness-of-fit when inference is run on the experimental data set originally used by MicroBooNE. We also find that our trained algorithm can create a fair approximation of an alternative neutrino scattering simulation, NuWro, that shares only a subset of its physics model parameters with GENIE.",
+      "authors": [
+        "Karla Tame-Narvaez",
+        "Steven Gardiner",
+        "Aleksandra Ćiprijanović",
+        "Giuseppe Cerati"
+      ],
+      "url": "https://arxiv.org/abs/2603.09778",
+      "published": "2026-03-10T15:14:40+00:00",
+      "updated": "2026-03-10T15:14:40+00:00",
+      "categories": [
+        "hep-ph",
+        "cs.AI",
+        "hep-ex",
+        "physics.comp-ph"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
       "id": "2603.09955",
       "title": "From Semantics to Pixels: Coarse-to-Fine Masked Autoencoders for Hierarchical Visual Understanding",
       "abstract": "Self-supervised visual pre-training methods face an inherent tension: contrastive learning (CL) captures global semantics but loses fine-grained detail, while masked image modeling (MIM) preserves local textures but suffers from \"attention drift\" due to semantically-agnostic random masking. We propose C2FMAE, a coarse-to-fine masked autoencoder that resolves this tension by explicitly learning hierarchical visual representations across three data granularities: semantic masks (scene-level), instance masks (object-level), and RGB images (pixel-level). Two synergistic innovations enforce a strict top-down learning principle. First, a cascaded decoder sequentially reconstructs from scene semantics to object instances to pixel details, establishing explicit cross-granularity dependencies that parallel decoders cannot capture. Second, a progressive masking curriculum dynamically shifts the training focus from semantic-guided to instance-guided and finally to random masking, creating a structured learning path from global context to local features. To support this framework, we construct a large-scale multi-granular dataset with high-quality pseudo-labels for all 1.28M ImageNet-1K images. Extensive experiments show that C2FMAE achieves significant performance gains on image classification, object detection, and semantic segmentation, validating the effectiveness of our hierarchical design in learning more robust and generalizable representations.",
@@ -881,6 +805,82 @@
       ],
       "matched_topics": [
         "Neural Network Training Methods"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09892",
+      "title": "MSSR: Memory-Aware Adaptive Replay for Continual LLM Fine-Tuning",
+      "abstract": "Continual fine-tuning of large language models (LLMs) is becoming increasingly crucial as these models are deployed in dynamic environments where tasks and data distributions evolve over time. While strong adaptability enables rapid acquisition of new knowledge, it also exposes LLMs to catastrophic forgetting, where previously learned skills degrade during sequential training. Existing replay-based strategies, such as fixed interleaved replay, accuracy-supervised, and loss-driven scheduling, remain limited: some depend on heuristic rules and provide only partial mitigation of forgetting, while others improve performance but incur substantial computational overhead. Motivated by retention dynamics under sequential fine-tuning, we propose Memory-Inspired Sampler and Scheduler Replay (MSSR), an experience replay framework that estimates sample-level memory strength and schedules rehearsal at adaptive intervals to mitigate catastrophic forgetting while maintaining fast adaptation. Extensive experiments across three backbone models and 11 sequential tasks show that MSSR consistently outperforms state-of-the-art replay baselines, with particularly strong gains on reasoning-intensive and multiple-choice benchmarks.",
+      "authors": [
+        "Yiyang Lu",
+        "Yu He",
+        "Jianlong Chen",
+        "Hongyuan Zha"
+      ],
+      "url": "https://arxiv.org/abs/2603.09892",
+      "published": "2026-03-10T16:49:44+00:00",
+      "updated": "2026-03-10T16:49:44+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09865",
+      "title": "GAST: Gradient-aligned Sparse Tuning of Large Language Models with Data-layer Selection",
+      "abstract": "Parameter-Efficient Fine-Tuning (PEFT) has become a key strategy for adapting large language models, with recent advances in sparse tuning reducing overhead by selectively updating key parameters or subsets of data. Existing approaches generally focus on two distinct paradigms: layer-selective methods aiming to fine-tune critical layers to minimize computational load, and data-selective methods aiming to select effective training subsets to boost training. However, current methods typically overlook the fact that different data points contribute varying degrees to distinct model layers, and they often discard potentially valuable information from data perceived as of low quality. To address these limitations, we propose Gradient-aligned Sparse Tuning (GAST), an innovative method that simultaneously performs selective fine-tuning at both data and layer dimensions as integral components of a unified optimization strategy. GAST specifically targets redundancy in information by employing a layer-sparse strategy that adaptively selects the most impactful data points for each layer, providing a more comprehensive and sophisticated solution than approaches restricted to a single dimension. Experiments demonstrate that GAST consistently outperforms baseline methods, establishing a promising direction for future research in PEFT strategies.",
+      "authors": [
+        "Kai Yao",
+        "Zhenghan Song",
+        "Kaixin Wu",
+        "Mingjie Zhong",
+        "Danzhao Cheng",
+        "Zhaorui Tan",
+        "Yixin Ji",
+        "Penglei Gao"
+      ],
+      "url": "https://arxiv.org/abs/2603.09865",
+      "published": "2026-03-10T16:28:48+00:00",
+      "updated": "2026-03-10T16:28:48+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0
+    },
+    {
+      "id": "2603.09827",
+      "title": "MA-EgoQA: Question Answering over Egocentric Videos from Multiple Embodied Agents",
+      "abstract": "As embodied models become powerful, humans will collaborate with multiple embodied AI agents at their workplace or home in the future. To ensure better communication between human users and the multi-agent system, it is crucial to interpret incoming information from agents in parallel and refer to the appropriate context for each query. Existing challenges include effectively compressing and communicating high volumes of individual sensory inputs in the form of video and correctly aggregating multiple egocentric videos to construct system-level memory. In this work, we first formally define a novel problem of understanding multiple long-horizon egocentric videos simultaneously collected from embodied agents. To facilitate research in this direction, we introduce MultiAgent-EgoQA (MA-EgoQA), a benchmark designed to systemically evaluate existing models in our scenario. MA-EgoQA provides 1.7k questions unique to multiple egocentric streams, spanning five categories: social interaction, task coordination, theory-of-mind, temporal reasoning, and environmental interaction. We further propose a simple baseline model for MA-EgoQA named EgoMAS, which leverages shared memory across embodied agents and agent-wise dynamic retrieval. Through comprehensive evaluation across diverse baselines and EgoMAS on MA-EgoQA, we find that current approaches are unable to effectively handle multiple egocentric streams, highlighting the need for future advances in system-level understanding across the agents. The code and benchmark are available at https://ma-egoqa.github.io.",
+      "authors": [
+        "Kangsan Kim",
+        "Yanlai Yang",
+        "Suji Kim",
+        "Woongyeong Yeo",
+        "Youngwan Lee",
+        "Mengye Ren",
+        "Sung Ju Hwang"
+      ],
+      "url": "https://arxiv.org/abs/2603.09827",
+      "published": "2026-03-10T15:48:35+00:00",
+      "updated": "2026-03-10T15:48:35+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
       ],
       "match_method": "keyword",
       "best_score": 0.0
