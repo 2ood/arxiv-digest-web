@@ -3,6 +3,167 @@
   "fetched_at": "2026-03-17T11:24:45.965186+09:00",
   "papers": [
     {
+      "id": "2603.16943",
+      "title": "KGS-GCN: Enhancing Sparse Skeleton Sensing via Kinematics-Driven Gaussian Splatting and Probabilistic Topology for Action Recognition",
+      "abstract": "Skeleton-based action recognition is widely utilized in sensor systems including human-computer interaction and intelligent surveillance. Nevertheless, current sensor devices typically generate sparse skeleton data as discrete coordinates, which inevitably discards fine-grained spatiotemporal details during highly dynamic movements. Moreover, the rigid constraints of predefined physical sensor topologies hinder the modeling of latent long-range dependencies. To overcome these limitations, we propose KGS-GCN, a graph convolutional network that integrates kinematics-driven Gaussian splatting with probabilistic topology. Our framework explicitly addresses the challenges of sensor data sparsity and topological rigidity by transforming discrete joints into continuous generative representations. Firstly, a kinematics-driven Gaussian splatting module is designed to dynamically construct anisotropic covariance matrices using instantaneous joint velocity vectors. This module enhances visual representation by rendering sparse skeleton sequences into multi-view continuous heatmaps rich in spatiotemporal semantics. Secondly, to transcend the limitations of fixed physical connections, a probabilistic topology construction method is proposed. This approach generates an adaptive prior adjacency matrix by quantifying statistical correlations via the Bhattacharyya distance between joint Gaussian distributions. Ultimately, the GCN backbone is adaptively modulated by the rendered visual features via a visual context gating mechanism. Empirical results demonstrate that KGS-GCN significantly enhances the modeling of complex spatiotemporal dynamics. By addressing the inherent limitations of sparse inputs, our framework offers a robust solution for processing low-fidelity sensor data. This approach establishes a practical pathway for improving perceptual reliability in real-world sensing applications.",
+      "authors": [
+        "Yuhan Chen",
+        "Yicui Shi",
+        "Guofa Li",
+        "Liping Zhang",
+        "Jie Li",
+        "Jiaxin Gao",
+        "Wenbo Chu"
+      ],
+      "url": "https://arxiv.org/abs/2603.16943",
+      "published": "2026-03-16T07:47:33+00:00",
+      "updated": "2026-03-16T07:47:33+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16947",
+      "title": "EmergeNav: Structured Embodied Inference for Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+      "abstract": "Zero-shot vision-and-language navigation in continuous environments (VLN-CE) remains challenging for modern vision-language models (VLMs). Although these models encode useful semantic priors, their open-ended reasoning does not directly translate into stable long-horizon embodied execution. We argue that the key bottleneck is not missing knowledge alone, but missing an execution structure for organizing instruction following, perceptual grounding, temporal progress, and stage verification. We propose EmergeNav, a zero-shot framework that formulates continuous VLN as structured embodied inference. EmergeNav combines a Plan--Solve--Transition hierarchy for stage-structured execution, GIPE for goal-conditioned perceptual extraction, contrastive dual-memory reasoning for progress grounding, and role-separated Dual-FOV sensing for time-aligned local control and boundary verification. On VLN-CE, EmergeNav achieves strong zero-shot performance using only open-source VLM backbones and no task-specific training, explicit maps, graph search, or waypoint predictors, reaching 30.00 SR with Qwen3-VL-8B and 37.00 SR with Qwen3-VL-32B. These results suggest that explicit execution structure is a key ingredient for turning VLM priors into stable embodied navigation behavior.",
+      "authors": [
+        "Kun Luo",
+        "Xiaoguang Ma"
+      ],
+      "url": "https://arxiv.org/abs/2603.16947",
+      "published": "2026-03-16T14:07:51+00:00",
+      "updated": "2026-03-16T14:07:51+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16950",
+      "title": "Kriging via variably scaled kernels",
+      "abstract": "Classical Gaussian processes and Kriging models are commonly based on stationary kernels, whereby correlations between observations depend exclusively on the relative distance between scattered data. While this assumption ensures analytical tractability, it limits the ability of Gaussian processes to represent heterogeneous correlation structures. In this work, we investigate variably scaled kernels as an effective tool for constructing non-stationary Gaussian processes by explicitly modifying the correlation structure of the data. Through a scaling function, variably scaled kernels alter the correlations between data and enable the modeling of targets exhibiting abrupt changes or discontinuities. We analyse the resulting predictive uncertainty via the variably scaled kernel power function and clarify the relationship between variably scaled kernels-based constructions and classical non-stationary kernels. Numerical experiments demonstrate that variably scaled kernels-based Gaussian processes yield improved reconstruction accuracy and provide uncertainty estimates that reflect the underlying structure of the data",
+      "authors": [
+        "Gianluca Audone",
+        "Francesco Marchetti",
+        "Emma Perracchione",
+        "Milvia Rossini"
+      ],
+      "url": "https://arxiv.org/abs/2603.16950",
+      "published": "2026-03-16T19:57:42+00:00",
+      "updated": "2026-03-16T19:57:42+00:00",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16952",
+      "title": "Embodied Foundation Models at the Edge: A Survey of Deployment Constraints and Mitigation Strategies",
+      "abstract": "Deploying foundation models in embodied edge systems is fundamentally a systems problem, not just a problem of model compression. Real-time control must operate within strict size, weight, and power constraints, where memory traffic, compute latency, timing variability, and safety margins interact directly. The Deployment Gauntlet organizes these constraints into eight coupled barriers that determine whether embodied foundation models can run reliably in practice. Across representative edge workloads, autoregressive Vision-Language-Action policies are constrained primarily by memory bandwidth, whereas diffusion-based controllers are limited more by compute latency and sustained execution cost. Reliable deployment therefore depends on system-level co-design across memory, scheduling, communication, and model architecture, including decompositions that separate fast control from slower semantic reasoning.",
+      "authors": [
+        "Utkarsh Grover",
+        "Ravi Ranjan",
+        "Mingyang Mao",
+        "Trung Tien Dong",
+        "Satvik Praveen",
+        "Zhenqi Wu",
+        "J. Morris Chang",
+        "Tinoosh Mohsenin",
+        "Yi Sheng",
+        "Agoritsa Polyzou",
+        "Eiman Kanjo",
+        "Xiaomin Lin"
+      ],
+      "url": "https://arxiv.org/abs/2603.16952",
+      "published": "2026-03-16T21:27:03+00:00",
+      "updated": "2026-03-16T21:27:03+00:00",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16951",
+      "title": "Minimum-Action Learning: Energy-Constrained Symbolic Model Selection for Physical Law Identification from Noisy Data",
+      "abstract": "Identifying physical laws from noisy observational data is a central challenge in scientific machine learning. We present Minimum-Action Learning (MAL), a framework that selects symbolic force laws from a pre-specified basis library by minimizing a Triple-Action functional combining trajectory reconstruction, architectural sparsity, and energy-conservation enforcement. A wide-stencil acceleration-matching technique reduces noise variance by 10,000x, transforming an intractable problem (SNR ~0.02) into a learnable one (SNR ~1.6); this preprocessing is the critical enabler shared by all methods tested, including SINDy variants. On two benchmarks -- Kepler gravity and Hooke's law -- MAL recovers the correct force law with Kepler exponent p = 3.01 +/- 0.01 at ~0.07 kWh (40% reduction vs. prediction-error-only baselines). The raw correct-basis rate is 40% for Kepler and 90% for Hooke; an energy-conservation-based criterion discriminates the true force law in all cases, yielding 100% pipeline-level identification. Basis library sensitivity experiments show that near-confounders degrade selection (20% with added r^{-2.5} and r^{-1.5}), while distant additions are harmless, and the conservation diagnostic remains informative even when the correct basis is absent. Direct comparison with noise-robust SINDy variants, Hamiltonian Neural Networks, and Lagrangian Neural Networks confirms MAL's distinct niche: interpretable, energy-constrained model selection that combines symbolic basis identification with dynamical rollout validation.",
+      "authors": [
+        "Martin G. Frasch"
+      ],
+      "url": "https://arxiv.org/abs/2603.16951",
+      "published": "2026-03-16T20:45:49+00:00",
+      "updated": "2026-03-16T20:45:49+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16944",
+      "title": "Omni IIE Bench: Benchmarking the Practical Capabilities of Image Editing Models",
+      "abstract": "While Instruction-based Image Editing (IIE) has achieved significant progress, existing benchmarks pursue task breadth via mixed evaluations. This paradigm obscures a critical failure mode crucial in professional applications: the inconsistent performance of models across tasks of varying semantic scales. To address this gap, we introduce Omni IIE Bench, a high-quality, human-annotated benchmark specifically designed to diagnose the editing consistency of IIE models in practical application scenarios. Omni IIE Bench features an innovative dual-track diagnostic design: (1) Single-turn Consistency, comprising shared-context task pairs of attribute modification and entity replacement; and (2) Multi-turn Coordination, involving continuous dialogue tasks that traverse semantic scales. The benchmark is constructed via an exceptionally rigorous multi-stage human filtering process, incorporating a quality standard enforced by computer vision graduate students and an industry relevance review conducted by professional designers. We perform a comprehensive evaluation of 8 mainstream IIE models using Omni IIE Bench. Our analysis quantifies, for the first time, a prevalent performance gap: nearly all models exhibit a significant performance degradation when transitioning from low-semantic-scale to high-semantic-scale tasks. Omni IIE Bench provides critical diagnostic tools and insights for the development of next-generation, more reliable, and stable IIE models.",
+      "authors": [
+        "Yujia Yang",
+        "Yuanxiang Wang",
+        "Zhenyu Guan",
+        "Tiankun Yang",
+        "Chenxi Bao",
+        "Haopeng Jin",
+        "Jinwen Luo",
+        "Xinyu Zuo",
+        "Lisheng Duan",
+        "Haijin Liang",
+        "Jin Ma",
+        "Xinming Wang",
+        "Ruiwen Tao",
+        "Hongzhu Yi"
+      ],
+      "url": "https://arxiv.org/abs/2603.16944",
+      "published": "2026-03-16T08:07:06+00:00",
+      "updated": "2026-03-16T08:07:06+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
       "id": "2603.15921",
       "title": "VIBEPASS: Can Vibe Coders Really Pass the Vibe Check?",
       "abstract": "As Large Language Models shift the programming toward human-guided ''vibe coding'', agentic coding tools increasingly rely on models to self-diagnose and repair their own subtle faults -- a capability central to autonomous software engineering yet never systematically evaluated. We present \\name{}, the first empirical decomposition that jointly evaluates two coupled tasks: \\emph{Fault-Triggering Test Generation (FT-Test)} constructing a discriminative witness that exposes a latent bug, and \\emph{Fault-targeted Program Repair (FPR)}, repairing it under varying diagnostic conditions. \\name{} pairs competitive programming problems with LLM-generated solutions that pass partial test suites but fail on semantic edge cases, enabling controlled identification of where the diagnostic chain breaks down.   Evaluating 12 frontier LLMs, we find that fault-targeted reasoning does not scale with general coding ability. Models produce syntactically valid test inputs at near-ceiling rates yet collapse on discriminative generation, with fault hypothesis generation -- not output validation -- as the dominant bottleneck. Test-guided repair reveals a complementary insight: when self-generated tests successfully witness a fault, the resulting repair matches or outperforms repair guided by externally provided tests, but tests that fail to witness the fault actively degrade repair below unguided baselines. Together, these results reframe the challenge of autonomous debugging: the binding bottleneck is not code synthesis or test validity but fault-target reasoning, a capability that remains deficient across all frontier models. As Large Language Models shift the programming toward human-guided ''vibe coding'', agentic coding tools increasingly rely on models to self-diagnose and repair their own subtle faults -- a capability central to autonomous software engineering yet never systematically evaluated.",
@@ -10376,7 +10537,129 @@
       "match_method": "none",
       "best_score": 0.083,
       "backfilled": true
+    },
+    {
+      "id": "2603.16949",
+      "title": "Entropy-Aware Task Offloading in Mobile Edge Computing",
+      "abstract": "Mobile Edge Computing (MEC) technology has been introduced to enable could computing at the edge of the network in order to help resource limited mobile devices with time sensitive data processing tasks. In this paradigm, mobile devices can offload their computationally heavy tasks to more efficient nearby MEC servers via wireless communication. Consequently, the main focus of researches on the subject has been on development of efficient offloading schemes, leaving the privacy of mobile user out. While the Blockchain technology is used as the trust mechanism for secured sharing of the data, the privacy issues induced from wireless communication, namely, usage pattern and location privacy are the centerpiece of this work. The effects of these privacy concerns on the task offloading Markov Decision Process (MDP) is addressed and the MDP is solved using a Deep Recurrent Q-Netwrok (DRQN). The Numerical simulations are presented to show the effectiveness of the proposed method.",
+      "authors": [
+        "Mohsen Sahraei Ardakani",
+        "Hong Wan",
+        "Rui Song"
+      ],
+      "url": "https://arxiv.org/abs/2603.16949",
+      "published": "2026-03-16T18:02:00+00:00",
+      "updated": "2026-03-16T18:02:00+00:00",
+      "categories": [
+        "cs.NI",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.171,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16945",
+      "title": "Joint Optimization of Storage and Loading for High-Performance 3D Point Cloud Data Processing",
+      "abstract": "With the rapid development of computer vision and deep learning, significant advancements have been made in 3D vision, partic- ularly in autonomous driving, robotic perception, and augmented reality. 3D point cloud data, as a crucial representation of 3D information, has gained widespread attention. However, the vast scale and complexity of point cloud data present significant chal- lenges for loading and processing and traditional algorithms struggle to handle large-scale datasets.The diversity of storage formats for point cloud datasets (e.g., PLY, XYZ, BIN) adds complexity to data handling and results in inefficiencies in data preparation. Al- though binary formats like BIN and NPY have been used to speed up data access, they still do not fully address the time-consuming data loading and processing phase. To overcome these challenges, we propose the .PcRecord format, a unified data storage solution designed to reduce the storage occupation and accelerate the processing of point cloud data. We also introduce a high-performance data processing pipeline equipped with multiple modules. By leveraging a multi-stage parallel pipeline architecture, our system optimizes the use of computational resources, significantly improving processing speed and efficiency. This paper details the im- plementation of this system and demonstrates its effectiveness in addressing the challenges of handling large-scale point cloud datasets.On average, our system achieves performance improvements of 6.61x (ModelNet40), 2.69x (S3DIS), 2.23x (ShapeNet), 3.09x (Kitti), 8.07x (SUN RGB-D), and 5.67x (ScanNet) with GPU and 6.9x, 1.88x, 1.29x, 2.28x, 25.4x, and 19.3x with Ascend.",
+      "authors": [
+        "Ke Wang",
+        "Yanfei Cao",
+        "Xiangzhi Tao",
+        "Naijie Gu",
+        "Jun Yu",
+        "Zhengdong Wang",
+        "Shouyang Dong",
+        "Fan Yu",
+        "Cong Wang",
+        "Yang Luo"
+      ],
+      "url": "https://arxiv.org/abs/2603.16945",
+      "published": "2026-03-16T12:35:46+00:00",
+      "updated": "2026-03-16T12:35:46+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.145,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16948",
+      "title": "A Framework for Modeling Liquefaction-Induced Road Disruptions After Earthquakes: Implications for Emergency Response and Access in the Cascadia Region of North America",
+      "abstract": "Large earthquakes along the Cascadia Subduction Zone (CSZ) are expected to trigger widespread soil liquefaction that could disrupt transportation systems across the U.S. Pacific Northwest. However, past regional assessments have relied on simple geologic screening methods and binomial shaking thresholds that are only loosely informed by liquefaction science. This study introduces a mechanics-informed, data-driven framework for estimating liquefaction-induced road closures and service reductions, and the framework is applied to a magnitude-9 CSZ earthquake. Predicted liquefaction severity is translated into segment-level probabilities of closure and reduced service using empirically derived fragility relationships. These probabilities are mapped at 90-m resolution and propagated through the National Highway System using a spatially correlated Monte Carlo simulation to estimate link-level disruption. Results show that impacts are concentrated in low-lying coastal zones, river valleys, and urban waterfronts, with major disruptions expected along critical routes including U.S. Route 101. Local mobility is further examined in Pacific and Grays Harbor counties, Washington, where limited network redundancy, strong shaking, and high liquefaction susceptibility lead to elevated probabilities of isolation and loss of hospital access. Socioeconomic analysis reveals modest but statistically significant associations between road impacts and demographic indicators, suggesting that liquefaction impacts may compound with existing social vulnerabilities. While not a substitute for site-specific analysis, the results provide a regional baseline for emergency planning, risk communication, and prioritization of more advanced geotechnical sampling and analysis. Moreover, the methodology proposed here is not specific to the CSZ, but rather, could be applied to analogous studies of road impacts elsewhere.",
+      "authors": [
+        "Morgan D. Sanger",
+        "Olyvia B. Smith",
+        "Brett W. Maurer",
+        "Liam Wotherspoon",
+        "Marc O. Eberhard",
+        "Jeffrey W. Berman"
+      ],
+      "url": "https://arxiv.org/abs/2603.16948",
+      "published": "2026-03-16T15:54:13+00:00",
+      "updated": "2026-03-16T15:54:13+00:00",
+      "categories": [
+        "physics.geo-ph",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.106,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16942",
+      "title": "UNICORN: Ultrasound Nakagami Imaging via Score Matching and Adaptation for Assessing Hepatic Steatosis",
+      "abstract": "Ultrasound imaging is an essential first-line tool for assessing hepatic steatosis. While conventional B-mode ultrasound imaging has limitations in providing detailed tissue characterization, ultrasound Nakagami imaging holds promise for visualizing and quantifying tissue scattering in backscattered signals, with potential applications in fat fraction analysis. However, existing methods for Nakagami imaging struggle with optimal window size selection and suffer from estimator instability, leading to degraded image resolution. To address these challenges, we propose a novel method called UNICORN (Ultrasound Nakagami Imaging via Score Matching and Adaptation), which offers an accurate, closed-form estimator for Nakagami parameter estimation based on the score function of the ultrasound envelope signal. Unlike methods that visualize only specific regions of interest (ROI) and estimate parameters within fixed window sizes, our approach provides comprehensive parameter mapping by providing a pixel-by-pixel estimator, resulting in high-resolution imaging. We demonstrated that our proposed estimator effectively assesses hepatic steatosis and provides visual distinction in the backscattered statistics associated with this condition. Through extensive experiments using real envelope data from patient, we validated that UNICORN enables clinical detection of hepatic steatosis and exhibits robustness and generalizability.",
+      "authors": [
+        "Kwanyoung Kim",
+        "Jaa-Yeon Lee",
+        "Youngjun Ko",
+        "GunWoo Lee",
+        "Jong Chul Ye"
+      ],
+      "url": "https://arxiv.org/abs/2603.16942",
+      "published": "2026-03-16T07:28:08+00:00",
+      "updated": "2026-03-16T07:28:08+00:00",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.CV",
+        "q-bio.QM"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.068,
+      "backfilled": true
+    },
+    {
+      "id": "2603.16946",
+      "title": "Automatic Termination Strategy of Inelastic Neutron-scattering Measurement Using Bayesian Optimization for Bin-width Selection",
+      "abstract": "Currently, an excessive amount of event data is being obtained in four-dimensional inelastic neutron-scattering experiments. A method for automatic bin-width optimization of multidimensional histograms has been developed and recently validated on real inelastic neutron-scattering data. However, measuring beyond the equipment resolution leads to inefficient use of valuable beam time. To improve experimental efficiency, an automatic termination strategy is essential. We propose a Bayesian-optimization-based method to compute stopping criteria and determine whether to continue or terminate the experiment in real time. In the proposed method, the bin-width optimization is performed using Bayesian optimization to efficiently compute the optimal bin widths. The experiment is terminated when the optimal bin widths become smaller than the target resolutions. In numerical experiments using real inelastic neutron-scattering data, the optimal bin widths decrease as the number of events increases. Even the optimal bin widths for data downsampled to 1/5 are comparable with the resolutions limited by the sample size, choppers, and so on. This implies excessive measurement of the inelastic neutron experiments for the moment. Moreover, we found that Bayesian optimization can reduce the search cost to approximately 10% of an exhaustive search in our numerical experiments.",
+      "authors": [
+        "Kensuke Muto",
+        "Hirotaka Sakamoto",
+        "Kenji Nagata",
+        "Taka-hisa Arima",
+        "Masato Okada"
+      ],
+      "url": "https://arxiv.org/abs/2603.16946",
+      "published": "2026-03-16T13:29:41+00:00",
+      "updated": "2026-03-16T13:29:41+00:00",
+      "categories": [
+        "physics.data-an",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.057,
+      "backfilled": true
     }
   ],
-  "patched_at": "2026-03-18T03:26:54.961295+00:00"
+  "patched_at": "2026-03-19T03:27:21.830227+00:00"
 }
