@@ -3,6 +3,132 @@
   "fetched_at": "2026-03-19T12:27:19.468192+09:00",
   "papers": [
     {
+      "id": "2603.19330",
+      "title": "PAI: Fast, Accurate, and Full Benchmark Performance Projection with AI",
+      "abstract": "The exponential increase in complex IPs within modern SoCs, driven by Moore's Law, has created a pressing need for fast and accurate hardware-software power-performance analysis. Traditional performance simulators (such as cycle accurate simulators) are often too slow to simulate full benchmarks within a reasonable timeframe; require considerable effort for development, maintenance, and extensions; and are prone to errors, making pre-silicon performance projections and competitive analysis increasingly challenging. Prior attempts in addressing this challenge using machine learning fall short as they are either slow, inaccurate or unable to predict the performance of full benchmarks. To address these limitations, we present PAI, the first technique to accurately predict full benchmark performance without relying on detailed simulation or instruction-wise encoding. At the heart of PAI is a hierarchical Long Short Term Memory (LSTM)-based model that takes a trace of microarchitecture independent features from a program execution and predicts performance metrics. We present the detailed design, implementation and evaluation of PAI. Our initial experiments showed that PAI can achieve an average IPC prediction error of 9.35% for SPEC CPU 2017 benchmark suite while taking only 2 min 57 sec for the entire suite. This prediction error is comparable to prior state-of-the-art techniques while requiring 3 orders of magnitude less time.",
+      "authors": [
+        "Avery Johnson",
+        "Mohammad Majharul Islam",
+        "Riad Akram",
+        "Abdullah Muzahid"
+      ],
+      "url": "https://arxiv.org/abs/2603.19330",
+      "published": "2026-03-18T19:34:32+00:00",
+      "updated": "2026-03-18T19:34:32+00:00",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.20283",
+      "title": "FastPFRec: A Fast Personalized Federated Recommendation with Secure Sharing",
+      "abstract": "Graph neural network (GNN)-based federated recommendation systems effectively capture user-item relationships while preserving data privacy. However, existing methods often face slow convergence on graph data and privacy leakage risks during collaboration. To address these challenges, we propose FastPFRec (Fast Personalized Federated Recommendation with Secure Sharing), a novel framework that enhances both training efficiency and data security. FastPFRec accelerates model convergence through an efficient local update strategy and introduces a privacy-aware parameter sharing mechanism to mitigate leakage risks. Experiments on four real-world datasets (Yelp, Kindle, Gowalla-100k, and Gowalla-1m) show that FastPFRec achieves 32.0% fewer training rounds, 34.1% shorter training time, and 8.1% higher accuracy compared with existing baselines. These results demonstrate that FastPFRec provides an efficient and privacy-preserving solution for scalable federated recommendation.",
+      "authors": [
+        "Zhenxing Yan",
+        "Jidong Yuan",
+        "Yongqi Sun",
+        "Haiyang Liu",
+        "Zhihui Gao"
+      ],
+      "url": "https://arxiv.org/abs/2603.20283",
+      "published": "2026-03-18T05:26:51+00:00",
+      "updated": "2026-03-18T05:26:51+00:00",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.19331",
+      "title": "FalconBC: Flow matching for Amortized inference of Latent-CONditioned physiologic Boundary Conditions",
+      "abstract": "Boundary condition tuning is a fundamental step in patient-specific cardiovascular modeling. Despite an increase in offline training cost, recent methods in data-driven variational inference can efficiently estimate the joint posterior distribution of boundary conditions, with amortization of training efforts over clinical targets. However, even the most modern approaches fall short in two important scenarios: open-loop models with known mean flow and assumed waveform shapes, and anatomies affected by vascular lesions where segmentation influences the reachability of pressure or flow split targets. In both cases, boundary conditions cannot be tuned in isolation. We introduce a general amortized inference framework based on probabilistic flow that treats clinical targets, inflow features, and point cloud embeddings of patient-specific anatomies as either conditioning variables or quantities to be jointly estimated. We demonstrate the approach on two patient-specific models: an aorto-iliac bifurcation with varying stenosis locations and severity, and a coronary arterial tree.",
+      "authors": [
+        "Chloe H. Choi",
+        "Alison L. Marsden",
+        "Daniele E. Schiavazzi"
+      ],
+      "url": "https://arxiv.org/abs/2603.19331",
+      "published": "2026-03-18T19:44:52+00:00",
+      "updated": "2026-03-18T19:44:52+00:00",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.17765",
+      "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search",
+      "abstract": "Automated radiology report generation has gained increasing attention with the rise of deep learning and large language models. However, fully generative approaches often suffer from hallucinations and lack clinical grounding, limiting their reliability in real-world workflows. In this study, we propose a multimodal retrieval-augmented generation (RAG) system for grounded drafting of chest radiograph impressions. The system combines contrastive image-text embeddings, case-based similarity retrieval, and citation-constrained draft generation to ensure factual alignment with historical radiology reports. A curated subset of the MIMIC-CXR dataset was used to construct a multimodal retrieval database. Image embeddings were generated using CLIP encoders, while textual embeddings were derived from structured impression sections. A fusion similarity framework was implemented using FAISS indexing for scalable nearest-neighbor retrieval. Retrieved cases were used to construct grounded prompts for draft impression generation, with safety mechanisms enforcing citation coverage and confidence-based refusal. Experimental results demonstrate that multimodal fusion significantly improves retrieval performance compared to image-only retrieval, achieving Recall@5 above 0.95 on clinically relevant findings. The grounded drafting pipeline produces interpretable outputs with explicit citation traceability, enabling improved trustworthiness compared to conventional generative approaches. This work highlights the potential of retrieval-augmented multimodal systems for reliable clinical decision support and radiology workflow augmentation",
+      "authors": [
+        "Himadri Samanta"
+      ],
+      "url": "https://arxiv.org/abs/2603.17765",
+      "published": "2026-03-18T14:25:50+00:00",
+      "updated": "2026-03-18T14:25:50+00:00",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.19329",
+      "title": "Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification",
+      "abstract": "Large language models (LLMs) can generate plausible code but offer limited guarantees of correctness. Formally verifying that implementations satisfy specifications requires constructing machine-checkable proofs, a task that remains beyond current automation. We propose a hierarchical proof search framework for automated code verification in Lean~4 that decomposes complex verification goals into structurally simpler subgoals before attempting tactic-level proving. Central to our approach is a principled decomposition score that combines constructive justification with structural effectiveness. Crucially, this score serves as both the training reward and the inference-time ranking criterion, ensuring strict alignment between optimization and deployment. We train Goedel-Code-Prover-8B, a single unified policy for both decomposition and completion, via supervised initialization followed by hybrid reinforcement learning, where a continuous decomposition reward drives planning exploration while supervised replay stabilizes proof generation. On three Lean-based code verification benchmarks comprising 427 tasks, our 8B-parameter model achieves a 62.0\\% prove success rate, a 2.6$\\times$ improvement over the strongest baseline, surpassing neural provers up to 84$\\times$ larger. We further observe consistent inference-time scaling: success rates improve monotonically with search iterations and sampling budget, with our trained model achieving greater efficiency than frontier off-the-shelf models of comparable scale.",
+      "authors": [
+        "Zenan Li",
+        "Ziran Yang",
+        "Deyuan",
+        "He",
+        "Haoyu Zhao",
+        "Andrew Zhao",
+        "Shange Tang",
+        "Kaiyu Yang",
+        "Aarti Gupta",
+        "Zhendong Su",
+        "Chi Jin"
+      ],
+      "url": "https://arxiv.org/abs/2603.19329",
+      "published": "2026-03-18T18:42:04+00:00",
+      "updated": "2026-03-18T18:42:04+00:00",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
       "id": "2603.18117",
       "title": "Intellectual Stewardship: Re-adapting Human Minds for Creative Knowledge Work in the Age of AI",
       "abstract": "Background: Amid the opportunities and risks introduced by generative AI, learning research needs to envision how human minds and responsibilities should re-adapt as AI continues to augment or automate various tasks.   Approach: Drawing on theories of learning, intelligence, and knowledge creation, this conceptual paper proposes intellectual stewardship as a human-centered, conceptually grounded framework for advancing creative learning practices with AI.   Key points: Students and teachers work as responsible governors of intellectual processes distributed across human and artificial systems, guided by five core principles. Being knowledge-wise involves understanding the evolving state of knowledge and taking purposeful actions to advance it. Being intelligence-wise emphasizes making informed choices about how to orchestrate distributed cognitive processes and resources. Being context-wise requires sensitivity to recognize opportunities and risks. Being ethics-wise foregrounds ethical judgment, responsibility, and care in the use of knowledge and intellectual power. Finally, self- and community-growing defines the overarching purpose, aligning intellectual work with personal development and the advancement of collective well-being.   Contribution: The principles provide a lens for viewing the adaptation of human minds in AI-infused learning environments, calling for the development of meta-level dispositions and capabilities that characterize wisdom-oriented, socially responsible knowledge builders in the AI age.",
@@ -8306,7 +8432,70 @@
       "match_method": "none",
       "best_score": 0.023,
       "backfilled": true
+    },
+    {
+      "id": "2603.20285",
+      "title": "AgentComm-Bench: Stress-Testing Cooperative Embodied AI Under Latency, Packet Loss, and Bandwidth Collapse",
+      "abstract": "Cooperative multi-agent methods for embodied AI are almost universally evaluated under idealized communication: zero latency, no packet loss, and unlimited bandwidth. Real-world deployment on robots with wireless links, autonomous vehicles on congested networks, or drone swarms in contested spectrum offers no such guarantees. We introduce AgentComm-Bench, a benchmark suite and evaluation protocol that systematically stress-tests cooperative embodied AI under six communication impairment dimensions: latency, packet loss, bandwidth collapse, asynchronous updates, stale memory, and conflicting sensor evidence. AgentComm-Bench spans three task families: cooperative perception, multi-agent waypoint navigation, and cooperative zone search, and evaluates five communication strategies, including a lightweight method we propose based on redundant message coding with staleness-aware fusion. Our experiments reveal that communication-dependent tasks degrade catastrophically: stale memory and bandwidth collapse cause over 96% performance drops in navigation, while content corruption (stale or conflicting data) reduces perception F1 by over 85%. Vulnerability depends on the interaction between impairment type and task design; perception fusion is robust to packet loss but amplifies corrupted data. Redundant message coding more than doubles navigation performance under 80% packet loss. We release AgentComm-Bench as a practical evaluation protocol and recommend that cooperative embodied AI work report performance under multiple impairment conditions.",
+      "authors": [
+        "Aayam Bansal",
+        "Ishaan Gangwani"
+      ],
+      "url": "https://arxiv.org/abs/2603.20285",
+      "published": "2026-03-18T07:45:09+00:00",
+      "updated": "2026-03-18T07:45:09+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.33,
+      "backfilled": true
+    },
+    {
+      "id": "2603.20281",
+      "title": "On the Fragility of AI Agent Collusion",
+      "abstract": "Recent work shows that pricing with symmetric LLM agents leads to algorithmic collusion. We show that collusion is fragile under the heterogeneity typical of real deployments. In a stylized repeated-pricing model, heterogeneity in patience or data access reduces the set of collusive equilibria. Experiments with open-source LLM agents (totaling over 2,000 compute hours) align with these predictions: patience heterogeneity reduces price lift from 22% to 10% above competitive levels; asymmetric data access, to 7%. Increasing the number of competing LLMs breaks up collusion; so does cross-algorithm heterogeneity, that is, setting LLMs against Q-learning agents. But model-size differences (e.g., 32B vs. 14B weights) do not; they generate leader-follower dynamics that stabilize collusion. We discuss antitrust implications, such as enforcement actions restricting data-sharing and policies promoting algorithmic diversity.",
+      "authors": [
+        "Jussi Keppo",
+        "Yuze Li",
+        "Gerry Tsoukalas",
+        "Nuo Yuan"
+      ],
+      "url": "https://arxiv.org/abs/2603.20281",
+      "published": "2026-03-18T01:55:13+00:00",
+      "updated": "2026-03-18T01:55:13+00:00",
+      "categories": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.213,
+      "backfilled": true
+    },
+    {
+      "id": "2603.19326",
+      "title": "Mathematical Modeling of Cancer-Bacterial Therapy: Analysis and Numerical Simulation via Physics-Informed Neural Networks",
+      "abstract": "Bacterial cancer therapy exploits anaerobic bacteria's ability to target hypoxia tumor regions, yet the interactions among tumor growth, bacterial colonization, oxygen levels, immunosuppressive cytokines, and bacterial communication remain poorly quantified. We present a mathematical model of five coupled nonlinear reaction-diffusion equations in a two-dimensional tissue domain. We proved the global well-posedness of the model and identified its steady states to analyze stability. Furthermore, a physics-informed neural network (PINN) solves the system without a mesh and without requiring extensive data. It provides convergence guarantees by combining residual stability and Sobolev approximation error bounds. This results in an overall error rate of O(n^-2 ln^4(n) + N^-1/2), which depends on the network width n and the number of collocation points N. We conducted several numerical experiments, including predicting the tumor's response to therapy. We also performed a sensitivity analysis of certain parameters. The results suggest that long-term therapeutic efficacy may require the maintenance of hypoxia regions in the tumor, or using bacteria that tolerate oxygen better, may be necessary for long-lasting tumor control.",
+      "authors": [
+        "Ayoub Farkane",
+        "David Lassounon"
+      ],
+      "url": "https://arxiv.org/abs/2603.19326",
+      "published": "2026-03-18T02:04:25+00:00",
+      "updated": "2026-03-18T02:04:25+00:00",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG",
+        "math.AP",
+        "math.NA"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.197,
+      "backfilled": true
     }
   ],
-  "patched_at": "2026-03-20T03:17:07.255206+00:00"
+  "patched_at": "2026-03-24T03:20:53.104571+00:00"
 }
