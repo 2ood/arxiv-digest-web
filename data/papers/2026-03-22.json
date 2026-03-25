@@ -3,6 +3,173 @@
   "fetched_at": "2026-03-24T12:20:45.711735+09:00",
   "papers": [
     {
+      "id": "2603.22346",
+      "title": "First-Mover Bias in Gradient Boosting Explanations: Mechanism, Detection, and Resolution",
+      "abstract": "We isolate and empirically characterize first-mover bias -- a path-dependent concentration of feature importance caused by sequential residual fitting in gradient boosting -- as a specific mechanistic cause of the well-known instability of SHAP-based feature rankings under multicollinearity. When correlated features compete for early splits, gradient boosting creates a self-reinforcing advantage for whichever feature is selected first: subsequent trees inherit modified residuals that favor the incumbent, concentrating SHAP importance on an arbitrary feature rather than distributing it across the correlated group. Scaling up a single model amplifies this effect -- a Large Single Model with the same total tree count as our method produces the worst explanations of any approach tested. We demonstrate that model independence is sufficient to resolve first-mover bias in the linear regime, and remains the most effective mitigation under nonlinear data-generating processes. Both our proposed method, DASH (Diversified Aggregation of SHAP), and simple seed-averaging (Stochastic Retrain) restore stability by breaking the sequential dependency chain, confirming that the operative mechanism is independence between explained models. At rho=0.9, both achieve stability=0.977, while the single-best workflow degrades to 0.958 and the Large Single Model to 0.938. On the Breast Cancer dataset, DASH improves stability from 0.32 to 0.93 (+0.61) against a tree-count-matched baseline. DASH additionally provides two diagnostic tools -- the Feature Stability Index (FSI) and Importance-Stability (IS) Plot -- that detect first-mover bias without ground truth, enabling practitioners to audit explanation reliability before acting on feature rankings. Software and reproducible benchmarks are available at https://github.com/DrakeCaraker/dash-shap.",
+      "authors": [
+        "Drake Caraker",
+        "Bryan Arnold",
+        "David Rhoads"
+      ],
+      "url": "https://arxiv.org/abs/2603.22346",
+      "published": "2026-03-22T02:59:40+00:00",
+      "updated": "2026-03-22T02:59:40+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22359",
+      "title": "STEM Agent: A Self-Adapting, Tool-Enabled, Extensible Architecture for Multi-Protocol AI Agent Systems",
+      "abstract": "Current AI agent frameworks commit early to a single interaction protocol, a fixed tool integration strategy, and static user models, limiting their deployment across diverse interaction paradigms. To address these constraints, we introduce STEM Agent (Self-adapting, Tool-enabled, Extensible, Multi-agent), a modular architecture inspired by biological pluripotency in which an undifferentiated agent core differentiates into specialized protocol handlers, tool bindings, and memory subsystems that compose into a fully functioning AI system. The framework unifies five interoperability protocols (A2A, AG-UI, A2UI, UCP, and AP2) behind a single gateway, introduces a Caller Profiler that continuously learns user preferences across more than twenty behavioral dimensions, externalizes all domain capabilities through the Model Context Protocol (MCP), and implements a biologically inspired skills acquisition system in which recurring interaction patterns crystallize into reusable agent skills through a maturation lifecycle analogous to cell differentiation. Complementing these capabilities, the memory system incorporates consolidation mechanisms, including episodic pruning, semantic deduplication, and pattern extraction, designed for sub-linear growth under sustained interaction. A comprehensive 413-test suite validates protocol handler behavior and component integration across all five architectural layers, completing in under three seconds.",
+      "authors": [
+        "Alfred Shen",
+        "Aaron Shen"
+      ],
+      "url": "https://arxiv.org/abs/2603.22359",
+      "published": "2026-03-22T20:50:53+00:00",
+      "updated": "2026-03-22T20:50:53+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22355",
+      "title": "Demystifying Low-Rank Knowledge Distillation in Large Language Models: Convergence, Generalization, and Information-Theoretic Guarantees",
+      "abstract": "Knowledge distillation has emerged as a powerful technique for compressing large language models (LLMs) into efficient, deployable architectures while preserving their advanced capabilities. Recent advances in low-rank knowledge distillation, particularly methods like Low-Rank Clone (LRC), have demonstrated remarkable empirical success, achieving comparable performance to full-parameter distillation with significantly reduced training data and computational overhead. However, the theoretical foundations underlying these methods remain poorly understood. In this paper, we establish a rigorous theoretical framework for low-rank knowledge distillation in language models. We prove that under mild assumptions, low-rank projection preserves the optimization dynamics, yielding explicit convergence rates of $O(1/\\sqrt{T})$. We derive generalization bounds that characterize the fundamental trade-off between model compression and generalization capability, showing that the generalization error scales with the rank parameter as $O(r(m+n)/\\sqrt{n})$. Furthermore, we provide an information-theoretic analysis of the activation cloning mechanism, revealing its role in maximizing the mutual information between the teacher's and student's intermediate representations. Our theoretical results offer principled guidelines for rank selection, mathematically suggesting an optimal rank $r^* = O(\\sqrt{n})$ where $n$ is the sample size. Experimental validation on standard language modeling benchmarks confirms our theoretical predictions, demonstrating that the empirical convergence, rank scaling, and generalization behaviors align closely with our bounds.",
+      "authors": [
+        "Alberlucia Rafael Soarez",
+        "Daniel Kim",
+        "Mariana Costa",
+        "Alejandro Torre"
+      ],
+      "url": "https://arxiv.org/abs/2603.22355",
+      "published": "2026-03-22T14:10:27+00:00",
+      "updated": "2026-03-22T14:10:27+00:00",
+      "categories": [
+        "stat.ML",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22345",
+      "title": "Dynamic Fusion-Aware Graph Convolutional Neural Network for Multimodal Emotion Recognition in Conversations",
+      "abstract": "Multimodal emotion recognition in conversations (MERC) aims to identify and understand the emotions expressed by speakers during utterance interaction from multiple modalities (e.g., text, audio, images, etc.). Existing studies have shown that GCN can improve the performance of MERC by modeling dependencies between speakers. However, existing methods usually use fixed parameters to process multimodal features for different emotion types, ignoring the dynamics of fusion between different modalities, which forces the model to balance performance between multiple emotion categories, thus limiting the model's performance on some specific emotions. To this end, we propose a dynamic fusion-aware graph convolutional neural network (DF-GCN) for robust recognition of multimodal emotion features in conversations. Specifically, DF-GCN integrates ordinary differential equations into graph convolutional networks (GCNs) to {capture} the dynamic nature of emotional dependencies within utterance interaction networks and leverages the prompts generated by the global information vector (GIV) of the utterance to guide the dynamic fusion of multimodal features. This allows our model to dynamically change parameters when processing each utterance feature, so that different network parameters can be equipped for different emotion categories in the inference stage, thereby achieving more flexible emotion classification and enhancing the generalization ability of the model. Comprehensive experiments conducted on two public multimodal conversational datasets {confirm} that the proposed DF-GCN model delivers superior performance, benefiting significantly from the dynamic fusion mechanism introduced.",
+      "authors": [
+        "Tao Meng",
+        "Weilun Tang",
+        "Yuntao Shou",
+        "Yilong Tan",
+        "Jun Zhou",
+        "Wei Ai",
+        "Keqin Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.22345",
+      "published": "2026-03-22T02:43:10+00:00",
+      "updated": "2026-03-22T02:43:10+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22347",
+      "title": "Intelligence Inertia: Physical Principles and Applications",
+      "abstract": "While Landauer's principle establishes the fundamental thermodynamic floor for information erasure and Fisher Information provides a metric for local curvature in parameter space, these classical frameworks function effectively only as approximations within regimes of sparse rule-constraints. They fail to explain the super-linear, and often explosive, computational and energy costs incurred when maintaining symbolic interpretability during the reconfiguration of advanced intelligent systems. This paper introduces the property of intelligence inertia and its underlying physical principles as foundational characteristics for quantifying the computational weight of intelligence. We demonstrate that this phenomenon is not merely an empirical observation but originates from the fundamental non-commutativity between rules and states, a root cause we have formally organized into a rigorous mathematical framework. By analyzing the growing discrepancy between actual adaptation costs and static information-theoretic estimates, we derive a non-linear cost formula that mirrors the Lorentz factor, characterizing a relativistic J-shaped inflation curve -- a \"computational wall\" that static models are blind to. The validity of these physical principles is examined through a trilogy of decisive experiments: (1) a comparative adjudication of this J-curve inflation against classical Fisher Information models, (2) a geometric analysis of the \"Zig-Zag\" trajectory of neural architecture evolution, and (3) the implementation of an inertia-aware scheduler wrapper that optimizes the training of deep networks by respecting the agent's physical resistance to change. Our results suggest a unified physical description for the cost of structural adaptation, offering a first-principle explanation for the computational and interpretability-maintenance overhead in intelligent agents.",
+      "authors": [
+        "Jipeng Han"
+      ],
+      "url": "https://arxiv.org/abs/2603.22347",
+      "published": "2026-03-22T03:37:33+00:00",
+      "updated": "2026-03-22T03:37:33+00:00",
+      "categories": [
+        "cs.AI",
+        "cond-mat.stat-mech",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22352",
+      "title": "WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement",
+      "abstract": "Recent progress in reinforcement learning with verifiable rewards (RLVR) offers a practical path to self-improvement of language models, but existing methods face a key trade-off: endogenous self-play can drift over iterations, while corpus-grounded approaches rely on curated data environments. We present \\textbf{WIST}, a \\textbf{W}eb-grounded \\textbf{I}terative \\textbf{S}elf-play \\textbf{T}ree framework for domain-targeted reasoning improvement that learns directly from the open web without requiring any pre-arranged domain corpus. WIST incrementally expands a domain tree for exploration, and retrieves and cleans path-consistent web corpus to construct a controllable training environment. It then performs Challenger--Solver self-play with verifiable rewards, and feeds learnability signals back to update node posteriors and guide subsequent exploration through an adaptive curriculum. Across four backbones, WIST consistently improves over the base models and typically outperforms both purely endogenous self-evolution and corpus-grounded self-play baselines, with the Overall gains reaching \\textbf{+9.8} (\\textit{Qwen3-4B-Base}) and \\textbf{+9.7} (\\textit{OctoThinker-8B}). WIST is also domain-steerable, improving \\textit{Qwen3-8B-Base} by \\textbf{+14.79} in medicine and \\textit{Qwen3-4B-Base} by \\textbf{+5.28} on PhyBench. Ablations further confirm the importance of WIST's key components for stable open-web learning. Our Code is available at https://github.com/lfy-123/WIST.",
+      "authors": [
+        "Fangyuan Li",
+        "Pengfei Li",
+        "Shijie Wang",
+        "Junqi Gao",
+        "Jianxing Liu",
+        "Biqing Qi",
+        "Yuqiang Li"
+      ],
+      "url": "https://arxiv.org/abs/2603.22352",
+      "published": "2026-03-22T09:55:16+00:00",
+      "updated": "2026-03-22T09:55:16+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22348",
+      "title": "COMPASS-Hedge: Learning Safely Without Knowing the World",
+      "abstract": "Online learning algorithms often faces a fundamental trilemma: balancing regret guarantees between adversarial and stochastic settings and providing baseline safety against a fixed comparator. While existing methods excel in one or two of these regimes, they typically fail to unify all three without sacrificing optimal rates or requiring oracle access to problem-dependent parameters.   In this work, we bridge this gap by introducing COMPASS-Hedge. Our algorithm is the first full-information method to simultaneously achieve: i) Minimax-optimal regret in adversarial environments; ii) Instance-optimal, gap-dependent regret in stochastic environments; and iii) $\\tilde{\\mathcal{O}}(1)$ regret relative to a designated baseline policy, up to logarithmic factors.   Crucially, COMPASS-Hedge is parameter-free and requires no prior knowledge of the environment's nature or the magnitude of the stochastic sub optimality gaps. Our approach hinges on a novel integration of adaptive pseudo-regret scaling and phase-based aggression, coupled with a comparator-aware mixing strategy. To the best of our knowledge, this provides the first \"best-of-three-world\" guarantee in the full-information setting, establishing that baseline safety does not have to come at the cost of worst-case robustness or stochastic efficiency.",
+      "authors": [
+        "Ting Hu",
+        "Luanda Cai",
+        "Manolis Vlatakis"
+      ],
+      "url": "https://arxiv.org/abs/2603.22348",
+      "published": "2026-03-22T04:17:43+00:00",
+      "updated": "2026-03-22T04:17:43+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.GT"
+      ],
+      "matched_topics": [
+        "Neural Network Training Methods"
+      ],
+      "match_method": "semantic",
+      "best_score": 0.359,
+      "backfilled": true
+    },
+    {
       "id": "2603.21272",
       "title": "The Library Theorem: How External Organization Governs Agentic Reasoning Capacity",
       "abstract": "Externalized reasoning is already exploited by transformer-based agents through chain-of-thought, but structured retrieval -- indexing over one's own reasoning state -- remains underexplored. We formalize the transformer context window as an I/O page and prove that tool-augmented agents with indexed external memory achieve exponentially lower retrieval cost than agents restricted to sequential scanning: $O(\\log_b N)$ versus $Ω(N)$ page reads per query, and $O(T \\log_b T)$ versus $Θ(T^2)$ cumulative cost over $T$ reasoning steps -- a gap that widens as deliberation deepens. We test these predictions on a controlled lookup benchmark across three content types -- random hashes, ordered integers, and encyclopedia entries -- varying store size from 50 to 5,000 items, and replicate key conditions across two model generations (GPT-4o-mini and GPT-5.4). On abstract content, the indexed agent achieves median 1 page read regardless of store size, confirming the $O(1)$ prediction. Sorted pages without an index fail to close the gap: the weaker model cannot sustain binary search at scale, and the stronger model achieves near-optimal $\\log_2 N$ search but still loses to the index by $5\\times$. On familiar content (encyclopedia entries), a competing failure mode emerges: the model recognizes the domain, bypasses the retrieval protocol, and generates answers from parametric memory, producing catastrophic token expenditure even when the index is sound. This parametric memory competition dissociates the two cognitive operations that indexing combines: understanding content (where language models excel) and following navigational protocols (where they fail when understanding tempts them to shortcut). The result argues for a separation of concerns: use language models for index construction, where semantic understanding helps, and deterministic algorithms for index traversal, where it hurts.",
@@ -3640,6 +3807,47 @@
       "matched_topics": [],
       "match_method": "none",
       "best_score": 0.089
+    },
+    {
+      "id": "2603.22357",
+      "title": "Bridging neuroscience and AI: adaptive, culturally sensitive technologies transforming aphasia rehabilitation",
+      "abstract": "Aphasia, a language impairment primarily resulting from stroke or brain injury, profoundly disrupts communication and everyday functioning. Despite advances in speech therapy, barriers such as limited therapist availability and the scarcity of personalized, culturally relevant tools continue to hinder optimal rehabilitation outcomes. This paper reviews recent developments in neurocognitive research and language technologies that contribute to the diagnosis and therapy of aphasia. Drawing on findings from our ethnographic field study, we introduce two digital therapy prototypes designed to reflect local linguistic diversity and enhance patient engagement. We also show how insights from neuroscience and the local context guided the design of these tools to better meet patient and therapist needs. Our work highlights the potential of adaptive, AI-enhanced assistive technologies to complement conventional therapy and broaden access to therapy. We conclude by outlining future research directions for advancing personalized and scalable aphasia rehabilitation.",
+      "authors": [
+        "Andreea I. Niculescu",
+        "Jochen Ehnes",
+        "Minghui Dong"
+      ],
+      "url": "https://arxiv.org/abs/2603.22357",
+      "published": "2026-03-22T16:55:47+00:00",
+      "updated": "2026-03-22T16:55:47+00:00",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.271,
+      "backfilled": true
+    },
+    {
+      "id": "2603.22350",
+      "title": "Session Risk Memory (SRM): Temporal Authorization for Deterministic Pre-Execution Safety Gates",
+      "abstract": "Deterministic pre-execution safety gates evaluate whether individual agent actions are compatible with their assigned roles. While effective at per-action authorization, these systems are structurally blind to distributed attacks that decompose harmful intent across multiple individually-compliant steps. This paper introduces Session Risk Memory (SRM), a lightweight deterministic module that extends stateless execution gates with trajectory-level authorization. SRM maintains a compact semantic centroid representing the evolving behavioral profile of an agent session and accumulates a risk signal through exponential moving average over baseline-subtracted gate outputs. It operates on the same semantic vector representation as the underlying gate, requiring no additional model components, training, or probabilistic inference. We evaluate SRM on a multi-turn benchmark of 80 sessions containing slow-burn exfiltration, gradual privilege escalation, and compliance drift scenarios. Results show that ILION+SRM achieves F1 = 1.0000 with 0% false positive rate, compared to stateless ILION at F1 = 0.9756 with 5% FPR, while maintaining 100% detection rate for both systems. Critically, SRM eliminates all false positives with a per-turn overhead under 250 microseconds. The framework introduces a conceptual distinction between spatial authorization consistency (evaluated per action) and temporal authorization consistency (evaluated over trajectory), providing a principled basis for session-level safety in agentic systems.",
+      "authors": [
+        "Florin Adrian Chitan"
+      ],
+      "url": "https://arxiv.org/abs/2603.22350",
+      "published": "2026-03-22T08:30:28+00:00",
+      "updated": "2026-03-22T08:30:28+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.127,
+      "backfilled": true
     }
-  ]
+  ],
+  "patched_at": "2026-03-25T03:25:17.535874+00:00"
 }
