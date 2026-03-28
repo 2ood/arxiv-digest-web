@@ -3,6 +3,76 @@
   "fetched_at": "2026-03-25T12:25:16.004999+09:00",
   "papers": [
     {
+      "id": "2603.24617",
+      "title": "Multi-LLM Query Optimization",
+      "abstract": "Deploying multiple large language models (LLMs) in parallel to classify an unknown ground-truth label is a common practice, yet the problem of optimally allocating queries across heterogeneous models remains poorly understood. In this paper, we formulate a robust, offline query-planning problem that minimizes total query cost subject to statewise error constraints which guarantee reliability for every possible ground-truth label. We first establish that this problem is NP-hard via a reduction from the minimum-weight set cover problem. To overcome this intractability, we develop a surrogate by combining a union bound decomposition of the multi-class error into pairwise comparisons with Chernoff-type concentration bounds. The resulting surrogate admits a closed-form, multiplicatively separable expression in the query counts and is guaranteed to be feasibility-preserving. We further show that the surrogate is asymptotically tight at the optimization level: the ratio of surrogate-optimal cost to true optimal cost converges to one as error tolerances shrink, with an explicit rate of $O\\left(\\log\\log(1/α_{\\min}) / \\log(1/α_{\\min})\\right)$. Finally, we design an asymptotic fully polynomial-time approximation scheme (AFPTAS) that returns a surrogate-feasible query plan within a $(1+\\varepsilon)$ factor of the surrogate optimum.",
+      "authors": [
+        "Arlen Dean",
+        "Zijin Zhang",
+        "Stefanus Jasin",
+        "Yuqing Liu"
+      ],
+      "url": "https://arxiv.org/abs/2603.24617",
+      "published": "2026-03-24T19:51:57+00:00",
+      "updated": "2026-03-24T19:51:57+00:00",
+      "categories": [
+        "cs.DS",
+        "cs.LG",
+        "math.OC"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.24618",
+      "title": "Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis",
+      "abstract": "Analog-mixed-signal (AMS) circuits are highly non-linear and operate on continuous real-world signals, making them far more difficult to model with data-driven AI than digital blocks. To close the gap between structured design data (device dimensions, bias voltages, etc.) and real-world performance, we propose a causal-inference framework that first discovers a directed-acyclic graph (DAG) from SPICE simulation data and then quantifies parameter impact through Average Treatment Effect (ATE) estimation. The approach yields human-interpretable rankings of design knobs and explicit 'what-if' predictions, enabling designers to understand trade-offs in sizing and topology. We evaluate the pipeline on three operational-amplifier families (OTA, telescopic, and folded-cascode) implemented in TSMC 65nm and benchmark it against a baseline neural-network (NN) regressor. Across all circuits the causal model reproduces simulation-based ATEs with an average absolute error of less than 25%, whereas the neural network deviates by more than 80% and frequently predicts the wrong sign. These results demonstrate that causal AI provides both higher accuracy and explainability, paving the way for more efficient, trustworthy AMS design automation.",
+      "authors": [
+        "Mohyeu Hussain",
+        "David Koblah",
+        "Reiner Dizon-Paradis",
+        "Domenic Forte"
+      ],
+      "url": "https://arxiv.org/abs/2603.24618",
+      "published": "2026-03-24T20:10:58+00:00",
+      "updated": "2026-03-24T20:10:58+00:00",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Graph Neural Networks"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.24621",
+      "title": "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
+      "abstract": "We introduce ARC-AGI-3, an interactive benchmark for studying agentic intelligence through novel, abstract, turn-based environments in which agents must explore, infer goals, build internal models of environment dynamics, and plan effective action sequences without explicit instructions. Like its predecessors ARC-AGI-1 and 2, ARC-AGI-3 focuses entirely on evaluating fluid adaptive efficiency on novel tasks, while avoiding language and external knowledge. ARC-AGI-3 environments only leverage Core Knowledge priors and are difficulty-calibrated via extensive testing with human test-takers. Our testing shows humans can solve 100% of the environments, in contrast to frontier AI systems which, as of March 2026, score below 1%. In this paper, we present the benchmark design, its efficiency-based scoring framework grounded in human action baselines, and the methodology used to construct, validate, and calibrate the environments.",
+      "authors": [
+        "ARC Prize Foundation"
+      ],
+      "url": "https://arxiv.org/abs/2603.24621",
+      "published": "2026-03-24T21:58:16+00:00",
+      "updated": "2026-03-24T21:58:16+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
       "id": "2603.23584",
       "title": "LineMVGNN: Anti-Money Laundering with Line-Graph-Assisted Multi-View Graph Neural Networks",
       "abstract": "Anti-money laundering (AML) systems are important for protecting the global economy. However, conventional rule-based methods rely on domain knowledge, leading to suboptimal accuracy and a lack of scalability. Graph neural networks (GNNs) for digraphs (directed graphs) can be applied to transaction graphs and capture suspicious transactions or accounts. However, most spectral GNNs do not naturally support multi-dimensional edge features, lack interpretability due to edge modifications, and have limited scalability owing to their spectral nature. Conversely, most spatial methods may not capture the money flow well. Therefore, in this work, we propose LineMVGNN (Line-Graph-Assisted Multi-View Graph Neural Network), a novel spatial method that considers payment and receipt transactions. Specifically, the LineMVGNN model extends a lightweight MVGNN module, which performs two-way message passing between nodes in a transaction graph. Additionally, LineMVGNN incorporates a line graph view of the original transaction graph to enhance the propagation of transaction information. We conduct experiments on two real-world account-based transaction datasets: the Ethereum phishing transaction network dataset and a financial payment transaction dataset from one of our industry partners. The results show that our proposed method outperforms state-of-the-art methods, reflecting the effectiveness of money laundering detection with line-graph-assisted multi-view graph learning. We also discuss scalability, adversarial robustness, and regulatory considerations of our proposed method.",
@@ -7789,7 +7859,26 @@
       "match_method": "none",
       "best_score": 0.044,
       "backfilled": true
+    },
+    {
+      "id": "2603.25047",
+      "title": "The Order Is The Message",
+      "abstract": "In a controlled experiment on modular arithmetic ($p = 9973$), varying only example ordering while holding all else constant, two fixed-ordering strategies achieve 99.5\\% test accuracy by epochs 487 and 659 respectively from a training set comprising 0.3\\% of the input space, well below established sample complexity lower bounds for this task under IID ordering. The IID baseline achieves 0.30\\% after 5{,}000 epochs from identical data. An adversarially structured ordering suppresses learning entirely. The generalizing model reliably constructs a Fourier representation whose fundamental frequency is the Fourier dual of the ordering structure, encoding information present in no individual training example, with the same fundamental emerging across all seeds tested regardless of initialization or training set composition. We discuss implications for training efficiency, the reinterpretation of grokking, and the safety risks of a channel that evades all content-level auditing.",
+      "authors": [
+        "Jordan LeDoux"
+      ],
+      "url": "https://arxiv.org/abs/2603.25047",
+      "published": "2026-03-24T22:14:33+00:00",
+      "updated": "2026-03-24T22:14:33+00:00",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.208,
+      "backfilled": true
     }
   ],
-  "patched_at": "2026-03-26T03:34:35.234494+00:00"
+  "patched_at": "2026-03-28T03:22:49.170378+00:00"
 }
