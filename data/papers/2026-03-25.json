@@ -3,6 +3,281 @@
   "fetched_at": "2026-03-26T12:34:34.097924+09:00",
   "papers": [
     {
+      "id": "2603.26795",
+      "title": "HASS: Hierarchical Simulation of Logopenic Aphasic Speech for Scalable PPA Detection",
+      "abstract": "Building a diagnosis model for primary progressive aphasia (PPA) has been challenging due to the data scarcity. Collecting clinical data at scale is limited by the high vulnerability of clinical population and the high cost of expert labeling. To circumvent this, previous studies simulate dysfluent speech to generate training data. However, those approaches are not comprehensive enough to simulate PPA as holistic, multi-level phenotypes, instead relying on isolated dysfluencies. To address this, we propose a novel, clinically grounded simulation framework, Hierarchical Aphasic Speech Simulation (HASS). HASS aims to simulate behaviors of logopenic variant of PPA (lvPPA) with varying degrees of severity. To this end, semantic, phonological, and temporal deficits of lvPPA are systematically identified by clinical experts, and simulated. We demonstrate that our framework enables more accurate and generalizable detection models.",
+      "authors": [
+        "Harrison Li",
+        "Kevin Wang",
+        "Cheol Jun Cho",
+        "Jiachen Lian",
+        "Rabab Rangwala",
+        "Chenxu Guo",
+        "Emma Yang",
+        "Lynn Kurteff",
+        "Zoe Ezzes",
+        "Willa Keegan-Rodewald",
+        "Jet Vonk",
+        "Siddarth Ramkrishnan",
+        "Giada Antonicelli",
+        "Zachary Miller",
+        "Marilu Gorno Tempini",
+        "Gopala Anumanchipalli"
+      ],
+      "url": "https://arxiv.org/abs/2603.26795",
+      "published": "2026-03-25T21:31:05+00:00",
+      "updated": "2026-03-25T21:31:05+00:00",
+      "categories": [
+        "eess.AS",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26783",
+      "title": "Can We Change the Stroke Size for Easier Diffusion?",
+      "abstract": "Diffusion models can be challenged in the low signal-to-noise regime, where they have to make pixel-level predictions despite the presence of high noise. The geometric intuition is akin to using the finest stroke for oil painting throughout, which may be ineffective. We therefore study stroke-size control as a controlled intervention that changes the effective roughness of the supervised target, predictions and perturbations across timesteps, in an attempt to ease the low signal-to-noise challenge. We analyze the advantages and trade-offs of the intervention both theoretically and empirically. Code will be released.",
+      "authors": [
+        "Yunwei Bai",
+        "Ying Kiat Tan",
+        "Yao Shu",
+        "Tsuhan Chen"
+      ],
+      "url": "https://arxiv.org/abs/2603.26783",
+      "published": "2026-03-25T06:03:14+00:00",
+      "updated": "2026-03-25T06:03:14+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.25755",
+      "title": "KANEL: Kolmogorov-Arnold Network Ensemble Learning Enables Early Hit Enrichment in High-Throughput Virtual Screening",
+      "abstract": "Machine learning models of chemical bioactivity are increasingly used for prioritizing a small number of compounds in virtual screening libraries for experimental follow-up. In these applications, assessing model accuracy by early hit enrichment such as Positive Predicted Value (PPV) calculated for top N hits (PPV@N) is more appropriate and actionable than traditional global metrics such as AUC. We present KANEL, an ensemble workflow that combines interpretable Kolmogorov-Arnold Networks (KANs) with XGBoost, random forest, and multilayer perceptron models trained on complementary molecular representations (LillyMol descriptors, RDKit-derived descriptors, and Morgan fingerprints).",
+      "authors": [
+        "Pavel Koptev",
+        "Nikita Krainov",
+        "Konstantin Malkov",
+        "Alexander Tropsha"
+      ],
+      "url": "https://arxiv.org/abs/2603.25755",
+      "published": "2026-03-25T05:27:25+00:00",
+      "updated": "2026-03-25T05:27:25+00:00",
+      "categories": [
+        "physics.chem-ph",
+        "cs.LG",
+        "q-bio.QM",
+        "stat.ML"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26779",
+      "title": "Limits of Imagery Reasoning in Frontier LLM Models",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive reasoning capabilities, yet they struggle with spatial tasks that require mental simulation, such as mental rotation. This paper investigates whether equipping an LLM with an external ``Imagery Module'' -- a tool capable of rendering and rotating 3D models -- can bridge this gap, functioning as a ``cognitive prosthetic.'' We conducted experiments using a dual-module architecture in which a reasoning module (an MLLM) interacts with an imagery module on 3D model rotation tasks. Performance was lower than expected, with accuracy reaching at most 62.5%. Further investigation suggests that even when the burden of maintaining and manipulating a holistic 3D state is outsourced, the system still fails. This reveals that current frontier models lack the foundational visual-spatial primitives required to interface with imagery. Specifically, they lack: (1) the low-level sensitivity to extract spatial signals such as (a) depth, (b) motion, and (c) short-horizon dynamic prediction; and (2) the capacity to reason contemplatively over images, dynamically shifting visual focus and balancing imagery with symbolic and associative information.",
+      "authors": [
+        "Sergio Y. Hayashi",
+        "Nina S. T. Hirata"
+      ],
+      "url": "https://arxiv.org/abs/2603.26779",
+      "published": "2026-03-25T01:17:13+00:00",
+      "updated": "2026-03-25T01:17:13+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.25758",
+      "title": "A-SelecT: Automatic Timestep Selection for Diffusion Transformer Representation Learning",
+      "abstract": "Diffusion models have significantly reshaped the field of generative artificial intelligence and are now increasingly explored for their capacity in discriminative representation learning. Diffusion Transformer (DiT) has recently gained attention as a promising alternative to conventional U-Net-based diffusion models, demonstrating a promising avenue for downstream discriminative tasks via generative pre-training. However, its current training efficiency and representational capacity remain largely constrained due to the inadequate timestep searching and insufficient exploitation of DiT-specific feature representations. In light of this view, we introduce Automatically Selected Timestep (A-SelecT) that dynamically pinpoints DiT's most information-rich timestep from the selected transformer feature in a single run, eliminating the need for both computationally intensive exhaustive timestep searching and suboptimal discriminative feature selection. Extensive experiments on classification and segmentation benchmarks demonstrate that DiT, empowered by A-SelecT, surpasses all prior diffusion-based attempts efficiently and effectively.",
+      "authors": [
+        "Changyu Liu",
+        "James Chenhao Liang",
+        "Wenhao Yang",
+        "Yiming Cui",
+        "Jinghao Yang",
+        "Tianyang Wang",
+        "Qifan Wang",
+        "Dongfang Liu",
+        "Cheng Han"
+      ],
+      "url": "https://arxiv.org/abs/2603.25758",
+      "published": "2026-03-25T19:17:14+00:00",
+      "updated": "2026-03-25T19:17:14+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "eess.IV"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26781",
+      "title": "Efficient Encrypted Computation in Convolutional Spiking Neural Networks with TFHE",
+      "abstract": "With the rapid advancement of AI technology, we have seen more and more concerns on data privacy, leading to some cutting-edge research on machine learning with encrypted computation. Fully Homomorphic Encryption (FHE) is a crucial technology for privacy-preserving computation, while it struggles with continuous non-polynomial functions, as it operates on discrete integers and supports only addition and multiplication. Spiking Neural Networks (SNNs), which use discrete spike signals, naturally complement FHE's characteristics. In this paper, we introduce FHE-DiCSNN, a framework built on the TFHE scheme, utilizing the discrete nature of SNNs for secure and efficient computations. By leveraging bootstrapping techniques, we successfully implement Leaky Integrate-and-Fire (LIF) neuron models on ciphertexts, allowing SNNs of arbitrary depth. Our framework is adaptable to other spiking neuron models, offering a novel approach to homomorphic evaluation of SNNs. Additionally, we integrate convolutional methods inspired by CNNs to enhance accuracy and reduce the simulation time associated with random encoding. Parallel computation techniques further accelerate bootstrapping operations. Experimental results on the MNIST and FashionMNIST datasets validate the effectiveness of FHE-DiCSNN, with a loss of less than 3\\% compared to plaintext, respectively, and computation times of under 1 second per prediction. We also apply the model into real medical image classification problems and analyze the parameter optimization and selection.",
+      "authors": [
+        "Longfei Guo",
+        "Pengbo Li",
+        "Ting Gao",
+        "Yonghai Zhong",
+        "Haojie Fan",
+        "Jinqiao Duan"
+      ],
+      "url": "https://arxiv.org/abs/2603.26781",
+      "published": "2026-03-25T03:15:59+00:00",
+      "updated": "2026-03-25T03:15:59+00:00",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness",
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26786",
+      "title": "A Step Toward Federated Pretraining of Multimodal Large Language Models",
+      "abstract": "The rapid evolution of Multimodal Large Language Models (MLLMs) is bottlenecked by the saturation of high-quality public data, while vast amounts of diverse multimodal data remain inaccessible in privacy-sensitive silos. Federated Learning (FL) offers a promising solution to unlock these distributed resources, but existing research focuses predominantly on fine-tuning, leaving the foundational pre-training phase largely unexplored. In this paper, we formally introduce the Federated MLLM Alignment (Fed-MA) task, a lightweight pre-training paradigm that freezes the vision encoder and LLM while collaboratively training the cross-modal projector. We identify two critical challenges in this setting: (i) parameter interference in aggregating local projectors; and (ii) gradient oscillations in one-pass collaborative SGD. To address these challenges, we propose Fed-CMP, a pioneering framework for federated MLLM pre-training. Fed-CMP employs Canonical Reliability-Aware Aggregation, which constructs a canonical space to decompose client projectors into a shared alignment basis and client-specific coefficients, then performs reliability-weighted fusion to suppress parameter interference. Furthermore, Fed-CMP introduces Orthogonality-Preserved Momentum, which applies momentum to the shared alignment basis via orthogonal projection, accumulating historical optimization directions while preserving geometric structure. We construct four federated pre-training scenarios based on public datasets, and extensive experiments validate that Fed-CMP significantly outperforms existing baselines.",
+      "authors": [
+        "Baochen Xiong",
+        "Yifan Xu",
+        "Xiaoshan Yang",
+        "Yaguang Song",
+        "Yaowei Wang",
+        "Changsheng Xu"
+      ],
+      "url": "https://arxiv.org/abs/2603.26786",
+      "published": "2026-03-25T08:16:23+00:00",
+      "updated": "2026-03-25T08:16:23+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26791",
+      "title": "CRISP: Characterizing Relative Impact of Scholarly Publications",
+      "abstract": "Assessing a cited paper's impact is typically done by analyzing its citation context in isolation within the citing paper. While this focuses on the most directly relevant text, it prevents relative comparisons across all the works a paper cites. We propose CRISP, which instead jointly ranks all cited papers within a citing paper using large language models (LLMs). To mitigate LLMs' positional bias, we rank each list three times in a randomized order and aggregate the impact labels through majority voting. This joint approach leverages the full citation context, rather than evaluating citations independently, to more reliably distinguish impactful references. CRISP outperforms a prior state-of-the-art impact classifier by +9.5% accuracy and +8.3% F1 on a dataset of human-annotated citations. CRISP further gains efficiency through fewer LLM calls and performs competitively with an open-source model, enabling scalable, cost-effective citation impact analysis. We release our rankings, impact labels, and codebase to support future research.",
+      "authors": [
+        "Hannah Collison",
+        "Benjamin Van Durme",
+        "Daniel Khashabi"
+      ],
+      "url": "https://arxiv.org/abs/2603.26791",
+      "published": "2026-03-25T16:42:30+00:00",
+      "updated": "2026-03-25T16:42:30+00:00",
+      "categories": [
+        "cs.DL",
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26796",
+      "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+      "abstract": "We study the problem of routing queries to large language models (LLMs) under cost, GPU resources, and concurrency constraints. Prior per-query routing methods often fail to control batch-level cost, especially under non-uniform or adversarial batching. To address this, we propose a batch-level, resource-aware routing framework that jointly optimizes model assignment for each batch while respecting cost and model capacity limits. We further introduce a robust variant that accounts for uncertainty in predicted LLM performance, along with an offline instance allocation procedure that balances quality and throughput across multiple models. Experiments on two multi-task LLM benchmarks show that robustness improves accuracy by 1-14% over non-robust counterparts (depending on the performance estimator), batch-level routing outperforms per-query methods by up to 24% under adversarial batching, and optimized instance allocation yields additional gains of up to 3% compared to a non-optimized allocation, all while strictly controlling cost and GPU resource constraints.",
+      "authors": [
+        "Jelena Markovic-Voronov",
+        "Kayhan Behdin",
+        "Yuanda Xu",
+        "Zhengze Zhou",
+        "Zhipeng Wang",
+        "Rahul Mazumder"
+      ],
+      "url": "https://arxiv.org/abs/2603.26796",
+      "published": "2026-03-25T22:24:11+00:00",
+      "updated": "2026-03-25T22:24:11+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "matched_topics": [
+        "Interpretability"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26778",
+      "title": "TED: Training-Free Experience Distillation for Multimodal Reasoning",
+      "abstract": "Knowledge distillation is typically realized by transferring a teacher model's knowledge into a student's parameters through supervised or reinforcement-based optimization. While effective, such approaches require repeated parameter updates and large-scale training data, limiting their applicability in resource-constrained environments. In this work, we propose TED, a training-free, context-based distillation framework that shifts the update target of distillation from model parameters to an in-context experience injected into the student's prompt. For each input, the student generates multiple reasoning trajectories, while a teacher independently produces its own solution. The teacher then compares the student trajectories with its reasoning and the ground-truth answer, extracting generalized experiences that capture effective reasoning patterns. These experiences are continuously refined and updated over time. A key challenge of context-based distillation is unbounded experience growth and noise accumulation. TED addresses this with an experience compression mechanism that tracks usage statistics and selectively merges, rewrites, or removes low-utility experiences. Experiments on multimodal reasoning benchmarks MathVision and VisualPuzzles show that TED consistently improves performance. On MathVision, TED raises the performance of Qwen3-VL-8B from 0.627 to 0.702, and on VisualPuzzles from 0.517 to 0.561 with just 100 training samples. Under this low-data, no-update setting, TED achieves performance competitive with fully trained parameter-based distillation while reducing training cost by over 5x, demonstrating that meaningful knowledge transfer can be achieved through contextual experience.",
+      "authors": [
+        "Shuozhi Yuan",
+        "Jinqing Wang",
+        "Zihao Liu",
+        "Miaomiao Yuan",
+        "Haoran Peng",
+        "Jin Zhao",
+        "Bingwen Wang",
+        "Haoyi Wang"
+      ],
+      "url": "https://arxiv.org/abs/2603.26778",
+      "published": "2026-03-25T01:08:36+00:00",
+      "updated": "2026-03-25T01:08:36+00:00",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Symbolic AI"
+      ],
+      "match_method": "semantic",
+      "best_score": 0.396,
+      "backfilled": true
+    },
+    {
       "id": "2603.24801",
       "title": "Dissecting Model Failures in Abdominal Aortic Aneurysm Segmentation through Explainability-Driven Analysis",
       "abstract": "Computed tomography image segmentation of complex abdominal aortic aneurysms (AAA) often fails because the models assign internal focus to irrelevant structures or do not focus on thin, low-contrast targets. Where the model looks is the primary training signal, and thus we propose an Explainable AI (XAI) guided encoder shaping framework. Our method computes a dense, attribution-based encoder focus map (\"XAI field\") from the final encoder block and uses it in two complementary ways: (i) we align the predicted probability mass to the XAI field to promote agreement between focus and output; and (ii) we route the field into a lightweight refinement pathway and a confidence prior that modulates logits at inference, suppressing distractors while preserving subtle structures. The objective terms serve only as control signals; the contribution is the integration of attribution guidance into representation and decoding. We evaluate clinically validated challenging cases curated for failure-prone scenarios. Compared to a base SAM setup, our implementation yields substantial improvements. The observed gains suggest that explicitly optimizing encoder focus via XAI guidance is a practical and effective principle for reliable segmentation in complex scenarios.",
@@ -7237,7 +7512,77 @@
       "match_method": "none",
       "best_score": 0.062,
       "backfilled": true
+    },
+    {
+      "id": "2603.26794",
+      "title": "PhyDCM: A Reproducible Open-Source Framework for AI-Assisted Brain Tumor Classification from Multi-Sequence MRI",
+      "abstract": "MRI-based medical imaging has become indispensable in modern clinical diagnosis, particularly for brain tumor detection. However, the rapid growth in data volume poses challenges for conventional diagnostic approaches. Although deep learning has shown strong performance in automated classification, many existing solutions are confined to closed technical architectures, limiting reproducibility and further academic development. PhyDCM is introduced as an open-source software framework that integrates a hybrid classification architecture based on MedViT with standardized DICOM processing and an interactive desktop visualization interface. The system is designed as a modular digital library that separates computational logic from the graphical interface, allowing independent modification and extension of components. Standardized preprocessing, including intensity rescaling and limited data augmentation, ensures consistency across varying MRI acquisition settings. Experimental evaluation on MRI datasets from BRISC2025 and curated Kaggle collections (FigShare, SARTAJ, and Br35H) demonstrates stable diagnostic performance, achieving over 93% classification accuracy across categories. The framework supports structured, exportable outputs and multi-planar reconstruction of volumetric data. By emphasizing transparency, modularity, and accessibility, PhyDCM provides a practical foundation for reproducible AI-driven medical image analysis, with flexibility for future integration of additional imaging modalities.",
+      "authors": [
+        "Hayder Saad Abdulbaqi",
+        "Mohammed Hadi Rahim",
+        "Mohammed Hassan Hadi",
+        "Haider Ali Aboud",
+        "Ali Hussein Allawi"
+      ],
+      "url": "https://arxiv.org/abs/2603.26794",
+      "published": "2026-03-25T20:58:22+00:00",
+      "updated": "2026-03-25T20:58:22+00:00",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.332,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26782",
+      "title": "Multiverse: Language-Conditioned Multi-Game Level Blending via Shared Representation",
+      "abstract": "Text-to-level generation aims to translate natural language descriptions into structured game levels, enabling intuitive control over procedural content generation. While prior text-to-level generators are typically limited to a single game domain, extending language-conditioned generation to multiple games requires learning representations that capture structural relationships across domains. We propose Multiverse, a language-conditioned multi-game level generator that enables cross-game level blending through textual specifications. The model learns a shared latent space aligning textual instructions and level structures, while a threshold-based multi-positive contrastive supervision links semantically related levels across games. This representation allows language to guide which structural characteristics should be preserved when combining content from different games, enabling controllable blending through latent interpolation and zero-shot generation from compositional textual prompts. Experiments show that the learned representation supports controllable cross-game level blending and significantly improves blending quality within the same game genre, while providing a unified representation for language-conditioned multi-game content generation.",
+      "authors": [
+        "In-Chang Baek",
+        "Jiyun Jung",
+        "Sung-Hyun Kim",
+        "Geum-Hwan Hwang",
+        "Kyung-Joong Kim"
+      ],
+      "url": "https://arxiv.org/abs/2603.26782",
+      "published": "2026-03-25T04:50:29+00:00",
+      "updated": "2026-03-25T04:50:29+00:00",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.229,
+      "backfilled": true
+    },
+    {
+      "id": "2603.26792",
+      "title": "A Firefly Algorithm for Mixed-Variable Optimization Based on Hybrid Distance Modeling",
+      "abstract": "Several real-world optimization problems involve mixed-variable search spaces, where continuous, ordinal, and categorical decision variables coexist. However, most population-based metaheuristic algorithms are designed for either continuous or discrete optimization problems and do not naturally handle heterogeneous variable types. In this paper, we propose an adaptation of the Firefly Algorithm for mixed-variable optimization problems (FAmv). The proposed method relies on a modified distance-based attractiveness mechanism that integrates continuous and discrete components within a unified formulation. This mixed-distance approach enables a more appropriate modeling of heterogeneous search spaces while maintaining a balance between exploration and exploitation. The proposed method is evaluated on the CEC2013 mixed-variable benchmark, which includes unimodal, multimodal, and composition functions. The results show that FAmv achieves competitive, and often superior, performance compared with state-of-the-art mixed-variable optimization algorithms. In addition, experiments on engineering design problems further highlight the robustness and practical applicability of the proposed approach. These results indicate that incorporating appropriate distance formulations into the Firefly Algorithm provides an effective strategy for solving complex mixed-variable optimization problems.",
+      "authors": [
+        "Ousmane Tom Bechir",
+        "Adán José-García",
+        "Zaineb Chelly Garcia",
+        "Vincent Sobanski",
+        "Clarisse Dhaenens"
+      ],
+      "url": "https://arxiv.org/abs/2603.26792",
+      "published": "2026-03-25T16:52:54+00:00",
+      "updated": "2026-03-25T16:52:54+00:00",
+      "categories": [
+        "cs.NE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.133,
+      "backfilled": true
     }
   ],
-  "patched_at": "2026-03-28T03:22:48.718401+00:00"
+  "patched_at": "2026-03-31T03:40:18.546254+00:00"
 }
