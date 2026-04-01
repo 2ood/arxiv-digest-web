@@ -3,6 +3,27 @@
   "fetched_at": "2026-04-01T07:56:44.931441+09:00",
   "papers": [
     {
+      "id": "2603.28825",
+      "title": "Incentives, Equilibria, and the Limits of Healthcare AI: A Game-Theoretic Perspective",
+      "abstract": "Artificial intelligence (AI) is widely promoted as a promising technological response to healthcare capacity and productivity pressures. Deployment of AI systems carries significant costs including ongoing costs of monitoring and whether optimism of a deus ex machina solution is well-placed is unclear. This paper proposes three archetypal AI technology types: AI for effort reduction, AI to increase observability, and mechanism-level incentive change AI. Using a stylised inpatient capacity signalling example and minimal game-theoretic reasoning, it argues that task optimisation alone is unlikely to change system outcomes when incentives are unchanged. The analysis highlights why only interventions that reshape risk allocation can plausibly shift stable system-level behaviour, and outlines implications for healthcare leadership and procurement.",
+      "authors": [
+        "Ari Ercole"
+      ],
+      "url": "https://arxiv.org/abs/2603.28825",
+      "published": "2026-03-29T12:01:34+00:00",
+      "updated": "2026-03-29T12:01:34+00:00",
+      "categories": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "matched_topics": [
+        "Artificial Consciousness"
+      ],
+      "match_method": "keyword",
+      "best_score": 0.0,
+      "backfilled": true
+    },
+    {
       "id": "2603.27646",
       "title": "PRBench: End-to-end Paper Reproduction in Physics Research",
       "abstract": "AI agents powered by large language models exhibit strong reasoning and problem-solving capabilities, enabling them to assist scientific research tasks such as formula derivation and code generation. However, whether these agents can reliably perform end-to-end reproduction from real scientific papers remains an open question. We introduce PRBench, a benchmark of 30 expert-curated tasks spanning 11 subfields of physics. Each task requires an agent to comprehend the methodology of a published paper, implement the corresponding algorithms from scratch, and produce quantitative results matching the original publication. Agents are provided only with the task instruction and paper content, and operate in a sandboxed execution environment. All tasks are contributed by domain experts from over 20 research groups at the School of Physics, Peking University, each grounded in a real published paper and validated through end-to-end reproduction with verified ground-truth results and detailed scoring rubrics. Using an agentified assessment pipeline, we evaluate a set of coding agents on PRBench and analyze their capabilities across key dimensions of scientific reasoning and execution. The best-performing agent, OpenAI Codex powered by GPT-5.3-Codex, achieves a mean overall score of 34%. All agents exhibit a zero end-to-end callback success rate, with particularly poor performance in data accuracy and code correctness. We further identify systematic failure modes, including errors in formula implementation, inability to debug numerical simulations, and fabrication of output data. Overall, PRBench provides a rigorous benchmark for evaluating progress toward autonomous scientific research.",
@@ -3009,6 +3030,49 @@
       "matched_topics": [],
       "match_method": "none",
       "best_score": 0.038
+    },
+    {
+      "id": "2603.28823",
+      "title": "Time is Not Compute: Scaling Laws for Wall-Clock Constrained Training on Consumer GPUs",
+      "abstract": "Scaling laws relate model quality to compute budget (FLOPs), but practitioners face wall-clock time constraints, not compute budgets. We study optimal model sizing under fixed time budgets from 5 minutes to 24 hours on consumer GPUs (RTX 4090). Across 70+ runs spanning 50M--1031M parameters, we find: (1)~at each time budget a U-shaped curve emerges where too-small models overfit and too-large models undertrain; (2)~optimal model size follows $N^* \\propto t^{0.60}$, growing \\emph{faster} than Chinchilla's $N^* \\propto C^{0.50}$, with $α= 0.60 \\pm 0.07$ robustly exceeding compute-optimal across all sensitivity analyses; (3)~a \\emph{dual U-shape mechanism}: short-budget U-curves arise from compute bottlenecks, while long-budget U-curves emerge from data bottlenecks (overfitting), with an intermediate regime where the U-curve temporarily disappears. These findings have immediate implications for researchers training on consumer hardware, where wall-clock time -- not FLOPs -- is the binding constraint. We release all code, logs, and 70+ experimental configurations.",
+      "authors": [
+        "Yi Liu"
+      ],
+      "url": "https://arxiv.org/abs/2603.28823",
+      "published": "2026-03-29T07:30:50+00:00",
+      "updated": "2026-03-29T07:30:50+00:00",
+      "categories": [
+        "cs.PF",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.256,
+      "backfilled": true
+    },
+    {
+      "id": "2603.28824",
+      "title": "SNEAKDOOR: Stealthy Backdoor Attacks against Distribution Matching-based Dataset Condensation",
+      "abstract": "Dataset condensation aims to synthesize compact yet informative datasets that retain the training efficacy of full-scale data, offering substantial gains in efficiency. Recent studies reveal that the condensation process can be vulnerable to backdoor attacks, where malicious triggers are injected into the condensation dataset, manipulating model behavior during inference. While prior approaches have made progress in balancing attack success rate and clean test accuracy, they often fall short in preserving stealthiness, especially in concealing the visual artifacts of condensed data or the perturbations introduced during inference. To address this challenge, we introduce Sneakdoor, which enhances stealthiness without compromising attack effectiveness. Sneakdoor exploits the inherent vulnerability of class decision boundaries and incorporates a generative module that constructs input-aware triggers aligned with local feature geometry, thereby minimizing detectability. This joint design enables the attack to remain imperceptible to both human inspection and statistical detection. Extensive experiments across multiple datasets demonstrate that Sneakdoor achieves a compelling balance among attack success rate, clean test accuracy, and stealthiness, substantially improving the invisibility of both the synthetic data and triggered samples while maintaining high attack efficacy. The code is available at https://github.com/XJTU-AI-Lab/SneakDoor.",
+      "authors": [
+        "He Yang",
+        "Dongyi Lv",
+        "Song Ma",
+        "Wei Xi",
+        "Jizhong Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2603.28824",
+      "published": "2026-03-29T09:00:25+00:00",
+      "updated": "2026-03-29T09:00:25+00:00",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "matched_topics": [],
+      "match_method": "none",
+      "best_score": 0.241,
+      "backfilled": true
     }
-  ]
+  ],
+  "patched_at": "2026-04-01T03:51:27.498731+00:00"
 }
