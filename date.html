@@ -37,28 +37,21 @@
 <div class="filter-bar" id="filter-bar"></div>
 
 <div class="content">
-  <div id="matched-list"></div>
-  <div class="pagination" id="matched-pagination"></div>
-  <div class="section-divider" id="unmatched-anchor">
-    <div class="section-divider-line"></div>
-    <div class="section-divider-label">Filtered out · sorted by relevance</div>
-    <div class="section-divider-line"></div>
-  </div>
-  <div id="unmatched-list"></div>
-  <div class="pagination" id="unmatched-pagination"></div>
+  <div id="paper-list"></div>
+  <div class="pagination" id="paper-pagination"></div>
 </div>
 
 <script src="static/display.js"></script>
 <script>
 let activeTopics = new Set();
-let pages        = { matched: 1, unmatched: 1 };
+let page         = 1;
 let allPapers    = [];
 
 async function boot() {
   const dateStr = window.location.hash.replace("#", "");
 
   if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-    DigestDisplay.showError("matched-list", "No date specified.",
+    DigestDisplay.showError("paper-list", "No date specified.",
       'Click a date from the calendar on the <a href="index.html">digest page</a>.');
     document.getElementById("header-title").textContent = "Archive";
     return;
@@ -69,15 +62,16 @@ async function boot() {
     d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   document.title = "arXiv Digest · " + dateStr;
 
-  DigestDisplay.showLoading("matched-list");
+  DigestDisplay.showLoading("paper-list");
 
   let payload;
   try {
-    const res = await fetch("data/papers/" + dateStr + ".json");
+    const parts = dateStr.split("-");
+    const res = await fetch("data/papers/" + parts[0] + "/" + parts[1] + "/" + parts[2] + ".json");
     if (!res.ok) throw new Error("HTTP " + res.status);
     payload = await res.json();
   } catch (e) {
-    DigestDisplay.showError("matched-list", "No data for " + dateStr + ".",
+    DigestDisplay.showError("paper-list", "No data for " + dateStr + ".",
       "This date may be outside the 3-month archive, or the digest hasn't run yet. <a href=\"index.html\">← Back</a>");
     return;
   }
@@ -86,11 +80,12 @@ async function boot() {
 
   const topicSet = new Set();
   allPapers.forEach(p => (p.matched_topics || []).forEach(t => topicSet.add(t)));
-  DigestDisplay.buildTopicStyles([...topicSet]);
-  activeTopics = new Set([...topicSet]);
+  const allTopics = [...topicSet, "misc"];
+  DigestDisplay.buildTopicStyles(allTopics);
+  activeTopics = new Set(allTopics);
 
   DigestDisplay.buildFilterChips("filter-bar", activeTopics, () => {
-    pages.matched = 1; render();
+    page = 1; render();
   });
 
   // Build calendar from available_dates.json
@@ -109,29 +104,22 @@ async function boot() {
 function render() {
   const matched   = allPapers.filter(p => p.matched_topics && p.matched_topics.length > 0);
   const unmatched = allPapers.filter(p => !p.matched_topics || p.matched_topics.length === 0);
-  const filtered  = matched.filter(p =>
+  const tagged    = unmatched.map(p => ({...p, matched_topics: ["misc"]}));
+  const combined  = [...matched, ...tagged];
+  const filtered  = combined.filter(p =>
     (p.matched_topics || []).some(t => activeTopics.has(t))
   );
 
+  const matchedCount = filtered.filter(p => !p.matched_topics.includes("misc")).length;
   document.getElementById("meta-count").textContent =
-    filtered.length + " matched · " + unmatched.length + " unmatched";
+    matchedCount + " matched · " + filtered.length + " total";
 
-  DigestDisplay.renderLists({
-    matchedListId:   "matched-list",
-    unmatchedListId: "unmatched-list",
-    matchedPagId:    "matched-pagination",
-    unmatchedPagId:  "unmatched-pagination",
-    matchedPapers:   filtered,
-    unmatchedPapers: unmatched,
-    pages,
-    onPage: (which, pg) => {
-      pages[which] = pg; render();
-      if (which === "unmatched") {
-        document.getElementById("unmatched-anchor").scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        scrollTo({ top: 0, behavior: "smooth" });
-      }
-    },
+  DigestDisplay.renderList({
+    containerId:  "paper-list",
+    paginationId: "paper-pagination",
+    papers:       filtered,
+    page,
+    onPage: pg => { page = pg; render(); scrollTo({ top: 0, behavior: "smooth" }); },
   });
 }
 

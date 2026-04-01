@@ -37,15 +37,8 @@
 <div class="filter-bar" id="filter-bar"></div>
 
 <div class="content">
-  <div id="matched-list"></div>
-  <div class="pagination" id="matched-pagination"></div>
-  <div class="section-divider" id="unmatched-anchor">
-    <div class="section-divider-line"></div>
-    <div class="section-divider-label">Filtered out · sorted by relevance</div>
-    <div class="section-divider-line"></div>
-  </div>
-  <div id="unmatched-list"></div>
-  <div class="pagination" id="unmatched-pagination"></div>
+  <div id="paper-list"></div>
+  <div class="pagination" id="paper-pagination"></div>
 </div>
 
 <script src="static/display.js"></script>
@@ -55,7 +48,7 @@ const MAX_TABS = 7;
 let daysData     = [];   // [{ date, label, papers[] }]
 let activeTab    = 0;
 let activeTopics = new Set();
-let pages        = { matched: 1, unmatched: 1 };
+let page         = 1;
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 // Dates from filenames are UTC calendar dates (YYYY-MM-DD).
@@ -89,15 +82,9 @@ function splitPapers(papers) {
   return { matched, unmatched };
 }
 
-function applyTopicFilter(matched) {
-  return matched.filter(p =>
-    (p.matched_topics || []).some(t => activeTopics.has(t))
-  );
-}
-
 // ── Boot ───────────────────────────────────────────────────────────────────
 async function boot() {
-  DigestDisplay.showLoading("matched-list");
+  DigestDisplay.showLoading("paper-list");
 
   // 1. Fetch available_dates.json
   let datesIndex;
@@ -106,7 +93,7 @@ async function boot() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     datesIndex = await res.json();
   } catch (e) {
-    DigestDisplay.showError("matched-list", "No data yet",
+    DigestDisplay.showError("paper-list", "No data yet",
       "Run the pipeline locally or wait for the next scheduled build.");
     document.getElementById("header-title").textContent = "arXiv Digest";
     return;
@@ -135,7 +122,8 @@ async function boot() {
   const fetched = await Promise.all(
     recentDates.map(async dateStr => {
       try {
-        const res = await fetch(`data/papers/${dateStr}.json`);
+        const [y, m, d] = dateStr.split("-");
+        const res = await fetch(`data/papers/${y}/${m}/${d}.json`);
         if (!res.ok) return null;
         return await res.json();
       } catch { return null; }
@@ -148,7 +136,7 @@ async function boot() {
     if (!day) return;
     day.papers.forEach(p => (p.matched_topics || []).forEach(t => topicSet.add(t)));
   });
-  const allTopics = [...topicSet];
+  const allTopics = [...topicSet, "misc"];
   DigestDisplay.buildTopicStyles(allTopics);
   activeTopics = new Set(allTopics);
 
@@ -160,7 +148,7 @@ async function boot() {
   })).filter(d => d.papers.length > 0);
 
   if (!daysData.length) {
-    DigestDisplay.showError("matched-list", "No papers loaded",
+    DigestDisplay.showError("paper-list", "No papers loaded",
       "Data files may be missing or empty.");
     return;
   }
@@ -173,7 +161,7 @@ async function boot() {
     btn.className = "tab" + (i === 0 ? " active" : "");
     btn.innerHTML = `${day.label}<span class="tab-count">${matched.length}</span>`;
     btn.addEventListener("click", () => {
-      activeTab = i; pages = { matched: 1, unmatched: 1 };
+      activeTab = i; page = 1;
       document.querySelectorAll(".tab").forEach((t, j) =>
         t.classList.toggle("active", j === i));
       render();
@@ -183,7 +171,7 @@ async function boot() {
 
   // 7. Build filter chips
   DigestDisplay.buildFilterChips("filter-bar", activeTopics, () => {
-    pages.matched = 1; render();
+    page = 1; render();
   });
 
   // 8. Build calendar sidebar
@@ -194,7 +182,7 @@ async function boot() {
       // If date is one of our tabs, switch to it
       const tabIdx = daysData.findIndex(d => d.date === dateStr);
       if (tabIdx >= 0) {
-        activeTab = tabIdx; pages = { matched: 1, unmatched: 1 };
+        activeTab = tabIdx; page = 1;
         document.querySelectorAll(".tab").forEach((t, j) =>
           t.classList.toggle("active", j === tabIdx));
         render(); scrollTo(0, 0);
@@ -212,27 +200,22 @@ async function boot() {
 function render() {
   const day = daysData[activeTab];
   const { matched, unmatched } = splitPapers(day.papers);
-  const filtered = applyTopicFilter(matched);
+  const tagged   = unmatched.map(p => ({...p, matched_topics: ["misc"]}));
+  const combined = [...matched, ...tagged];
+  const filtered = combined.filter(p =>
+    (p.matched_topics || []).some(t => activeTopics.has(t))
+  );
 
+  const matchedCount = filtered.filter(p => !p.matched_topics.includes("misc")).length;
   document.getElementById("meta-count").textContent =
-    `${filtered.length} matched · ${unmatched.length} unmatched`;
+    `${matchedCount} matched · ${filtered.length} total`;
 
-  DigestDisplay.renderLists({
-    matchedListId:   "matched-list",
-    unmatchedListId: "unmatched-list",
-    matchedPagId:    "matched-pagination",
-    unmatchedPagId:  "unmatched-pagination",
-    matchedPapers:   filtered,
-    unmatchedPapers: unmatched,
-    pages,
-    onPage: (which, pg) => {
-      pages[which] = pg; render();
-      if (which === "unmatched") {
-        document.getElementById("unmatched-anchor").scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        scrollTo({ top: 0, behavior: "smooth" });
-      }
-    },
+  DigestDisplay.renderList({
+    containerId:  "paper-list",
+    paginationId: "paper-pagination",
+    papers:       filtered,
+    page,
+    onPage: pg => { page = pg; render(); scrollTo({ top: 0, behavior: "smooth" }); },
   });
 }
 

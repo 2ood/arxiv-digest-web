@@ -14,7 +14,7 @@
 const DigestDisplay = (() => {
 
   // ── Constants ──────────────────────────────────────────────────────────────
-  const PAGE_SIZE = 5;
+  const PAGE_SIZE = 10;
 
   const CHIP_PALETTES = [
     ["#dbeafe","#1d4ed8","#93c5fd","#3b82f6"],
@@ -25,9 +25,10 @@ const DigestDisplay = (() => {
     ["#ccfbf1","#0f766e","#5eead4","#14b8a6"],
   ];
 
-  const IRREL_STYLE = {
-    background: "#f1f5f9", color: "#94a3b8", borderColor: "#e2e8f0"
+  const MISC_STYLE = {
+    background: "#f1f5f9", color: "#64748b", borderColor: "#cbd5e1"
   };
+  const MISC_ACCENT = "#e2e8f0";
 
   // ── Match method badge ─────────────────────────────────────────────────────
   function _methodBadge(method) {
@@ -48,11 +49,19 @@ const DigestDisplay = (() => {
 
   function buildTopicStyles(topics) {
     allTopics = topics;
-    topics.forEach((t, i) => {
-      const pal = CHIP_PALETTES[i % CHIP_PALETTES.length];
+    let palIdx = 0;
+    topics.forEach((t) => {
+      if (t === "misc") {
+        activeStyles[t]   = MISC_STYLE;
+        inactiveStyles[t] = { background: "#f1f5f9", color: "#94a3b8", borderColor: "#e2e8f0" };
+        accentColors[t]   = MISC_ACCENT;
+        return;
+      }
+      const pal = CHIP_PALETTES[palIdx % CHIP_PALETTES.length];
       activeStyles[t]   = { background: pal[0], color: pal[1], borderColor: pal[2] };
       inactiveStyles[t] = { background: "#f1f5f9", color: "#94a3b8", borderColor: "#e2e8f0" };
       accentColors[t]   = pal[3];
+      palIdx++;
     });
   }
 
@@ -208,27 +217,24 @@ const DigestDisplay = (() => {
   }
 
   function _applyChipStyle(el, t, on) {
-    const s = on ? (activeStyles[t] || IRREL_STYLE) : (inactiveStyles[t] || IRREL_STYLE);
+    const s = on ? (activeStyles[t] || MISC_STYLE) : (inactiveStyles[t] || MISC_STYLE);
     el.style.background  = s.background;
     el.style.color       = s.color;
     el.style.borderColor = s.borderColor;
   }
 
   // ── Paper card ─────────────────────────────────────────────────────────────
-  function buildCard(p, isIrrelevant) {
+  function buildCard(p) {
+    const isMisc  = (p.matched_topics || []).length === 1 && p.matched_topics[0] === "misc";
     const preview = p.abstract.slice(0, 320) + (p.abstract.length > 320 ? "…" : "");
     const hasMore = p.abstract.length > 320;
-    const accent  = isIrrelevant
-      ? "#e2e8f0"
-      : (accentColors[p.matched_topics && p.matched_topics[0]] || "#cbd5e1");
+    const accent  = accentColors[(p.matched_topics || [])[0]] || "#cbd5e1";
 
-    const chips = isIrrelevant
-      ? `<span class="topic-chip" style="background:${IRREL_STYLE.background};color:${IRREL_STYLE.color};border-color:${IRREL_STYLE.borderColor}">irrelevant</span>
-         <span class="score-badge">score ${p.best_score}</span>`
-      : (p.matched_topics || []).map(t => {
-          const s = activeStyles[t] || IRREL_STYLE;
-          return `<span class="topic-chip" style="background:${s.background};color:${s.color};border-color:${s.borderColor}">${t}</span>`;
-        }).join("");
+    const chips = (p.matched_topics || []).map(t => {
+        const s = activeStyles[t] || MISC_STYLE;
+        return `<span class="topic-chip" style="background:${s.background};color:${s.color};border-color:${s.borderColor}">${t}</span>`;
+      }).join("")
+      + (isMisc ? `<span class="score-badge">score ${p.best_score}</span>` : "");
 
     const authorsArr = p.authors || [];
     const authorsStr = authorsArr.slice(0, 3).join(", ") + (authorsArr.length > 3 ? " et al." : "");
@@ -239,7 +245,7 @@ const DigestDisplay = (() => {
       : "";
 
     const card = document.createElement("div");
-    card.className = "paper" + (isIrrelevant ? " irrelevant" : "");
+    card.className = "paper" + (isMisc ? " irrelevant" : "");
     card.style.borderLeftColor = accent;
     card.innerHTML = `
       ${backfilledBadge}
@@ -268,31 +274,19 @@ const DigestDisplay = (() => {
   }
 
   // ── Render paper lists ─────────────────────────────────────────────────────
-  function renderLists({ matchedListId, unmatchedListId, matchedPagId, unmatchedPagId,
-                         matchedPapers, unmatchedPapers, pages, onPage }) {
-    const mList = document.getElementById(matchedListId);
-    if (mList) {
-      mList.innerHTML = "";
-      if (!matchedPapers.length) {
-        mList.innerHTML = '<div style="text-align:center;color:#94a3b8;padding:48px 0;font-size:14px">No papers match the selected topics.</div>';
+  function renderList({ containerId, paginationId, papers, page, onPage }) {
+    const list = document.getElementById(containerId);
+    if (list) {
+      list.innerHTML = "";
+      if (!papers.length) {
+        list.innerHTML = '<div style="text-align:center;color:#94a3b8;padding:48px 0;font-size:14px">No papers match the selected topics.</div>';
       } else {
-        matchedPapers
-          .slice((pages.matched - 1) * PAGE_SIZE, pages.matched * PAGE_SIZE)
-          .forEach(p => mList.appendChild(buildCard(p, false)));
+        papers
+          .slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+          .forEach(p => list.appendChild(buildCard(p)));
       }
     }
-    renderPagination(matchedPagId, matchedPapers.length, pages.matched,
-      pg => onPage("matched", pg));
-
-    const uList = document.getElementById(unmatchedListId);
-    if (uList) {
-      uList.innerHTML = "";
-      unmatchedPapers
-        .slice((pages.unmatched - 1) * PAGE_SIZE, pages.unmatched * PAGE_SIZE)
-        .forEach(p => uList.appendChild(buildCard(p, true)));
-    }
-    renderPagination(unmatchedPagId, unmatchedPapers.length, pages.unmatched,
-      pg => onPage("unmatched", pg));
+    renderPagination(paginationId, papers.length, page, onPage);
   }
 
   // ── Pagination ─────────────────────────────────────────────────────────────
@@ -352,7 +346,7 @@ const DigestDisplay = (() => {
     buildFilterChips,
     buildCard,
     toggle,
-    renderLists,
+    renderList,
     renderPagination,
     openSidebar,
     closeSidebar,
